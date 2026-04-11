@@ -101,14 +101,14 @@ export default function Experience() {
         },
         {
           role: "Data Instructor",
-          company: "MindX Technology School",
+          company: "MindX",
           url: "https://mindx.edu.vn/",
           period: "May 2023 - Present",
           description: "Training the next generation of data professionals in SQL, Python, and PowerBI."
         },
         {
           role: "Data Curriculum Designer",
-          company: "MindX Technology School",
+          company: "MindX",
           url: "https://mindx.edu.vn/",
           period: "Feb 2025 - Dec 2025",
           description: "Developing comprehensive learning paths for Data Engineering and Analytics."
@@ -208,9 +208,11 @@ export default function Experience() {
                       </a>
                       <span style={{
                         display: 'inline-block', fontSize: '0.62rem', padding: '0.1rem 0.5rem',
-                        borderRadius: '9999px', background: `${col.accentColor}15`,
-                        color: col.accentColor,
+                        borderRadius: '9999px',
+                        background: exp.period.includes('Present') ? `${col.accentColor}15` : 'transparent',
+                        color: exp.period.includes('Present') ? col.accentColor : 'var(--text-muted)',
                         border: exp.period.includes('Present') ? `1px solid ${col.accentColor}` : 'none',
+                        outline: 'none',
                         boxShadow: exp.period.includes('Present') ? `0 0 8px ${col.accentColor}66` : 'none',
                         fontWeight: exp.period.includes('Present') ? 700 : 400,
                       }}>
