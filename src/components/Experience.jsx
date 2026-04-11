@@ -145,7 +145,7 @@ export default function Experience() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '2rem',
           alignItems: 'flex-start'
         }}>
