@@ -4,6 +4,7 @@ import urllib.error
 import concurrent.futures
 import time
 
+# Use the existing search output
 with open('/home/tunguyenn99/.gemini/antigravity/brain/acec29b2-879e-42a3-a56b-77604c7cf57a/.system_generated/steps/135/output.txt', 'r') as f:
     data = json.load(f)
 
@@ -31,25 +32,37 @@ def process_repo(repo):
     name = repo.get('name', '')
     desc = repo.get('description') or ''
     default_branch = repo.get('default_branch', 'main')
+    is_fork = repo.get('fork', False)
     readme = fetch_readme(name, default_branch).lower()
     
-    content_to_check = name.lower() + " " + desc.lower() + " " + readme
+    content_to_check = (name + " " + desc + " " + readme).lower()
     
-    # Classification logic
     tags = set()
-    if any(x in content_to_check for x in ['dbt', 'dagster', 'airflow', 'trino', 'mage', 'iceberg', 'snowflake', 'elt', 'kestra', 'n8n', 'airbyte']):
-        tags.add('Analytics Engineering')
-    if any(x in content_to_check for x in ['power bi', 'dashboard', 'metabase', 'pbi', 'bi ', 'business intelligence']):
-        tags.add('Business Intelligence')
-    if any(x in content_to_check for x in ['kafka', 'flink', 'streaming', 'spark']):
-        tags.add('Data Engineering')
-    if any(x in content_to_check for x in ['analytics', 'analysis', 'cohort', 'machine learning', 'ml', 'faker']):
-        tags.add('Data Analytics')
-    if any(x in content_to_check for x in ['docker', 'kubernetes', 'k8s', 'wsl', 'ubuntu', 'linux', 'aws']):
-        tags.add('System & DevOps')
     
+    # 1. Analytics Engineering
+    if any(x in content_to_check for x in ['dbt', 'dagster', 'airflow', 'trino', 'mage', 'iceberg', 'snowflake', 'elt', 'kestra', 'pipeline']):
+        tags.add('Analytics Engineering')
+        
+    # 2. Data Analytics
+    if any(x in content_to_check for x in ['analytics', 'analysis', 'cohort', 'machine learning', 'ml', 'faker', 'jupyter', 'crawl', 'scraping']):
+        tags.add('Data Analytics')
+        
+    # 3. Business Intelligence
+    if any(x in content_to_check for x in ['power bi', 'dashboard', 'metabase', 'pbi', 'bi ', 'visualization', 'business intelligence']):
+        tags.add('Business Intelligence')
+        
+    # 4. Self-learning
+    if any(x in content_to_check for x in ['i-learn', 'learn-', 'intro-to', 'foundations', 'fundamentals', 'tutorial', 're-learn', 'notes', 'docs', 'leetcode']):
+        tags.add('Self-learning')
+        
+    # 5. Community contribution
+    # We'll use specific keywords or status (like forks or specific public project names)
+    if is_fork or any(x in content_to_check for x in ['community', 'contribution', 'public', 'free', 'xom data', 'shared', 'open-source']):
+        tags.add('Community contribution')
+
+    # Fallback
     if not tags:
-        tags.add('Software Engineering & Others')
+        tags.add('Other Projects')
         
     return {
         'id': repo['id'],
@@ -62,7 +75,7 @@ def process_repo(repo):
         'tags': list(tags)
     }
 
-print("Fetching and analyzing readmes...")
+print("Fetching and analyzing readmes for 77 repos...")
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
     results = list(executor.map(process_repo, items))
 

@@ -5,12 +5,28 @@ import projectsData from '../data/projects.json';
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  // Extract all unique tags
-  const allTags = new Set();
+  // Define explicit filter order
+  const filterOrder = [
+    'All',
+    'Analytics Engineering',
+    'Data Analytics',
+    'Business Intelligence',
+    'Self-learning',
+    'Community contribution',
+    'Other Projects'
+  ];
+
+  // Extract all unique tags present in the data to ensure we don't miss any
+  const existingTags = new Set();
   projectsData.forEach(proj => {
-    proj.tags.forEach(tag => allTags.add(tag));
+    proj.tags.forEach(tag => existingTags.add(tag));
   });
-  const filters = ['All', ...Array.from(allTags).sort()];
+
+  // Combine ordered filters with any extra tags found
+  const filters = [
+    ...filterOrder.filter(f => f === 'All' || existingTags.has(f)),
+    ...Array.from(existingTags).filter(t => !filterOrder.includes(t))
+  ];
 
   const filteredProjects = activeFilter === 'All' 
     ? projectsData 
