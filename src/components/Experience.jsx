@@ -19,25 +19,35 @@ export default function Experience() {
 
   return (
     <section id="experience" className="section">
-      <h2 className="section-title">Experience</h2>
-      <div style={{ display: 'grid', gap: '2rem', maxWidth: '800px', paddingLeft: '1rem', borderLeft: '2px solid var(--primary)' }}>
-        {experiences.map((exp, index) => (
-          <div key={index} className="glass-panel" style={{ position: 'relative' }}>
-            <div style={{
-              position: 'absolute', left: '-2rem', top: '2rem', width: '20px', height: '20px',
-              borderRadius: '50%', background: 'var(--primary)', border: '4px solid var(--bg-darker)',
-              transform: 'translateX(-50%)'
-            }}></div>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Briefcase size={20} color="var(--primary)" /> {exp.role}
-            </h3>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)', marginBottom: '1rem', fontSize: '0.9rem' }}>
-              <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>{exp.company}</span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}><Calendar size={14} /> {exp.period}</span>
+      <div className="container">
+        <h2 className="section-title">Professional Path</h2>
+        <div style={{ display: 'grid', gap: '3rem', maxWidth: '900px', position: 'relative' }}>
+          {/* Vertical Timeline Line */}
+          <div style={{ position: 'absolute', left: '0', top: '0', bottom: '0', width: '1px', background: 'linear-gradient(180deg, var(--primary) 0%, transparent 100%)', opacity: 0.3 }}></div>
+          
+          {experiences.map((exp, index) => (
+            <div key={index} className="animate-fade-in" style={{ paddingLeft: '2.5rem', position: 'relative', animationDelay: `${index * 0.2}s` }}>
+              <div style={{
+                position: 'absolute', left: '-4.5px', top: '0.5rem', width: '10px', height: '10px',
+                borderRadius: '50%', background: 'var(--primary)', boxShadow: '0 0 10px var(--primary)'
+              }}></div>
+              
+              <div style={{ marginBottom: '1rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                  <h3 style={{ fontSize: '1.75rem', fontWeight: 700, fontFamily: 'Space Grotesk' }}>{exp.role}</h3>
+                  <span className="tag" style={{fontSize: '0.7rem'}}>{exp.period}</span>
+                </div>
+                <div style={{ color: 'var(--secondary)', fontWeight: 600, fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                  {exp.company}
+                </div>
+              </div>
+              
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '700px', lineHeight: 1.7 }}>
+                {exp.description}
+              </p>
             </div>
-            <p style={{ color: 'var(--text-muted)' }}>{exp.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

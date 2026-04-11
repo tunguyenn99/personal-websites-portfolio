@@ -4,41 +4,47 @@ import { FaGithub as Github, FaLinkedin as Linkedin } from 'react-icons/fa';
 
 export default function AboutMe() {
   return (
-    <section id="about" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="responsive-grid">
+    <section id="about" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px', position: 'relative' }}>
+      <div className="container responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }}>
         <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '1.5rem', color: 'var(--primary)' }}>
-            <span style={{ height: '2px', width: '40px', background: 'var(--primary)' }}></span>
-            <span style={{ fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase' }}>Data Enthusiast</span>
+          <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '1.5rem', color: 'var(--primary)' }}>
+            <span style={{ height: '1px', width: '30px', background: 'var(--primary)' }}></span>
+            <span style={{ fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: '0.8rem', fontFamily: 'Space Grotesk' }}>Precision Data Engineering</span>
           </div>
-          <h1 style={{ fontSize: '4rem', fontWeight: 800, lineHeight: 1.1, margin: '0 0 1.5rem 0' }}>
+          <h1 style={{ fontSize: '5rem', fontWeight: 700, lineHeight: 1, margin: '0 0 2rem 0', fontFamily: 'Space Grotesk' }}>
             Decoding Data with<br/>
-            <span style={{ color: 'var(--primary)' }}>Tu Nguyen</span>
+            <span style={{ color: 'var(--primary)', position: 'relative' }}>
+              Tu Nguyen
+              <svg style={{ position: 'absolute', bottom: '-10px', left: 0, width: '100%', height: '12px' }} viewBox="0 0 100 12" preserveAspectRatio="none">
+                <path d="M0,10 Q50,0 100,10" stroke="var(--primary)" strokeWidth="2" fill="none" opacity="0.3" />
+              </svg>
+            </span>
           </h1>
-          <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', marginBottom: '2rem', maxWidth: '600px' }}>
-            Passionate about building scalable modern data stacks, ELT pipelines, and advanced analytics models. Turning raw data into strategic insights.
+          <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: '650px', fontWeight: 400 }}>
+            Crafting high-performance data architectures and scalable ELT pipelines. Bridging the gap between raw data and metabolic insights with <span style={{color: 'var(--secondary)'}}>mathematical precision</span>.
           </p>
           
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-             <a href="#projects" className="btn-primary">View Projects <ArrowRight size={18} /></a>
-             <a href="https://github.com/tunguyenn99" target="_blank" rel="noreferrer" className="btn-secondary"><Github size={18} /> GitHub</a>
-             <a href="https://linkedin.com/in/tunguyenn99" target="_blank" rel="noreferrer" className="btn-secondary"><Linkedin size={18} /> LinkedIn</a>
+          <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+             <a href="#projects" className="btn-primary">Explore Work <ArrowRight size={18} /></a>
+             <a href="https://github.com/tunguyenn99" target="_blank" rel="noreferrer" className="btn-secondary"><Github size={18} /> Source Code</a>
           </div>
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-muted)' }}>
-             <MapPin size={18} /> <span>Hanoi, Vietnam</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: 500 }}>
+             <MapPin size={18} color="var(--secondary)" /> <span>Hanoi, Vietnam // 21.0285° N, 105.8542° E</span>
           </div>
         </div>
         
         <div className="animate-fade-in" style={{ animationDelay: '0.3s', position: 'relative' }}>
-          <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', height: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, rgba(139,92,246,0.2) 0%, rgba(20,184,166,0.2) 100%)' }}>
-            <h2 style={{ fontSize: '8rem', opacity: 0.1, position: 'absolute', transform: 'rotate(-45deg)' }}>DATA</h2>
-            {/* Using a placeholder SVG since we don't have a photo */}
-            <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--primary)', filter: 'drop-shadow(0 0 20px rgba(139,92,246,0.5))' }}>
-              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-            </svg>
+          <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', height: '550px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--surface-container)', border: '1px solid var(--outline-low)' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.05, backgroundImage: 'linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(90deg, var(--primary) 1px, transparent 1px)', backgroundSize: '100px 100px' }}></div>
+            <h2 style={{ fontSize: '12rem', opacity: 0.03, position: 'absolute', transform: 'rotate(-15deg)', fontWeight: 900, fontFamily: 'Space Grotesk' }}>VOID</h2>
+            {/* Functional Data Icon */}
+            <div style={{ position: 'relative' }}>
+              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '250px', height: '250px', background: 'var(--primary)', borderRadius: '50%', filter: 'blur(80px)', opacity: 0.1 }}></div>
+              <svg width="240" height="240" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--primary)', filter: 'drop-shadow(0 0 15px rgba(170,221,81,0.4))' }}>
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

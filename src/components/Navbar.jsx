@@ -32,12 +32,20 @@ export default function Navbar() {
       borderBottom: isScrolled ? '1px solid var(--glass-border)' : 'none'
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <a href="#" style={{ fontSize: '1.5rem', fontWeight: 800, textDecoration: 'none', color: 'var(--primary)' }}>TN.</a>
+        <a href="#" style={{ fontSize: '1.75rem', fontWeight: 700, textDecoration: 'none', color: 'var(--primary)', fontFamily: 'Space Grotesk' }}>TN<span style={{color: 'var(--secondary)'}}>.</span></a>
         
         {/* Desktop Nav */}
-        <div style={{ display: 'none', gap: '2rem' }} className="desktop-nav">
+        <div style={{ display: 'none', gap: '2.5rem' }} className="desktop-nav">
           {navLinks.map(link => (
-            <a key={link.name} href={link.href} style={{ color: 'var(--text-main)', textDecoration: 'none', fontWeight: 500 }}>
+            <a key={link.name} href={link.href} style={{ 
+              color: 'var(--text-main)', 
+              textDecoration: 'none', 
+              fontWeight: 600, 
+              fontSize: '0.9rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              transition: 'color 0.3s'
+            }}>
               {link.name}
             </a>
           ))}
