@@ -206,8 +206,15 @@ export default function Experience() {
                     <span style={{
                       display: 'inline-block', fontSize: '0.65rem', padding: '0.1rem 0.5rem',
                       borderRadius: '9999px', background: `${col.accentColor}15`,
-                      color: col.accentColor, border: `1px solid ${col.accentColor}30`,
-                      fontWeight: 500, marginBottom: '0.5rem'
+                      color: col.accentColor,
+                      border: exp.period.includes('Present')
+                        ? `1px solid ${col.accentColor}`
+                        : `1px solid ${col.accentColor}30`,
+                      boxShadow: exp.period.includes('Present')
+                        ? `0 0 8px ${col.accentColor}66`
+                        : 'none',
+                      fontWeight: exp.period.includes('Present') ? 700 : 500,
+                      marginBottom: '0.5rem'
                     }}>
                       {exp.period}
                     </span>
