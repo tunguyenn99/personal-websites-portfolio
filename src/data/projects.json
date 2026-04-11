@@ -2,108 +2,72 @@
   {
     "id": 1025892970,
     "title": "thu_vien_cua_xom_data",
-    "description": "Th\u01b0 vi\u1ec7n s\u00e1ch c\u1ee7a X\u00f3m - Free & Public \ud83d\ude0e",
+    "description": "Thư viện sách của Xóm - Free & Public 😎",
     "url": "https://github.com/tunguyenn99/thu_vien_cua_xom_data",
     "language": "N/A",
     "stars": 187,
     "forks": 49,
-    "tags": [
-      "Analytics Engineering",
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Business Intelligence"
-    ]
+    "tags": ["Community contribution", "Data Analytics"]
   },
   {
     "id": 1051181407,
     "title": "crawl-topcv-jobs",
-    "description": "",
+    "description": "Web scraping for job market analysis",
     "url": "https://github.com/tunguyenn99/crawl-topcv-jobs",
     "language": "Python",
     "stars": 35,
     "forks": 5,
-    "tags": [
-      "Self-learning",
-      "Data Analytics",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Data Analytics"]
   },
   {
     "id": 1016207024,
     "title": "dbt-trino-minio-iceberg-mage",
-    "description": "On-premises ELT Pipeline",
+    "description": "On-premises ELT Pipeline with modern data stack",
     "url": "https://github.com/tunguyenn99/dbt-trino-minio-iceberg-mage",
     "language": "Python",
     "stars": 31,
     "forks": 10,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering"]
   },
   {
     "id": 1010723387,
     "title": "distributed-data-processing",
-    "description": "Efficient Data Processing in Distributed Database (Vietnamese docs)",
+    "description": "Efficient Data Processing in Distributed Database",
     "url": "https://github.com/tunguyenn99/distributed-data-processing",
     "language": "Python",
     "stars": 31,
     "forks": 10,
-    "tags": [
-      "Community contribution",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering", "Community contribution"]
   },
   {
     "id": 1061744584,
     "title": "son-tung-mtp-analytics",
-    "description": "An end-2-end project about Son Tung M-TP",
+    "description": "An end-2-end analytics project about Son Tung M-TP",
     "url": "https://github.com/tunguyenn99/son-tung-mtp-analytics",
     "language": "Jupyter Notebook",
     "stars": 27,
     "forks": 4,
-    "tags": [
-      "Self-learning",
-      "Data Analytics",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Data Analytics", "Business Intelligence"]
   },
   {
     "id": 1008506781,
     "title": "i-learn-docker",
-    "description": "H\u1ecdc Docker tr\u00ean Ubuntu",
+    "description": "Docker fundamentals for Data Engineers",
     "url": "https://github.com/tunguyenn99/i-learn-docker",
     "language": "Python",
     "stars": 18,
     "forks": 5,
-    "tags": [
-      "Analytics Engineering",
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Business Intelligence"
-    ]
+    "tags": ["Self-learning", "Analytics Engineering"]
   },
   {
     "id": 1070805005,
     "title": "intro-to-faker",
-    "description": "An introduction to Faker in Python",
+    "description": "An introduction to synthetic data generation with Faker",
     "url": "https://github.com/tunguyenn99/intro-to-faker",
     "language": "Python",
     "stars": 15,
     "forks": 2,
-    "tags": [
-      "Self-learning",
-      "Data Analytics",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning", "Data Analytics"]
   },
   {
     "id": 1188890803,
@@ -113,489 +77,356 @@
     "language": "Python",
     "stars": 13,
     "forks": 5,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering", "Data Analytics"]
   },
   {
     "id": 1012905847,
     "title": "data-warehouse-tk-kimball",
-    "description": "Docs l\u1ea1i \"The Data Warehouse Toolkit\" c\u1ee7a Ralph Kimball theo \u00fd m\u00ecnh",
+    "description": "The Data Warehouse Toolkit summary and notes",
     "url": "https://github.com/tunguyenn99/data-warehouse-tk-kimball",
     "language": "N/A",
     "stars": 12,
     "forks": 1,
-    "tags": [
-      "Self-learning",
-      "Data Analytics",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning", "Analytics Engineering"]
   },
   {
     "id": 992134661,
     "title": "i-learn-git",
-    "description": "I try to learn git",
+    "description": "Version control fundamentals for data teams",
     "url": "https://github.com/tunguyenn99/i-learn-git",
     "language": "Jupyter Notebook",
     "stars": 10,
     "forks": 3,
-    "tags": [
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning"]
   },
   {
     "id": 1004819136,
     "title": "dbt-databricks-kestra",
-    "description": "ELT Pipeline on Modern Data platforms",
+    "description": "ELT Pipeline on Databricks and Kestra",
     "url": "https://github.com/tunguyenn99/dbt-databricks-kestra",
     "language": "Jupyter Notebook",
     "stars": 9,
     "forks": 2,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering"]
   },
   {
     "id": 1010512586,
     "title": "ubuntu-install-wsl",
-    "description": "C\u00e0i \u0111\u1eb7t Ubuntu tr\u00ean Windows (WSL)",
+    "description": "Ubuntu installation guide on Windows (WSL)",
     "url": "https://github.com/tunguyenn99/ubuntu-install-wsl",
     "language": "N/A",
     "stars": 7,
     "forks": 0,
-    "tags": [
-      "Analytics Engineering"
-    ]
+    "tags": ["Other Projects"]
   },
   {
     "id": 994642890,
     "title": "dbt-supabase-postgres",
-    "description": "",
+    "description": "Integrating dbt with Supabase Postgres",
     "url": "https://github.com/tunguyenn99/dbt-supabase-postgres",
     "language": "Python",
     "stars": 7,
     "forks": 2,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering"]
   },
   {
     "id": 1007213796,
     "title": "iceberg-fundamentals",
-    "description": "H\u01b0\u1edbng d\u1eabn self-host v\u00e0 t\u00ecm hi\u1ec3u Apache Iceberg",
+    "description": "Deep dive into Apache Iceberg table format",
     "url": "https://github.com/tunguyenn99/iceberg-fundamentals",
     "language": "Jupyter Notebook",
     "stars": 4,
     "forks": 1,
-    "tags": [
-      "Self-learning",
-      "Data Analytics",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning", "Analytics Engineering"]
   },
   {
     "id": 991457662,
     "title": "data-portfolio",
-    "description": "A collection of my data analytics and BI projects.",
+    "description": "Curated collection of analytics and BI showcases",
     "url": "https://github.com/tunguyenn99/data-portfolio",
     "language": "Jupyter Notebook",
     "stars": 4,
     "forks": 0,
-    "tags": [
-      "Analytics Engineering",
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Business Intelligence"
-    ]
+    "tags": ["Data Analytics", "Business Intelligence"]
   },
   {
     "id": 1195422315,
     "title": "weather-streaming-pipeline",
-    "description": "",
+    "description": "Real-time weather data ingestion and processing",
     "url": "https://github.com/tunguyenn99/weather-streaming-pipeline",
     "language": "Python",
     "stars": 3,
     "forks": 4,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering"]
   },
   {
     "id": 996472282,
     "title": "dagster-dlthub-snowflake",
-    "description": "Modern ELT Pipeline",
+    "description": "Modern ELT Pipeline with Dagster and DLT Hub",
     "url": "https://github.com/tunguyenn99/dagster-dlthub-snowflake",
     "language": "Python",
     "stars": 3,
     "forks": 1,
-    "tags": [
-      "Data Analytics",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering"]
   },
   {
     "id": 1010291431,
     "title": "diem-thi-thpt",
-    "description": "D\u1eef li\u1ec7u t\u1eeb web D\u00e2n tr\u00ed: https://dantri.com.vn/giao-duc/tuyen-sinh/tra-cuu-diem.htm",
+    "description": "Scraping and analyzing high school exam data",
     "url": "https://github.com/tunguyenn99/diem-thi-thpt",
     "language": "Python",
     "stars": 2,
     "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
+    "tags": ["Data Analytics"]
   },
   {
     "id": 992107628,
     "title": "dashboard-showcase",
-    "description": "My BI Dashboard Showcase",
+    "description": "Professional BI Dashboard collection",
     "url": "https://github.com/tunguyenn99/dashboard-showcase",
     "language": "Jupyter Notebook",
     "stars": 2,
     "forks": 0,
-    "tags": [
-      "Business Intelligence",
-      "Data Analytics"
-    ]
+    "tags": ["Business Intelligence"]
   },
   {
     "id": 1007237997,
     "title": "airflow-fundamentals",
-    "description": "",
+    "description": "Mastering Airflow for data orchestration",
     "url": "https://github.com/tunguyenn99/airflow-fundamentals",
     "language": "Dockerfile",
     "stars": 1,
     "forks": 2,
-    "tags": [
-      "Data Analytics",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning", "Analytics Engineering"]
   },
   {
     "id": 1008494681,
     "title": "dbt-snowflake",
-    "description": "H\u01b0\u1edbng d\u1eabn d\u00f9ng dbt v\u1edbi Snowflake",
+    "description": "A guide to using dbt with Snowflake",
     "url": "https://github.com/tunguyenn99/dbt-snowflake",
     "language": "Python",
     "stars": 1,
     "forks": 0,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering", "Self-learning"]
   },
   {
     "id": 994076570,
     "title": "metabase-from-scratch-to-embed",
-    "description": "",
+    "description": "Self-hosting Metabase and embedding dashboards",
     "url": "https://github.com/tunguyenn99/metabase-from-scratch-to-embed",
     "language": "JavaScript",
     "stars": 1,
     "forks": 0,
-    "tags": [
-      "Analytics Engineering",
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Business Intelligence"
-    ]
+    "tags": ["Business Intelligence", "Analytics Engineering"]
   },
   {
     "id": 992082722,
     "title": "tunguyenn99",
-    "description": "Init my profile",
+    "description": "GitHub Profile and personal landing page data",
     "url": "https://github.com/tunguyenn99/tunguyenn99",
     "language": "N/A",
     "stars": 1,
     "forks": 0,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Other Projects"]
   },
   {
     "id": 992130506,
     "title": "machine-learning",
-    "description": "Learning ML with me!",
+    "description": "Repository for exploring and learning ML algorithms",
     "url": "https://github.com/tunguyenn99/machine-learning",
     "language": "Jupyter Notebook",
     "stars": 1,
     "forks": 0,
-    "tags": [
-      "Self-learning",
-      "Data Analytics",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning", "Data Analytics"]
   },
   {
     "id": 613755857,
     "title": "vba_files",
-    "description": "My VBA",
+    "description": "Automation scripts and VBA files",
     "url": "https://github.com/tunguyenn99/vba_files",
     "language": "N/A",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
+    "tags": ["Other Projects"]
   },
   {
     "id": 993869003,
     "title": "i-learn-airbyte",
-    "description": "",
+    "description": "Learning Airbyte for data ingestion",
     "url": "https://github.com/tunguyenn99/i-learn-airbyte",
     "language": "N/A",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning", "Analytics Engineering"]
   },
   {
     "id": 718501759,
     "title": "topjson-shapemap",
-    "description": "TopoJSON for PBI",
+    "description": "TopoJSON shape files for Power BI maps",
     "url": "https://github.com/tunguyenn99/topjson-shapemap",
     "language": "N/A",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Business Intelligence"
-    ]
+    "tags": ["Business Intelligence"]
   },
   {
     "id": 1035468864,
     "title": "learn-mcp-server",
-    "description": "",
+    "description": "Exploring Model Context Protocol implementations",
     "url": "https://github.com/tunguyenn99/learn-mcp-server",
     "language": "N/A",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Self-learning"
-    ]
+    "tags": ["Self-learning"]
   },
   {
     "id": 1020675325,
     "title": "diem_thi_thpt_2025",
-    "description": "Source: B\u00e1o \u0110i\u1ec7n t\u1eed Ch\u00ednh ph\u1ee7",
+    "description": "Analyzing 2025 High School exam results",
     "url": "https://github.com/tunguyenn99/diem_thi_thpt_2025",
     "language": "Jupyter Notebook",
     "stars": 0,
     "forks": 1,
-    "tags": [
-      "Data Analytics"
-    ]
+    "tags": ["Data Analytics"]
   },
   {
     "id": 992351100,
     "title": "install-packages-on-prems",
-    "description": "Thanks to @duong.eth, now I know how to install python packages on remote servers without internet",
+    "description": "Infrastructure guide for remote server package management",
     "url": "https://github.com/tunguyenn99/install-packages-on-prems",
     "language": "N/A",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering"]
   },
   {
     "id": 1177119639,
     "title": "LeetCode",
-    "description": "",
+    "description": "Algorithm and Data Structure practice",
     "url": "https://github.com/tunguyenn99/LeetCode",
     "language": "Python",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Self-learning",
-      "Data Analytics"
-    ]
+    "tags": ["Self-learning"]
   },
   {
     "id": 1014865704,
     "title": "cohort-analysis",
-    "description": "",
+    "description": "Implementation of cohort analysis models",
     "url": "https://github.com/tunguyenn99/cohort-analysis",
     "language": "Jupyter Notebook",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Data Analytics",
-      "Analytics Engineering"
-    ]
+    "tags": ["Data Analytics"]
   },
   {
     "id": 992352437,
     "title": "i-learn-mongodb",
-    "description": "Just my personal docs while learning basics about MongoDB",
+    "description": "Personal documentation for NoSQL study",
     "url": "https://github.com/tunguyenn99/i-learn-mongodb",
     "language": "HTML",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Data Analytics",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning"]
   },
   {
     "id": 613512848,
     "title": "CPdashboard",
-    "description": "Streamlit Deployment",
+    "description": "Custom analytics dashboard via Streamlit",
     "url": "https://github.com/tunguyenn99/CPdashboard",
     "language": "Jupyter Notebook",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Business Intelligence",
-      "Data Analytics"
-    ]
+    "tags": ["Business Intelligence", "Data Analytics"]
   },
   {
     "id": 635254793,
     "title": "MongoDB_University_M100",
-    "description": "M100: MongoDB for SQL Pros",
+    "description": "Certification course: MongoDB for SQL Professionals",
     "url": "https://github.com/tunguyenn99/MongoDB_University_M100",
     "language": "N/A",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
+    "tags": ["Self-learning", "Other Projects"]
   },
   {
     "id": 993145208,
     "title": "mini-project",
-    "description": "Some quick projects I've done (or maybe not done yet)",
+    "description": "Miscellaneous quick data projects and prototypes",
     "url": "https://github.com/tunguyenn99/mini-project",
     "language": "Python",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Analytics Engineering",
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Business Intelligence"
-    ]
+    "tags": ["Other Projects"]
   },
   {
     "id": 1031338991,
     "title": "machine-learning-foundations",
-    "description": "I re-learn machine learning to support my work",
+    "description": "Re-learning ML foundations for practical applications",
     "url": "https://github.com/tunguyenn99/machine-learning-foundations",
     "language": "Jupyter Notebook",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Self-learning",
-      "Data Analytics"
-    ]
+    "tags": ["Self-learning", "Data Analytics"]
   },
   {
     "id": 1074391962,
     "title": "faker-for-circle-k-assignment",
-    "description": "",
+    "description": "Data generation for operational simulation",
     "url": "https://github.com/tunguyenn99/faker-for-circle-k-assignment",
     "language": "Jupyter Notebook",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Data Analytics"
-    ]
+    "tags": ["Data Analytics"]
   },
   {
     "id": 1037442323,
     "title": "i-learn-uv",
-    "description": "",
+    "description": "Learning UV for Python package management",
     "url": "https://github.com/tunguyenn99/i-learn-uv",
     "language": "Jupyter Notebook",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Self-learning"
-    ]
+    "tags": ["Self-learning"]
   },
   {
     "id": 1071510257,
     "title": "i-learn-kafka",
-    "description": "",
+    "description": "Streaming data fundamentals with Kafka",
     "url": "https://github.com/tunguyenn99/i-learn-kafka",
     "language": "Python",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Data Analytics",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Self-learning", "Analytics Engineering"]
   },
   {
     "id": 1067173021,
     "title": "weather-api-open-meteo",
-    "description": "How to use open-meteo's api",
+    "description": "Integration and exploration of weather APIs",
     "url": "https://github.com/tunguyenn99/weather-api-open-meteo",
     "language": "N/A",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
+    "tags": ["Data Analytics"]
   },
   {
     "id": 992095351,
     "title": "docker-n8n-ubuntu",
-    "description": "Self-host n8n on Ubuntu with public domain",
+    "description": "Automated n8n deployment with custom domain",
     "url": "https://github.com/tunguyenn99/docker-n8n-ubuntu",
     "language": "Shell",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Data Analytics",
-      "Community contribution",
-      "Self-learning",
-      "Analytics Engineering"
-    ]
+    "tags": ["Analytics Engineering"]
   },
   {
     "id": 1012868415,
     "title": "badge-earner",
-    "description": "A miscellaneous repo to earn some badges",
+    "description": "Miscellaneous repository for platform achievement tracking",
     "url": "https://github.com/tunguyenn99/badge-earner",
     "language": "N/A",
     "stars": 0,
     "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
+    "tags": ["Other Projects"]
   }
 ]
