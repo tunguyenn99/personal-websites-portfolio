@@ -185,40 +185,40 @@ export default function Experience() {
                       width: '8px', height: '8px', borderRadius: '50%',
                       background: col.accentColor, boxShadow: `0 0 6px ${col.accentColor}`
                     }} />
-                    <h4 style={{
-                      fontSize: '0.95rem', fontWeight: 700, fontFamily: 'Space Grotesk',
-                      marginBottom: '0.2rem', lineHeight: 1.3
-                    }}>
-                      {exp.role}
-                    </h4>
-                    <a
-                      href={exp.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      style={{
-                        color: col.accentColor, fontWeight: 600, fontSize: '0.8rem',
-                        textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.06em',
-                        display: 'block', marginBottom: '0.3rem'
-                      }}
-                    >
-                      {exp.company}
-                    </a>
-                    <span style={{
-                      display: 'inline-block', fontSize: '0.65rem', padding: '0.1rem 0.5rem',
-                      borderRadius: '9999px', background: `${col.accentColor}15`,
-                      color: col.accentColor,
-                      border: exp.period.includes('Present')
-                        ? `1px solid ${col.accentColor}`
-                        : `1px solid ${col.accentColor}30`,
-                      boxShadow: exp.period.includes('Present')
-                        ? `0 0 8px ${col.accentColor}66`
-                        : 'none',
-                      fontWeight: exp.period.includes('Present') ? 700 : 500,
-                      marginBottom: '0.5rem'
-                    }}>
-                      {exp.period}
-                    </span>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '0.845rem', lineHeight: 1.6 }}>
+
+                    {/* Role + Company + Period on same row */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
+                      <h4 style={{
+                        fontSize: '0.9rem', fontWeight: 700, fontFamily: 'Space Grotesk',
+                        lineHeight: 1.3, margin: 0
+                      }}>
+                        {exp.role}
+                      </h4>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>@</span>
+                      <a
+                        href={exp.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{
+                          color: col.accentColor, fontWeight: 600, fontSize: '0.8rem',
+                          textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.06em'
+                        }}
+                      >
+                        {exp.company}
+                      </a>
+                      <span style={{
+                        display: 'inline-block', fontSize: '0.62rem', padding: '0.1rem 0.5rem',
+                        borderRadius: '9999px', background: `${col.accentColor}15`,
+                        color: col.accentColor,
+                        border: exp.period.includes('Present') ? `1px solid ${col.accentColor}` : 'none',
+                        boxShadow: exp.period.includes('Present') ? `0 0 8px ${col.accentColor}66` : 'none',
+                        fontWeight: exp.period.includes('Present') ? 700 : 400,
+                      }}>
+                        {exp.period}
+                      </span>
+                    </div>
+
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.845rem', lineHeight: 1.6, margin: 0 }}>
                       {exp.description}
                     </p>
                   </div>
