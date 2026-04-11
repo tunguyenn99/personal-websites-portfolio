@@ -44,7 +44,6 @@
     "stars": 31,
     "forks": 10,
     "tags": [
-      "Analytics Engineering",
       "Community contribution"
     ]
   },
@@ -82,7 +81,6 @@
     "stars": 15,
     "forks": 2,
     "tags": [
-      "Data Analytics",
       "Self-learning"
     ]
   },
@@ -169,7 +167,6 @@
     "stars": 4,
     "forks": 1,
     "tags": [
-      "Analytics Engineering",
       "Self-learning"
     ]
   },
@@ -297,18 +294,6 @@
     ]
   },
   {
-    "id": 613755857,
-    "title": "vba_files",
-    "description": "My VBA",
-    "url": "https://github.com/tunguyenn99/vba_files",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Business Intelligence"
-    ]
-  },
-  {
     "id": 993869003,
     "title": "i-learn-airbyte",
     "description": "",
@@ -318,18 +303,6 @@
     "forks": 0,
     "tags": [
       "Self-learning"
-    ]
-  },
-  {
-    "id": 718501759,
-    "title": "topjson-shapemap",
-    "description": "TopoJSON for PBI",
-    "url": "https://github.com/tunguyenn99/topjson-shapemap",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Business Intelligence"
     ]
   },
   {
@@ -365,7 +338,6 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
       "Self-learning"
     ]
   },
@@ -406,19 +378,6 @@
     ]
   },
   {
-    "id": 613512848,
-    "title": "CPdashboard",
-    "description": "Streamlit Deployment",
-    "url": "https://github.com/tunguyenn99/CPdashboard",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Business Intelligence",
-      "Data Analytics"
-    ]
-  },
-  {
     "id": 635254793,
     "title": "MongoDB_University_M100",
     "description": "M100: MongoDB for SQL Pros",
@@ -451,7 +410,6 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
       "Self-learning"
     ]
   },
