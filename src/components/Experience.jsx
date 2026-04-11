@@ -4,16 +4,109 @@ import { Briefcase, Calendar } from 'lucide-react';
 export default function Experience() {
   const experiences = [
     {
-      role: "Data Engineer / Analytics Specialist",
-      company: "Freelance & Open Source",
-      period: "2023 - Present",
-      description: "Building modern data stack pipelines using technologies like dbt, Trino, Iceberg, Dagster and Snowflake. Designing scalable architectures for deep analytics."
+      role: "Senior Data Analyst",
+      company: "TNEX",
+      url: "https://www.tnex.com.vn/",
+      period: "Sept 2025 - Present",
+      description: "Leading data-driven initiatives and advanced analytics for digital banking."
     },
     {
-      role: "Founder / Data Contributor",
-      company: "Thư viện sách của Xóm",
-      period: "2025 - Present",
-      description: "Developed and maintained a free and public library platform ensuring efficient data processing and access."
+      role: "Data Analytics Engineer",
+      company: "UpBase",
+      url: "https://upbase.asia/",
+      period: "Jan 2026 - Present",
+      description: "Optimizing e-commerce data landscapes and building automated analytics pipelines."
+    },
+    {
+      role: "Analytics Engineer",
+      company: "HV HOLDINGS",
+      url: "https://hvgroup.com.vn/",
+      period: "Feb 2026 - Present",
+      description: "Architecting modern data stacks and ensuring data integrity across diversified holdings."
+    },
+    {
+      role: "Co-Owner",
+      company: "Xóm Data",
+      url: "https://www.facebook.com/groups/xomdata/",
+      period: "Apr 2025 - Present",
+      description: "Building the most active data community in Vietnam and sharing domain knowledge."
+    },
+    {
+      role: "Data Instructor",
+      company: "MindX Technology School",
+      url: "https://mindx.edu.vn/",
+      period: "May 2023 - Present",
+      description: "Training the next generation of data professionals in SQL, Python, and PowerBI."
+    },
+    {
+      role: "Advisor",
+      company: "AlphaSights",
+      url: "https://www.alphasights.com/",
+      period: "Apr 2023 - Present",
+      description: "Providing expert insights on the Vietnamese data and technology landscape."
+    },
+    {
+      role: "Data Curriculum Designer",
+      company: "MindX Technology School",
+      url: "https://mindx.edu.vn/",
+      period: "Feb 2025 - Dec 2025",
+      description: "Developing comprehensive learning paths for Data Engineering and Analytics."
+    },
+    {
+      role: "Business Intelligence Developer",
+      company: "Cloud Ace Vietnam",
+      url: "https://vn.cloud-ace.com/",
+      period: "Dec 2025 - Feb 2026",
+      description: "GCP-focused BI solutions and data warehousing architecture."
+    },
+    {
+      role: "Advisor",
+      company: "Arches",
+      url: "https://arches-global.com/",
+      period: "Feb 2025 - Feb 2026",
+      description: "Strategic consulting for global knowledge sharing platforms."
+    },
+    {
+      role: "Middle Data Analyst",
+      company: "VNPAY",
+      url: "https://vnpay.vn/",
+      period: "Apr 2023 - Sept 2025",
+      description: "Processing millions of transactions to drive business growth in fintech."
+    },
+    {
+      role: "Business Intelligence Developer",
+      company: "FIXMA",
+      url: "https://fixma.vn/",
+      period: "Sept 2024 - Aug 2025",
+      description: "Designing end-to-end BI systems for data-driven decision making."
+    },
+    {
+      role: "Business Intelligence Analyst",
+      company: "VietCleaning",
+      url: "https://vietcleaning.vn/",
+      period: "Jan 2025 - May 2025",
+      description: "Analyzing operational efficiency and customer behaviors."
+    },
+    {
+      role: "Outsource Data Analyst",
+      company: "BraveBits",
+      url: "https://bravebits.co/",
+      period: "Mar 2024 - July 2024",
+      description: "Support analytics projects for international Shopify applications."
+    },
+    {
+      role: "Project Management Officer",
+      company: "Shopee",
+      url: "https://shopee.vn/",
+      period: "Nov 2021 - Apr 2023",
+      description: "Coordinating cross-functional projects in Southeast Asia's leading e-commerce platform."
+    },
+    {
+      role: "Consultant Network Operator",
+      company: "MPI, Vietnam",
+      url: "https://www.mpi.gov.vn/",
+      period: "Oct 2020 - Nov 2021",
+      description: "Managing consultant networks and data for the Ministry of Planning and Investment."
     }
   ];
 
@@ -38,7 +131,11 @@ export default function Experience() {
                   <span className="tag" style={{fontSize: '0.7rem'}}>{exp.period}</span>
                 </div>
                 <div style={{ color: 'var(--secondary)', fontWeight: 600, fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                  {exp.company}
+                  {exp.url ? (
+                    <a href={exp.url} target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid transparent', transition: 'all 0.3s' }} onMouseOver={e => e.target.style.borderBottom = '1px solid var(--secondary)'} onMouseOut={e => e.target.style.borderBottom = '1px solid transparent'}>
+                      {exp.company}
+                    </a>
+                  ) : exp.company}
                 </div>
               </div>
               
