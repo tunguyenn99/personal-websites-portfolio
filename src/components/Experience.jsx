@@ -186,8 +186,8 @@ export default function Experience() {
                       background: col.accentColor, boxShadow: `0 0 6px ${col.accentColor}`
                     }} />
 
-                    {/* Role + Company + Period on same row */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
+                    {/* Row 1: Role @ Company */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.2rem' }}>
                       <h4 style={{
                         fontSize: '0.9rem', fontWeight: 700, fontFamily: 'Space Grotesk',
                         lineHeight: 1.3, margin: 0
@@ -206,11 +206,15 @@ export default function Experience() {
                       >
                         {exp.company}
                       </a>
+                    </div>
+
+                    {/* Row 2: Period */}
+                    <div style={{ marginBottom: '0.4rem' }}>
                       <span style={{
-                        display: 'inline-block', fontSize: '0.62rem', padding: '0.1rem 0.5rem',
+                        fontSize: '0.62rem', padding: '0.1rem 0.5rem',
                         borderRadius: '9999px',
                         background: exp.period.includes('Present') ? `${col.accentColor}15` : 'transparent',
-                        color: exp.period.includes('Present') ? col.accentColor : 'var(--text-muted)',
+                        color: col.accentColor,
                         border: exp.period.includes('Present') ? `1px solid ${col.accentColor}` : 'none',
                         outline: 'none',
                         boxShadow: exp.period.includes('Present') ? `0 0 8px ${col.accentColor}66` : 'none',
