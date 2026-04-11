@@ -8,11 +8,11 @@ export default function Projects() {
     .sort((a, b) => (b.stars || 0) - (a.stars || 0))
     .slice(0, 10);
 
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('Top 10 Starring Projects');
 
   // Define explicit filter order
   const filterOrder = [
-    'All',
+    'Top 10 Starring Projects',
     'Analytics Engineering',
     'Data Analytics',
     'Business Intelligence',
@@ -29,11 +29,11 @@ export default function Projects() {
 
   // Combine ordered filters with any extra tags found
   const filters = [
-    ...filterOrder.filter(f => f === 'All' || existingTags.has(f)),
+    ...filterOrder.filter(f => f === 'Top 10 Starring Projects' || existingTags.has(f)),
     ...Array.from(existingTags).filter(t => !filterOrder.includes(t))
   ];
 
-  const filteredProjects = activeFilter === 'All' 
+  const filteredProjects = activeFilter === 'Top 10 Starring Projects' 
     ? topProjects 
     : topProjects.filter(proj => proj.tags.includes(activeFilter));
 
