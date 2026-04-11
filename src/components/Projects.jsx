@@ -3,6 +3,11 @@ import { Star, GitFork, ExternalLink, Database } from 'lucide-react';
 import projectsData from '../data/projects.json';
 
 export default function Projects() {
+  // Filter to top 10 projects by stars
+  const topProjects = [...projectsData]
+    .sort((a, b) => (b.stars || 0) - (a.stars || 0))
+    .slice(0, 10);
+
   const [activeFilter, setActiveFilter] = useState('All');
 
   // Define explicit filter order
@@ -18,7 +23,7 @@ export default function Projects() {
 
   // Extract all unique tags present in the data to ensure we don't miss any
   const existingTags = new Set();
-  projectsData.forEach(proj => {
+  topProjects.forEach(proj => {
     proj.tags.forEach(tag => existingTags.add(tag));
   });
 
@@ -29,8 +34,8 @@ export default function Projects() {
   ];
 
   const filteredProjects = activeFilter === 'All' 
-    ? projectsData 
-    : projectsData.filter(proj => proj.tags.includes(activeFilter));
+    ? topProjects 
+    : topProjects.filter(proj => proj.tags.includes(activeFilter));
 
   return (
     <section id="projects" className="section">
