@@ -1,8 +1,8 @@
 import React from 'react';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase, Clock } from 'lucide-react';
 
 export default function Experience() {
-  const experiences = [
+  const fullTime = [
     {
       role: "Senior Data Analyst",
       company: "TNEX",
@@ -10,6 +10,30 @@ export default function Experience() {
       period: "Sept 2025 - Present",
       description: "Leading data-driven initiatives and advanced analytics for digital banking."
     },
+    {
+      role: "Middle Data Analyst",
+      company: "VNPAY",
+      url: "https://vnpay.vn/",
+      period: "Apr 2023 - Sept 2025",
+      description: "Processing millions of transactions to drive business growth in fintech."
+    },
+    {
+      role: "Project Management Officer",
+      company: "Shopee",
+      url: "https://shopee.vn/",
+      period: "Nov 2021 - Apr 2023",
+      description: "Coordinating cross-functional projects in Southeast Asia's leading e-commerce platform."
+    },
+    {
+      role: "Consultant Network Operator",
+      company: "MPI, Vietnam",
+      url: "https://www.mpi.gov.vn/",
+      period: "Oct 2020 - Nov 2021",
+      description: "Managing consultant networks and data for the Ministry of Planning and Investment."
+    }
+  ];
+
+  const partTime = [
     {
       role: "Data Analytics Engineer",
       company: "UpBase",
@@ -67,13 +91,6 @@ export default function Experience() {
       description: "Strategic consulting for global knowledge sharing platforms."
     },
     {
-      role: "Middle Data Analyst",
-      company: "VNPAY",
-      url: "https://vnpay.vn/",
-      period: "Apr 2023 - Sept 2025",
-      description: "Processing millions of transactions to drive business growth in fintech."
-    },
-    {
       role: "Business Intelligence Developer",
       company: "FIXMA",
       url: "https://fixma.vn/",
@@ -93,57 +110,90 @@ export default function Experience() {
       url: "https://bravebits.co/",
       period: "Mar 2024 - July 2024",
       description: "Support analytics projects for international Shopify applications."
-    },
-    {
-      role: "Project Management Officer",
-      company: "Shopee",
-      url: "https://shopee.vn/",
-      period: "Nov 2021 - Apr 2023",
-      description: "Coordinating cross-functional projects in Southeast Asia's leading e-commerce platform."
-    },
-    {
-      role: "Consultant Network Operator",
-      company: "MPI, Vietnam",
-      url: "https://www.mpi.gov.vn/",
-      period: "Oct 2020 - Nov 2021",
-      description: "Managing consultant networks and data for the Ministry of Planning and Investment."
     }
   ];
+
+  const ExperienceColumn = ({ title, icon, items, accentColor }) => (
+    <div style={{ flex: 1, minWidth: 0 }}>
+      {/* Column Header */}
+      <div style={{
+        display: 'flex', alignItems: 'center', gap: '0.75rem',
+        marginBottom: '2.5rem', paddingBottom: '1rem',
+        borderBottom: `1px solid ${accentColor}33`
+      }}>
+        <div style={{
+          width: '36px', height: '36px', borderRadius: '8px',
+          background: `${accentColor}22`, display: 'flex', alignItems: 'center',
+          justifyContent: 'center', flexShrink: 0
+        }}>
+          {icon}
+        </div>
+        <h3 style={{ fontSize: '1rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: accentColor }}>
+          {title}
+        </h3>
+      </div>
+
+      {/* Timeline */}
+      <div style={{ display: 'grid', gap: '2.25rem', position: 'relative' }}>
+        <div style={{
+          position: 'absolute', left: '0', top: '0', bottom: '0', width: '1px',
+          background: `linear-gradient(180deg, ${accentColor} 0%, transparent 100%)`, opacity: 0.25
+        }} />
+        {items.map((exp, index) => (
+          <div key={index} style={{ paddingLeft: '2rem', position: 'relative' }}>
+            <div style={{
+              position: 'absolute', left: '-4px', top: '0.45rem',
+              width: '9px', height: '9px', borderRadius: '50%',
+              background: accentColor, boxShadow: `0 0 8px ${accentColor}`
+            }} />
+            <div style={{ marginBottom: '0.4rem' }}>
+              <h4 style={{ fontSize: '1.05rem', fontWeight: 700, fontFamily: 'Space Grotesk', marginBottom: '0.2rem', lineHeight: 1.3 }}>
+                {exp.role}
+              </h4>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+                <a
+                  href={exp.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: accentColor, fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.07em' }}
+                >
+                  {exp.company}
+                </a>
+                <span style={{
+                  fontSize: '0.7rem', padding: '0.15rem 0.6rem', borderRadius: '9999px',
+                  background: `${accentColor}15`, color: accentColor, border: `1px solid ${accentColor}30`,
+                  fontWeight: 500, whiteSpace: 'nowrap'
+                }}>
+                  {exp.period}
+                </span>
+              </div>
+            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.65 }}>
+              {exp.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <section id="experience" className="section">
       <div className="container">
         <h2 className="section-title">Professional Path</h2>
-        <div style={{ display: 'grid', gap: '3rem', maxWidth: '900px', position: 'relative' }}>
-          {/* Vertical Timeline Line */}
-          <div style={{ position: 'absolute', left: '0', top: '0', bottom: '0', width: '1px', background: 'linear-gradient(180deg, var(--primary) 0%, transparent 100%)', opacity: 0.3 }}></div>
-          
-          {experiences.map((exp, index) => (
-            <div key={index} className="animate-fade-in" style={{ paddingLeft: '2.5rem', position: 'relative', animationDelay: `${index * 0.2}s` }}>
-              <div style={{
-                position: 'absolute', left: '-4.5px', top: '0.5rem', width: '10px', height: '10px',
-                borderRadius: '50%', background: 'var(--primary)', boxShadow: '0 0 10px var(--primary)'
-              }}></div>
-              
-              <div style={{ marginBottom: '1rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
-                  <h3 style={{ fontSize: '1.75rem', fontWeight: 700, fontFamily: 'Space Grotesk' }}>{exp.role}</h3>
-                  <span className="tag" style={{fontSize: '0.7rem'}}>{exp.period}</span>
-                </div>
-                <div style={{ color: 'var(--secondary)', fontWeight: 600, fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                  {exp.url ? (
-                    <a href={exp.url} target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid transparent', transition: 'all 0.3s' }} onMouseOver={e => e.target.style.borderBottom = '1px solid var(--secondary)'} onMouseOut={e => e.target.style.borderBottom = '1px solid transparent'}>
-                      {exp.company}
-                    </a>
-                  ) : exp.company}
-                </div>
-              </div>
-              
-              <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '700px', lineHeight: 1.7 }}>
-                {exp.description}
-              </p>
-            </div>
-          ))}
+        <div style={{ display: 'flex', gap: '4rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+          <ExperienceColumn
+            title="Full-time Professional"
+            icon={<Briefcase size={18} color="var(--primary)" />}
+            items={fullTime}
+            accentColor="var(--primary)"
+          />
+          <ExperienceColumn
+            title="Part-time / Remote / Outsourcing"
+            icon={<Clock size={18} color="var(--secondary)" />}
+            items={partTime}
+            accentColor="var(--secondary)"
+          />
         </div>
       </div>
     </section>
