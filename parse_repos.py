@@ -75,9 +75,12 @@ def process_repo(repo):
         'tags': list(tags)
     }
 
-print("Fetching and analyzing readmes for 77 repos...")
+# Filter only public repos
+public_items = [item for item in items if not item.get('private', False)]
+
+print(f"Fetching and analyzing readmes for {len(public_items)} public repos...")
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-    results = list(executor.map(process_repo, items))
+    results = list(executor.map(process_repo, public_items))
 
 # Sort by stars descending
 results.sort(key=lambda x: x['stars'], reverse=True)

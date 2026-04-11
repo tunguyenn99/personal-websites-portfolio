@@ -10,9 +10,9 @@
     "tags": [
       "Analytics Engineering",
       "Data Analytics",
+      "Community contribution",
       "Self-learning",
-      "Business Intelligence",
-      "Community contribution"
+      "Business Intelligence"
     ]
   },
   {
@@ -24,10 +24,10 @@
     "stars": 35,
     "forks": 5,
     "tags": [
-      "Analytics Engineering",
       "Self-learning",
       "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -39,10 +39,10 @@
     "stars": 31,
     "forks": 10,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Self-learning"
+      "Community contribution",
+      "Self-learning",
+      "Analytics Engineering"
     ]
   },
   {
@@ -54,9 +54,9 @@
     "stars": 31,
     "forks": 10,
     "tags": [
-      "Analytics Engineering",
       "Community contribution",
-      "Self-learning"
+      "Self-learning",
+      "Analytics Engineering"
     ]
   },
   {
@@ -68,10 +68,10 @@
     "stars": 27,
     "forks": 4,
     "tags": [
-      "Analytics Engineering",
       "Self-learning",
       "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -85,9 +85,9 @@
     "tags": [
       "Analytics Engineering",
       "Data Analytics",
+      "Community contribution",
       "Self-learning",
-      "Business Intelligence",
-      "Community contribution"
+      "Business Intelligence"
     ]
   },
   {
@@ -99,10 +99,10 @@
     "stars": 15,
     "forks": 2,
     "tags": [
-      "Analytics Engineering",
       "Self-learning",
       "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -114,10 +114,10 @@
     "stars": 13,
     "forks": 5,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Business Intelligence"
+      "Community contribution",
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -129,10 +129,10 @@
     "stars": 12,
     "forks": 1,
     "tags": [
-      "Analytics Engineering",
       "Self-learning",
       "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -144,8 +144,8 @@
     "stars": 10,
     "forks": 3,
     "tags": [
-      "Analytics Engineering",
-      "Self-learning"
+      "Self-learning",
+      "Analytics Engineering"
     ]
   },
   {
@@ -157,10 +157,10 @@
     "stars": 9,
     "forks": 2,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Self-learning"
+      "Community contribution",
+      "Self-learning",
+      "Analytics Engineering"
     ]
   },
   {
@@ -184,10 +184,10 @@
     "stars": 7,
     "forks": 2,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Self-learning"
+      "Community contribution",
+      "Self-learning",
+      "Analytics Engineering"
     ]
   },
   {
@@ -199,10 +199,10 @@
     "stars": 4,
     "forks": 1,
     "tags": [
-      "Analytics Engineering",
       "Self-learning",
       "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -216,9 +216,9 @@
     "tags": [
       "Analytics Engineering",
       "Data Analytics",
+      "Community contribution",
       "Self-learning",
-      "Business Intelligence",
-      "Community contribution"
+      "Business Intelligence"
     ]
   },
   {
@@ -230,10 +230,10 @@
     "stars": 3,
     "forks": 4,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Business Intelligence"
+      "Community contribution",
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -245,9 +245,9 @@
     "stars": 3,
     "forks": 1,
     "tags": [
-      "Analytics Engineering",
       "Data Analytics",
-      "Self-learning"
+      "Self-learning",
+      "Analytics Engineering"
     ]
   },
   {
@@ -271,8 +271,8 @@
     "stars": 2,
     "forks": 0,
     "tags": [
-      "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Data Analytics"
     ]
   },
   {
@@ -284,9 +284,9 @@
     "stars": 1,
     "forks": 2,
     "tags": [
-      "Analytics Engineering",
       "Data Analytics",
-      "Self-learning"
+      "Self-learning",
+      "Analytics Engineering"
     ]
   },
   {
@@ -298,10 +298,10 @@
     "stars": 1,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Self-learning"
+      "Community contribution",
+      "Self-learning",
+      "Analytics Engineering"
     ]
   },
   {
@@ -315,9 +315,9 @@
     "tags": [
       "Analytics Engineering",
       "Data Analytics",
+      "Community contribution",
       "Self-learning",
-      "Business Intelligence",
-      "Community contribution"
+      "Business Intelligence"
     ]
   },
   {
@@ -329,10 +329,10 @@
     "stars": 1,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Business Intelligence"
+      "Community contribution",
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -344,10 +344,10 @@
     "stars": 1,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
       "Self-learning",
       "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -363,18 +363,6 @@
     ]
   },
   {
-    "id": 982959882,
-    "title": "docker-n8n-start",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/docker-n8n-start",
-    "language": "Shell",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
     "id": 993869003,
     "title": "i-learn-airbyte",
     "description": "",
@@ -383,33 +371,9 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1162213615,
-    "title": "i-learn-kubernetes-k8s",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/i-learn-kubernetes-k8s",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1060031880,
-    "title": "dbt-netflix",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/dbt-netflix",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
+      "Community contribution",
+      "Self-learning",
       "Analytics Engineering"
     ]
   },
@@ -426,30 +390,6 @@
     ]
   },
   {
-    "id": 842108307,
-    "title": "my-sided-project",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/my-sided-project",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 854031637,
-    "title": "my-teaching-repo",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/my-teaching-repo",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
     "id": 1035468864,
     "title": "learn-mcp-server",
     "description": "",
@@ -458,19 +398,6 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1059501238,
-    "title": "dbt-self-notes",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/dbt-self-notes",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Analytics Engineering",
       "Self-learning"
     ]
   },
@@ -487,54 +414,6 @@
     ]
   },
   {
-    "id": 1021851170,
-    "title": "google-app-script",
-    "description": "C\u00e1c App Scripts cho Google Workspace",
-    "url": "https://github.com/tunguyenn99/google-app-script",
-    "language": "JavaScript",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 1161831287,
-    "title": "i-learn-kubernetes",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/i-learn-kubernetes",
-    "language": "HCL",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1127996145,
-    "title": "my-tnex-notes",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/my-tnex-notes",
-    "language": "Shell",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1009757125,
-    "title": "data-streaming-kafka-flink-postgres",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/data-streaming-kafka-flink-postgres",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
     "id": 992351100,
     "title": "install-packages-on-prems",
     "description": "Thanks to @duong.eth, now I know how to install python packages on remote servers without internet",
@@ -543,57 +422,9 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
+      "Data Analytics",
       "Community contribution",
-      "Data Analytics"
-    ]
-  },
-  {
-    "id": 985416473,
-    "title": "dbt-snowflake-airflow",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/dbt-snowflake-airflow",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
       "Analytics Engineering"
-    ]
-  },
-  {
-    "id": 982227498,
-    "title": "n8n-automation",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/n8n-automation",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 895331651,
-    "title": "pbi-embed",
-    "description": "Embed for Customer using Power BI SDK",
-    "url": "https://github.com/tunguyenn99/pbi-embed",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Business Intelligence"
-    ]
-  },
-  {
-    "id": 829761372,
-    "title": "python-crawler",
-    "description": "My Python Crawlers",
-    "url": "https://github.com/tunguyenn99/python-crawler",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Data Analytics"
     ]
   },
   {
@@ -618,8 +449,8 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
-      "Data Analytics"
+      "Data Analytics",
+      "Analytics Engineering"
     ]
   },
   {
@@ -631,44 +462,8 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
       "Data Analytics",
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1009653091,
-    "title": "real-time-analysis",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/real-time-analysis",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Data Analytics"
-    ]
-  },
-  {
-    "id": 1063850558,
-    "title": "my-vnpay-projects",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/my-vnpay-projects",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 995557785,
-    "title": "dagster-dlt-learn",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/dagster-dlt-learn",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
+      "Self-learning",
       "Analytics Engineering"
     ]
   },
@@ -681,8 +476,8 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Data Analytics"
     ]
   },
   {
@@ -698,18 +493,6 @@
     ]
   },
   {
-    "id": 981498797,
-    "title": "crawl-linkedin-jobs",
-    "description": "Crawl Linkedin Jobs",
-    "url": "https://github.com/tunguyenn99/crawl-linkedin-jobs",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Data Analytics"
-    ]
-  },
-  {
     "id": 993145208,
     "title": "mini-project",
     "description": "Some quick projects I've done (or maybe not done yet)",
@@ -720,9 +503,9 @@
     "tags": [
       "Analytics Engineering",
       "Data Analytics",
+      "Community contribution",
       "Self-learning",
-      "Business Intelligence",
-      "Community contribution"
+      "Business Intelligence"
     ]
   },
   {
@@ -763,54 +546,6 @@
     ]
   },
   {
-    "id": 1009767040,
-    "title": "dbt-trino-iceberg",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/dbt-trino-iceberg",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Analytics Engineering"
-    ]
-  },
-  {
-    "id": 1208017176,
-    "title": "personal-websites-portfolio",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/personal-websites-portfolio",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 829507976,
-    "title": "my-second-origin",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/my-second-origin",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 1014440508,
-    "title": "oracle-heatwave-mysql",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/oracle-heatwave-mysql",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
     "id": 1071510257,
     "title": "i-learn-kafka",
     "description": "",
@@ -819,82 +554,9 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
       "Data Analytics",
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1069578982,
-    "title": "i-learn-api",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/i-learn-api",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1008503273,
-    "title": "ubuntu-docker-setup",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/ubuntu-docker-setup",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 980172362,
-    "title": "crawl_facebook_comments",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/crawl_facebook_comments",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Data Analytics"
-    ]
-  },
-  {
-    "id": 829342911,
-    "title": "pbi-rs-airflow",
-    "description": "Airflow to automatically retrieve power bi report server LOG",
-    "url": "https://github.com/tunguyenn99/pbi-rs-airflow",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Analytics Engineering",
-      "Business Intelligence"
-    ]
-  },
-  {
-    "id": 1061197937,
-    "title": "dbt-netflix-w-snowflake",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/dbt-netflix-w-snowflake",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
+      "Self-learning",
       "Analytics Engineering"
-    ]
-  },
-  {
-    "id": 1020976879,
-    "title": "oracle-data-platform-foundations-associate",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/oracle-data-platform-foundations-associate",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Self-learning"
     ]
   },
   {
@@ -918,57 +580,9 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
-      "Community contribution",
       "Data Analytics",
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 1066875569,
-    "title": "my-notes-at-tnex",
-    "description": "Private repo for TNEX",
-    "url": "https://github.com/tunguyenn99/my-notes-at-tnex",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Self-learning"
-    ]
-  },
-  {
-    "id": 829520933,
-    "title": "my-learning-repo",
-    "description": "Learning is growing!!",
-    "url": "https://github.com/tunguyenn99/my-learning-repo",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 1007823029,
-    "title": "over-under-betting",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/over-under-betting",
-    "language": "JavaScript",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Other Projects"
-    ]
-  },
-  {
-    "id": 1178078517,
-    "title": "modern-data-pipeline-api-to-evidence",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/modern-data-pipeline-api-to-evidence",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
+      "Community contribution",
+      "Self-learning",
       "Analytics Engineering"
     ]
   },
@@ -982,30 +596,6 @@
     "forks": 0,
     "tags": [
       "Other Projects"
-    ]
-  },
-  {
-    "id": 1006828491,
-    "title": "ai-for-data-analytics",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/ai-for-data-analytics",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Data Analytics"
-    ]
-  },
-  {
-    "id": 987842749,
-    "title": "dbt-postgres",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/dbt-postgres",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "tags": [
-      "Analytics Engineering"
     ]
   }
 ]
