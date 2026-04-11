@@ -147,7 +147,7 @@ export default function Experience() {
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '2rem',
-          alignItems: 'flex-start'
+          alignItems: 'stretch'
         }}>
           {columns.map((col, ci) => (
             <div key={ci} className="glass-panel" style={{ padding: '1.75rem', height: '100%' }}>
