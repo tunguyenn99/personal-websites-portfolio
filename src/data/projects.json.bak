@@ -8,7 +8,8 @@
     "stars": 187,
     "forks": 49,
     "tags": [
-      "Community contribution"
+      "Community contribution",
+      "Self-learning"
     ]
   },
   {
@@ -20,7 +21,8 @@
     "stars": 35,
     "forks": 5,
     "tags": [
-      "Data Analytics"
+      "Data Analytics",
+      "Analytics Engineering"
     ]
   },
   {
@@ -45,7 +47,7 @@
     "forks": 10,
     "tags": [
       "Analytics Engineering",
-      "Community contribution"
+      "Self-learning"
     ]
   },
   {
@@ -96,8 +98,9 @@
     "stars": 13,
     "forks": 5,
     "tags": [
-      "Analytics Engineering",
-      "Data Analytics"
+      "Data Analytics",
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -184,7 +187,8 @@
     "forks": 0,
     "tags": [
       "Data Analytics",
-      "Business Intelligence"
+      "Business Intelligence",
+      "Community contribution"
     ]
   },
   {
@@ -270,7 +274,8 @@
     "stars": 1,
     "forks": 0,
     "tags": [
-      "Business Intelligence"
+      "Business Intelligence",
+      "Analytics Engineering"
     ]
   },
   {
@@ -307,7 +312,7 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Business Intelligence"
+      "Data Analytics"
     ]
   },
   {
@@ -368,8 +373,7 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Analytics Engineering",
-      "Self-learning"
+      "Analytics Engineering"
     ]
   },
   {
@@ -417,8 +421,8 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics"
+      "Data Analytics",
+      "Business Intelligence"
     ]
   },
   {
@@ -442,7 +446,8 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics"
+      "Data Analytics",
+      "Community contribution"
     ]
   },
   {
@@ -529,7 +534,7 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Other Projects"
+      "Self-learning"
     ]
   }
 ]
