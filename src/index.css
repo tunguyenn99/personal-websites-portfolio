@@ -3,113 +3,66 @@
 :root {
   /* THE KINETIC TERMINAL DESIGN TOKENS */
   --primary: #aadd51;
-  /* Cyber Lime */
   --on-primary: #233600;
   --secondary: #7bd0ff;
-  /* Electric Blue */
   --surface: #0b1326;
-  /* Canvas Background */
   --surface-low: #131b2e;
-  /* Sidebar/Well */
   --surface-container: #171f33;
   --surface-high: #222a3d;
-  /* Active cards */
   --surface-highest: #2d3449;
-  /* Overlays */
 
   --text-main: #dae2fd;
   --text-muted: #bdc8d1;
-  --outline: #87929a;
   --outline-low: rgba(135, 146, 154, 0.2);
 
   --glass-bg: rgba(34, 42, 61, 0.7);
   --glass-border: rgba(135, 146, 154, 0.2);
 
-  /* Responsive Tokens */
+  /* Biến khoảng cách linh hoạt */
   --container-padding: 2.5rem;
   --section-padding: 8rem;
 }
 
+/* 1. THIẾT LẬP CHỐNG TRÀN (QUAN TRỌNG NHẤT) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Padding không làm tăng chiều rộng tag */
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  /* Triệt tiêu thanh cuộn ngang */
+  width: 100%;
+  position: relative;
+  background-color: var(--surface);
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--surface);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
   background-image: radial-gradient(var(--outline-low) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
+/* 2. TYPOGRAPHY LINH HOẠT */
 h1,
 h2,
 h3,
 .display-editor {
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  /* Tự ngắt chữ nếu quá dài */
 }
 
-/* Background Blobs - Performance optimized for mobile */
-.bg-blobs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.blob-1 {
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, rgba(170, 221, 81, 0.08) 0%, rgba(170, 221, 81, 0) 70%);
-  border-radius: 50%;
-  filter: blur(100px);
-}
-
-.blob-2 {
-  position: absolute;
-  bottom: -20%;
-  right: -10%;
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba(123, 208, 255, 0.08) 0%, rgba(123, 208, 255, 0) 70%);
-  border-radius: 50%;
-  filter: blur(100px);
-}
-
-/* Glassmorphism Refined */
-.glass-panel {
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  padding: 2rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Only enable hover transforms on desktop devices */
-@media (hover: hover) {
-  .glass-panel:hover {
-    transform: translateY(-4px) scale(1.01);
-    background: rgba(45, 52, 73, 0.8);
-    border-color: var(--primary);
-    box-shadow: 0 20px 40px rgba(6, 14, 32, 0.6);
-  }
-}
-
+/* 3. CONTAINERS & PANELS */
 .container {
+  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 var(--container-padding);
@@ -117,124 +70,70 @@ h3,
 
 .section {
   padding: var(--section-padding) 0;
+  width: 100%;
+  overflow: hidden;
+  /* Cắt bỏ bất kỳ hiệu ứng bay bổng nào vượt quá section */
 }
 
-.section-title {
-  /* Fluid font size: min 2rem, scales with view, max 3rem */
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  margin-bottom: 4rem;
-  color: var(--text-main);
-  position: relative;
-  display: inline-block;
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  /* Đảm bảo panel không bao giờ rộng hơn cha */
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: var(--primary);
-  border-radius: 2px;
-}
-
-/* Buttons */
-.btn-primary {
-  background: var(--primary);
-  color: var(--on-primary);
-  border: none;
-  padding: 0.875rem 2rem;
-  border-radius: 6px;
-  font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.625rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: 0 0 15px rgba(170, 221, 81, 0.15);
-}
-
-.btn-secondary {
-  background: var(--surface-container);
-  color: var(--text-main);
-  border: 1px solid var(--outline-low);
-  padding: 0.875rem 2rem;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.625rem;
-}
-
-/* Animations */
-@keyframes kineticFade {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-    filter: blur(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-.animate-fade-in {
-  animation: kineticFade 1s cubic-bezier(0.16, 1, 0.3, 1) backwards;
-}
-
-/* --- Responsive Breakpoints --- */
-
+/* 4. CHỈNH SỬA CHO MOBILE (FIX LỖI FIT) */
 @media (max-width: 1024px) {
   :root {
-    --section-padding: 6rem;
+    --section-padding: 5rem;
   }
 }
 
 @media (max-width: 768px) {
   :root {
     --container-padding: 1.25rem;
+    /* Giảm padding để fit màn hình nhỏ */
     --section-padding: 4rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem !important;
+    /* Thu nhỏ tiêu đề */
+    margin-bottom: 2.5rem;
   }
 
   .glass-panel {
     padding: 1.5rem;
+    /* Panel nhỏ hơn cho mobile */
   }
 
-  .section-title {
-    margin-bottom: 2.5rem;
-  }
-
-  /* Reduce background effects for better mobile battery/performance */
-  .blob-1,
-  .blob-2 {
-    width: 80vw;
-    height: 80vw;
-    filter: blur(60px);
-    opacity: 0.5;
+  /* Ảnh và video không được vượt quá container */
+  img,
+  video,
+  canvas {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-@media (max-width: 480px) {
+/* Cho điện thoại cực nhỏ (iPhone SE) */
+@media (max-width: 380px) {
+  .section-title {
+    font-size: 1.8rem !important;
+  }
 
-  /* Ensure buttons are easy to tap on small screens */
   .btn-primary,
   .btn-secondary {
-    width: 100%;
-    justify-content: center;
-    padding: 1rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
 
+/* Hiệu ứng con trỏ typing */
 .typing-cursor {
   color: var(--primary);
   font-weight: 700;

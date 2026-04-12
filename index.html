@@ -1,14 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tu Nguyen's Portfolio Website</title>
-    <meta name="description" content="Official portfolio of Tu Nguyen - Senior Data Analyst and Analytics Engineer. Explore my projects in data engineering, analytics, and business intelligence." />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>Tu Nguyen | Senior Data Analyst & Analytics Engineer</title>
+  <meta name="description" content="Official portfolio of Tu Nguyen - Senior Data Analyst and Analytics Engineer." />
+
+  <meta name="theme-color" content="#0b1326" />
+
+  <meta name="format-detection" content="telephone=no" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tu Nguyen | Data Portfolio" />
+  <meta property="og:image" content="/og-image.jpg" />
+
+  <style>
+    /* CSS bổ trợ để đảm bảo không bị tràn ngang ngay khi trang đang load */
+    html,
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      /* Quan trọng: Triệt tiêu thanh cuộn ngang */
+      background-color: #0b1326;
+    }
+
+    #root {
+      width: 100%;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
