@@ -5,6 +5,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Techstack from './components/Techstack';
 import Community from './components/Community';
+import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -30,6 +31,7 @@ function App() {
         <Projects />
         <Techstack />
         <Community />
+        <Certifications />
         <Contact />
       </main>
       

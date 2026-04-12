@@ -30,6 +30,7 @@ export default function Navbar() {
     { name: 'Projects', href: '#projects' },
     { name: 'Techstack', href: '#techstack' },
     { name: 'Community', href: '#community' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ];
 
