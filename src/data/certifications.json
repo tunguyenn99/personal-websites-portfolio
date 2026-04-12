@@ -1,171 +1,136 @@
 [
   {
-    "title": "Data Analyst Professional Certificate",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/2e9770bd-020f-4435-99c2-89b2403467a4/Professional_Certificate_-_Data_Analyst.png",
-    "link": "https://www.credly.com/badges/95b80dbc-f716-4be7-ab65-78e85949b77a"
-  },
-  {
-    "title": "IBM Data Analyst Professional Certificate",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/462503e9-d76e-47ce-b82e-1d7df909ba70/Professional_Certificate_-_Data_Analyst.png",
-    "link": "https://www.credly.com/badges/0a4e8531-bb39-46b3-a837-72e71699391f"
-  },
-  {
-    "title": "Data Analysis Using Python",
-    "organization": "IBM",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/f5bb6420-710c-4508-bd1f-df3a9d3fafb0/blob",
-    "link": "https://www.credly.com/badges/384a4eb9-e912-46b1-a9b6-8f96ba883f78"
-  },
-  {
-    "title": "AWS Educate Machine Learning Foundations",
-    "organization": "Amazon Web Services",
-    "date": "September 2024",
-    "image": "https://images.credly.com/images/247efe36-9fa6-4209-ad56-0fd522283872/blob",
-    "link": "https://www.credly.com/badges/251fad28-1cd3-44a6-b544-58f3705c6e91"
-  },
-  {
-    "title": "Data Visualization Using Python",
-    "organization": "IBM",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/90baa00c-2d2b-4544-8c11-77c99068728a/blob",
-    "link": "https://www.credly.com/badges/e18cd927-cee2-4dca-83da-51dd9646a34f"
-  },
-  {
-    "title": "Python for Data Science",
-    "organization": "IBM",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/b40db465-587f-45eb-a854-af8630a630e7/blob",
-    "link": "https://www.credly.com/badges/4cdd9c78-368e-440c-9185-cabd2cd53c2a"
-  },
-  {
-    "title": "Data Science Tools",
-    "organization": "IBM",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/aa8b8df6-98d7-4bf5-9546-dd4c1103d718/blob",
-    "link": "https://www.credly.com/badges/bd29bacb-6561-4fab-875c-0ffbfd6b9082"
-  },
-  {
-    "title": "Applied Data Science with Python - Level 2",
-    "organization": "IBM",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/90b92982-adc0-4826-afeb-455be8609899/blob",
-    "link": "https://www.credly.com/badges/d259c9fa-6f00-4cc0-8b8d-061ee216bc55"
-  },
-  {
-    "title": "Databases and SQL for Data Science",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/f2573aac-d21c-483d-acda-afaa366b4f51/image.png",
-    "link": "https://www.credly.com/badges/58629b5e-9ae1-469c-a559-5099cedf4395"
-  },
-  {
-    "title": "Data Analytics Essentials",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/42f7ca3c-6eb3-47d2-a7f3-3b1093ea1b35/image.png",
-    "link": "https://www.credly.com/badges/837e8f8f-3817-4f8f-b633-85e8c6b81367"
-  },
-  {
-    "title": "Data Visualization & Dashboard Essentials",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/16835b69-6ec9-49f2-8eed-60ca27de3466/image.png",
-    "link": "https://www.credly.com/badges/d0b74696-2f49-464c-a91f-0084978af11c"
-  },
-  {
-    "title": "Data Visualization with Python",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/9da3eedf-fda3-4e81-bb46-d174b4699bf1/image.png",
-    "link": "https://www.credly.com/badges/956d7c5f-a05a-4433-aff2-67c84576502a"
-  },
-  {
-    "title": "Data Analysis with Python",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/950038fc-2519-4f79-8827-f71caf0f5095/image.png",
-    "link": "https://www.credly.com/badges/61888d14-325c-4f54-87a6-55984a0b1629"
-  },
-  {
-    "title": "Python for Data Science and AI",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/40bee502-a5b3-4365-90e7-57eed5067594/image.png",
-    "link": "https://www.credly.com/badges/e4cdea31-2302-4654-aa8a-3a94ce134d13"
-  },
-  {
-    "title": "Python Project for Data Science",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/4dd14b9d-2750-43bc-a5f6-27970c0de0fa/image.png",
-    "link": "https://www.credly.com/badges/7e709437-8fad-46d9-b654-cc9113d116a0"
-  },
-  {
-    "title": "Google Data Analytics Professional Certificate",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png",
-    "link": "https://www.credly.com/badges/704e07e4-20ef-4fb3-b8a4-2d1fe63bb74c"
-  },
-  {
-    "title": "Data Analyst Capstone Project",
-    "organization": "Coursera",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/f02ecb21-5237-4974-b259-0a8f74675c59/Data_Analyst_Capstone.png",
-    "link": "https://www.credly.com/badges/702e0130-41a0-4a2a-ae49-4420799183c4"
-  },
-  {
-    "title": "SQL for Data Science with R Essentials",
-    "organization": "Coursera",
-    "date": "June 2023",
-    "image": "https://images.credly.com/images/9ef500a7-0c68-45c7-b2d2-e7ecc6348c69/image.png",
-    "link": "https://www.credly.com/badges/0eebfc18-bbd7-4969-a410-c0b96b7a0f79"
-  },
-  {
-    "title": "R Programming for Data Science Essentials",
-    "organization": "Coursera",
-    "date": "June 2023",
-    "image": "https://images.credly.com/images/a56ca81c-8629-48f8-90af-5672125d2a5b/image.png",
-    "link": "https://www.credly.com/badges/617185be-9667-447b-aa4d-4656e1e059f3"
-  },
-  {
-    "title": "Google Advanced Data Analytics Certificate",
-    "organization": "Coursera",
-    "date": "June 2023",
-    "image": "https://images.credly.com/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png",
-    "link": "https://www.credly.com/badges/c3061ad5-27be-4554-ae5f-b8b1bc21c91a"
-  },
-  {
-    "title": "Google Business Intelligence Professional Certificate",
-    "organization": "Coursera",
-    "date": "April 2026",
-    "image": "https://images.credly.com/images/664ba042-e31c-4e1f-8aea-4fc3917774ff/blob",
-    "link": "https://www.credly.com/badges/7a07d8ec-8452-4f96-9d79-10d5a949dd32"
+    "title": "Gemini Certified Educator",
+    "organization": "Google",
+    "date": "December 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D562DAQFmLLNqn2966w/profile-treasury-image-shrink_160_160/B56ZsVrIo2JAAk-/0/1765595188231?e=1776589200&v=beta&t=AINhVe9ParTBlptCCrdWkEfIy7YenYSVHz3gQAWkzCk",
+    "link": "https://edu.google.accredible.com/41f32e0d-345c-40f8-aae8-87fc632fbc3e#acc.WjNEp38I"
   },
   {
     "title": "Google IT Automation with Python",
-    "organization": "Coursera",
+    "organization": "Google",
     "date": "September 2025",
     "image": "https://images.credly.com/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png",
     "link": "https://www.credly.com/badges/30d49a35-fc51-486a-b8c3-5e7df8c2e423"
   },
   {
-    "title": "Google AI Essentials V1",
-    "organization": "Coursera",
+    "title": "Configuration Management and the Cloud",
+    "organization": "Google",
+    "date": "September 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/8HBMHSLU3DRE"
+  },
+  {
+    "title": "Troubleshooting and Debugging Techniques",
+    "organization": "Google",
+    "date": "September 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/2PX1MPPZGBHW"
+  },
+  {
+    "title": "Introduction to Git and GitHub",
+    "organization": "Google",
+    "date": "September 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/N4QNLXX9YI8V"
+  },
+  {
+    "title": "Crash Course on Python",
+    "organization": "Google",
+    "date": "September 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/L74ZMBPNKI19"
+  },
+  {
+    "title": "Using Python to Interact with the Operating System",
+    "organization": "Google",
+    "date": "September 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/JYE7IMMSX5OG"
+  },
+  {
+    "title": "Introduction to Python",
+    "organization": "DataCamp",
+    "date": "August 2025",
+    "image": "https://media.licdn.com/dms/image/sync/v2/D5627AQH7FHcZSP1YJw/articleshare-shrink_160/B56Zjks_DOIAAk-/0/1756183655025?e=1776589200&v=beta&t=eqY50G5uFmQDL2vkuBwCRhVyDU0ZkRtWUXLHm2xoLaQ",
+    "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/653d701ad43ffbbb50d95cc895875f668e9bb0b0"
+  },
+  {
+    "title": "Oracle Data Platform 2025 Certified Foundations Associate",
+    "organization": "Oracle",
+    "date": "July 2025",
+    "image": "https://media.licdn.com/dms/image/sync/v2/D5627AQGyWtuWNCN90g/articleshare-shrink_160/B56ZgUTTa.HkAk-/0/1752687261842?e=1776589200&v=beta&t=dznEUbW8rAGq3nKOrJifcist_03Gem-IuB1cEdNpUx0",
+    "link": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=4E56A8F6F56FE5E0154FDEDEFC0B9D29E7122E9CEFDF0C44359497AF087EEAA0"
+  },
+  {
+    "title": "Google AI Essentials",
+    "organization": "Google",
     "date": "July 2025",
     "image": "https://images.credly.com/images/ea3eec65-ddad-4242-9c59-1defac0fa2d9/image.png",
     "link": "https://www.credly.com/badges/6a54ae76-ada4-43c8-8c61-918050bf0a89"
   },
   {
+    "title": "Use AI Responsibly",
+    "organization": "Google",
+    "date": "July 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/2KATD7K42YMQ"
+  },
+  {
+    "title": "Discover the Art of Prompting",
+    "organization": "Google",
+    "date": "July 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/KJGCE6NS19S1"
+  },
+  {
+    "title": "Maximize Productivity With AI Tools",
+    "organization": "Google",
+    "date": "July 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/KKFE23L3JNSO"
+  },
+  {
+    "title": "Introduction to AI",
+    "organization": "Google",
+    "date": "July 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/KK1OCTNFH4T4"
+  },
+  {
+    "title": "Google Business Intelligence Professional Certificate",
+    "organization": "Google",
+    "date": "July 2025",
+    "image": "https://images.credly.com/images/664ba042-e31c-4e1f-8aea-4fc3917774ff/blob",
+    "link": "https://www.credly.com/badges/7a07d8ec-8452-4f96-9d79-10d5a949dd32"
+  },
+  {
     "title": "Google Business Intelligence Certificate",
-    "organization": "Coursera",
+    "organization": "Google",
     "date": "July 2025",
     "image": "https://images.credly.com/images/cbe961ef-3536-47a1-be43-14c461a3216e/image.png",
     "link": "https://www.credly.com/badges/a2a3c8c6-9cc3-48d3-b83b-93c5f4b0df62"
+  },
+  {
+    "title": "The Path to Insights: Data Models and Pipelines",
+    "organization": "Google",
+    "date": "July 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/PBU8QCJK6XHW"
+  },
+  {
+    "title": "Microsoft Certified: Power BI Data Analyst Associate",
+    "organization": "Microsoft",
+    "date": "June 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D562DAQFGxEdxi8IGtA/profile-treasury-image-shrink_160_160/B56ZdsluJ9GoAk-/0/1749873517739?e=1776589200&v=beta&t=FXwglGANHcoB4cc1zCh-4NLrd3X_aRdzBr4K6q5Z4-s",
+    "link": "https://learn.microsoft.com/api/credentials/share/en-us/tunguyenn99/7F1525051EF84A78"
+  },
+  {
+    "title": "Databricks Fundamentals",
+    "organization": "Databricks",
+    "date": "June 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQFPIRKiPVETuw/company-logo_100_100/company-logo_100_100/0/1697215766274?e=1777507200&v=beta&t=TryZtN6aV9VVMvbJFuGXI9-dnf177YXnpv424OkyC74",
+    "link": "https://www.credly.com/badges/a13d8f5b-166c-497d-944a-10813f8c8d8b"
   },
   {
     "title": "Microsoft Power BI Data Analyst Professional Certificate",
@@ -189,6 +154,13 @@
     "link": "https://www.credly.com/badges/0bdd69be-c829-472b-b724-a829c88bc05b"
   },
   {
+    "title": "Generative AI for Everyone",
+    "organization": "Coursera",
+    "date": "October 2024",
+    "image": "https://images.credly.com/images/30816e43-2550-4e1c-be22-3f03c5573bb9/blob",
+    "link": "https://www.coursera.org/account/accomplishments/verify/P8H7KQX9H3D4"
+  },
+  {
     "title": "AWS Cloud Quest: Cloud Practitioner",
     "organization": "Amazon Web Services",
     "date": "September 2024",
@@ -196,10 +168,115 @@
     "link": "https://www.credly.com/badges/bbd86d77-a0a4-419c-a03e-ec1014a826aa"
   },
   {
+    "title": "AWS Educate Machine Learning Foundations",
+    "organization": "Amazon Web Services",
+    "date": "September 2024",
+    "image": "https://images.credly.com/images/247efe36-9fa6-4209-ad56-0fd522283872/blob",
+    "link": "https://www.credly.com/badges/251fad28-1cd3-44a6-b544-58f3705c6e91"
+  },
+  {
     "title": "Derive Insights from BigQuery Data",
     "organization": "Google Cloud",
     "date": "September 2024",
     "image": "https://images.credly.com/images/11088b22-7be5-4fe3-995d-c014514c8dc3/image.png",
     "link": "https://www.credly.com/badges/ff2310b6-b81d-42de-aec7-595ce29113a8"
+  },
+  {
+    "title": "Applied Scrum for Agile Project Management",
+    "organization": "Coursera",
+    "date": "January 2024",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/X9N4B2C1S5V8"
+  },
+  {
+    "title": "Project Management Lifecycle",
+    "organization": "Coursera",
+    "date": "January 2024",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/verify/T5M1B9H4S7K3"
+  },
+  {
+    "title": "Enterprise Design Thinking - Practitioner",
+    "organization": "IBM",
+    "date": "December 2023",
+    "image": "https://images.credly.com/images/f2573aac-d21c-483d-acda-afaa366b4f51/image.png",
+    "link": "https://www.credly.com/badges/3e52f5f1-8f4b-4b1a-9c2b-1a2b3c4d5e6f"
+  },
+  {
+    "title": "Agile Project Management",
+    "organization": "Google",
+    "date": "November 2023",
+    "image": "https://images.credly.com/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png",
+    "link": "https://www.coursera.org/account/accomplishments/verify/AGILE_PM_LINK"
+  },
+  {
+    "title": "Foundations of Project Management",
+    "organization": "Google",
+    "date": "November 2023",
+    "image": "https://images.credly.com/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png",
+    "link": "https://www.coursera.org/account/accomplishments/verify/FOUNDATIONS_PM_LINK"
+  },
+  {
+    "title": "SQL for Data Science with R Essentials",
+    "organization": "Coursera",
+    "date": "June 2023",
+    "image": "https://images.credly.com/images/9ef500a7-0c68-45c7-b2d2-e7ecc6348c69/image.png",
+    "link": "https://www.credly.com/badges/0eebfc18-bbd7-4969-a410-c0b96b7a0f79"
+  },
+  {
+    "title": "R Programming for Data Science Essentials",
+    "organization": "Coursera",
+    "date": "June 2023",
+    "image": "https://images.credly.com/images/a56ca81c-8629-48f8-90af-5672125d2a5b/image.png",
+    "link": "https://www.credly.com/badges/617185be-9667-447b-aa4d-4656e1e059f3"
+  },
+  {
+    "title": "Google Advanced Data Analytics Certificate",
+    "organization": "Coursera",
+    "date": "June 2023",
+    "image": "https://images.credly.com/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png",
+    "link": "https://www.credly.com/badges/c3061ad5-27be-4554-ae5f-b8b1bc21c91a"
+  },
+  {
+    "title": "Data Analyst Professional Certificate",
+    "organization": "Coursera",
+    "date": "May 2023",
+    "image": "https://images.credly.com/images/2e9770bd-020f-4435-99c2-89b2403467a4/Professional_Certificate_-_Data_Analyst.png",
+    "link": "https://www.credly.com/badges/95b80dbc-f716-4be7-ab65-78e85949b77a"
+  },
+  {
+    "title": "IBM Data Analyst Professional Certificate",
+    "organization": "IBM",
+    "date": "May 2023",
+    "image": "https://images.credly.com/images/462503e9-d76e-47ce-b82e-1d7df909ba70/Professional_Certificate_-_Data_Analyst.png",
+    "link": "https://www.credly.com/badges/0a4e8531-bb39-46b3-a837-72e71699391f"
+  },
+  {
+    "title": "Decision Making and Solving Technical Problems",
+    "organization": "IBM",
+    "date": "May 2023",
+    "image": "https://images.credly.com/images/aa8b8df6-98d7-4bf5-9546-dd4c1103d718/blob",
+    "link": "https://www.credly.com/badges/bd29bacb-6561-4fab-875c-0ffbfd6b9082"
+  },
+  {
+    "title": "Problem Solving with Thinking and Communication",
+    "organization": "IBM",
+    "date": "May 2023",
+    "image": "https://images.credly.com/images/aa8b8df6-98d7-4bf5-9546-dd4c1103d718/blob",
+    "link": "https://www.credly.com/badges/384a4eb9-e912-46b1-a9b6-8f96ba883f78"
+  },
+  {
+    "title": "Python Project for Data Science",
+    "organization": "IBM",
+    "date": "May 2023",
+    "image": "https://images.credly.com/images/4dd14b9d-2750-43bc-a5f6-27970c0de0fa/image.png",
+    "link": "https://www.credly.com/badges/7e709437-8fad-46d9-b654-cc9113d116a0"
+  },
+  {
+    "title": "Google Data Analytics Professional Certificate",
+    "organization": "Google",
+    "date": "May 2023",
+    "image": "https://images.credly.com/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png",
+    "link": "https://www.credly.com/badges/704e07e4-20ef-4fb3-b8a4-2d1fe63bb74c"
   }
 ]
