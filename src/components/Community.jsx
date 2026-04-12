@@ -97,8 +97,8 @@ export default function Community() {
             overflow: 'hidden',
             border: '1px solid var(--outline-low)'
           }}>
-            <div style={{ position: 'relative', zIndex: 10 }}>
-              <div style={{ fontSize: '3.5rem', fontWeight: 900, color: 'var(--primary)', lineHeight: 1 }}>
+              <div style={{ position: 'relative', zIndex: 10 }}>
+              <div className="stat-number">
                 <CountUp end={74000} suffix="+" />
               </div>
               <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Active Members</div>
@@ -120,8 +120,8 @@ export default function Community() {
             overflow: 'hidden',
             border: '1px solid var(--outline-low)'
           }}>
-            <div style={{ position: 'relative', zIndex: 10 }}>
-              <div style={{ fontSize: '3.5rem', fontWeight: 900, color: 'var(--secondary)', lineHeight: 1 }}>
+              <div style={{ position: 'relative', zIndex: 10 }}>
+              <div className="stat-number stat-number-secondary">
                 <CountUp end={180} suffix="+" />
               </div>
               <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Open-Source Resources</div>
@@ -150,11 +150,11 @@ export default function Community() {
               Our community is an inclusive space for <strong>everyone</strong> - from curious beginners and tech hobbyists to industry veterans - united by a common goal to master the world of data.
             </p>
           </div>
-          <div style={{ display: 'flex', gap: '1.25rem', paddingBottom: '1rem' }}>
-            <a href="https://www.facebook.com/groups/xomdata" target="_blank" rel="noreferrer" className="btn-primary" style={{ padding: '1rem 2rem', minWidth: '180px', textAlign: 'center' }}>
+          <div className="community-cta" style={{ display: 'flex', gap: '1.25rem', paddingBottom: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a href="https://www.facebook.com/groups/xomdata" target="_blank" rel="noreferrer" className="btn-primary" style={{ padding: '1rem 2rem', flex: '1 1 48%', minWidth: 0, textAlign: 'center' }}>
               Join Community <ExternalLink size={16} />
             </a>
-            <a href="https://github.com/tunguyenn99/thu_vien_cua_xom_data" target="_blank" rel="noreferrer" className="btn-secondary" style={{ padding: '1rem 2rem', minWidth: '180px', textAlign: 'center' }}>
+            <a href="https://github.com/tunguyenn99/thu_vien_cua_xom_data" target="_blank" rel="noreferrer" className="btn-secondary" style={{ padding: '1rem 2rem', flex: '1 1 48%', minWidth: 0, textAlign: 'center' }}>
               <SiGithub size={18} /> Library
             </a>
           </div>
@@ -167,7 +167,7 @@ export default function Community() {
           style={{ position: 'relative' }}
         >
             <div className="glass-panel" style={{ padding: '0.6rem', overflow: 'hidden', background: 'rgba(0,0,0,0.4)', border: '1px solid var(--outline-low)' }}>
-            <div style={{ position: 'relative', aspectRatio: '21/9', maxHeight: '48vh', borderRadius: '8px', overflow: 'hidden', background: '#000' }}>
+            <div className="community-gallery" style={{ position: 'relative', aspectRatio: '21/9', maxHeight: '48vh', borderRadius: '8px', overflow: 'hidden', background: '#000' }}>
               {images.map((img, idx) => (
                 <img
                   key={idx}
@@ -240,10 +240,23 @@ export default function Community() {
           box-shadow: 0 0 30px var(--primary);
           transform: translateY(-50%) scale(1.1);
         }
+        .stat-number {
+          font-size: 3.5rem;
+          font-weight: 900;
+          color: var(--primary);
+          line-height: 1;
+        }
+        .stat-number-secondary { color: var(--secondary); }
+        .community-cta a { box-sizing: border-box; }
+        .community-gallery img { display: block; }
         @media (max-width: 480px) {
           .carousel-btn { width: 40px !important; height: 40px !important; left: 0.5rem !important; right: 0.5rem !important; }
           .carousel-btn:hover { transform: translateY(-50%) scale(1.05) !important; }
           .carousel-btn svg { width: 18px; height: 18px; }
+          .stat-number { font-size: 2.1rem !important; }
+          .community-cta a { flex: 1 1 48% !important; min-width: 0 !important; }
+          .community-gallery { aspect-ratio: 4/3 !important; max-height: 60vh !important; }
+          .community-gallery img { position: absolute; left: 0; top: 0; }
         }
       `}</style>
     </section>
