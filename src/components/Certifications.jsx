@@ -235,26 +235,35 @@ export default function Certifications() {
             </button>
 
             <div style={{ display: 'flex', gap: '0.5rem' }}>
-              {[...Array(totalPages)].map((_, i) => (
-                <button
-                  key={i + 1}
-                  onClick={() => handlePageChange(i + 1)}
-                  style={{
-                    width: '45px',
-                    height: '45px',
-                    borderRadius: '12px',
-                    border: '1px solid',
-                    borderColor: currentPage === i + 1 ? 'var(--primary)' : 'var(--outline-low)',
-                    background: currentPage === i + 1 ? 'var(--primary)' : 'rgba(255,255,255,0.05)',
-                    color: currentPage === i + 1 ? 'var(--on-primary)' : 'var(--text-main)',
-                    fontWeight: 700,
-                    cursor: 'pointer',
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  {i + 1}
-                </button>
-              ))}
+              {[...Array(totalPages)].map((_, i) => {
+                const pageNumber = i + 1;
+                const isActive = currentPage === pageNumber; // Kiểm tra trang hiện tại
+
+                return (
+                  <button
+                    key={pageNumber}
+                    onClick={() => handlePageChange(pageNumber)}
+                    style={{
+                      width: '45px',
+                      height: '45px',
+                      borderRadius: '12px',
+                      border: '1px solid',
+                      // Chỉ đổi màu border nếu là trang active
+                      borderColor: isActive ? 'var(--primary)' : 'var(--outline-low)',
+                      // Chỉ đổi màu background nếu là trang active
+                      background: isActive ? 'var(--primary)' : 'rgba(255,255,255,0.05)',
+                      // Chỉ đổi màu chữ nếu là trang active
+                      color: isActive ? 'var(--on-primary)' : 'var(--text-main)',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease',
+                      boxShadow: isActive ? '0 0 15px rgba(var(--primary-rgb), 0.3)' : 'none'
+                    }}
+                  >
+                    {pageNumber}
+                  </button>
+                );
+              })}
             </div>
 
             <button
