@@ -192,14 +192,14 @@
     "title": "Microsoft Certified: Power BI Data Analyst Associate",
     "organization": "Microsoft",
     "date": "Jun 2025",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1777507200&v=beta&t=w5cLA4v0uQc5rekDZijMu_DDZKYKKacQMlZu6z5LW4Y",
+    "image": "https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
     "link": "https://learn.microsoft.com/api/credentials/share/en-us/tunguyenn99/7F1525051EF84A78?sharingId"
   },
   {
     "title": "Microsoft Power BI Data Analyst Professional Badge",
     "organization": "Microsoft",
     "date": "Mar 2025",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1777507200&v=beta&t=w5cLA4v0uQc5rekDZijMu_DDZKYKKacQMlZu6z5LW4Y",
+    "image": "https://images.credly.com/size/340x340/images/a8bb8375-f317-45e1-98b0-a81fb633d995/blob",
     "link": "https://www.credly.com/badges/37d30f55-d8bd-4f8e-8ae9-7e15591e1dbd/public_url"
   },
   {
@@ -248,7 +248,7 @@
     "title": "AI Skills Challenge April 2024 Badge",
     "organization": "Microsoft",
     "date": "Apr 2024",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1777507200&v=beta&t=w5cLA4v0uQc5rekDZijMu_DDZKYKKacQMlZu6z5LW4Y",
+    "image": "https://learn.microsoft.com/training/achievements/ai-skills-challenge-april-2024.png",
     "link": "https://learn.microsoft.com/api/achievements/share/en-us/tunguyenn99/8A7BSM8W?sharingId=B56A6887FAC64A5D"
   },
   {
@@ -465,7 +465,7 @@
     "title": "Data Analysis Using Python",
     "organization": "IBM",
     "date": "May 2023",
-    "image": "https://images.credly.com/images/384a4eb9-e912-46b1-a9b6-8f96ba883f78/IBM_Data_Analysis_Python.png",
+    "image": "https://images.credly.com/size/340x340/images/f5bb6420-710c-4508-bd1f-df3a9d3fafb0/blob",
     "link": "https://www.credly.com/badges/384a4eb9-e912-46b1-a9b6-8f96ba883f78"
   },
   {
@@ -474,13 +474,6 @@
     "date": "May 2023",
     "image": "https://images.credly.com/size/340x340/images/90baa00c-2d2b-4544-8c11-77c99068728a/blob",
     "link": "https://www.credly.com/badges/e18cd927-cee2-4dca-83da-51dd9646a34f"
-  },
-  {
-    "title": "Python for Data Science",
-    "organization": "IBM",
-    "date": "May 2023",
-    "image": "https://images.credly.com/images/4cdd9c78-368e-440c-9185-cabd2cd53c2a/IBM_Python_DataScience.png",
-    "link": "https://www.credly.com/badges/4cdd9c78-368e-440c-9185-cabd2cd53c2a"
   },
   {
     "title": "Databases and SQL for Data Science",
