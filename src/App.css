@@ -1,4 +1,3 @@
-/* --- UI Components --- */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -12,16 +11,15 @@
   &:hover {
     border-color: var(--accent-border);
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
-/* --- Hero Section Fix --- 
-   Quan trọng: Ép các khối decor không được gây tràn ngang 
-*/
 .hero {
   position: relative;
-  max-width: 100vw;
-  overflow: hidden;
-  /* Chống các khối transform bay ra ngoài màn hình */
 
   .base,
   .framework,
@@ -31,8 +29,7 @@
   }
 
   .base {
-    width: min(170px, 40vw);
-    /* Co giãn theo màn hình nhỏ */
+    width: 170px;
     position: relative;
     z-index: 0;
   }
@@ -56,23 +53,8 @@
     width: auto;
     transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
   }
-
-  /* Trên mobile cực nhỏ, giảm bớt hiệu ứng transform để tránh đẩy layout */
-  @media (max-width: 768px) {
-
-    .framework,
-    .vite {
-      transform: none !important;
-      position: relative !important;
-      top: 0 !important;
-      margin: 10px auto !important;
-      display: block;
-      height: 40px;
-    }
-  }
 }
 
-/* --- Layout Containers --- */
 #center {
   display: flex;
   flex-direction: column;
@@ -80,116 +62,95 @@
   place-content: center;
   place-items: center;
   flex-grow: 1;
-  width: 100%;
-  max-width: 100%;
-  /* Đảm bảo không rộng hơn viewport */
 
   @media (max-width: 1024px) {
-    padding: 2rem 1rem;
+    padding: 32px 20px 24px;
     gap: 18px;
-    text-align: center;
   }
 }
 
-/* --- Next Steps / Footer --- */
 #next-steps {
   display: flex;
   border-top: 1px solid var(--border);
   text-align: left;
-  width: 100%;
 
   &>div {
     flex: 1 1 0;
     padding: 32px;
+
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
   }
 
-  /* Ép hàng dọc trên mobile */
-  @media (max-width: 768px) {
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
     flex-direction: column;
     text-align: center;
-
-    &>div {
-      padding: 24px 1rem;
-      width: 100%;
-    }
   }
 }
 
 #docs {
   border-right: 1px solid var(--border);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
 }
 
-/* --- Social Links / Lists --- */
 #next-steps ul {
   list-style: none;
   padding: 0;
   display: flex;
   gap: 8px;
   margin: 32px 0 0;
-  flex-wrap: wrap;
-  /* Cho phép xuống dòng nếu thiếu chỗ */
 
-  li {
-    flex: 1 1 auto;
+  .logo {
+    height: 18px;
   }
 
   a {
     color: var(--text-h);
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 6px;
     background: var(--social-bg);
     display: flex;
-    padding: 12px;
-    /* Tăng diện tích bấm cho mobile */
+    padding: 6px 12px;
     align-items: center;
-    justify-content: center;
     gap: 8px;
     text-decoration: none;
-    width: 100%;
-  }
+    transition: box-shadow 0.3s;
 
-  @media (max-width: 600px) {
-    li {
-      flex: 1 1 100%;
-      /* Mỗi nút 1 hàng trên mobile */
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+
+    .button-icon {
+      height: 18px;
+      width: 18px;
     }
   }
-}
 
-/* --- Global Section Grids (Fix lỗi tràn card) --- */
-.cert-grid,
-.projects-grid {
-  display: grid !important;
-  /* Dùng min 280px để fit mọi dòng phone */
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)) !important;
-  gap: 1.5rem !important;
-  width: 100% !important;
-  padding: 0 !important;
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr !important;
-    /* Luôn 1 cột duy nhất */
-  }
-}
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
 
-/* --- Filter Bar cuộn ngang --- */
-.filter-container {
-  display: flex;
-  gap: 0.5rem;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 10px;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-
-  &::-webkit-scrollbar {
-    display: none;
-    /* Ẩn scrollbar cho đẹp */
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
   }
 }
 
@@ -197,7 +158,30 @@
   height: 88px;
   border-top: 1px solid var(--border);
 
-  @media (max-width: 768px) {
-    height: 40px;
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
   }
 }

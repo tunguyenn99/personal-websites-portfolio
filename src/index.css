@@ -3,137 +3,261 @@
 :root {
   /* THE KINETIC TERMINAL DESIGN TOKENS */
   --primary: #aadd51;
+  /* Cyber Lime */
   --on-primary: #233600;
   --secondary: #7bd0ff;
+  /* Electric Blue */
   --surface: #0b1326;
+  /* Canvas Background */
   --surface-low: #131b2e;
+  /* Sidebar/Well */
   --surface-container: #171f33;
   --surface-high: #222a3d;
+  /* Active cards */
   --surface-highest: #2d3449;
+  /* Overlays */
 
   --text-main: #dae2fd;
   --text-muted: #bdc8d1;
+  --outline: #87929a;
   --outline-low: rgba(135, 146, 154, 0.2);
 
   --glass-bg: rgba(34, 42, 61, 0.7);
   --glass-border: rgba(135, 146, 154, 0.2);
-
-  /* Biến khoảng cách linh hoạt */
-  --container-padding: 2.5rem;
-  --section-padding: 8rem;
 }
 
-/* 1. THIẾT LẬP CHỐNG TRÀN (QUAN TRỌNG NHẤT) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* Padding không làm tăng chiều rộng tag */
-}
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  /* Triệt tiêu thanh cuộn ngang */
-  width: 100%;
-  position: relative;
-  background-color: var(--surface);
 }
 
 body {
   font-family: 'Inter', sans-serif;
+  background-color: var(--surface);
   color: var(--text-main);
   line-height: 1.6;
+  overflow-x: hidden;
+  /* Grid Overlay from Design Specs */
   background-image: radial-gradient(var(--outline-low) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* 2. TYPOGRAPHY LINH HOẠT */
 h1,
 h2,
 h3,
 .display-editor {
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: -0.02em;
-  overflow-wrap: break-word;
-  /* Tự ngắt chữ nếu quá dài */
 }
 
-/* 3. CONTAINERS & PANELS */
-.container {
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
-
-.section {
-  padding: var(--section-padding) 0;
-  width: 100%;
+/* Background Blobs - Keep but update colors */
+.bg-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
   overflow: hidden;
-  /* Cắt bỏ bất kỳ hiệu ứng bay bổng nào vượt quá section */
+  pointer-events: none;
 }
 
+.blob-1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(170, 221, 81, 0.08) 0%, rgba(170, 221, 81, 0) 70%);
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.blob-2 {
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(123, 208, 255, 0.08) 0%, rgba(123, 208, 255, 0) 70%);
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+/* Glassmorphism Refined for Kinetic Terminal */
 .glass-panel {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
+  /* Tighter corners per spec */
   padding: 2rem;
-  width: 100%;
-  /* Đảm bảo panel không bao giờ rộng hơn cha */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* 4. CHỈNH SỬA CHO MOBILE (FIX LỖI FIT) */
+.glass-panel:hover {
+  transform: translateY(-4px) scale(1.01);
+  background: rgba(45, 52, 73, 0.8);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(6, 14, 32, 0.6);
+}
+
+/* Tonal Shifts (No-Line Rule) */
+.sidebar-well {
+  background: var(--surface-low);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.section {
+  padding: 8rem 0;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: var(--text-main);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Buttons (Terminal Precision) */
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 15px rgba(170, 221, 81, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 0 25px rgba(170, 221, 81, 0.3);
+}
+
+.btn-secondary {
+  background: var(--surface-container);
+  color: var(--text-main);
+  border: 1px solid var(--outline-low);
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.btn-secondary:hover {
+  background: var(--surface-high);
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+/* Tags/Chips (Data Pulse) */
+.tag {
+  background: rgba(123, 208, 255, 0.1);
+  color: var(--secondary);
+  padding: 0.375rem 1rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(123, 208, 255, 0.2);
+}
+
+/* Animations */
+@keyframes kineticFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-fade-in {
+  animation: kineticFade 1s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.profile-img-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-img-hover:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: contrast(1.2) brightness(1.1) !important;
+}
+
 @media (max-width: 1024px) {
-  :root {
-    --section-padding: 5rem;
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    padding: 6rem 0;
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --container-padding: 1.25rem;
-    /* Giảm padding để fit màn hình nhỏ */
-    --section-padding: 4rem;
+    --container-padding: 1.5rem;
+  }
+
+  .container {
+    padding: 0 var(--container-padding);
+  }
+
+  .section {
+    padding: 4rem 0;
   }
 
   .section-title {
-    font-size: 2.2rem !important;
-    /* Thu nhỏ tiêu đề */
+    font-size: 2rem;
     margin-bottom: 2.5rem;
   }
 
   .glass-panel {
     padding: 1.5rem;
-    /* Panel nhỏ hơn cho mobile */
-  }
-
-  /* Ảnh và video không được vượt quá container */
-  img,
-  video,
-  canvas {
-    max-width: 100%;
-    height: auto;
   }
 }
 
-/* Cho điện thoại cực nhỏ (iPhone SE) */
-@media (max-width: 380px) {
-  .section-title {
-    font-size: 1.8rem !important;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    padding: 0.8rem 1.2rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* Hiệu ứng con trỏ typing */
 .typing-cursor {
   color: var(--primary);
   font-weight: 700;
@@ -149,5 +273,11 @@ h3,
 
   50% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
   }
 }
