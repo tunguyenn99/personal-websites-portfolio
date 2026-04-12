@@ -1,21 +1,21 @@
 import React from 'react';
-import { 
-  SiPython, SiPostgresql, SiDbt, SiApacheairflow, SiSnowflake, 
-  SiDatabricks, SiSupabase, SiApachespark, SiAirbyte, SiSelenium, 
-  SiGooglecloud, SiGooglebigquery, SiLooker, SiApachesuperset, 
-  SiMetabase, SiGoogleanalytics, SiJira, SiConfluence, SiFigma, 
+import {
+  SiPython, SiPostgresql, SiDbt, SiApacheairflow, SiSnowflake,
+  SiDatabricks, SiSupabase, SiApachespark, SiAirbyte, SiSelenium,
+  SiGooglecloud, SiGooglebigquery, SiLooker, SiApachesuperset,
+  SiMetabase, SiGoogleanalytics, SiJira, SiConfluence, SiFigma,
   SiNotion, SiDbeaver, SiMongodb
 } from 'react-icons/si';
-import { 
-  Database, Terminal, Cloud, BarChart3, Workflow, 
-  PieChart, Code, Download, Layers, ShieldCheck, 
+import {
+  Database, Terminal, Cloud, BarChart3, Workflow,
+  PieChart, Code, Download, Layers, ShieldCheck,
   Eye, FileText, Layout, Users
 } from 'lucide-react';
 
 export default function Techstack() {
   const stack = [
-    { 
-      category: "Programming & Query Languages", 
+    {
+      category: "Programming & Query Languages",
       icon: <Terminal size={20} />,
       items: [
         { name: "Python", icon: <SiPython color="#3776AB" /> },
@@ -23,10 +23,10 @@ export default function Techstack() {
         { name: "KQL", icon: <Database size={14} color="var(--primary)" /> },
         { name: "MQL", icon: <Database size={14} color="var(--secondary)" /> },
         { name: "JQL", icon: <Database size={14} color="#0052CC" /> }
-      ] 
+      ]
     },
-    { 
-      category: "Data Ingestion & Collection (DE/AE focus)", 
+    {
+      category: "Data Ingestion & Collection (DE/AE focus)",
       icon: <Download size={20} />,
       items: [
         { name: "Airbyte", icon: <SiAirbyte color="#6557FF" /> },
@@ -34,10 +34,10 @@ export default function Techstack() {
         { name: "DLT", icon: <Download size={14} color="#FF694B" /> },
         { name: "Selenium", icon: <SiSelenium color="#43B02A" /> },
         { name: "BeautifulSoup", icon: <Code size={14} color="#FFD43B" /> }
-      ] 
+      ]
     },
-    { 
-      category: "Transformation & Orchestration (AE focus)", 
+    {
+      category: "Transformation & Orchestration (AE focus)",
       icon: <Workflow size={20} />,
       items: [
         { name: "dbt", icon: <SiDbt color="#FF694B" /> },
@@ -45,12 +45,12 @@ export default function Techstack() {
         { name: "Astronomer", icon: <Workflow size={14} color="#FE4A49" /> },
         { name: "Apache Spark", icon: <SiApachespark color="#E25A1C" /> },
         { name: "Dagster", icon: <Workflow size={14} color="#4FB194" /> },
-        { name: "Kestra", icon: <span style={{fontSize: '0.8rem'}}>⚡</span> },
-        { name: "Mage", icon: <span style={{fontSize: '0.8rem'}}>🧙</span> }
-      ] 
+        { name: "Kestra", icon: <span style={{ fontSize: '0.8rem' }}>⚡</span> },
+        { name: "Mage", icon: <span style={{ fontSize: '0.8rem' }}>🧙</span> }
+      ]
     },
-    { 
-      category: "Data Platforms & Storage", 
+    {
+      category: "Data Platforms & Storage",
       icon: <Layers size={20} />,
       items: [
         { name: "GCP", icon: <SiGooglecloud color="#4285F4" /> },
@@ -64,10 +64,10 @@ export default function Techstack() {
         { name: "Oracle", icon: <Database size={14} color="#F70000" /> },
         { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
         { name: "Supabase", icon: <SiSupabase color="#3ECF8E" /> }
-      ] 
+      ]
     },
-    { 
-      category: "BI, Analytics & Visualization (DA/BI focus)", 
+    {
+      category: "BI, Analytics & Visualization (DA/BI focus)",
       icon: <BarChart3 size={20} />,
       items: [
         { name: "Power BI", icon: <BarChart3 size={14} color="#F2C811" /> },
@@ -76,10 +76,10 @@ export default function Techstack() {
         { name: "Metabase", icon: <SiMetabase color="#509EE3" /> },
         { name: "GA4 / Analytics", icon: <SiGoogleanalytics color="#E37400" /> },
         { name: "SmartLook", icon: <Eye size={14} color="#F25C05" /> }
-      ] 
+      ]
     },
-    { 
-      category: "Collaboration & Tools", 
+    {
+      category: "Collaboration & Tools",
       icon: <Users size={20} />,
       items: [
         { name: "Jira", icon: <SiJira color="#0052CC" /> },
@@ -89,36 +89,36 @@ export default function Techstack() {
         { name: "DBeaver", icon: <SiDbeaver color="#382923" /> },
         { name: "Excel", icon: <FileText size={14} color="#1D6F42" /> },
         { name: "Notion", icon: <SiNotion color="#000000" /> }
-      ] 
+      ]
     }
   ];
 
   return (
     <section id="techstack" className="section">
       <h2 className="section-title">End-to-End Stack</h2>
-      
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-        gap: '2.5rem' 
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+        gap: '2.5rem'
       }}>
         {stack.map((group, idx) => (
-          <div key={idx} className="glass-panel animate-fade-in" style={{ 
+          <div key={idx} className="glass-panel animate-fade-in" style={{
             animationDelay: `${idx * 0.1}s`,
             border: '1px solid var(--outline-low)',
             display: 'flex',
             flexDirection: 'column'
           }}>
             {/* Header Group */}
-            <div style={{ 
-              display: 'flex', alignItems: 'center', gap: '0.75rem', 
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: '0.75rem',
               marginBottom: '1.5rem', paddingBottom: '0.875rem',
               borderBottom: '1px solid rgba(255,255,255,0.05)'
             }}>
               <div style={{ color: 'var(--primary)', opacity: 0.8 }}>
                 {group.icon}
               </div>
-              <h3 style={{ 
+              <h3 style={{
                 fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.1em',
                 textTransform: 'uppercase', color: 'var(--text-main)', margin: 0
               }}>
@@ -127,16 +127,16 @@ export default function Techstack() {
             </div>
 
             {/* Icons Grid */}
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', 
-              gap: '0.75rem' 
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+              gap: '0.75rem'
             }}>
               {group.items.map((tech, tIdx) => (
-                <div 
-                  key={tIdx} 
+                <div
+                  key={tIdx}
                   className="tech-item-hover"
-                  style={{ 
+                  style={{
                     display: 'flex', alignItems: 'center', gap: '0.5rem',
                     background: 'rgba(255,255,255,0.02)',
                     padding: '0.5rem 0.75rem', borderRadius: '6px',
@@ -147,8 +147,8 @@ export default function Techstack() {
                   <div style={{ fontSize: '1rem', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
                     {tech.icon}
                   </div>
-                  <span style={{ 
-                    fontSize: '0.75rem', fontWeight: 600, 
+                  <span style={{
+                    fontSize: '0.75rem', fontWeight: 600,
                     color: 'var(--text-muted)',
                     whiteSpace: 'nowrap',
                     overflow: 'hidden',
