@@ -1,12 +1,10 @@
 import React from 'react';
 import { 
-  SiPython, SiJavascript, SiPostgresql, SiHtml5, SiCss3 as SiCss,
-  SiDbt, SiApacheairflow, SiSnowflake, SiDatabricks, 
-  SiSupabase, SiDocker, SiKubernetes, SiLinux, SiGithubactions, 
-  SiJupyter, SiApachespark, SiAirbyte, SiSelenium, SiGooglecloud,
-  SiGooglebigquery, SiLooker, SiApachesuperset, SiMetabase,
-  SiGoogleanalytics, SiJira, SiConfluence, SiFigma, SiNotion,
-  SiDbeaver, SiMongodb
+  SiPython, SiPostgresql, SiDbt, SiApacheairflow, SiSnowflake, 
+  SiDatabricks, SiSupabase, SiApachespark, SiAirbyte, SiSelenium, 
+  SiGooglecloud, SiGooglebigquery, SiLooker, SiApachesuperset, 
+  SiMetabase, SiGoogleanalytics, SiJira, SiConfluence, SiFigma, 
+  SiNotion, SiDbeaver, SiMongodb
 } from 'react-icons/si';
 import { 
   Database, Terminal, Cloud, BarChart3, Workflow, 
