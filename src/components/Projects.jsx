@@ -35,35 +35,36 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section">
-      <h2 className="section-title">Highlighted Projects</h2>
-      
-      {/* Filter UI */}
-      <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '3rem', justifyContent: 'center' }}>
-        {filters.map(filter => (
-          <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
-            style={{
-              padding: '0.5rem 1rem',
-              borderRadius: '9999px',
-              border: `1px solid ${activeFilter === filter ? 'var(--primary)' : 'rgba(255,255,255,0.1)'}`,
-              background: activeFilter === filter ? 'rgba(139, 92, 246, 0.2)' : 'rgba(0,0,0,0.2)',
-              color: activeFilter === filter ? 'var(--primary)' : 'var(--text-muted)',
-              cursor: 'pointer',
-              transition: 'all 0.3s',
-              fontWeight: 500,
-              backdropFilter: 'blur(10px)'
-            }}
-          >
-            {filter}
-          </button>
-        ))}
-      </div>
+      <div className="container">
+        <h2 className="section-title">Highlighted Projects</h2>
+        
+        {/* Filter UI */}
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '3rem', justifyContent: 'center' }}>
+          {filters.map(filter => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              style={{
+                padding: '0.5rem 1rem',
+                borderRadius: '9999px',
+                border: `1px solid ${activeFilter === filter ? 'var(--primary)' : 'rgba(255,255,255,0.1)'}`,
+                background: activeFilter === filter ? 'rgba(139, 92, 246, 0.2)' : 'rgba(0,0,0,0.2)',
+                color: activeFilter === filter ? 'var(--primary)' : 'var(--text-muted)',
+                cursor: 'pointer',
+                transition: 'all 0.3s',
+                fontWeight: 500,
+                backdropFilter: 'blur(10px)'
+              }}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
 
-      <div className="card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        <div className="card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
         {filteredProjects.map((proj, idx) => (
           <a key={proj.id || idx} href={proj.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="glass-panel equal-panel" style={{ height: '100%', transition: 'transform 0.3s', ...proj.stars > 10 ? { border: '1px solid rgba(139, 92, 246, 0.3)' } : {} }}>
+            <div className="glass-panel equal-panel" style={{ height: '100%', transition: 'transform 0.3s', border: '1px solid var(--outline-low)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                 <Database size={24} color="var(--primary)" />
                 <div style={{ display: 'flex', gap: '1rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
@@ -86,6 +87,7 @@ export default function Projects() {
             </div>
           </a>
         ))}
+        </div>
       </div>
     </section>
   );

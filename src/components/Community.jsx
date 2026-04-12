@@ -52,6 +52,7 @@ function CountUp({ end, duration = 2000, suffix = "" }) {
 export default function Community() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (isPaused) return;
@@ -66,9 +67,10 @@ export default function Community() {
 
   return (
     <section id="community" className="section">
-      <h2 className="section-title">Community Impact</h2>
+      <div className="container">
+        <h2 className="section-title">Community Impact</h2>
 
-      <div className="glass-panel" style={{ padding: '2.5rem', maxWidth: '1100px', margin: '0 auto' }}>
+        <div className="glass-panel" style={{ padding: '2.5rem', border: '1px solid var(--outline-low)' }}>
 
         {/* Header Section */}
         <div style={{ marginBottom: '2.5rem' }}>
@@ -82,14 +84,14 @@ export default function Community() {
         </div>
 
         {/* Stats Row with Background Graphs */}
-        <div style={{
+        <div className="stats-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '2.5rem',
           marginBottom: '3rem'
         }}>
           {/* Members Stat Card */}
-          <div style={{
+          <div className="stat-card" style={{
             position: 'relative',
             padding: '2.5rem 2rem',
             borderRadius: '16px',
@@ -112,7 +114,7 @@ export default function Community() {
           </div>
 
           {/* Stars Stat Card */}
-          <div style={{
+          <div className="stat-card" style={{
             position: 'relative',
             padding: '2.5rem 2rem',
             borderRadius: '16px',
@@ -122,9 +124,9 @@ export default function Community() {
           }}>
               <div style={{ position: 'relative', zIndex: 10 }}>
               <div className="stat-number stat-number-secondary">
-                <CountUp end={180} suffix="+" />
+                <CountUp end={180} suffix="+ 🌟" />
               </div>
-              <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Open-Source Resources</div>
+              <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Books Library Stars</div>
             </div>
             {/* Background Area Graph (Stars) */}
             <div style={{ position: 'absolute', bottom: -15, left: 0, width: '100%', height: '80%', opacity: 0.3, filter: 'blur(20px)', zIndex: 0 }}>
@@ -167,18 +169,20 @@ export default function Community() {
           style={{ position: 'relative' }}
         >
             <div className="glass-panel" style={{ padding: '0.6rem', overflow: 'hidden', background: 'rgba(0,0,0,0.4)', border: '1px solid var(--outline-low)' }}>
-            <div className="community-gallery" style={{ position: 'relative', aspectRatio: '21/9', maxHeight: '48vh', borderRadius: '8px', overflow: 'hidden', background: '#000' }}>
+            <div className="community-gallery" style={{ position: 'relative', aspectRatio: '16/9', maxHeight: '50vh', borderRadius: '8px', overflow: 'hidden', background: '#000', cursor: 'pointer' }}>
               {images.map((img, idx) => (
                 <img
                   key={idx}
                   src={img}
                   alt={`Community Highlight ${idx}`}
+                  onClick={() => setIsModalOpen(true)}
                   style={{
                     position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
                     objectFit: 'cover', transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
                     opacity: activeSlide === idx ? 1 : 0,
                     transform: activeSlide === idx ? 'scale(1)' : 'scale(1.15)',
-                    filter: activeSlide === idx ? 'none' : 'blur(4px)'
+                    filter: activeSlide === idx ? 'none' : 'blur(4px)',
+                    cursor: 'pointer'
                   }}
                   className="responsive-img"
                   loading="lazy"
@@ -186,21 +190,21 @@ export default function Community() {
                 />
               ))}
 
-                <button onClick={prevSlide} className="carousel-btn" style={{ position: 'absolute', left: '1.5rem', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', color: '#fff', width: '48px', height: '48px', cursor: 'pointer', zIndex: 20 }}>
+                <button onClick={prevSlide} className="carousel-btn" style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', color: '#fff', width: '48px', height: '48px', cursor: 'pointer', zIndex: 20 }}>
                 <ChevronLeft size={24} />
               </button>
-              <button onClick={nextSlide} className="carousel-btn" style={{ position: 'absolute', right: '1.5rem', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', color: '#fff', width: '48px', height: '48px', cursor: 'pointer', zIndex: 20 }}>
+              <button onClick={nextSlide} className="carousel-btn" style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', color: '#fff', width: '48px', height: '48px', cursor: 'pointer', zIndex: 20 }}>
                 <ChevronRight size={24} />
               </button>
 
-              <div style={{ position: 'absolute', bottom: '1.5rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '0.75rem', zIndex: 20 }}>
+              <div style={{ position: 'absolute', bottom: '1rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '0.75rem', zIndex: 20 }}>
                 {images.map((_, idx) => (
                   <div key={idx} onClick={() => setActiveSlide(idx)} style={{ width: activeSlide === idx ? '40px' : '12px', height: '6px', borderRadius: '3px', background: activeSlide === idx ? 'var(--primary)' : 'rgba(255,255,255,0.3)', cursor: 'pointer', transition: '0.4s' }} />
                 ))}
               </div>
             </div>
 
-            <div style={{ padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <div style={{ padding: '1.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <div>
                 <h4 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.75rem', letterSpacing: '0.02em' }}>
                   {activeSlide === 0 && "Our Vibrant Facebook Hub"}
@@ -208,14 +212,14 @@ export default function Community() {
                   {activeSlide === 2 && "Global & Diverse Community"}
                   {activeSlide === 3 && "Top-Tier Knowledge Sharing"}
                 </h4>
-                <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', maxWidth: '700px', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', maxWidth: '100%', lineHeight: 1.6 }}>
                   {activeSlide === 0 && "Connecting 75k hearts and minds in Vietnam's most active data-driven community."}
                   {activeSlide === 1 && "Unprecedented growth driven by high-quality content and community-first values."}
                   {activeSlide === 2 && "Built for builders, hobbyists, and experts alike across all STEM and data domains."}
                   {activeSlide === 3 && "Empowering the next generation of data professionals with open resources and deep insights."}
                 </p>
               </div>
-              <div style={{ fontSize: '0.9rem', fontWeight: 900, opacity: 0.2, letterSpacing: '0.3em', fontFamily: 'Space Grotesk' }}>
+              <div style={{ fontSize: '0.9rem', fontWeight: 900, opacity: 0.2, letterSpacing: '0.3em', fontFamily: 'Space Grotesk', alignSelf: 'flex-end' }}>
                 0{activeSlide + 1} / 0{images.length}
               </div>
             </div>
@@ -223,6 +227,90 @@ export default function Community() {
         </div>
 
       </div>
+
+      </div>
+
+      {/* Image Modal */}
+      {isModalOpen && (
+        <div 
+          onClick={() => setIsModalOpen(false)}
+          style={{
+            position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.95)', 
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            zIndex: 1000, cursor: 'pointer', backdropFilter: 'blur(8px)'
+          }}
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: 'relative', maxWidth: '90vw', maxHeight: '90vh',
+              borderRadius: '12px', overflow: 'hidden'
+            }}
+          >
+            <img 
+              src={images[activeSlide]} 
+              alt="Fullscreen view"
+              style={{
+                width: '100%', height: '100%',
+                objectFit: 'contain', display: 'block'
+              }}
+            />
+            
+            {/* Navigation Buttons */}
+            {images.length > 1 && (
+              <>
+                <button 
+                  onClick={(e) => {e.stopPropagation(); prevSlide();}}
+                  style={{
+                    position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)',
+                    background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', 
+                    color: '#fff', width: '48px', height: '48px', cursor: 'pointer', 
+                    zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    transition: 'all 0.3s'
+                  }}
+                  onMouseEnter={(e) => e.target.style.background = 'var(--primary)'}
+                  onMouseLeave={(e) => e.target.style.background = 'rgba(0,0,0,0.6)'}
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button 
+                  onClick={(e) => {e.stopPropagation(); nextSlide();}}
+                  style={{
+                    position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)',
+                    background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', 
+                    color: '#fff', width: '48px', height: '48px', cursor: 'pointer', 
+                    zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    transition: 'all 0.3s'
+                  }}
+                  onMouseEnter={(e) => e.target.style.background = 'var(--primary)'}
+                  onMouseLeave={(e) => e.target.style.background = 'rgba(0,0,0,0.6)'}
+                >
+                  <ChevronRight size={24} />
+                </button>
+              </>
+            )}
+            
+            <button
+              onClick={() => setIsModalOpen(false)}
+              style={{
+                position: 'absolute', top: '1.5rem', right: '1.5rem',
+                width: '48px', height: '48px', borderRadius: '50%',
+                background: 'rgba(0,0,0,0.7)', border: 'none', color: '#fff',
+                cursor: 'pointer', display: 'flex', alignItems: 'center',
+                justifyContent: 'center', fontSize: '1.5rem', fontWeight: 'bold',
+                transition: 'all 0.3s', zIndex: 10
+              }}
+              onMouseEnter={(e) => e.target.style.background = 'var(--primary)'}
+              onMouseLeave={(e) => e.target.style.background = 'rgba(0,0,0,0.7)'}
+            >
+              ✕
+            </button>
+            <div style={{ position: 'absolute', bottom: '1.5rem', left: '50%', transform: 'translateX(-50%)', color: '#fff', fontSize: '0.9rem', fontWeight: 700, zIndex: 10 }}>
+              0{activeSlide + 1} / 0{images.length}
+            </div>
+          </div>
+        </div>
+      )}
 
       <style>{`
         .carousel-btn {
@@ -253,13 +341,17 @@ export default function Community() {
         .stat-number-secondary { color: var(--secondary); }
         .community-cta a { box-sizing: border-box; }
         .community-gallery img { display: block; }
+        .stats-grid { align-items: stretch; }
+        .stat-card { width: 100%; max-width: 420px; }
         @media (max-width: 480px) {
           .carousel-btn { width: 40px !important; height: 40px !important; left: 0.5rem !important; right: 0.5rem !important; }
           .carousel-btn:hover { transform: translateY(-50%) scale(1.05) !important; }
           .carousel-btn svg { width: 18px; height: 18px; }
           .stat-number { font-size: clamp(1.2rem, 6.5vw, 2.1rem) !important; }
           .community-cta a { flex: 1 1 48% !important; min-width: 0 !important; }
-          .community-gallery { aspect-ratio: 4/3 !important; max-height: 60vh !important; }
+          .community-gallery { aspect-ratio: 9/12 !important; max-height: 70vh !important; }
+          .stats-grid { grid-template-columns: 1fr !important; justify-items: center !important; }
+          .stat-card { max-width: min(320px, 92%) !important; padding: 1rem !important; border-radius: 12px !important; }
           .community-gallery img { position: absolute; left: 0; top: 0; }
         }
       `}</style>

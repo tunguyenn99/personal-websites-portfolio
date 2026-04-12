@@ -19,10 +19,10 @@ export default function Techstack() {
       icon: <Terminal size={20} />,
       items: [
         { name: "Python", icon: <SiPython color="#3776AB" /> },
-        { name: "SQL", icon: <SiPostgresql color="#4169E1" /> },
-        { name: "KQL", icon: <Database size={14} color="var(--primary)" /> },
-        { name: "MQL", icon: <Database size={14} color="var(--secondary)" /> },
-        { name: "JQL", icon: <Database size={14} color="#0052CC" /> }
+        { name: "SQL", icon: <SiPostgresql color="#336791" /> },
+        { name: "KQL", icon: <Database size={14} color="#0078D4" /> },
+        { name: "MQL", icon: <Database size={14} color="#13AA52" /> },
+        { name: "JQL", icon: <SiJira size={14} color="#0052CC" /> }
       ]
     },
     {
@@ -30,10 +30,10 @@ export default function Techstack() {
       icon: <Download size={20} />,
       items: [
         { name: "Airbyte", icon: <SiAirbyte color="#6557FF" /> },
-        { name: "Fivetran", icon: <Workflow size={14} color="#005DFF" /> },
+        { name: "Fivetran", icon: <Code size={14} color="#005DFF" /> },
         { name: "DLT", icon: <Download size={14} color="#FF694B" /> },
         { name: "Selenium", icon: <SiSelenium color="#43B02A" /> },
-        { name: "BeautifulSoup", icon: <Code size={14} color="#FFD43B" /> }
+        { name: "BeautifulSoup", icon: <Code size={14} color="#3776AB" /> }
       ]
     },
     {
@@ -42,11 +42,11 @@ export default function Techstack() {
       items: [
         { name: "dbt", icon: <SiDbt color="#FF694B" /> },
         { name: "Airflow", icon: <SiApacheairflow color="#017CEE" /> },
-        { name: "Astronomer", icon: <Workflow size={14} color="#FE4A49" /> },
+        { name: "Astronomer", icon: <Workflow size={14} color="#23D9FF" /> },
         { name: "Apache Spark", icon: <SiApachespark color="#E25A1C" /> },
-        { name: "Dagster", icon: <Workflow size={14} color="#4FB194" /> },
-        { name: "Kestra", icon: <span style={{ fontSize: '0.8rem' }}>⚡</span> },
-        { name: "Mage", icon: <span style={{ fontSize: '0.8rem' }}>🧙</span> }
+        { name: "Dagster", icon: <Workflow size={14} color="#1890FF" /> },
+        { name: "Kestra", icon: <Workflow size={14} color="#FF6B6B" /> },
+        { name: "Mage", icon: <Code size={14} color="#9D4EDD" /> }
       ]
     },
     {
@@ -55,14 +55,14 @@ export default function Techstack() {
       items: [
         { name: "GCP", icon: <SiGooglecloud color="#4285F4" /> },
         { name: "AWS", icon: <Cloud size={14} color="#FF9900" /> },
-        { name: "Azure", icon: <Cloud size={14} color="#0089D6" /> },
-        { name: "BigQuery", icon: <SiGooglebigquery color="#669DF6" /> },
+        { name: "Azure", icon: <Cloud size={14} color="#0078D4" /> },
+        { name: "BigQuery", icon: <SiGooglebigquery color="#3367D6" /> },
         { name: "Snowflake", icon: <SiSnowflake color="#29B5E8" /> },
         { name: "Databricks", icon: <SiDatabricks color="#FF3621" /> },
         { name: "PostgreSQL", icon: <SiPostgresql color="#336791" /> },
-        { name: "SQL Server", icon: <Database size={14} color="#DA3D34" /> },
-        { name: "Oracle", icon: <Database size={14} color="#F70000" /> },
-        { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
+        { name: "SQL Server", icon: <Database size={14} color="#CC2927" /> },
+        { name: "Oracle", icon: <Database size={14} color="#F80000" /> },
+        { name: "MongoDB", icon: <SiMongodb color="#13AA52" /> },
         { name: "Supabase", icon: <SiSupabase color="#3ECF8E" /> }
       ]
     },
@@ -75,7 +75,7 @@ export default function Techstack() {
         { name: "Superset", icon: <SiApachesuperset color="#00A2D3" /> },
         { name: "Metabase", icon: <SiMetabase color="#509EE3" /> },
         { name: "GA4 / Analytics", icon: <SiGoogleanalytics color="#E37400" /> },
-        { name: "SmartLook", icon: <Eye size={14} color="#F25C05" /> }
+        { name: "SmartLook", icon: <Eye size={14} color="#FF6B35" /> }
       ]
     },
     {
@@ -87,7 +87,7 @@ export default function Techstack() {
         { name: "Figma", icon: <SiFigma color="#F24E1E" /> },
         { name: "VS Code", icon: <Code size={14} color="#007ACC" /> },
         { name: "DBeaver", icon: <SiDbeaver color="#382923" /> },
-        { name: "Excel", icon: <FileText size={14} color="#1D6F42" /> },
+        { name: "Excel", icon: <FileText size={14} color="#217346" /> },
         { name: "Notion", icon: <SiNotion color="#000000" /> }
       ]
     }
@@ -95,13 +95,14 @@ export default function Techstack() {
 
   return (
     <section id="techstack" className="section">
-      <h2 className="section-title">End-to-End Stack</h2>
+      <div className="container">
+        <h2 className="section-title">End-to-End Stack</h2>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-        gap: '2.5rem'
-      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '2.5rem'
+        }}>
         {stack.map((group, idx) => (
           <div key={idx} className="glass-panel animate-fade-in" style={{
             animationDelay: `${idx * 0.1}s`,
@@ -161,6 +162,8 @@ export default function Techstack() {
             </div>
           </div>
         ))}
+      </div>
+
       </div>
 
       <style>{`

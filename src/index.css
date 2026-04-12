@@ -273,6 +273,20 @@ h3,
 /* Utility for grids containing cards to ensure equal-height rows */
 .card-grid { align-items: stretch; }
 
+/* Ensure cards in card-grid and experience have consistent min-height and mobile behavior */
+.card-grid .equal-panel,
+#experience .equal-panel {
+  min-height: clamp(220px, 30vh, 320px);
+}
+
+@media (max-width: 480px) {
+  .card-grid .equal-panel,
+  #experience .equal-panel {
+    min-height: 260px;
+    padding: 1rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .section-title {
     font-size: 2.5rem;

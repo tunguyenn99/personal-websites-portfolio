@@ -83,31 +83,26 @@ export default function AboutMe() {
         </div>
         
         <div className="animate-fade-in" style={{ animationDelay: '0.3s', position: 'relative' }}>
-          <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--surface-container)', border: '1px solid var(--outline-low)', position: 'relative' }}>
+          <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--surface-container)', border: '1px solid var(--outline-low)', position: 'relative', aspectRatio: '4/5', maxWidth: '420px', margin: '0 auto' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.05, backgroundImage: 'linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(90deg, var(--primary) 1px, transparent 1px)', backgroundSize: '100px 100px', zIndex: 1 }}></div>
             
             <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2 }}>
               <div style={{ position: 'absolute', width: '38%', maxWidth: '350px', aspectRatio: '1/1', background: 'var(--primary)', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.15 }}></div>
-              <div className="fluid-card" style={{ 
-                border: '1px solid rgba(255,255,255,0.1)',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-                position: 'relative',
-                transform: 'perspective(1000px) rotateY(-5deg)'
-              }}>
-                <img 
-                  src={profilePic} 
-                  alt="Tu Nguyen" 
-                  style={{ 
-                    objectFit: 'cover',
-                    filter: 'contrast(1.1) brightness(0.9)',
-                    transition: 'transform 0.5s ease',
-                  }}
-                  className="responsive-img profile-img-hover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%)' }}></div>
-              </div>
+              <img 
+                src={profilePic} 
+                alt="Tu Nguyen" 
+                style={{ 
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  filter: 'contrast(1.1) brightness(0.9)',
+                  transition: 'transform 0.5s ease',
+                }}
+                className="profile-img-hover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%)', pointerEvents: 'none' }}></div>
             </div>
           </div>
         </div>

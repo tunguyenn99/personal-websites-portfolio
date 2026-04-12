@@ -5,6 +5,7 @@ import certs from '../data/certifications.json';
 export default function Certifications() {
   const [selectedOrg, setSelectedOrg] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
+  const [showMoreOrgs, setShowMoreOrgs] = useState(false);
   const itemsPerPage = 9;
 
   // Derive unique categories/organizations with counts
@@ -107,17 +108,59 @@ export default function Certifications() {
             paddingBottom: '0.5rem',
             overflowX: 'auto'
           }}>
-            {orgs.map(org => (
+            {/* Main Filter Organizations */}
+            {orgs.map((org, idx) => {
+              const mainOrgs = ['All', 'Google', 'IBM', 'Microsoft'];
+              const isMainOrg = mainOrgs.includes(org.name);
+              
+              if (!isMainOrg && !showMoreOrgs) return null;
+              
+              return (
+                <button
+                  key={org.name}
+                  onClick={() => setSelectedOrg(org.name)}
+                  style={{
+                    padding: '0.6rem 1.25rem',
+                    borderRadius: '100px',
+                    border: '1px solid',
+                    borderColor: selectedOrg === org.name ? 'var(--primary)' : 'var(--outline-low)',
+                    background: selectedOrg === org.name ? 'rgba(170, 221, 81, 0.1)' : 'rgba(255, 255, 255, 0.02)',
+                    color: selectedOrg === org.name ? 'var(--primary)' : 'var(--text-muted)',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    transition: 'all 0.3s ease',
+                    whiteSpace: 'nowrap'
+                  }}
+                >
+                  {org.name}
+                  <span style={{
+                    fontSize: '0.75rem',
+                    opacity: 0.6,
+                    background: selectedOrg === org.name ? 'var(--primary)' : 'rgba(255,255,255,0.1)',
+                    color: selectedOrg === org.name ? 'var(--on-primary)' : 'inherit',
+                    padding: '2px 8px',
+                    borderRadius: '10px'
+                  }}>
+                    {org.count}
+                  </span>
+                </button>
+              );
+            })}
+            
+            {/* More Button */}
+            {!showMoreOrgs && orgs.some(org => !['All', 'Google', 'IBM', 'Microsoft'].includes(org.name)) && (
               <button
-                key={org.name}
-                onClick={() => setSelectedOrg(org.name)}
+                onClick={() => setShowMoreOrgs(true)}
                 style={{
                   padding: '0.6rem 1.25rem',
                   borderRadius: '100px',
-                  border: '1px solid',
-                  borderColor: selectedOrg === org.name ? 'var(--primary)' : 'var(--outline-low)',
-                  background: selectedOrg === org.name ? 'rgba(170, 221, 81, 0.1)' : 'rgba(255, 255, 255, 0.02)',
-                  color: selectedOrg === org.name ? 'var(--primary)' : 'var(--text-muted)',
+                  border: '1px solid var(--outline-low)',
+                  background: 'rgba(255, 255, 255, 0.02)',
+                  color: 'var(--text-muted)',
                   fontSize: '0.85rem',
                   fontWeight: 600,
                   cursor: 'pointer',
@@ -128,19 +171,33 @@ export default function Certifications() {
                   whiteSpace: 'nowrap'
                 }}
               >
-                {org.name}
-                <span style={{
-                  fontSize: '0.75rem',
-                  opacity: 0.6,
-                  background: selectedOrg === org.name ? 'var(--primary)' : 'rgba(255,255,255,0.1)',
-                  color: selectedOrg === org.name ? 'var(--on-primary)' : 'inherit',
-                  padding: '2px 8px',
-                  borderRadius: '10px'
-                }}>
-                  {org.count}
-                </span>
+                More
               </button>
-            ))}
+            )}
+            
+            {/* Collapse Button */}
+            {showMoreOrgs && (
+              <button
+                onClick={() => setShowMoreOrgs(false)}
+                style={{
+                  padding: '0.6rem 1.25rem',
+                  borderRadius: '100px',
+                  border: '1px solid var(--outline-low)',
+                  background: 'rgba(255, 255, 255, 0.02)',
+                  color: 'var(--text-muted)',
+                  fontSize: '0.85rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  transition: 'all 0.3s ease',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                Less
+              </button>
+            )}
           </div>
         </div>
 
@@ -148,7 +205,7 @@ export default function Certifications() {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
           gridAutoRows: 'minmax(160px, auto)',
-          gap: '2rem',
+          gap: '2.5rem',
           minHeight: 'auto'
         }}>
           {paginatedCerts.map((cert, index) => (

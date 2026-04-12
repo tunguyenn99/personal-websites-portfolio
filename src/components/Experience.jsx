@@ -143,14 +143,14 @@ export default function Experience() {
       <div className="container">
         <h2 className="section-title">Professional Path</h2>
 
-        <div style={{
+        <div className="card-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '2.5rem',
           alignItems: 'stretch'
         }}>
           {columns.map((col, ci) => (
-            <div key={ci} className="glass-panel equal-panel" style={{ padding: '1.75rem' }}>
+            <div key={ci} className="glass-panel equal-panel">
               {/* Column Header */}
               <div style={{
                 display: 'flex', alignItems: 'center', gap: '0.6rem',
