@@ -60,10 +60,10 @@ export default function Projects() {
         ))}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+      <div className="card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
         {filteredProjects.map((proj, idx) => (
           <a key={proj.id || idx} href={proj.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="glass-panel" style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '1.5rem', transition: 'transform 0.3s', ...proj.stars > 10 ? { border: '1px solid rgba(139, 92, 246, 0.3)' } : {} }}>
+            <div className="glass-panel equal-panel" style={{ height: '100%', transition: 'transform 0.3s', ...proj.stars > 10 ? { border: '1px solid rgba(139, 92, 246, 0.3)' } : {} }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                 <Database size={24} color="var(--primary)" />
                 <div style={{ display: 'flex', gap: '1rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>

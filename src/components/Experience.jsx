@@ -150,7 +150,7 @@ export default function Experience() {
           alignItems: 'stretch'
         }}>
           {columns.map((col, ci) => (
-            <div key={ci} className="glass-panel" style={{ padding: '1.75rem', height: '100%' }}>
+            <div key={ci} className="glass-panel equal-panel" style={{ padding: '1.75rem' }}>
               {/* Column Header */}
               <div style={{
                 display: 'flex', alignItems: 'center', gap: '0.6rem',

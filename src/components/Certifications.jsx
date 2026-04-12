@@ -154,19 +154,14 @@ export default function Certifications() {
           {paginatedCerts.map((cert, index) => (
             <div
               key={cert.title + index}
-              className="glass-panel cert-card"
+              className="glass-panel cert-card equal-panel"
               style={{
-                padding: '1.5rem',
-                display: 'flex',
-                flexDirection: 'column',
                 gap: '1.25rem',
                 position: 'relative',
                 overflow: 'hidden',
                 border: '1px solid var(--outline-low)',
                 background: 'rgba(255, 255, 255, 0.02)',
-                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-                height: '100%',
-                boxSizing: 'border-box'
+                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
               }}
             >
               <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>

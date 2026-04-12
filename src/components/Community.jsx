@@ -99,7 +99,7 @@ export default function Community() {
           }}>
               <div style={{ position: 'relative', zIndex: 10 }}>
               <div className="stat-number">
-                <CountUp end={74000} suffix="+" />
+                <CountUp end={75000} suffix="+" />
               </div>
               <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Active Members</div>
             </div>
@@ -241,10 +241,14 @@ export default function Community() {
           transform: translateY(-50%) scale(1.1);
         }
         .stat-number {
-          font-size: 3.5rem;
+          font-size: clamp(1.6rem, 8vw, 3.5rem);
           font-weight: 900;
           color: var(--primary);
           line-height: 1;
+          max-width: 100%;
+          display: block;
+          hyphens: none;
+          overflow-wrap: anywhere;
         }
         .stat-number-secondary { color: var(--secondary); }
         .community-cta a { box-sizing: border-box; }
@@ -253,7 +257,7 @@ export default function Community() {
           .carousel-btn { width: 40px !important; height: 40px !important; left: 0.5rem !important; right: 0.5rem !important; }
           .carousel-btn:hover { transform: translateY(-50%) scale(1.05) !important; }
           .carousel-btn svg { width: 18px; height: 18px; }
-          .stat-number { font-size: 2.1rem !important; }
+          .stat-number { font-size: clamp(1.2rem, 6.5vw, 2.1rem) !important; }
           .community-cta a { flex: 1 1 48% !important; min-width: 0 !important; }
           .community-gallery { aspect-ratio: 4/3 !important; max-height: 60vh !important; }
           .community-gallery img { position: absolute; left: 0; top: 0; }
