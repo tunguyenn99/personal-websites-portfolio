@@ -120,9 +120,10 @@ export default function Certifications() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+          gridAutoRows: '200px',
           gap: '2rem',
-          minHeight: '600px' // Keep height consistent during transitions
+          minHeight: '600px'
         }}>
           {paginatedCerts.map((cert, index) => (
             <div
@@ -137,7 +138,9 @@ export default function Certifications() {
                 overflow: 'hidden',
                 border: '1px solid var(--outline-low)',
                 background: 'rgba(255, 255, 255, 0.02)',
-                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
+                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                height: '100%',
+                boxSizing: 'border-box'
               }}
             >
               <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
