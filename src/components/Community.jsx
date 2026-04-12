@@ -144,7 +144,7 @@ export default function Community() {
           marginBottom: '3.5rem',
           flexWrap: 'wrap'
         }}>
-          <div style={{ flex: '1', minWidth: '320px' }}>
+          <div style={{ flex: '1 1 220px', minWidth: 0 }}>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '1.15rem' }}>
               Co-founding and managing the most vibrant data ecosystem in Vietnam.
               Our community is an inclusive space for <strong>everyone</strong> - from curious beginners and tech hobbyists to industry veterans - united by a common goal to master the world of data.
@@ -166,8 +166,8 @@ export default function Community() {
           onMouseLeave={() => setIsPaused(false)}
           style={{ position: 'relative' }}
         >
-          <div className="glass-panel" style={{ padding: '0.6rem', overflow: 'hidden', background: 'rgba(0,0,0,0.4)', border: '1px solid var(--outline-low)' }}>
-            <div style={{ position: 'relative', aspectRatio: '21/9', borderRadius: '8px', overflow: 'hidden', background: '#000' }}>
+            <div className="glass-panel" style={{ padding: '0.6rem', overflow: 'hidden', background: 'rgba(0,0,0,0.4)', border: '1px solid var(--outline-low)' }}>
+            <div style={{ position: 'relative', aspectRatio: '21/9', maxHeight: '48vh', borderRadius: '8px', overflow: 'hidden', background: '#000' }}>
               {images.map((img, idx) => (
                 <img
                   key={idx}
@@ -186,7 +186,7 @@ export default function Community() {
                 />
               ))}
 
-              <button onClick={prevSlide} className="carousel-btn" style={{ position: 'absolute', left: '1.5rem', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', color: '#fff', width: '48px', height: '48px', cursor: 'pointer', zIndex: 20 }}>
+                <button onClick={prevSlide} className="carousel-btn" style={{ position: 'absolute', left: '1.5rem', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', color: '#fff', width: '48px', height: '48px', cursor: 'pointer', zIndex: 20 }}>
                 <ChevronLeft size={24} />
               </button>
               <button onClick={nextSlide} className="carousel-btn" style={{ position: 'absolute', right: '1.5rem', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.6)', border: 'none', borderRadius: '50%', color: '#fff', width: '48px', height: '48px', cursor: 'pointer', zIndex: 20 }}>
@@ -239,6 +239,11 @@ export default function Community() {
           color: #000 !important;
           box-shadow: 0 0 30px var(--primary);
           transform: translateY(-50%) scale(1.1);
+        }
+        @media (max-width: 480px) {
+          .carousel-btn { width: 40px !important; height: 40px !important; left: 0.5rem !important; right: 0.5rem !important; }
+          .carousel-btn:hover { transform: translateY(-50%) scale(1.05) !important; }
+          .carousel-btn svg { width: 18px; height: 18px; }
         }
       `}</style>
     </section>
