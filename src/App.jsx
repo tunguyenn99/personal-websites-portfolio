@@ -8,11 +8,13 @@ import Community from './components/Community';
 import Contact from './components/Contact';
 
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
     <>
       <Analytics />
+      <SpeedInsights />
       <div className="bg-blobs">
         <div className="blob-1"></div>
         <div className="blob-2"></div>
