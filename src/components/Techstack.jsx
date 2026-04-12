@@ -1,71 +1,101 @@
 import React from 'react';
 import { 
-  SiPython, SiJavascript, SiPostgresql, SiHtml5, SiCss,
+  SiPython, SiJavascript, SiPostgresql, SiHtml5, SiCss3 as SiCss,
   SiDbt, SiApacheairflow, SiSnowflake, SiDatabricks, 
   SiSupabase, SiDocker, SiKubernetes, SiLinux, SiGithubactions, 
-  SiJupyter
+  SiJupyter, SiApachespark, SiAirbyte, SiSelenium, SiGooglecloud,
+  SiGooglebigquery, SiLooker, SiApachesuperset, SiMetabase,
+  SiGoogleanalytics, SiJira, SiConfluence, SiFigma, SiNotion,
+  SiDbeaver, SiMongodb
 } from 'react-icons/si';
-import { Database, Terminal, Cloud, BarChart3, Workflow, PieChart } from 'lucide-react';
+import { 
+  Database, Terminal, Cloud, BarChart3, Workflow, 
+  PieChart, Code, Download, Layers, ShieldCheck, 
+  Eye, FileText, Layout, Users
+} from 'lucide-react';
 
 export default function Techstack() {
   const stack = [
     { 
-      category: "Languages & Core", 
+      category: "Programming & Query Languages", 
       icon: <Terminal size={20} />,
       items: [
         { name: "Python", icon: <SiPython color="#3776AB" /> },
-        { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
-        { name: "PostgreSQL / SQL", icon: <SiPostgresql color="#4169E1" /> },
-        { name: "Frontend", icon: <><SiHtml5 color="#E34F26" /> <SiCss color="#1572B6" /></> }
+        { name: "SQL", icon: <SiPostgresql color="#4169E1" /> },
+        { name: "KQL", icon: <Database size={14} color="var(--primary)" /> },
+        { name: "MQL", icon: <Database size={14} color="var(--secondary)" /> },
+        { name: "JQL", icon: <Database size={14} color="#0052CC" /> }
       ] 
     },
     { 
-      category: "Orchestration & ELT", 
+      category: "Data Ingestion & Collection", 
+      icon: <Download size={20} />,
+      items: [
+        { name: "Airbyte", icon: <SiAirbyte color="#6557FF" /> },
+        { name: "Fivetran", icon: <Workflow size={14} color="#005DFF" /> },
+        { name: "DLT", icon: <Download size={14} color="#FF694B" /> },
+        { name: "Selenium", icon: <SiSelenium color="#43B02A" /> },
+        { name: "BeautifulSoup", icon: <Code size={14} color="#FFD43B" /> }
+      ] 
+    },
+    { 
+      category: "Transformation & Orchestration", 
       icon: <Workflow size={20} />,
       items: [
         { name: "dbt", icon: <SiDbt color="#FF694B" /> },
         { name: "Airflow", icon: <SiApacheairflow color="#017CEE" /> },
+        { name: "Astronomer", icon: <Workflow size={14} color="#FE4A49" /> },
+        { name: "Apache Spark", icon: <SiApachespark color="#E25A1C" /> },
         { name: "Dagster", icon: <Workflow size={14} color="#4FB194" /> },
-        { name: "Mage", icon: <span style={{fontSize: '0.8rem'}}>🧙</span> },
-        { name: "Kestra", icon: <span style={{fontSize: '0.8rem'}}>⚡</span> }
+        { name: "Kestra", icon: <span style={{fontSize: '0.8rem'}}>⚡</span> },
+        { name: "Mage", icon: <span style={{fontSize: '0.8rem'}}>🧙</span> }
       ] 
     },
     { 
-      category: "Data Platforms", 
-      icon: <Database size={20} />,
+      category: "Data Platforms & Storage", 
+      icon: <Layers size={20} />,
       items: [
+        { name: "GCP", icon: <SiGooglecloud color="#4285F4" /> },
+        { name: "AWS", icon: <Cloud size={14} color="#FF9900" /> },
+        { name: "Azure", icon: <Cloud size={14} color="#0089D6" /> },
+        { name: "BigQuery", icon: <SiGooglebigquery color="#669DF6" /> },
         { name: "Snowflake", icon: <SiSnowflake color="#29B5E8" /> },
         { name: "Databricks", icon: <SiDatabricks color="#FF3621" /> },
-        { name: "Trino", icon: <Database size={14} color="#DD0031" /> },
-        { name: "Apache Iceberg", icon: <Database size={14} color="#011B3D" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql color="#336791" /> },
+        { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
         { name: "Supabase", icon: <SiSupabase color="#3ECF8E" /> }
       ] 
     },
     { 
-      category: "Cloud & DevSecOps", 
-      icon: <Cloud size={20} />,
+      category: "BI, Analytics & Visualization", 
+      icon: <BarChart3 size={20} />,
       items: [
-        { name: "Docker", icon: <SiDocker color="#2496ED" /> },
-        { name: "Kubernetes", icon: <SiKubernetes color="#326CE5" /> },
-        { name: "Linux", icon: <SiLinux color="#FCC624" /> },
-        { name: "GitHub Actions", icon: <SiGithubactions color="#2088FF" /> }
+        { name: "Power BI", icon: <BarChart3 size={14} color="#F2C811" /> },
+        { name: "Looker Studio", icon: <SiLooker color="#4285F4" /> },
+        { name: "Superset", icon: <SiApachesuperset color="#00A2D3" /> },
+        { name: "Metabase", icon: <SiMetabase color="#509EE3" /> },
+        { name: "GA4 / Analytics", icon: <SiGoogleanalytics color="#E37400" /> },
+        { name: "SmartLook", icon: <Eye size={14} color="#F25C05" /> }
       ] 
     },
     { 
-      category: "Analytics & ML", 
-      icon: <BarChart3 size={20} />,
+      category: "Collaboration & Tools", 
+      icon: <Users size={20} />,
       items: [
-        { name: "Jupyter", icon: <SiJupyter color="#F37626" /> },
-        { name: "PowerBI", icon: <BarChart3 size={14} color="#F2C811" /> },
-        { name: "Tableau", icon: <PieChart size={14} color="#E97627" /> },
-        { name: "Scikit-Learn", icon: <span style={{fontWeight: 800}}>scikit</span> }
+        { name: "Jira", icon: <SiJira color="#0052CC" /> },
+        { name: "Confluence", icon: <SiConfluence color="#0052CC" /> },
+        { name: "Figma", icon: <SiFigma color="#F24E1E" /> },
+        { name: "VS Code", icon: <Code size={14} color="#007ACC" /> },
+        { name: "DBeaver", icon: <SiDbeaver color="#382923" /> },
+        { name: "Excel", icon: <FileText size={14} color="#1D6F42" /> },
+        { name: "Notion", icon: <SiNotion color="#000000" /> }
       ] 
     }
   ];
 
   return (
     <section id="techstack" className="section">
-      <h2 className="section-title">Techstack Setup</h2>
+      <h2 className="section-title">End-to-End Stack</h2>
       
       <div style={{ 
         display: 'grid', 
@@ -82,14 +112,14 @@ export default function Techstack() {
             {/* Header Group */}
             <div style={{ 
               display: 'flex', alignItems: 'center', gap: '0.75rem', 
-              marginBottom: '2rem', paddingBottom: '0.875rem',
+              marginBottom: '1.5rem', paddingBottom: '0.875rem',
               borderBottom: '1px solid rgba(255,255,255,0.05)'
             }}>
               <div style={{ color: 'var(--primary)', opacity: 0.8 }}>
                 {group.icon}
               </div>
               <h3 style={{ 
-                fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.1em',
+                fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.1em',
                 textTransform: 'uppercase', color: 'var(--text-main)', margin: 0
               }}>
                 {group.category}
@@ -99,27 +129,30 @@ export default function Techstack() {
             {/* Icons Grid */}
             <div style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'repeat(2, 1fr)', 
-              gap: '1.25rem' 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', 
+              gap: '0.75rem' 
             }}>
               {group.items.map((tech, tIdx) => (
                 <div 
                   key={tIdx} 
                   className="tech-item-hover"
                   style={{ 
-                    display: 'flex', alignItems: 'center', gap: '0.625rem',
+                    display: 'flex', alignItems: 'center', gap: '0.5rem',
                     background: 'rgba(255,255,255,0.02)',
-                    padding: '0.75rem', borderRadius: '6px',
+                    padding: '0.5rem 0.75rem', borderRadius: '6px',
                     border: '1px solid transparent',
                     transition: 'all 0.3s'
                   }}
                 >
-                  <div style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center' }}>
+                  <div style={{ fontSize: '1rem', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
                     {tech.icon}
                   </div>
                   <span style={{ 
-                    fontSize: '0.85rem', fontWeight: 600, 
-                    color: 'var(--text-muted)'
+                    fontSize: '0.75rem', fontWeight: 600, 
+                    color: 'var(--text-muted)',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
                   }}>
                     {tech.name}
                   </span>
