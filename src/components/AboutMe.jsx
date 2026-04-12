@@ -1,20 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Download, ArrowRight, MapPin } from 'lucide-react';
 import { SiGithub as Github } from 'react-icons/si';
 import { FaLinkedin as Linkedin } from 'react-icons/fa';
 import profilePic from '../assets/avatar/github-avatar.jpg';
 
 export default function AboutMe() {
+  const [titleIndex, setTitleIndex] = useState(0);
+  const titles = [
+    "A Senior Data Analyst",
+    "A Wonder Analytics Engineer",
+    "A Helpful BI Developer",
+    "A Data Enthusiast"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTitleIndex((prev) => (prev + 1) % titles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="about" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px', position: 'relative' }}>
       <div className="container responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }}>
         <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '1.5rem', color: 'var(--primary)' }}>
             <span style={{ height: '1px', width: '30px', background: 'var(--primary)' }}></span>
-            <span style={{ fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: '0.8rem', fontFamily: 'Space Grotesk' }}>Precision Data Engineering</span>
+            <span 
+              key={titleIndex}
+              className="animate-fade-in"
+              style={{ 
+                fontWeight: 700, 
+                letterSpacing: '0.15em', 
+                textTransform: 'uppercase', 
+                fontSize: '0.8rem', 
+                fontFamily: 'Space Grotesk',
+                minWidth: '200px'
+              }}
+            >
+              {titles[titleIndex]}
+            </span>
           </div>
-          <h1 style={{ fontSize: '5rem', fontWeight: 700, lineHeight: 1, margin: '0 0 2rem 0', fontFamily: 'Space Grotesk' }}>
-            Decoding Data with<br/>
+          <h1 style={{ fontSize: '5rem', fontWeight: 700, lineHeight: 1.1, margin: '0 0 2rem 0', fontFamily: 'Space Grotesk' }}>
+            Hi there, I'm <br/>
             <span style={{ color: 'var(--primary)', position: 'relative' }}>
               Tu Nguyen
               <svg style={{ position: 'absolute', bottom: '-10px', left: 0, width: '100%', height: '12px' }} viewBox="0 0 100 12" preserveAspectRatio="none">
