@@ -49,13 +49,6 @@
     "link": "https://www.coursera.org/account/accomplishments/verify/JYE7IMMSX5OG"
   },
   {
-    "title": "Introduction to Python",
-    "organization": "DataCamp",
-    "date": "Aug 2025",
-    "image": "https://media.licdn.com/dms/image/v2/C4D0BAQHoE9F6A76mOQ/company-logo_100_100/company-logo_100_100/0/1630577190840/datacampinc_logo?e=1777507200&v=beta&t=DgEsV1XXKBc7J0gwurX5cYZCuT7PuhjS-KQy5vGtuj0",
-    "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/653d701ad43ffbbb50d95cc895875f668e9bb0b0"
-  },
-  {
     "title": "Google AI Essentials",
     "organization": "Google",
     "date": "Jul 2025",
@@ -98,13 +91,6 @@
     "link": "https://www.coursera.org/account/accomplishments/verify/KK1OCTNFH4T4"
   },
   {
-    "title": "Oracle Data Platform 2025 Certified Foundations Associate",
-    "organization": "Oracle",
-    "date": "Jul 2025",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQHYCgYovUuPtQ/company-logo_100_100/company-logo_100_100/0/1665755678957/oracle_logo?e=1777507200&v=beta&t=pvV2HK-Xg16zWXku9kTwYJqV0j5s4BRAgddViB4mAC4",
-    "link": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=4E56A8F6F56FE5E0154FDEDEFC0B9D29E7122E9CEFDF0C44359497AF087EEAA0"
-  },
-  {
     "title": "Google Business Intelligence Certificate",
     "organization": "Google",
     "date": "Jul 2025",
@@ -126,39 +112,88 @@
     "link": "https://www.coursera.org/account/accomplishments/verify/PBU8QCJK6XHW"
   },
   {
+    "title": "Developing Data Models with LookML",
+    "organization": "Google",
+    "date": "Sep 2024",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_100_100/company-logo_100_100/0/1698660876286?e=1777507200&v=beta&t=ALFZKt2aAIRYfOzrF2Rhhq8-NAlWXacAJ7p4SdUFdyo",
+    "link": "https://www.cloudskillsboost.google/public_profiles/3f3d1ff5-64bc-4d9f-bf56-8da09024de80/badges/11558206"
+  },
+  {
+    "title": "Derive Insights from BigQuery Data Skill Badge",
+    "organization": "Google",
+    "date": "Sep 2024",
+    "image": "https://images.credly.com/size/340x340/images/11088b22-7be5-4fe3-995d-c014514c8dc3/image.png",
+    "link": "https://www.credly.com/badges/ff2310b6-b81d-42de-aec7-595ce29113a8/public_url"
+  },
+  {
+    "title": "Introduction to Data Analytics on Google Cloud",
+    "organization": "Google",
+    "date": "Sep 2024",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.cloudskillsboost.google/public_profiles/3f3d1ff5-64bc-4d9f-bf56-8da09024de80/badges/11521846"
+  },
+  {
+    "title": "Analyzing and Visualizing Data in Looker",
+    "organization": "Google",
+    "date": "Sep 2024",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.cloudskillsboost.google/public_profiles/3f3d1ff5-64bc-4d9f-bf56-8da09024de80/badges/11528387"
+  },
+  {
+    "title": "Google Advanced Data Analytics Specialization",
+    "organization": "Google",
+    "date": "Jun 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/3VBYS3PW7ZQB"
+  },
+  {
+    "title": "Google Analytics Certification",
+    "organization": "Google",
+    "date": "May 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://skillshop.credential.net/2b7d3147-93e3-47f1-ad3f-907bfbb2103a"
+  },
+  {
+    "title": "Derive Insights from BigQuery Data",
+    "organization": "Google",
+    "date": "September 2024",
+    "image": "https://images.credly.com/images/ff2310b6-b81d-42de-aec7-595ce29113a8/GoogleCloud_BigQuery.png",
+    "link": "https://www.credly.com/badges/ff2310b6-b81d-42de-aec7-595ce29113a8"
+  },
+  {
+    "title": "Google Advanced Data Analytics",
+    "organization": "Google",
+    "date": "June 2023",
+    "image": "https://images.credly.com/size/340x340/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png",
+    "link": "https://www.credly.com/badges/c3061ad5-27be-4554-ae5f-b8b1bc21c91a"
+  },
+  {
+    "title": "Google Data Analytics Specialization",
+    "organization": "Google",
+    "date": "May 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/79WZ3UAZYJV2"
+  },
+  {
+    "title": "Google Data Analytics",
+    "organization": "Google",
+    "date": "May 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQHtxDeZFo34zA/company-logo_100_100/company-logo_100_100/0/1667436004075/credly_logo?e=1777507200&v=beta&t=CgPjylqzZx0rDZF1Dp-QXM12nY3OBJwqqXgHmpw7Vqk",
+    "link": "https://www.credly.com/badges/704e07e4-20ef-4fb3-b8a4-2d1fe63bb74c/public_url"
+  },
+  {
+    "title": "Oracle Data Platform 2025 Certified Foundations Associate",
+    "organization": "Oracle",
+    "date": "Jul 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQHYCgYovUuPtQ/company-logo_100_100/company-logo_100_100/0/1665755678957/oracle_logo?e=1777507200&v=beta&t=pvV2HK-Xg16zWXku9kTwYJqV0j5s4BRAgddViB4mAC4",
+    "link": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=4E56A8F6F56FE5E0154FDEDEFC0B9D29E7122E9CEFDF0C44359497AF087EEAA0"
+  },
+  {
     "title": "Microsoft Certified: Power BI Data Analyst Associate",
     "organization": "Microsoft",
     "date": "Jun 2025",
     "image": "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1777507200&v=beta&t=w5cLA4v0uQc5rekDZijMu_DDZKYKKacQMlZu6z5LW4Y",
     "link": "https://learn.microsoft.com/api/credentials/share/en-us/tunguyenn99/7F1525051EF84A78?sharingId"
-  },
-  {
-    "title": "Databricks Fundamentals",
-    "organization": "Databricks",
-    "date": "Jun 2025",
-    "image": "https://s3.us-east-1.amazonaws.com/accredible_temp_credential_images/16002836894132567677717491881160.png",
-    "link": "https://credentials.databricks.com/c6489d76-024c-4f2c-ad6b-915356adbd83"
-  },
-  {
-    "title": "Dagster Essentials",
-    "organization": "Dagster Labs",
-    "date": "Jun 2025",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQH7iNlXiRlcEg/company-logo_100_100/B56ZZKK2zdGsAQ-/0/1745001082396/dagsterlabs_logo?e=1777507200&v=beta&t=EKSHwmDrTzcEp20U2-QwKJm7A_gQx6kfTBtBkYnoFRY",
-    "link": "https://courses.dagster.io/certificates/egkah0no6u"
-  },
-  {
-    "title": "dbt Fundamentals",
-    "organization": "dbt Labs",
-    "date": "Jun 2025",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQHYKuW1_dSUTw/company-logo_100_100/B56Zcxv_zLHEAQ-/0/1748886356585/dbtlabs_logo?e=1777507200&v=beta&t=nuabd5xjZaEAUmCKSU1Hz3OxMYP5qWWXYXWENE9E3fc",
-    "link": "https://credentials.getdbt.com/7b376cda-80a3-452a-a46d-174347ce84cb"
-  },
-  {
-    "title": "Airbyte Cloud Fundamentals",
-    "organization": "Airbyte",
-    "date": "May 2025",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQGOU6zMFu0oyA/company-logo_100_100/B56ZaDNy7jGoAQ-/0/1745958154474/airbytehq_logo?e=1777507200&v=beta&t=__SD1VDWaKgt5Ie5mpn6z2XMM-wZVMMOWagw7xIP_Qc",
-    "link": "https://airbyteacademy.thinkific.com/certificates/azyhkwqvha"
   },
   {
     "title": "Microsoft Power BI Data Analyst Professional Badge",
@@ -210,76 +245,6 @@
     "link": "https://www.coursera.org/account/accomplishments/records/9AE0X7YG6XCP"
   },
   {
-    "title": "Dremio Verified Data Analyst",
-    "organization": "Dremio",
-    "date": "Mar 2025",
-    "image": "https://media.licdn.com/dms/image/v2/C560BAQFjwLBsd9FkiQ/company-logo_100_100/company-logo_100_100/0/1630640170202/dremio_logo?e=1777507200&v=beta&t=SpVv8YQGPO5Tn4BVK4UJcukInytWwMJ9afVjtZyy880",
-    "link": "https://www.credly.com/badges/4ee884cc-2df3-41cf-91ff-62f01d410440/public_url"
-  },
-  {
-    "title": "Dremio SQL for Data Analysts",
-    "organization": "Dremio",
-    "date": "Mar 2025",
-    "image": "https://media.licdn.com/dms/image/v2/C560BAQFjwLBsd9FkiQ/company-logo_100_100/company-logo_100_100/0/1630640170202/dremio_logo?e=1777507200&v=beta&t=SpVv8YQGPO5Tn4BVK4UJcukInytWwMJ9afVjtZyy880",
-    "link": "https://mycourse.app/aqGnMfbVVxqgUiChL"
-  },
-  {
-    "title": "Dremio Fundamentals Certificate",
-    "organization": "Dremio",
-    "date": "Mar 2025",
-    "image": "https://media.licdn.com/dms/image/v2/C560BAQFjwLBsd9FkiQ/company-logo_100_100/company-logo_100_100/0/1630640170202/dremio_logo?e=1777507200&v=beta&t=SpVv8YQGPO5Tn4BVK4UJcukInytWwMJ9afVjtZyy880",
-    "link": "https://mycourse.app/k46Wc49GJvr7YhUlA"
-  },
-  {
-    "title": "Applied Data Science Lab",
-    "organization": "WorldQuant University",
-    "date": "Feb 2025",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQESEDfB20bR6A/company-logo_100_100/company-logo_100_100/0/1712845289109/worldquant_university_logo?e=1777507200&v=beta&t=D9jYKBtF5lG8bPgeacyRC2g68JzZa8nfbv5vJMOZpK8",
-    "link": "https://www.credly.com/badges/0bdd69be-c829-472b-b724-a829c88bc05b/public_url"
-  },
-  {
-    "title": "AWS Cloud Quest: Cloud Practitioner",
-    "organization": "Amazon Web Services (AWS)",
-    "date": "Sep 2024",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQFqdm1TZ-RZKQ/company-logo_100_100/B4EZgOay6gHEAY-/0/1752588562343/amazon_web_services_logo?e=1777507200&v=beta&t=sINUc52II3ahQBUG78sEa4L8PCMpPRpEsTMPp6KYuxI",
-    "link": "https://www.credly.com/badges/bbd86d77-a0a4-419c-a03e-ec1014a826aa/linked_in_profile"
-  },
-  {
-    "title": "Developing Data Models with LookML",
-    "organization": "Google",
-    "date": "Sep 2024",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_100_100/company-logo_100_100/0/1698660876286?e=1777507200&v=beta&t=ALFZKt2aAIRYfOzrF2Rhhq8-NAlWXacAJ7p4SdUFdyo",
-    "link": "https://www.cloudskillsboost.google/public_profiles/3f3d1ff5-64bc-4d9f-bf56-8da09024de80/badges/11558206"
-  },
-  {
-    "title": "Derive Insights from BigQuery Data Skill Badge",
-    "organization": "Google",
-    "date": "Sep 2024",
-    "image": "https://images.credly.com/size/340x340/images/11088b22-7be5-4fe3-995d-c014514c8dc3/image.png",
-    "link": "https://www.credly.com/badges/ff2310b6-b81d-42de-aec7-595ce29113a8/public_url"
-  },
-  {
-    "title": "Introduction to Data Analytics on Google Cloud",
-    "organization": "Google",
-    "date": "Sep 2024",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
-    "link": "https://www.cloudskillsboost.google/public_profiles/3f3d1ff5-64bc-4d9f-bf56-8da09024de80/badges/11521846"
-  },
-  {
-    "title": "Analyzing and Visualizing Data in Looker",
-    "organization": "Google",
-    "date": "Sep 2024",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
-    "link": "https://www.cloudskillsboost.google/public_profiles/3f3d1ff5-64bc-4d9f-bf56-8da09024de80/badges/11528387"
-  },
-  {
-    "title": "AWS Educate Machine Learning Foundations",
-    "organization": "Amazon Web Services (AWS)",
-    "date": "Sep 2024",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQFqdm1TZ-RZKQ/company-logo_100_100/B4EZgOay6gHEAY-/0/1752588562343/amazon_web_services_logo?e=1777507200&v=beta&t=sINUc52II3ahQBUG78sEa4L8PCMpPRpEsTMPp6KYuxI",
-    "link": "https://www.credly.com/badges/251fad28-1cd3-44a6-b544-58f3705c6e91/public_url"
-  },
-  {
     "title": "AI Skills Challenge April 2024 Badge",
     "organization": "Microsoft",
     "date": "Apr 2024",
@@ -308,11 +273,67 @@
     "link": "https://www.coursera.org/account/accomplishments/records/WCH2LP83QCA5"
   },
   {
-    "title": "Google Advanced Data Analytics Specialization",
-    "organization": "Google",
-    "date": "Jun 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
-    "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/3VBYS3PW7ZQB"
+    "title": "Microsoft Power BI Data Analyst Professional Certificate",
+    "organization": "Microsoft",
+    "date": "March 2025",
+    "image": "https://images.credly.com/size/340x340/images/a8bb8375-f317-45e1-98b0-a81fb633d995/blob",
+    "link": "https://www.credly.com/badges/37d30f55-d8bd-4f8e-8ae9-7e15591e1dbd"
+  },
+  {
+    "title": "Databricks Fundamentals",
+    "organization": "Databricks",
+    "date": "Jun 2025",
+    "image": "https://s3.us-east-1.amazonaws.com/accredible_temp_credential_images/16002836894132567677717491881160.png",
+    "link": "https://credentials.databricks.com/c6489d76-024c-4f2c-ad6b-915356adbd83"
+  },
+  {
+    "title": "Dagster Essentials",
+    "organization": "Dagster Labs",
+    "date": "Jun 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQH7iNlXiRlcEg/company-logo_100_100/B56ZZKK2zdGsAQ-/0/1745001082396/dagsterlabs_logo?e=1777507200&v=beta&t=EKSHwmDrTzcEp20U2-QwKJm7A_gQx6kfTBtBkYnoFRY",
+    "link": "https://courses.dagster.io/certificates/egkah0no6u"
+  },
+  {
+    "title": "dbt Fundamentals",
+    "organization": "dbt Labs",
+    "date": "Jun 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQHYKuW1_dSUTw/company-logo_100_100/B56Zcxv_zLHEAQ-/0/1748886356585/dbtlabs_logo?e=1777507200&v=beta&t=nuabd5xjZaEAUmCKSU1Hz3OxMYP5qWWXYXWENE9E3fc",
+    "link": "https://credentials.getdbt.com/7b376cda-80a3-452a-a46d-174347ce84cb"
+  },
+  {
+    "title": "Airbyte Cloud Fundamentals",
+    "organization": "Airbyte",
+    "date": "May 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQGOU6zMFu0oyA/company-logo_100_100/B56ZaDNy7jGoAQ-/0/1745958154474/airbytehq_logo?e=1777507200&v=beta&t=__SD1VDWaKgt5Ie5mpn6z2XMM-wZVMMOWagw7xIP_Qc",
+    "link": "https://airbyteacademy.thinkific.com/certificates/azyhkwqvha"
+  },
+  {
+    "title": "Dremio Verified Data Analyst",
+    "organization": "Dremio",
+    "date": "Mar 2025",
+    "image": "https://media.licdn.com/dms/image/v2/C560BAQFjwLBsd9FkiQ/company-logo_100_100/company-logo_100_100/0/1630640170202/dremio_logo?e=1777507200&v=beta&t=SpVv8YQGPO5Tn4BVK4UJcukInytWwMJ9afVjtZyy880",
+    "link": "https://www.credly.com/badges/4ee884cc-2df3-41cf-91ff-62f01d410440/public_url"
+  },
+  {
+    "title": "Dremio SQL for Data Analysts",
+    "organization": "Dremio",
+    "date": "Mar 2025",
+    "image": "https://media.licdn.com/dms/image/v2/C560BAQFjwLBsd9FkiQ/company-logo_100_100/company-logo_100_100/0/1630640170202/dremio_logo?e=1777507200&v=beta&t=SpVv8YQGPO5Tn4BVK4UJcukInytWwMJ9afVjtZyy880",
+    "link": "https://mycourse.app/aqGnMfbVVxqgUiChL"
+  },
+  {
+    "title": "Dremio Fundamentals Certificate",
+    "organization": "Dremio",
+    "date": "Mar 2025",
+    "image": "https://media.licdn.com/dms/image/v2/C560BAQFjwLBsd9FkiQ/company-logo_100_100/company-logo_100_100/0/1630640170202/dremio_logo?e=1777507200&v=beta&t=SpVv8YQGPO5Tn4BVK4UJcukInytWwMJ9afVjtZyy880",
+    "link": "https://mycourse.app/k46Wc49GJvr7YhUlA"
+  },
+  {
+    "title": "Dremio Verified Data Analyst",
+    "organization": "Dremio",
+    "date": "March 2025",
+    "image": "https://images.credly.com/images/4f9d8c7b-6a2e-4d5c-b1f8-3e9a4d7c5b6a/Dremio_Verified_DA.png",
+    "link": "https://www.credly.com/badges/892da8b7-6019-4809-ae9f-dfd9e2646274"
   },
   {
     "title": "Databases and SQL for Data Science with Python (WITH HONORS)",
@@ -385,39 +406,11 @@
     "link": "https://www.credly.com/badges/4cdd9c78-368e-440c-9185-cabd2cd53c2a/linked_in_profile"
   },
   {
-    "title": "M100: MongoDB for SQL Pros",
-    "organization": "MongoDB",
-    "date": "May 2023",
-    "image": "https://media.licdn.com/dms/image/v2/C4D0BAQFKe8PwqzyHyA/company-logo_100_100/company-logo_100_100/0/1635171226992/mongodbinc_logo?e=1777507200&v=beta&t=lwTDhmjEiN6gXTcxl-vfSs6rMugxS4LvGACG4z7Td1Q",
-    "link": "https://learn.mongodb.com/c/zZ539T6fS9CoG_6gLXDx7Q"
-  },
-  {
     "title": "SQL and Relational Databases 101",
     "organization": "IBM",
     "date": "May 2023",
     "image": "https://media.licdn.com/dms/image/v2/D560BAQGiz5ecgpCtkA/company-logo_100_100/company-logo_100_100/0/1688684715866/ibm_logo?e=1777507200&v=beta&t=TfktOX6EKpN2wP_S-85vs9vxXtj97AwM3Yeoic7klsA",
     "link": "https://courses.cognitiveclass.ai/certificates/bc079c1699b74d1ebb064d8cc1881f8b"
-  },
-  {
-    "title": "Google Analytics Certification",
-    "organization": "Google",
-    "date": "May 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1777507200&v=beta&t=Qh84lGzzoJvGUYgxQi1zMUw2hbVuBEFu4hgpuMJ5ct8",
-    "link": "https://skillshop.credential.net/2b7d3147-93e3-47f1-ad3f-907bfbb2103a"
-  },
-  {
-    "title": "MySQL Certificate",
-    "organization": "TopCV Vietnam",
-    "date": "May 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQEUyqN0faHV1A/company-logo_100_100/company-logo_100_100/0/1731393063984/topcv_vietnam_logo?e=1777507200&v=beta&t=i_Va438lejvACnnZf4i0SNsNkU12EmrJSgxkXF3D1eo",
-    "link": "https://certificate.testcenter.vn/dk57Uj0fMlcZNV9GVjE2bFN7SXU"
-  },
-  {
-    "title": "Excel Certificate",
-    "organization": "TopCV Vietnam",
-    "date": "May 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQEUyqN0faHV1A/company-logo_100_100/company-logo_100_100/0/1731393063984/topcv_vietnam_logo?e=1777507200&v=beta&t=i_Va438lejvACnnZf4i0SNsNkU12EmrJSgxkXF3D1eo",
-    "link": "https://certificate.testcenter.vn/dk58Wz0fMlcZNV9GVjE2bFN7SXU"
   },
   {
     "title": "Getting started with MySQL",
@@ -432,48 +425,6 @@
     "date": "May 2023",
     "image": "https://media.licdn.com/dms/image/v2/D560BAQGiz5ecgpCtkA/company-logo_100_100/company-logo_100_100/0/1688684715866/ibm_logo?e=1777507200&v=beta&t=TfktOX6EKpN2wP_S-85vs9vxXtj97AwM3Yeoic7klsA",
     "link": "https://courses.cognitiveclass.ai/certificates/ba71b8f5e6a040be85e2f052d54a8f42"
-  },
-  {
-    "title": "Kaggle’s Advanced SQL",
-    "organization": "Kaggle",
-    "date": "May 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQHiDW6e3lXmdw/company-logo_100_100/B4EZz2IQPcHgAQ-/0/1773655885272/kaggle_logo?e=1777507200&v=beta&t=lq8tiIjkfZWvZSimF84u4YkKSpRjEPnIYsCmAqphzTQ",
-    "link": "https://www.kaggle.com/learn/certification/tunguyen99/advanced-sql"
-  },
-  {
-    "title": "Intro to SQL",
-    "organization": "Kaggle",
-    "date": "May 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQHiDW6e3lXmdw/company-logo_100_100/B4EZz2IQPcHgAQ-/0/1773655885272/kaggle_logo?e=1777507200&v=beta&t=lq8tiIjkfZWvZSimF84u4YkKSpRjEPnIYsCmAqphzTQ",
-    "link": "https://www.kaggle.com/learn/certification/tunguyen99/intro-to-sql"
-  },
-  {
-    "title": "Python (Basic) Certificate",
-    "organization": "HackerRank",
-    "date": "Apr 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1777507200&v=beta&t=wthOwr5OBTRcB6tzW9PG5GhJcz8GlUECDdLNWJvOYAI",
-    "link": "https://www.hackerrank.com/certificates/34de750f2b22"
-  },
-  {
-    "title": "SQL (Advanced) Certificate",
-    "organization": "HackerRank",
-    "date": "Apr 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1777507200&v=beta&t=wthOwr5OBTRcB6tzW9PG5GhJcz8GlUECDdLNWJvOYAI",
-    "link": "https://www.hackerrank.com/certificates/7b984d13749c"
-  },
-  {
-    "title": "SQL (Intermediate) Certificate",
-    "organization": "HackerRank",
-    "date": "Apr 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1777507200&v=beta&t=wthOwr5OBTRcB6tzW9PG5GhJcz8GlUECDdLNWJvOYAI",
-    "link": "https://www.hackerrank.com/certificates/83dcd799e4d3"
-  },
-  {
-    "title": "SQL (Basic) Certificate",
-    "organization": "HackerRank",
-    "date": "Apr 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1777507200&v=beta&t=wthOwr5OBTRcB6tzW9PG5GhJcz8GlUECDdLNWJvOYAI",
-    "link": "https://www.hackerrank.com/certificates/b503b82a7ad0"
   },
   {
     "title": "Data Analysis with Python",
@@ -502,62 +453,6 @@
     "date": "Jan 2023",
     "image": "https://media.licdn.com/dms/image/v2/D560BAQGiz5ecgpCtkA/company-logo_100_100/company-logo_100_100/0/1688684715866/ibm_logo?e=1777507200&v=beta&t=TfktOX6EKpN2wP_S-85vs9vxXtj97AwM3Yeoic7klsA",
     "link": "https://www.credly.com/badges/837e8f8f-3817-4f8f-b633-85e8c6b81367"
-  },
-  {
-    "title": "Learn SQL Basics for Data Science Specialization",
-    "organization": "Others",
-    "date": "Jan 2023",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQEoGOIHB7x65w/company-logo_100_100/B56ZnoqcQMKMAY-/0/1760545064338/uc_davis_logo?e=1777507200&v=beta&t=BjuXPBI3NiV_aMQPqlpJonA58vYrzNWfK4-WgSzw-1Q",
-    "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/QABHUXXRJ3KZ"
-  },
-  {
-    "title": "IC3 Digital Literacy Certification",
-    "organization": "Others",
-    "date": "N/A",
-    "image": "https://media.licdn.com/dms/image/v2/C4D0BAQHkMhN-vtxOrg/company-logo_100_100/company-logo_100_100/0/1631301130477?e=1777507200&v=beta&t=RgA1D59jnX2zs79wu7L22ex6RXgQcWf8btrKf-ElcTQ",
-    "link": "https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=186&cvid=scFXmIDQoGT6mtmFZk95lQ%3D%3D"
-  },
-  {
-    "title": "Microsoft Power BI Data Analyst Professional Certificate",
-    "organization": "Microsoft",
-    "date": "March 2025",
-    "image": "https://images.credly.com/size/340x340/images/a8bb8375-f317-45e1-98b0-a81fb633d995/blob",
-    "link": "https://www.credly.com/badges/37d30f55-d8bd-4f8e-8ae9-7e15591e1dbd"
-  },
-  {
-    "title": "Dremio Verified Data Analyst",
-    "organization": "Dremio",
-    "date": "March 2025",
-    "image": "https://images.credly.com/images/4f9d8c7b-6a2e-4d5c-b1f8-3e9a4d7c5b6a/Dremio_Verified_DA.png",
-    "link": "https://www.credly.com/badges/892da8b7-6019-4809-ae9f-dfd9e2646274"
-  },
-  {
-    "title": "Applied Data Science Lab",
-    "organization": "WorldQuant University",
-    "date": "February 2025",
-    "image": "https://images.credly.com/images/d10e6676-e91b-4171-886d-16be9ebf04fc/WQU_Applied_Data_Science.png",
-    "link": "https://www.credly.com/badges/d10e6676-e91b-4171-886d-16be9ebf04fc"
-  },
-  {
-    "title": "AWS Cloud Quest: Cloud Practitioner",
-    "organization": "Amazon Web Services (AWS)",
-    "date": "September 2024",
-    "image": "https://images.credly.com/images/bbd86d77-a0a4-419c-a03e-ec1014a826aa/AWS_Cloud_Quest.png",
-    "link": "https://www.credly.com/badges/bbd86d77-a0a4-419c-a03e-ec1014a826aa"
-  },
-  {
-    "title": "Derive Insights from BigQuery Data",
-    "organization": "Google",
-    "date": "September 2024",
-    "image": "https://images.credly.com/images/ff2310b6-b81d-42de-aec7-595ce29113a8/GoogleCloud_BigQuery.png",
-    "link": "https://www.credly.com/badges/ff2310b6-b81d-42de-aec7-595ce29113a8"
-  },
-  {
-    "title": "Google Advanced Data Analytics",
-    "organization": "Google",
-    "date": "June 2023",
-    "image": "https://images.credly.com/size/340x340/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png",
-    "link": "https://www.credly.com/badges/c3061ad5-27be-4554-ae5f-b8b1bc21c91a"
   },
   {
     "title": "Data Analyst Professional Certificate",
@@ -621,5 +516,103 @@
     "date": "May 2023",
     "image": "https://images.credly.com/images/d259c9fa-6f00-4cc0-8b8d-061ee216bc55/IBM_Applied_DS_Python.png",
     "link": "https://www.credly.com/badges/d259c9fa-6f00-4cc0-8b8d-061ee216bc55"
+  },
+  {
+    "title": "M100: MongoDB for SQL Pros",
+    "organization": "MongoDB",
+    "date": "May 2023",
+    "image": "https://media.licdn.com/dms/image/v2/C4D0BAQFKe8PwqzyHyA/company-logo_100_100/company-logo_100_100/0/1635171226992/mongodbinc_logo?e=1777507200&v=beta&t=lwTDhmjEiN6gXTcxl-vfSs6rMugxS4LvGACG4z7Td1Q",
+    "link": "https://learn.mongodb.com/c/zZ539T6fS9CoG_6gLXDx7Q"
+  },
+  {
+    "title": "Applied Data Science Lab",
+    "organization": "WorldQuant University",
+    "date": "February 2025",
+    "image": "https://images.credly.com/images/d10e6676-e91b-4171-886d-16be9ebf04fc/WQU_Applied_Data_Science.png",
+    "link": "https://www.credly.com/badges/d10e6676-e91b-4171-886d-16be9ebf04fc"
+  },
+  {
+    "title": "Applied Data Science Lab",
+    "organization": "WorldQuant University",
+    "date": "Feb 2025",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQESEDfB20bR6A/company-logo_100_100/company-logo_100_100/0/1712845289109/worldquant_university_logo?e=1777507200&v=beta&t=D9jYKBtF5lG8bPgeacyRC2g68JzZa8nfbv5vJMOZpK8",
+    "link": "https://www.credly.com/badges/0bdd69be-c829-472b-b724-a829c88bc05b/public_url"
+  },
+  {
+    "title": "Python (Basic) Certificate",
+    "organization": "HackerRank",
+    "date": "Apr 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1777507200&v=beta&t=wthOwr5OBTRcB6tzW9PG5GhJcz8GlUECDdLNWJvOYAI",
+    "link": "https://www.hackerrank.com/certificates/34de750f2b22"
+  },
+  {
+    "title": "SQL (Advanced) Certificate",
+    "organization": "HackerRank",
+    "date": "Apr 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1777507200&v=beta&t=wthOwr5OBTRcB6tzW9PG5GhJcz8GlUECDdLNWJvOYAI",
+    "link": "https://www.hackerrank.com/certificates/7b984d13749c"
+  },
+  {
+    "title": "SQL (Intermediate) Certificate",
+    "organization": "HackerRank",
+    "date": "Apr 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1777507200&v=beta&t=wthOwr5OBTRcB6tzW9PG5GhJcz8GlUECDdLNWJvOYAI",
+    "link": "https://www.hackerrank.com/certificates/83dcd799e4d3"
+  },
+  {
+    "title": "SQL (Basic) Certificate",
+    "organization": "HackerRank",
+    "date": "Apr 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1777507200&v=beta&t=wthOwr5OBTRcB6tzW9PG5GhJcz8GlUECDdLNWJvOYAI",
+    "link": "https://www.hackerrank.com/certificates/b503b82a7ad0"
+  },
+  {
+    "title": "Introduction to Python",
+    "organization": "Others",
+    "date": "Aug 2025",
+    "image": "https://media.licdn.com/dms/image/v2/C4D0BAQHoE9F6A76mOQ/company-logo_100_100/company-logo_100_100/0/1630577190840/datacampinc_logo?e=1777507200&v=beta&t=DgEsV1XXKBc7J0gwurX5cYZCuT7PuhjS-KQy5vGtuj0",
+    "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/653d701ad43ffbbb50d95cc895875f668e9bb0b0"
+  },
+  {
+    "title": "MySQL Certificate",
+    "organization": "Others",
+    "date": "May 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQEUyqN0faHV1A/company-logo_100_100/company-logo_100_100/0/1731393063984/topcv_vietnam_logo?e=1777507200&v=beta&t=i_Va438lejvACnnZf4i0SNsNkU12EmrJSgxkXF3D1eo",
+    "link": "https://certificate.testcenter.vn/dk57Uj0fMlcZNV9GVjE2bFN7SXU"
+  },
+  {
+    "title": "Excel Certificate",
+    "organization": "Others",
+    "date": "May 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQEUyqN0faHV1A/company-logo_100_100/company-logo_100_100/0/1731393063984/topcv_vietnam_logo?e=1777507200&v=beta&t=i_Va438lejvACnnZf4i0SNsNkU12EmrJSgxkXF3D1eo",
+    "link": "https://certificate.testcenter.vn/dk58Wz0fMlcZNV9GVjE2bFN7SXU"
+  },
+  {
+    "title": "Kaggle’s Advanced SQL",
+    "organization": "Others",
+    "date": "May 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQHiDW6e3lXmdw/company-logo_100_100/B4EZz2IQPcHgAQ-/0/1773655885272/kaggle_logo?e=1777507200&v=beta&t=lq8tiIjkfZWvZSimF84u4YkKSpRjEPnIYsCmAqphzTQ",
+    "link": "https://www.kaggle.com/learn/certification/tunguyen99/advanced-sql"
+  },
+  {
+    "title": "Intro to SQL",
+    "organization": "Others",
+    "date": "May 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQHiDW6e3lXmdw/company-logo_100_100/B4EZz2IQPcHgAQ-/0/1773655885272/kaggle_logo?e=1777507200&v=beta&t=lq8tiIjkfZWvZSimF84u4YkKSpRjEPnIYsCmAqphzTQ",
+    "link": "https://www.kaggle.com/learn/certification/tunguyen99/intro-to-sql"
+  },
+  {
+    "title": "Learn SQL Basics for Data Science Specialization",
+    "organization": "Others",
+    "date": "Jan 2023",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQEoGOIHB7x65w/company-logo_100_100/B56ZnoqcQMKMAY-/0/1760545064338/uc_davis_logo?e=1777507200&v=beta&t=BjuXPBI3NiV_aMQPqlpJonA58vYrzNWfK4-WgSzw-1Q",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/QABHUXXRJ3KZ"
+  },
+  {
+    "title": "IC3 Digital Literacy Certification",
+    "organization": "Others",
+    "date": "N/A",
+    "image": "https://media.licdn.com/dms/image/v2/C4D0BAQHkMhN-vtxOrg/company-logo_100_100/company-logo_100_100/0/1631301130477?e=1777507200&v=beta&t=RgA1D59jnX2zs79wu7L22ex6RXgQcWf8btrKf-ElcTQ",
+    "link": "https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=186&cvid=scFXmIDQoGT6mtmFZk95lQ%3D%3D"
   }
 ]
