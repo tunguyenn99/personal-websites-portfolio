@@ -50,8 +50,19 @@ export default function AboutMe() {
       </div>
 
       <style>{`
+        @media (max-width: 1024px) {
+          .responsive-grid { gap: 2rem !important; }
+          h1 { font-size: 4rem !important; }
+        }
         @media (max-width: 900px) {
-          .responsive-grid { grid-template-columns: 1fr !important; }
+          .responsive-grid { grid-template-columns: 1fr !important; text-align: center; }
+          .responsive-grid div { display: flex; flex-direction: column; align-items: center; }
+          .responsive-grid p { margin-left: auto; margin-right: auto; }
+          h1 { font-size: 3.5rem !important; }
+        }
+        @media (max-width: 480px) {
+          h1 { font-size: 2.75rem !important; }
+          .glass-panel { height: 400px !important; }
         }
       `}</style>
     </section>

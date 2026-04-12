@@ -14,6 +14,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [isMenuOpen]);
+
   const navLinks = [
     { name: 'About Me', href: '#about' },
     { name: 'Experience', href: '#experience' },
@@ -55,6 +64,42 @@ export default function Navbar() {
         <button className="mobile-toggle" style={{ background: 'none', border: 'none', color: 'var(--text-main)', cursor: 'pointer' }} onClick={() => setIsMenuOpen(!isMenuOpen)}>
            {isMenuOpen ? <X /> : <Menu />}
         </button>
+      </div>
+
+      {/* Mobile Nav Overlay */}
+      <div style={{
+        position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh',
+        background: 'var(--surface)', zIndex: 100,
+        display: isMenuOpen ? 'flex' : 'none', flexDirection: 'column',
+        alignItems: 'center', justifyContent: 'center', gap: '2rem',
+        padding: '2rem'
+      }}>
+        <button 
+          style={{ position: 'absolute', top: '1.5rem', right: '2rem', background: 'none', border: 'none', color: 'var(--text-main)', cursor: 'pointer' }}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <X size={32} />
+        </button>
+        {navLinks.map(link => (
+          <a 
+            key={link.name} 
+            href={link.href} 
+            onClick={() => setIsMenuOpen(false)}
+            style={{ 
+              color: 'var(--text-main)', textDecoration: 'none', 
+              fontSize: '2rem', fontWeight: 700, fontFamily: 'Space Grotesk'
+            }}
+          >
+            {link.name}
+          </a>
+        ))}
+        
+        {/* Mobile Socials */}
+        <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
+          <a href="https://github.com/tunguyenn99" target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)' }}><Github size={24} /></a>
+          <a href="https://linkedin.com/in/tunguyendata" target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)' }}><Linkedin size={24} /></a>
+          <a href="mailto:contact@tunguyen.data" style={{ color: 'var(--text-muted)' }}><Mail size={24} /></a>
+        </div>
       </div>
 
       <style>{`
