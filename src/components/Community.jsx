@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Users, Heart, Facebook, Github, ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
+import { Users, Heart, ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
 import { SiFacebook, SiGithub } from 'react-icons/si';
 
 // Asset Imports
@@ -123,7 +123,7 @@ export default function Community() {
               Join Us <ExternalLink size={16} />
             </a>
             <a href="https://github.com/tunguyenn99/thu_vien_cua_xom_data" target="_blank" rel="noreferrer" className="btn-secondary">
-              <Github size={18} /> Library
+              <SiGithub size={18} /> Library
             </a>
           </div>
         </div>
