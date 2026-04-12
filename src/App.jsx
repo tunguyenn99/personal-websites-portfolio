@@ -7,9 +7,12 @@ import Techstack from './components/Techstack';
 import Community from './components/Community';
 import Contact from './components/Contact';
 
+import { Analytics } from "@vercel/analytics/react";
+
 function App() {
   return (
     <>
+      <Analytics />
       <div className="bg-blobs">
         <div className="blob-1"></div>
         <div className="blob-2"></div>
