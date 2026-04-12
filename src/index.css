@@ -2,22 +2,32 @@
 
 :root {
   /* THE KINETIC TERMINAL DESIGN TOKENS */
-  --primary: #aadd51;        /* Cyber Lime */
+  --primary: #aadd51;
+  /* Cyber Lime */
   --on-primary: #233600;
-  --secondary: #7bd0ff;      /* Electric Blue */
-  --surface: #0b1326;        /* Canvas Background */
-  --surface-low: #131b2e;    /* Sidebar/Well */
-  --surface-container: #171f33; 
-  --surface-high: #222a3d;   /* Active cards */
-  --surface-highest: #2d3449; /* Overlays */
-  
+  --secondary: #7bd0ff;
+  /* Electric Blue */
+  --surface: #0b1326;
+  /* Canvas Background */
+  --surface-low: #131b2e;
+  /* Sidebar/Well */
+  --surface-container: #171f33;
+  --surface-high: #222a3d;
+  /* Active cards */
+  --surface-highest: #2d3449;
+  /* Overlays */
+
   --text-main: #dae2fd;
   --text-muted: #bdc8d1;
   --outline: #87929a;
   --outline-low: rgba(135, 146, 154, 0.2);
-  
+
   --glass-bg: rgba(34, 42, 61, 0.7);
   --glass-border: rgba(135, 146, 154, 0.2);
+
+  /* Responsive Tokens */
+  --container-padding: 2.5rem;
+  --section-padding: 8rem;
 }
 
 * {
@@ -32,17 +42,19 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  /* Grid Overlay from Design Specs */
   background-image: radial-gradient(var(--outline-low) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-h1, h2, h3, .display-editor {
+h1,
+h2,
+h3,
+.display-editor {
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: -0.02em;
 }
 
-/* Background Blobs - Keep but update colors */
+/* Background Blobs - Performance optimized for mobile */
 .bg-blobs {
   position: fixed;
   top: 0;
@@ -76,41 +88,40 @@ h1, h2, h3, .display-editor {
   filter: blur(100px);
 }
 
-/* Glassmorphism Refined for Kinetic Terminal */
+/* Glassmorphism Refined */
 .glass-panel {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  border-radius: 8px; /* Tighter corners per spec */
+  border-radius: 8px;
   padding: 2rem;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-panel:hover {
-  transform: translateY(-4px) scale(1.01);
-  background: rgba(45, 52, 73, 0.8);
-  border-color: var(--primary);
-  box-shadow: 0 20px 40px rgba(6, 14, 32, 0.6);
-}
-
-/* Tonal Shifts (No-Line Rule) */
-.sidebar-well {
-  background: var(--surface-low);
+/* Only enable hover transforms on desktop devices */
+@media (hover: hover) {
+  .glass-panel:hover {
+    transform: translateY(-4px) scale(1.01);
+    background: rgba(45, 52, 73, 0.8);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(6, 14, 32, 0.6);
+  }
 }
 
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 var(--container-padding);
 }
 
 .section {
-  padding: 8rem 0;
+  padding: var(--section-padding) 0;
 }
 
 .section-title {
-  font-size: 3rem;
+  /* Fluid font size: min 2rem, scales with view, max 3rem */
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 4rem;
   color: var(--text-main);
@@ -129,7 +140,7 @@ h1, h2, h3, .display-editor {
   border-radius: 2px;
 }
 
-/* Buttons (Terminal Precision) */
+/* Buttons */
 .btn-primary {
   background: var(--primary);
   color: var(--on-primary);
@@ -148,12 +159,6 @@ h1, h2, h3, .display-editor {
   box-shadow: 0 0 15px rgba(170, 221, 81, 0.15);
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
-  box-shadow: 0 0 25px rgba(170, 221, 81, 0.3);
-}
-
 .btn-secondary {
   background: var(--surface-container);
   color: var(--text-main);
@@ -168,69 +173,65 @@ h1, h2, h3, .display-editor {
   gap: 0.625rem;
 }
 
-.btn-secondary:hover {
-  background: var(--surface-high);
-  border-color: var(--secondary);
-  color: var(--secondary);
-}
-
-/* Tags/Chips (Data Pulse) */
-.tag {
-  background: rgba(123, 208, 255, 0.1);
-  color: var(--secondary);
-  padding: 0.375rem 1rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border: 1px solid rgba(123, 208, 255, 0.2);
-}
-
 /* Animations */
 @keyframes kineticFade {
-  from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
-  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
 .animate-fade-in {
   animation: kineticFade 1s cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
 
-.profile-img-hover {
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.profile-img-hover:hover {
-  transform: scale(1.08) rotate(2deg);
-  filter: contrast(1.2) brightness(1.1) !important;
-}
+/* --- Responsive Breakpoints --- */
 
 @media (max-width: 1024px) {
-  .section-title { font-size: 2.5rem; }
-  .section { padding: 6rem 0; }
+  :root {
+    --section-padding: 6rem;
+  }
 }
 
 @media (max-width: 768px) {
   :root {
-    --container-padding: 1.5rem;
+    --container-padding: 1.25rem;
+    --section-padding: 4rem;
   }
-  
-  .container {
-    padding: 0 var(--container-padding);
-  }
-  
-  .section {
-    padding: 4rem 0;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-  }
-  
+
   .glass-panel {
     padding: 1.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Reduce background effects for better mobile battery/performance */
+  .blob-1,
+  .blob-2 {
+    width: 80vw;
+    height: 80vw;
+    filter: blur(60px);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Ensure buttons are easy to tap on small screens */
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
   }
 }
 
@@ -241,10 +242,13 @@ h1, h2, h3, .display-editor {
 }
 
 @keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
-}
 
-@media (max-width: 480px) {
-  .section-title { font-size: 1.75rem; }
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
