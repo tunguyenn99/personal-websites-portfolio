@@ -67,9 +67,9 @@ export default function Community() {
   return (
     <section id="community" className="section">
       <h2 className="section-title">Community Impact</h2>
-      
+
       <div className="glass-panel" style={{ padding: '2.5rem', maxWidth: '1100px', margin: '0 auto' }}>
-        
+
         {/* Header Section */}
         <div style={{ marginBottom: '2.5rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', color: 'var(--primary)' }}>
@@ -82,17 +82,17 @@ export default function Community() {
         </div>
 
         {/* Stats Row with Background Graphs */}
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: '2rem', 
-          marginBottom: '3rem' 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2rem',
+          marginBottom: '3rem'
         }}>
           {/* Members Stat Card */}
-          <div style={{ 
-            position: 'relative', 
-            padding: '2.5rem 2rem', 
-            borderRadius: '16px', 
+          <div style={{
+            position: 'relative',
+            padding: '2.5rem 2rem',
+            borderRadius: '16px',
             background: 'rgba(255,255,255,0.03)',
             overflow: 'hidden',
             border: '1px solid var(--outline-low)'
@@ -105,17 +105,17 @@ export default function Community() {
             </div>
             {/* Background Area Graph (Members) */}
             <div style={{ position: 'absolute', bottom: -15, left: 0, width: '100%', height: '80%', opacity: 0.35, filter: 'blur(20px)', zIndex: 0 }}>
-               <svg width="100%" height="100%" viewBox="0 0 200 100" preserveAspectRatio="none">
-                  <path d="M0 80C20 75 40 90 60 65C80 40 100 55 120 25C140 0 160 40 180 15C190 0 200 10 200 10V100H0V80Z" fill="var(--primary)" />
-               </svg>
+              <svg width="100%" height="100%" viewBox="0 0 200 100" preserveAspectRatio="none">
+                <path d="M0 80C20 75 40 90 60 65C80 40 100 55 120 25C140 0 160 40 180 15C190 0 200 10 200 10V100H0V80Z" fill="var(--primary)" />
+              </svg>
             </div>
           </div>
 
           {/* Stars Stat Card */}
-          <div style={{ 
-            position: 'relative', 
-            padding: '2.5rem 2rem', 
-            borderRadius: '16px', 
+          <div style={{
+            position: 'relative',
+            padding: '2.5rem 2rem',
+            borderRadius: '16px',
             background: 'rgba(255,255,255,0.03)',
             overflow: 'hidden',
             border: '1px solid var(--outline-low)'
@@ -128,26 +128,26 @@ export default function Community() {
             </div>
             {/* Background Area Graph (Stars) */}
             <div style={{ position: 'absolute', bottom: -15, left: 0, width: '100%', height: '80%', opacity: 0.3, filter: 'blur(20px)', zIndex: 0 }}>
-               <svg width="100%" height="100%" viewBox="0 0 200 100" preserveAspectRatio="none">
-                  <path d="M0 95C30 85 60 98 90 75C120 50 150 85 180 55C190 40 200 45 200 45V100H0V95Z" fill="var(--secondary)" />
-               </svg>
+              <svg width="100%" height="100%" viewBox="0 0 200 100" preserveAspectRatio="none">
+                <path d="M0 95C30 85 60 98 90 75C120 50 150 85 180 55C190 40 200 45 200 45V100H0V95Z" fill="var(--secondary)" />
+              </svg>
             </div>
           </div>
         </div>
 
         {/* Description & Buttons Row */}
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'space-between', 
-          alignItems: 'flex-start', 
-          gap: '3rem', 
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          gap: '3rem',
           marginBottom: '3.5rem',
           flexWrap: 'wrap'
         }}>
           <div style={{ flex: '1', minWidth: '320px' }}>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '1.15rem' }}>
-              Co-founding and managing the most vibrant data ecosystem in Vietnam. 
-              Our community is an inclusive space for <strong>everyone</strong>—from curious beginners and tech hobbyists to industry veterans—united by a common goal to master the world of data.
+              Co-founding and managing the most vibrant data ecosystem in Vietnam.
+              Our community is an inclusive space for <strong>everyone</strong> - from curious beginners and tech hobbyists to industry veterans - united by a common goal to master the world of data.
             </p>
           </div>
           <div style={{ display: 'flex', gap: '1.25rem', paddingBottom: '1rem' }}>
@@ -161,7 +161,7 @@ export default function Community() {
         </div>
 
         {/* Interactive Slideshow */}
-        <div 
+        <div
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           style={{ position: 'relative' }}
@@ -169,12 +169,12 @@ export default function Community() {
           <div className="glass-panel" style={{ padding: '0.6rem', overflow: 'hidden', background: 'rgba(0,0,0,0.4)', border: '1px solid var(--outline-low)' }}>
             <div style={{ position: 'relative', aspectRatio: '21/9', borderRadius: '8px', overflow: 'hidden', background: '#000' }}>
               {images.map((img, idx) => (
-                <img 
+                <img
                   key={idx}
-                  src={img} 
+                  src={img}
                   alt={`Community Highlight ${idx}`}
-                  style={{ 
-                    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', 
+                  style={{
+                    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
                     objectFit: 'cover', transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
                     opacity: activeSlide === idx ? 1 : 0,
                     transform: activeSlide === idx ? 'scale(1)' : 'scale(1.15)',
@@ -196,25 +196,25 @@ export default function Community() {
                 ))}
               </div>
             </div>
-            
+
             <div style={{ padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-               <div>
-                  <h4 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.75rem', letterSpacing: '0.02em' }}>
-                    {activeSlide === 0 && "Our Vibrant Facebook Hub"}
-                    {activeSlide === 1 && "Rapid Ecosystem Growth"}
-                    {activeSlide === 2 && "Global & Diverse Community"}
-                    {activeSlide === 3 && "Top-Tier Knowledge Sharing"}
-                  </h4>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', maxWidth: '700px', lineHeight: 1.6 }}>
-                    {activeSlide === 0 && "Connecting 75k hearts and minds in Vietnam's most active data-driven community."}
-                    {activeSlide === 1 && "Unprecedented growth driven by high-quality content and community-first values."}
-                    {activeSlide === 2 && "Built for builders, hobbyists, and experts alike across all STEM and data domains."}
-                    {activeSlide === 3 && "Empowering the next generation of data professionals with open resources and deep insights."}
-                  </p>
-               </div>
-               <div style={{ fontSize: '0.9rem', fontWeight: 900, opacity: 0.2, letterSpacing: '0.3em', fontFamily: 'Space Grotesk' }}>
-                  0{activeSlide + 1} / 0{images.length}
-               </div>
+              <div>
+                <h4 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.75rem', letterSpacing: '0.02em' }}>
+                  {activeSlide === 0 && "Our Vibrant Facebook Hub"}
+                  {activeSlide === 1 && "Rapid Ecosystem Growth"}
+                  {activeSlide === 2 && "Global & Diverse Community"}
+                  {activeSlide === 3 && "Top-Tier Knowledge Sharing"}
+                </h4>
+                <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', maxWidth: '700px', lineHeight: 1.6 }}>
+                  {activeSlide === 0 && "Connecting 75k hearts and minds in Vietnam's most active data-driven community."}
+                  {activeSlide === 1 && "Unprecedented growth driven by high-quality content and community-first values."}
+                  {activeSlide === 2 && "Built for builders, hobbyists, and experts alike across all STEM and data domains."}
+                  {activeSlide === 3 && "Empowering the next generation of data professionals with open resources and deep insights."}
+                </p>
+              </div>
+              <div style={{ fontSize: '0.9rem', fontWeight: 900, opacity: 0.2, letterSpacing: '0.3em', fontFamily: 'Space Grotesk' }}>
+                0{activeSlide + 1} / 0{images.length}
+              </div>
             </div>
           </div>
         </div>

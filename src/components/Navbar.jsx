@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Mail } from 'lucide-react';
-import { FaGithub as Github, FaLinkedin as Linkedin } from 'react-icons/fa';
+import { SiGithub as Github } from 'react-icons/si';
+import { FaLinkedin as Linkedin } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

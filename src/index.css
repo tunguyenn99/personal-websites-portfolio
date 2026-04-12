@@ -197,7 +197,15 @@ h1, h2, h3, .display-editor {
   animation: kineticFade 1s cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
 
-/* RESPONSIVENESS TWEAKS */
+.profile-img-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-img-hover:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: contrast(1.2) brightness(1.1) !important;
+}
+
 @media (max-width: 1024px) {
   .section-title { font-size: 2.5rem; }
   .section { padding: 6rem 0; }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Download, ArrowRight, MapPin } from 'lucide-react';
-import { FaGithub as Github, FaLinkedin as Linkedin } from 'react-icons/fa';
+import { SiGithub as Github } from 'react-icons/si';
+import { FaLinkedin as Linkedin } from 'react-icons/fa';
 import profilePic from '../assets/avatar/github-avatar.jpg';
 
 export default function AboutMe() {
