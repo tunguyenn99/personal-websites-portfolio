@@ -13,11 +13,28 @@ export default function AboutMe() {
     "A Data Enthusiast"
   ];
 
+  const fullText = "Crafting high-performance data architectures and scalable ELT pipelines. Bridging the gap between raw data and metabolic insights with mathematical precision.";
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleIndex((prev) => (prev + 1) % titles.length);
     }, 3000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      setDisplayedText(fullText.slice(0, index));
+      index++;
+      if (index > fullText.length) {
+        clearInterval(timer);
+        setIsTypingComplete(true);
+      }
+    }, 30);
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -50,8 +67,9 @@ export default function AboutMe() {
               </svg>
             </span>
           </h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: '650px', fontWeight: 400 }}>
-            Crafting high-performance data architectures and scalable ELT pipelines. Bridging the gap between raw data and metabolic insights with <span style={{color: 'var(--secondary)'}}>mathematical precision</span>.
+          <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: '650px', fontWeight: 400, minHeight: '4.5em' }}>
+            {displayedText}
+            {!isTypingComplete && <span className="typing-cursor">|</span>}
           </p>
           
           <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
