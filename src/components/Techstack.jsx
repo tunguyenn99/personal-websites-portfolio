@@ -28,7 +28,7 @@ export default function Techstack() {
       ] 
     },
     { 
-      category: "Data Ingestion & Collection", 
+      category: "Data Ingestion & Collection (DE/AE focus)", 
       icon: <Download size={20} />,
       items: [
         { name: "Airbyte", icon: <SiAirbyte color="#6557FF" /> },
@@ -39,7 +39,7 @@ export default function Techstack() {
       ] 
     },
     { 
-      category: "Transformation & Orchestration", 
+      category: "Transformation & Orchestration (AE focus)", 
       icon: <Workflow size={20} />,
       items: [
         { name: "dbt", icon: <SiDbt color="#FF694B" /> },
@@ -62,12 +62,14 @@ export default function Techstack() {
         { name: "Snowflake", icon: <SiSnowflake color="#29B5E8" /> },
         { name: "Databricks", icon: <SiDatabricks color="#FF3621" /> },
         { name: "PostgreSQL", icon: <SiPostgresql color="#336791" /> },
+        { name: "SQL Server", icon: <Database size={14} color="#DA3D34" /> },
+        { name: "Oracle", icon: <Database size={14} color="#F70000" /> },
         { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
         { name: "Supabase", icon: <SiSupabase color="#3ECF8E" /> }
       ] 
     },
     { 
-      category: "BI, Analytics & Visualization", 
+      category: "BI, Analytics & Visualization (DA/BI focus)", 
       icon: <BarChart3 size={20} />,
       items: [
         { name: "Power BI", icon: <BarChart3 size={14} color="#F2C811" /> },
