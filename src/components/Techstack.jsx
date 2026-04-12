@@ -1,11 +1,11 @@
 import React from 'react';
 import { 
-  SiPython, SiJavascript, SiPostgresql, SiHtml5, SiCss3,
-  SiDbt, SiApacheairflow, SiDagster, SiSnowflake, SiDatabricks, 
+  SiPython, SiJavascript, SiPostgresql, SiHtml5, SiCss,
+  SiDbt, SiApacheairflow, SiSnowflake, SiDatabricks, 
   SiSupabase, SiDocker, SiKubernetes, SiLinux, SiGithubactions, 
-  SiJupyter, SiPowerbi, SiTrino, SiApacheiceberg, SiTableau
+  SiJupyter
 } from 'react-icons/si';
-import { Database, Terminal, Cloud, BarChart3, Workflow } from 'lucide-react';
+import { Database, Terminal, Cloud, BarChart3, Workflow, PieChart } from 'lucide-react';
 
 export default function Techstack() {
   const stack = [
@@ -16,7 +16,7 @@ export default function Techstack() {
         { name: "Python", icon: <SiPython color="#3776AB" /> },
         { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
         { name: "PostgreSQL / SQL", icon: <SiPostgresql color="#4169E1" /> },
-        { name: "Frontend", icon: <><SiHtml5 color="#E34F26" /> <SiCss3 color="#1572B6" /></> }
+        { name: "Frontend", icon: <><SiHtml5 color="#E34F26" /> <SiCss color="#1572B6" /></> }
       ] 
     },
     { 
@@ -25,7 +25,7 @@ export default function Techstack() {
       items: [
         { name: "dbt", icon: <SiDbt color="#FF694B" /> },
         { name: "Airflow", icon: <SiApacheairflow color="#017CEE" /> },
-        { name: "Dagster", icon: <SiDagster color="#4FB194" /> },
+        { name: "Dagster", icon: <Workflow size={14} color="#4FB194" /> },
         { name: "Mage", icon: <span style={{fontSize: '0.8rem'}}>🧙</span> },
         { name: "Kestra", icon: <span style={{fontSize: '0.8rem'}}>⚡</span> }
       ] 
@@ -36,8 +36,8 @@ export default function Techstack() {
       items: [
         { name: "Snowflake", icon: <SiSnowflake color="#29B5E8" /> },
         { name: "Databricks", icon: <SiDatabricks color="#FF3621" /> },
-        { name: "Trino", icon: <SiTrino color="#DD0031" /> },
-        { name: "Apache Iceberg", icon: <SiApacheiceberg color="#011B3D" /> },
+        { name: "Trino", icon: <Database size={14} color="#DD0031" /> },
+        { name: "Apache Iceberg", icon: <Database size={14} color="#011B3D" /> },
         { name: "Supabase", icon: <SiSupabase color="#3ECF8E" /> }
       ] 
     },
@@ -56,8 +56,8 @@ export default function Techstack() {
       icon: <BarChart3 size={20} />,
       items: [
         { name: "Jupyter", icon: <SiJupyter color="#F37626" /> },
-        { name: "PowerBI", icon: <SiPowerbi color="#F2C811" /> },
-        { name: "Tableau", icon: <SiTableau color="#E97627" /> },
+        { name: "PowerBI", icon: <BarChart3 size={14} color="#F2C811" /> },
+        { name: "Tableau", icon: <PieChart size={14} color="#E97627" /> },
         { name: "Scikit-Learn", icon: <span style={{fontWeight: 800}}>scikit</span> }
       ] 
     }
