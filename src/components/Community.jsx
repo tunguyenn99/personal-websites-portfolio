@@ -27,7 +27,7 @@ export default function Community() {
           </h3>
           
           <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', marginBottom: '1.75rem', lineHeight: 1.7 }}>
-            Co-founding and managing the most vibrant data ecosystem in Vietnam. Empowering **20,000+** members through knowledge sharing, professional networking, and high-quality educational resources.
+            Co-founding and managing the most vibrant data ecosystem in Vietnam. Empowering <strong style={{color: 'var(--primary)'}}>74,000+</strong> members through knowledge sharing, professional networking, and high-quality educational resources.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
@@ -46,7 +46,7 @@ export default function Community() {
               </div>
               <div>
                 <h4 style={{ fontSize: '1rem', marginBottom: '0.2rem' }}>Thư Viện Của Xóm</h4>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Open-source library with **180+ stars** on GitHub.</p>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Open-source library with <strong>180+ stars</strong> on GitHub.</p>
               </div>
             </div>
           </div>
