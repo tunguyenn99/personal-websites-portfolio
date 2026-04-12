@@ -136,7 +136,7 @@
     "title": "Databricks Fundamentals",
     "organization": "Databricks",
     "date": "Jun 2025",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQFPIRKiPVETuw/company-logo_100_100/company-logo_100_100/0/1697215766274/databricks_logo?e=1777507200&v=beta&t=TryZtN6aV9VVMvbJFuGXI9-dnf177YXnpv424OkyC74",
+    "image": "https://s3.us-east-1.amazonaws.com/accredible_temp_credential_images/16002836894132567677717491881160.png",
     "link": "https://credentials.databricks.com/c6489d76-024c-4f2c-ad6b-915356adbd83"
   },
   {
@@ -246,16 +246,16 @@
   },
   {
     "title": "Developing Data Models with LookML",
-    "organization": "Google Cloud Skills Boost",
+    "organization": "Google",
     "date": "Sep 2024",
     "image": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_100_100/company-logo_100_100/0/1698660876286?e=1777507200&v=beta&t=ALFZKt2aAIRYfOzrF2Rhhq8-NAlWXacAJ7p4SdUFdyo",
     "link": "https://www.cloudskillsboost.google/public_profiles/3f3d1ff5-64bc-4d9f-bf56-8da09024de80/badges/11558206"
   },
   {
     "title": "Derive Insights from BigQuery Data Skill Badge",
-    "organization": "Google Cloud Skills Boost",
+    "organization": "Google",
     "date": "Sep 2024",
-    "image": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_100_100/company-logo_100_100/0/1698660876286?e=1777507200&v=beta&t=ALFZKt2aAIRYfOzrF2Rhhq8-NAlWXacAJ7p4SdUFdyo",
+    "image": "https://images.credly.com/size/340x340/images/11088b22-7be5-4fe3-995d-c014514c8dc3/image.png",
     "link": "https://www.credly.com/badges/ff2310b6-b81d-42de-aec7-595ce29113a8/public_url"
   },
   {
@@ -505,24 +505,24 @@
   },
   {
     "title": "Learn SQL Basics for Data Science Specialization",
-    "organization": "University of California, Davis",
+    "organization": "Others",
     "date": "Jan 2023",
     "image": "https://media.licdn.com/dms/image/v2/D560BAQEoGOIHB7x65w/company-logo_100_100/B56ZnoqcQMKMAY-/0/1760545064338/uc_davis_logo?e=1777507200&v=beta&t=BjuXPBI3NiV_aMQPqlpJonA58vYrzNWfK4-WgSzw-1Q",
     "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/QABHUXXRJ3KZ"
   },
   {
     "title": "IC3 Digital Literacy Certification",
-    "organization": "Certiport - A Pearson VUE Business",
+    "organization": "Others",
     "date": "N/A",
     "image": "https://media.licdn.com/dms/image/v2/C4D0BAQHkMhN-vtxOrg/company-logo_100_100/company-logo_100_100/0/1631301130477?e=1777507200&v=beta&t=RgA1D59jnX2zs79wu7L22ex6RXgQcWf8btrKf-ElcTQ",
     "link": "https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=186&cvid=scFXmIDQoGT6mtmFZk95lQ%3D%3D"
   },
   {
     "title": "Microsoft Power BI Data Analyst Professional Certificate",
-    "organization": "Coursera",
+    "organization": "Microsoft",
     "date": "March 2025",
-    "image": "https://images.credly.com/images/3a4d9c7e-8c6f-4d6b-b78a-5f9e8d4c2a1b/Microsoft_PowerBI_DA.png",
-    "link": "https://www.credly.com/badges/6289fb0c-03be-4654-8fe4-9343729e71ec"
+    "image": "https://images.credly.com/size/340x340/images/a8bb8375-f317-45e1-98b0-a81fb633d995/blob",
+    "link": "https://www.credly.com/badges/37d30f55-d8bd-4f8e-8ae9-7e15591e1dbd"
   },
   {
     "title": "Dremio Verified Data Analyst",
@@ -547,30 +547,30 @@
   },
   {
     "title": "Derive Insights from BigQuery Data",
-    "organization": "Google Cloud",
+    "organization": "Google",
     "date": "September 2024",
     "image": "https://images.credly.com/images/ff2310b6-b81d-42de-aec7-595ce29113a8/GoogleCloud_BigQuery.png",
     "link": "https://www.credly.com/badges/ff2310b6-b81d-42de-aec7-595ce29113a8"
   },
   {
     "title": "Google Advanced Data Analytics",
-    "organization": "Coursera",
+    "organization": "Google",
     "date": "June 2023",
-    "image": "https://images.credly.com/images/e80c85b5-7798-48b4-9642-1e967a5b3a37/Google_Advanced_Data_Analytics.png",
-    "link": "https://www.credly.com/badges/e80c85b5-7798-48b4-9642-1e967a5b3a37"
+    "image": "https://images.credly.com/size/340x340/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png",
+    "link": "https://www.credly.com/badges/c3061ad5-27be-4554-ae5f-b8b1bc21c91a"
   },
   {
     "title": "Data Analyst Professional Certificate",
-    "organization": "Coursera",
+    "organization": "IBM",
     "date": "May 2023",
-    "image": "https://images.credly.com/images/2e9770bd-020f-4435-99c2-89b2403467a4/Professional_Certificate_-_Data_Analyst.png",
+    "image": "https://images.credly.com/size/340x340/images/2e9770bd-020f-4435-99c2-89b2403467a4/Professional_Certificate_-_Data_Analyst.png",
     "link": "https://www.credly.com/badges/95b80dbc-f716-4be7-ab65-78e85949b77a"
   },
   {
     "title": "IBM Data Analyst Professional Certificate",
-    "organization": "Coursera / IBM",
+    "organization": "IBM",
     "date": "May 2023",
-    "image": "https://images.credly.com/images/0a4e8531-bb39-46b3-a837-72e71699391f/IBM_Data_Analyst.png",
+    "image": "https://images.credly.com/size/340x340/images/462503e9-d76e-47ce-b82e-1d7df909ba70/Professional_Certificate_-_Data_Analyst.png",
     "link": "https://www.credly.com/badges/0a4e8531-bb39-46b3-a837-72e71699391f"
   },
   {
@@ -596,24 +596,24 @@
   },
   {
     "title": "Databases and SQL for Data Science",
-    "organization": "Coursera",
+    "organization": "IBM",
     "date": "May 2023",
-    "image": "https://images.credly.com/images/58629b5e-9ae1-469c-a559-5099cedf4395/Coursera_SQL.png",
+    "image": "https://images.credly.com/size/340x340/images/f2573aac-d21c-483d-acda-afaa366b4f51/image.png",
     "link": "https://www.credly.com/badges/58629b5e-9ae1-469c-a559-5099cedf4395"
   },
   {
     "title": "Data Analytics Essentials",
-    "organization": "Coursera",
+    "organization": "IBM",
     "date": "May 2023",
-    "image": "https://images.credly.com/images/837e8f8f-3817-4f8f-b633-85e8c6b81367/Coursera_DataAnalytics.png",
+    "image": "https://images.credly.com/size/340x340/images/42f7ca3c-6eb3-47d2-a7f3-3b1093ea1b35/image.png",
     "link": "https://www.credly.com/badges/837e8f8f-3817-4f8f-b633-85e8c6b81367"
   },
   {
     "title": "R Programming Essentials",
-    "organization": "Coursera",
+    "organization": "IBM",
     "date": "June 2023",
-    "image": "https://images.credly.com/images/50682226-f78f-494b-9705-19e99c104445/Coursera_R_Programming.png",
-    "link": "https://www.credly.com/badges/50682226-f78f-494b-9705-19e99c104445"
+    "image": "https://images.credly.com/size/340x340/images/a56ca81c-8629-48f8-90af-5672125d2a5b/image.png",
+    "link": "https://www.credly.com/badges/617185be-9667-447b-aa4d-4656e1e059f3"
   },
   {
     "title": "Applied Data Science with Python",
