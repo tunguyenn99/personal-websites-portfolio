@@ -26,6 +26,24 @@
   --glass-border: rgba(135, 146, 154, 0.2);
 }
 
+/* Mobile-friendly defaults */
+html, body {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Responsive hero/title scaling */
+.hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 1.05;
+  font-size: clamp(1.75rem, 6vw, 3.5rem);
+}
+
+/* Hide scroll-to-top on very small devices to avoid overlaying content */
+@media (max-width: 420px) {
+  .scroll-to-top-btn { display: none !important; }
+}
+
 * {
   margin: 0;
   padding: 0;

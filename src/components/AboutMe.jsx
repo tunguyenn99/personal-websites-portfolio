@@ -38,7 +38,7 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <section id="about" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px', position: 'relative' }}>
+    <section id="about" className="section" style={{ display: 'flex', alignItems: 'center', paddingTop: '80px', position: 'relative' }}>
       <div className="container responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }}>
         <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '1.5rem', color: 'var(--primary)' }}>
@@ -58,7 +58,7 @@ export default function AboutMe() {
               {titles[titleIndex]}
             </span>
           </div>
-          <h1 style={{ fontSize: '5rem', fontWeight: 700, lineHeight: 1.1, margin: '0 0 2rem 0', fontFamily: 'Space Grotesk' }}>
+          <h1 className="hero-title" style={{ margin: '0 0 2rem 0' }}>
             Hi there, I'm <br/>
             <span style={{ color: 'var(--primary)', position: 'relative' }}>
               Tu Nguyen
