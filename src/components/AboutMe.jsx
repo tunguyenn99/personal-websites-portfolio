@@ -1,6 +1,7 @@
 import React from 'react';
 import { Download, ArrowRight, MapPin } from 'lucide-react';
 import { FaGithub as Github, FaLinkedin as Linkedin } from 'react-icons/fa';
+import profilePic from '../assets/avatar/github-avatar.jpg';
 
 export default function AboutMe() {
   return (
@@ -35,15 +36,35 @@ export default function AboutMe() {
         </div>
         
         <div className="animate-fade-in" style={{ animationDelay: '0.3s', position: 'relative' }}>
-          <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', height: '550px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--surface-container)', border: '1px solid var(--outline-low)' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.05, backgroundImage: 'linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(90deg, var(--primary) 1px, transparent 1px)', backgroundSize: '100px 100px' }}></div>
-            <h2 style={{ fontSize: '12rem', opacity: 0.03, position: 'absolute', transform: 'rotate(-15deg)', fontWeight: 900, fontFamily: 'Space Grotesk' }}>VOID</h2>
-            {/* Functional Data Icon */}
-            <div style={{ position: 'relative' }}>
-              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '250px', height: '250px', background: 'var(--primary)', borderRadius: '50%', filter: 'blur(80px)', opacity: 0.1 }}></div>
-              <svg width="240" height="240" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--primary)', filter: 'drop-shadow(0 0 15px rgba(170,221,81,0.4))' }}>
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
+          <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', height: '550px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--surface-container)', border: '1px solid var(--outline-low)', position: 'relative' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.05, backgroundImage: 'linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(90deg, var(--primary) 1px, transparent 1px)', backgroundSize: '100px 100px', zIndex: 1 }}></div>
+            
+            <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2 }}>
+              <div style={{ position: 'absolute', width: '350px', height: '350px', background: 'var(--primary)', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.15 }}></div>
+              <div style={{ 
+                width: '380px', 
+                height: '480px', 
+                borderRadius: '24px', 
+                overflow: 'hidden', 
+                border: '1px solid rgba(255,255,255,0.1)',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                position: 'relative',
+                transform: 'perspective(1000px) rotateY(-5deg)'
+              }}>
+                <img 
+                  src={profilePic} 
+                  alt="Tu Nguyen" 
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    filter: 'contrast(1.1) brightness(0.9)',
+                    transition: 'transform 0.5s ease',
+                  }}
+                  className="profile-img-hover"
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%)' }}></div>
+              </div>
             </div>
           </div>
         </div>
