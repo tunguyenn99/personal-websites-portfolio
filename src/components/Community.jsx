@@ -1,5 +1,6 @@
 import React from 'react';
-import { Users, BookOpen, Heart, Facebook, Github, ExternalLink } from 'lucide-react';
+import { Users, BookOpen, Heart, ExternalLink } from 'lucide-react';
+import { SiFacebook, SiGithub } from 'react-icons/si';
 import communityImg from '../assets/community/xom_data_fb.png';
 
 export default function Community() {
@@ -32,7 +33,7 @@ export default function Community() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
               <div style={{ padding: '0.5rem', background: 'rgba(24, 119, 242, 0.1)', borderRadius: '8px', color: '#1877F2' }}>
-                <Facebook size={20} />
+                <SiFacebook size={20} />
               </div>
               <div>
                 <h4 style={{ fontSize: '1rem', marginBottom: '0.2rem' }}>Facebook Group</h4>
@@ -55,7 +56,7 @@ export default function Community() {
               Join Group <ExternalLink size={16} />
             </a>
             <a href="https://github.com/tunguyenn99/thu_vien_cua_xom_data" target="_blank" rel="noreferrer" className="btn-secondary">
-              <Github size={18} /> Visit Github
+              <SiGithub size={18} /> Visit Github
             </a>
           </div>
         </div>
