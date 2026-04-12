@@ -121,9 +121,9 @@ export default function Certifications() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-          gridAutoRows: '200px',
+          gridAutoRows: 'minmax(160px, auto)',
           gap: '2rem',
-          minHeight: '600px'
+          minHeight: 'auto'
         }}>
           {paginatedCerts.map((cert, index) => (
             <div
@@ -161,6 +161,9 @@ export default function Certifications() {
                     src={cert.image}
                     alt={cert.title}
                     style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    className="responsive-img"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div style={{ flex: 1 }}>

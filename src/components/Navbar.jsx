@@ -62,19 +62,19 @@ export default function Navbar() {
           ))}
         </div>
         
-        {/* Mobile Nav Toggle */}
-        <button className="mobile-toggle" style={{ background: 'none', border: 'none', color: 'var(--text-main)', cursor: 'pointer' }} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-           {isMenuOpen ? <X /> : <Menu />}
-        </button>
+          {/* Mobile Nav Toggle */}
+          <button id="mobile-nav-toggle" aria-controls="mobile-nav-overlay" aria-expanded={isMenuOpen} aria-label="Toggle navigation menu" className="mobile-toggle" style={{ background: 'none', border: 'none', color: 'var(--text-main)', cursor: 'pointer' }} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X /> : <Menu />}
+          </button>
       </div>
 
       {/* Mobile Nav Overlay */}
-      <div style={{
-        position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh',
+      <div id="mobile-nav-overlay" role="dialog" aria-modal="true" aria-hidden={!isMenuOpen} style={{
+        position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, minHeight: '100dvh',
         background: 'var(--surface)', zIndex: 100,
         display: isMenuOpen ? 'flex' : 'none', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center', gap: '2rem',
-        padding: '2rem'
+        padding: '2rem', overflowY: 'auto'
       }}>
         <button 
           style={{ position: 'absolute', top: '1.5rem', right: '2rem', background: 'none', border: 'none', color: 'var(--text-main)', cursor: 'pointer' }}

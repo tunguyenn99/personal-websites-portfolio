@@ -180,6 +180,9 @@ export default function Community() {
                     transform: activeSlide === idx ? 'scale(1)' : 'scale(1.15)',
                     filter: activeSlide === idx ? 'none' : 'blur(4px)'
                   }}
+                  className="responsive-img"
+                  loading="lazy"
+                  decoding="async"
                 />
               ))}
 
