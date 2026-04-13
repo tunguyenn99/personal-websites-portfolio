@@ -33,9 +33,10 @@ def process_repo(repo):
     desc = repo.get('description') or ''
     default_branch = repo.get('default_branch', 'main')
     is_fork = repo.get('fork', False)
-    readme = fetch_readme(name, default_branch).lower()
+    readme = fetch_readme(name, default_branch)
+    readme_lower = readme.lower()
     
-    content_to_check = (name + " " + desc + " " + readme).lower()
+    content_to_check = (name + " " + desc + " " + readme_lower)
     
     tags = set()
     
@@ -63,6 +64,9 @@ def process_repo(repo):
     # Fallback
     if not tags:
         tags.add('Other Projects')
+    
+    # Extract techstack from README
+    techstack = extract_techstack(readme)
         
     return {
         'id': repo['id'],
@@ -72,8 +76,77 @@ def process_repo(repo):
         'language': repo.get('language') or 'N/A',
         'stars': repo.get('stargazers_count', 0),
         'forks': repo.get('forks_count', 0),
-        'tags': list(tags)
+        'tags': list(tags),
+        'techstack': techstack
     }
+
+def extract_techstack(readme):
+    """Extract tech stack information from README"""
+    if not readme:
+        return []
+    
+    readme_lower = readme.lower()
+    
+    # Map of tech names to search patterns
+    tech_map = {
+        'Python': ['python'],
+        'SQL': ['sql', 'postgres', 'mysql', 'snowflake', 't-sql', 'bigquery'],
+        'Pandas': ['pandas'],
+        'NumPy': ['numpy'],
+        'Spark': ['spark', 'pyspark'],
+        'Airflow': ['airflow'],
+        'dbt': ['dbt'],
+        'DBT': ['dbt'],
+        'Dagster': ['dagster'],
+        'Trino': ['trino', 'presto'],
+        'Mage': ['mage'],
+        'Docker': ['docker'],
+        'Kubernetes': ['kubernetes', 'k8s'],
+        'AWS': ['aws', 'amazon web services'],
+        'GCP': ['gcp', 'google cloud', 'bigquery'],
+        'Azure': ['azure', 'microsoft azure'],
+        'Docker': ['docker'],
+        'Jupyter': ['jupyter'],
+        'Streamlit': ['streamlit'],
+        'FastAPI': ['fastapi'],
+        'Flask': ['flask'],
+        'Django': ['django'],
+        'React': ['react'],
+        'JavaScript': ['javascript', 'node.js', 'nodejs'],
+        'PowerBI': ['power bi', 'powerbi', 'pbi'],
+        'Tableau': ['tableau'],
+        'Metabase': ['metabase'],
+        'Looker': ['looker'],
+        'Elasticsearch': ['elasticsearch'],
+        'MongoDB': ['mongodb'],
+        'PostgreSQL': ['postgresql', 'postgres'],
+        'MySQL': ['mysql'],
+        'Redis': ['redis'],
+        'Kafka': ['kafka'],
+        'Git': ['git'],
+        'GitHub': ['github'],
+        'Scikit-learn': ['scikit-learn', 'sklearn'],
+        'TensorFlow': ['tensorflow'],
+        'PyTorch': ['pytorch'],
+        'Matplotlib': ['matplotlib'],
+        'Seaborn': ['seaborn'],
+        'Plotly': ['plotly'],
+        'Iceberg': ['iceberg', 'apache iceberg'],
+        'Parquet': ['parquet'],
+        'Avro': ['avro'],
+        'Excel': ['excel', 'xlsxwriter'],
+        'VS Code': ['vs code', 'vscode'],
+    }
+    
+    detected_tech = set()
+    
+    for tech, patterns in tech_map.items():
+        for pattern in patterns:
+            if pattern in readme_lower:
+                detected_tech.add(tech)
+                break
+    
+    return sorted(list(detected_tech))
 
 # Filter only public repos
 public_items = [item for item in items if not item.get('private', False)]

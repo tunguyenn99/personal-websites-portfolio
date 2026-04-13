@@ -185,3 +185,9 @@
     border-right-color: var(--border);
   }
 }
+
+.responsive-grid {
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -143,9 +143,9 @@ export default function Experience() {
       <div className="container">
         <h2 className="section-title">Professional Path</h2>
 
-        <div className="card-grid" style={{
+        <div className="card-grid responsive-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '2.5rem',
           alignItems: 'stretch'
         }}>

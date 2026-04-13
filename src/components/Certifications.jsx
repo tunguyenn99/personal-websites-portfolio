@@ -84,7 +84,7 @@ export default function Certifications() {
       <div className="container">
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', marginBottom: '3rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <h2 className="section-title" style={{ marginBottom: 0 }}>Professional Certifications</h2>
+            <h2 className="section-title" style={{ marginBottom: 0 }}>Certifications</h2>
             <div style={{
               padding: '0.4rem 1rem',
               background: 'var(--primary)',

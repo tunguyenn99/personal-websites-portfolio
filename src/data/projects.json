@@ -2,13 +2,25 @@
   {
     "id": 1025892970,
     "title": "thu_vien_cua_xom_data",
-    "description": "Thư viện sách của Xóm - Free & Public 😎",
+    "description": "Th\u01b0 vi\u1ec7n s\u00e1ch c\u1ee7a X\u00f3m - Free & Public \ud83d\ude0e",
     "url": "https://github.com/tunguyenn99/thu_vien_cua_xom_data",
     "language": "N/A",
     "stars": 187,
     "forks": 49,
     "tags": [
-      "Community contribution"
+      "Community contribution",
+      "Data Analytics",
+      "Self-learning",
+      "Business Intelligence",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Excel",
+      "PowerBI",
+      "Python",
+      "SQL",
+      "Spark",
+      "Tableau"
     ]
   },
   {
@@ -20,7 +32,26 @@
     "stars": 35,
     "forks": 5,
     "tags": [
-      "Data Analytics"
+      "Business Intelligence",
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Airflow",
+      "Docker",
+      "Excel",
+      "Git",
+      "GitHub",
+      "Mage",
+      "Matplotlib",
+      "Metabase",
+      "Pandas",
+      "PostgreSQL",
+      "PowerBI",
+      "Python",
+      "SQL",
+      "Seaborn"
     ]
   },
   {
@@ -32,7 +63,22 @@
     "stars": 31,
     "forks": 10,
     "tags": [
-      "Analytics Engineering"
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering",
+      "Community contribution"
+    ],
+    "techstack": [
+      "DBT",
+      "Docker",
+      "Git",
+      "GitHub",
+      "Iceberg",
+      "Mage",
+      "Python",
+      "SQL",
+      "Trino",
+      "dbt"
     ]
   },
   {
@@ -44,7 +90,17 @@
     "stars": 31,
     "forks": 10,
     "tags": [
+      "Self-learning",
+      "Analytics Engineering",
       "Community contribution"
+    ],
+    "techstack": [
+      "Docker",
+      "Git",
+      "GitHub",
+      "Mage",
+      "SQL",
+      "Trino"
     ]
   },
   {
@@ -56,20 +112,47 @@
     "stars": 27,
     "forks": 4,
     "tags": [
+      "Business Intelligence",
       "Data Analytics",
-      "Business Intelligence"
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Airflow",
+      "DBT",
+      "Docker",
+      "Git",
+      "GitHub",
+      "Jupyter",
+      "Pandas",
+      "PowerBI",
+      "Python",
+      "SQL",
+      "dbt"
     ]
   },
   {
     "id": 1008506781,
     "title": "i-learn-docker",
-    "description": "Học Docker trên Ubuntu",
+    "description": "H\u1ecdc Docker tr\u00ean Ubuntu",
     "url": "https://github.com/tunguyenn99/i-learn-docker",
     "language": "Python",
     "stars": 18,
     "forks": 5,
     "tags": [
-      "Self-learning"
+      "Community contribution",
+      "Data Analytics",
+      "Self-learning",
+      "Business Intelligence",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Docker",
+      "Git",
+      "Mage",
+      "Metabase",
+      "Python",
+      "Redis"
     ]
   },
   {
@@ -81,7 +164,19 @@
     "stars": 15,
     "forks": 2,
     "tags": [
-      "Self-learning"
+      "Business Intelligence",
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Airflow",
+      "DBT",
+      "Pandas",
+      "PowerBI",
+      "Python",
+      "SQL",
+      "dbt"
     ]
   },
   {
@@ -93,21 +188,43 @@
     "stars": 13,
     "forks": 5,
     "tags": [
+      "Business Intelligence",
+      "Data Analytics",
       "Analytics Engineering",
-      "Data Analytics"
+      "Community contribution"
+    ],
+    "techstack": [
+      "DBT",
+      "Git",
+      "GitHub",
+      "Mage",
+      "Matplotlib",
+      "MongoDB",
+      "PostgreSQL",
+      "Python",
+      "SQL",
+      "Seaborn",
+      "dbt"
     ]
   },
   {
     "id": 1012905847,
     "title": "data-warehouse-tk-kimball",
-    "description": "Docs lại \"The Data Warehouse Toolkit\" của Ralph Kimball theo ý mình",
+    "description": "Docs l\u1ea1i \"The Data Warehouse Toolkit\" c\u1ee7a Ralph Kimball theo \u00fd m\u00ecnh",
     "url": "https://github.com/tunguyenn99/data-warehouse-tk-kimball",
     "language": "N/A",
     "stars": 12,
     "forks": 1,
     "tags": [
-      "Analytics Engineering",
-      "Self-learning"
+      "Business Intelligence",
+      "Data Analytics",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "GCP",
+      "PowerBI",
+      "SQL",
+      "VS Code"
     ]
   },
   {
@@ -119,7 +236,13 @@
     "stars": 10,
     "forks": 3,
     "tags": [
-      "Self-learning"
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Git",
+      "GitHub",
+      "Mage"
     ]
   },
   {
@@ -131,19 +254,43 @@
     "stars": 9,
     "forks": 2,
     "tags": [
-      "Analytics Engineering"
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering",
+      "Community contribution"
+    ],
+    "techstack": [
+      "DBT",
+      "Docker",
+      "Git",
+      "GitHub",
+      "Mage",
+      "Python",
+      "SQL",
+      "dbt"
     ]
   },
   {
     "id": 1010512586,
     "title": "ubuntu-install-wsl",
-    "description": "Cài đặt Ubuntu trên Windows (WSL)",
+    "description": "C\u00e0i \u0111\u1eb7t Ubuntu tr\u00ean Windows (WSL)",
     "url": "https://github.com/tunguyenn99/ubuntu-install-wsl",
     "language": "N/A",
     "stars": 7,
     "forks": 0,
     "tags": [
-      "Self-learning"
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "DBT",
+      "Docker",
+      "Git",
+      "GitHub",
+      "JavaScript",
+      "Mage",
+      "Python",
+      "VS Code",
+      "dbt"
     ]
   },
   {
@@ -155,19 +302,48 @@
     "stars": 7,
     "forks": 2,
     "tags": [
-      "Analytics Engineering"
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering",
+      "Community contribution"
+    ],
+    "techstack": [
+      "Airflow",
+      "DBT",
+      "Git",
+      "GitHub",
+      "Mage",
+      "PostgreSQL",
+      "Python",
+      "SQL",
+      "dbt"
     ]
   },
   {
     "id": 1007213796,
     "title": "iceberg-fundamentals",
-    "description": "Hướng dẫn self-host và tìm hiểu Apache Iceberg",
+    "description": "H\u01b0\u1edbng d\u1eabn self-host v\u00e0 t\u00ecm hi\u1ec3u Apache Iceberg",
     "url": "https://github.com/tunguyenn99/iceberg-fundamentals",
     "language": "Jupyter Notebook",
     "stars": 4,
     "forks": 1,
     "tags": [
-      "Self-learning"
+      "Business Intelligence",
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "AWS",
+      "Docker",
+      "Iceberg",
+      "Jupyter",
+      "Mage",
+      "Parquet",
+      "PostgreSQL",
+      "SQL",
+      "Spark",
+      "Trino"
     ]
   },
   {
@@ -179,8 +355,22 @@
     "stars": 4,
     "forks": 0,
     "tags": [
+      "Community contribution",
       "Data Analytics",
-      "Business Intelligence"
+      "Self-learning",
+      "Business Intelligence",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Airflow",
+      "GCP",
+      "Git",
+      "GitHub",
+      "Looker",
+      "PowerBI",
+      "Python",
+      "SQL",
+      "Spark"
     ]
   },
   {
@@ -192,7 +382,17 @@
     "stars": 3,
     "forks": 4,
     "tags": [
-      "Analytics Engineering"
+      "Business Intelligence",
+      "Data Analytics",
+      "Analytics Engineering",
+      "Community contribution"
+    ],
+    "techstack": [
+      "Docker",
+      "Kafka",
+      "Mage",
+      "Python",
+      "Spark"
     ]
   },
   {
@@ -204,20 +404,34 @@
     "stars": 3,
     "forks": 1,
     "tags": [
+      "Data Analytics",
+      "Self-learning",
       "Analytics Engineering"
+    ],
+    "techstack": [
+      "DBT",
+      "Dagster",
+      "Mage",
+      "MongoDB",
+      "Python",
+      "React",
+      "SQL",
+      "Scikit-learn",
+      "dbt"
     ]
   },
   {
     "id": 1010291431,
     "title": "diem-thi-thpt",
-    "description": "Dữ liệu từ web Dân trí: https://dantri.com.vn/giao-duc/tuyen-sinh/tra-cuu-diem.htm",
+    "description": "D\u1eef li\u1ec7u t\u1eeb web D\u00e2n tr\u00ed: https://dantri.com.vn/giao-duc/tuyen-sinh/tra-cuu-diem.htm",
     "url": "https://github.com/tunguyenn99/diem-thi-thpt",
     "language": "Python",
     "stars": 2,
     "forks": 0,
     "tags": [
-      "Data Analytics"
-    ]
+      "Other Projects"
+    ],
+    "techstack": []
   },
   {
     "id": 992107628,
@@ -228,7 +442,11 @@
     "stars": 2,
     "forks": 0,
     "tags": [
-      "Business Intelligence"
+      "Business Intelligence",
+      "Data Analytics"
+    ],
+    "techstack": [
+      "PowerBI"
     ]
   },
   {
@@ -240,20 +458,45 @@
     "stars": 1,
     "forks": 2,
     "tags": [
-      "Self-learning"
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Airflow",
+      "Docker",
+      "Kubernetes",
+      "PostgreSQL",
+      "Python",
+      "Redis",
+      "SQL"
     ]
   },
   {
     "id": 1008494681,
     "title": "dbt-snowflake",
-    "description": "Hướng dẫn dùng dbt với Snowflake",
+    "description": "H\u01b0\u1edbng d\u1eabn d\u00f9ng dbt v\u1edbi Snowflake",
     "url": "https://github.com/tunguyenn99/dbt-snowflake",
     "language": "Python",
     "stars": 1,
     "forks": 0,
     "tags": [
+      "Data Analytics",
+      "Self-learning",
       "Analytics Engineering",
-      "Self-learning"
+      "Community contribution"
+    ],
+    "techstack": [
+      "Airflow",
+      "Azure",
+      "DBT",
+      "Docker",
+      "Git",
+      "Mage",
+      "Python",
+      "SQL",
+      "VS Code",
+      "dbt"
     ]
   },
   {
@@ -265,7 +508,18 @@
     "stars": 1,
     "forks": 0,
     "tags": [
-      "Business Intelligence"
+      "Community contribution",
+      "Data Analytics",
+      "Self-learning",
+      "Business Intelligence",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Docker",
+      "JavaScript",
+      "Mage",
+      "Metabase",
+      "SQL"
     ]
   },
   {
@@ -277,7 +531,32 @@
     "stars": 1,
     "forks": 0,
     "tags": [
+      "Business Intelligence",
+      "Data Analytics",
+      "Analytics Engineering",
       "Community contribution"
+    ],
+    "techstack": [
+      "AWS",
+      "Airflow",
+      "Azure",
+      "DBT",
+      "Dagster",
+      "Excel",
+      "GCP",
+      "Git",
+      "GitHub",
+      "Looker",
+      "Mage",
+      "Metabase",
+      "MongoDB",
+      "PostgreSQL",
+      "PowerBI",
+      "Python",
+      "SQL",
+      "Spark",
+      "VS Code",
+      "dbt"
     ]
   },
   {
@@ -289,9 +568,31 @@
     "stars": 1,
     "forks": 0,
     "tags": [
+      "Business Intelligence",
       "Data Analytics",
-      "Self-learning"
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Git",
+      "Jupyter",
+      "Python",
+      "Scikit-learn",
+      "TensorFlow"
     ]
+  },
+  {
+    "id": 613755857,
+    "title": "vba_files",
+    "description": "My VBA",
+    "url": "https://github.com/tunguyenn99/vba_files",
+    "language": "N/A",
+    "stars": 0,
+    "forks": 0,
+    "tags": [
+      "Other Projects"
+    ],
+    "techstack": []
   },
   {
     "id": 993869003,
@@ -302,7 +603,33 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Self-learning"
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering",
+      "Community contribution"
+    ],
+    "techstack": [
+      "Docker",
+      "Git",
+      "GitHub",
+      "Mage",
+      "PostgreSQL",
+      "SQL"
+    ]
+  },
+  {
+    "id": 718501759,
+    "title": "topjson-shapemap",
+    "description": "TopoJSON for PBI",
+    "url": "https://github.com/tunguyenn99/topjson-shapemap",
+    "language": "N/A",
+    "stars": 0,
+    "forks": 0,
+    "tags": [
+      "Business Intelligence"
+    ],
+    "techstack": [
+      "PowerBI"
     ]
   },
   {
@@ -315,18 +642,27 @@
     "forks": 0,
     "tags": [
       "Self-learning"
-    ]
+    ],
+    "techstack": []
   },
   {
     "id": 1020675325,
     "title": "diem_thi_thpt_2025",
-    "description": "Source: Báo Điện tử Chính phủ",
+    "description": "Source: B\u00e1o \u0110i\u1ec7n t\u1eed Ch\u00ednh ph\u1ee7",
     "url": "https://github.com/tunguyenn99/diem_thi_thpt_2025",
     "language": "Jupyter Notebook",
     "stars": 0,
     "forks": 1,
     "tags": [
       "Data Analytics"
+    ],
+    "techstack": [
+      "Excel",
+      "Jupyter",
+      "Matplotlib",
+      "Pandas",
+      "Python",
+      "Seaborn"
     ]
   },
   {
@@ -338,7 +674,23 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Self-learning"
+      "Data Analytics",
+      "Analytics Engineering",
+      "Community contribution"
+    ],
+    "techstack": [
+      "FastAPI",
+      "Jupyter",
+      "Matplotlib",
+      "NumPy",
+      "Pandas",
+      "Parquet",
+      "Python",
+      "SQL",
+      "Scikit-learn",
+      "Seaborn",
+      "Trino",
+      "VS Code"
     ]
   },
   {
@@ -350,7 +702,12 @@
     "stars": 0,
     "forks": 0,
     "tags": [
+      "Data Analytics",
       "Self-learning"
+    ],
+    "techstack": [
+      "Git",
+      "GitHub"
     ]
   },
   {
@@ -362,7 +719,19 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics"
+      "Data Analytics",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Git",
+      "GitHub",
+      "Jupyter",
+      "Mage",
+      "Matplotlib",
+      "Pandas",
+      "Python",
+      "Seaborn",
+      "VS Code"
     ]
   },
   {
@@ -374,8 +743,31 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Self-learning"
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Docker",
+      "Git",
+      "GitHub",
+      "MongoDB",
+      "SQL"
     ]
+  },
+  {
+    "id": 613512848,
+    "title": "CPdashboard",
+    "description": "Streamlit Deployment",
+    "url": "https://github.com/tunguyenn99/CPdashboard",
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "forks": 0,
+    "tags": [
+      "Business Intelligence",
+      "Data Analytics"
+    ],
+    "techstack": []
   },
   {
     "id": 635254793,
@@ -386,7 +778,13 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Self-learning"
+      "Other Projects"
+    ],
+    "techstack": [
+      "Git",
+      "GitHub",
+      "MongoDB",
+      "SQL"
     ]
   },
   {
@@ -398,7 +796,25 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics"
+      "Community contribution",
+      "Data Analytics",
+      "Self-learning",
+      "Business Intelligence",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "GCP",
+      "Jupyter",
+      "Matplotlib",
+      "Pandas",
+      "PostgreSQL",
+      "PowerBI",
+      "Python",
+      "SQL",
+      "Seaborn",
+      "Spark",
+      "Trino",
+      "VS Code"
     ]
   },
   {
@@ -410,7 +826,13 @@
     "stars": 0,
     "forks": 0,
     "tags": [
+      "Data Analytics",
       "Self-learning"
+    ],
+    "techstack": [
+      "Git",
+      "GitHub",
+      "Jupyter"
     ]
   },
   {
@@ -423,7 +845,8 @@
     "forks": 0,
     "tags": [
       "Data Analytics"
-    ]
+    ],
+    "techstack": []
   },
   {
     "id": 1037442323,
@@ -435,6 +858,15 @@
     "forks": 0,
     "tags": [
       "Self-learning"
+    ],
+    "techstack": [
+      "FastAPI",
+      "Git",
+      "GitHub",
+      "Matplotlib",
+      "Pandas",
+      "Python",
+      "Seaborn"
     ]
   },
   {
@@ -446,7 +878,19 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Self-learning"
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering"
+    ],
+    "techstack": [
+      "Avro",
+      "Docker",
+      "GCP",
+      "Kafka",
+      "Mage",
+      "PostgreSQL",
+      "Python",
+      "SQL"
     ]
   },
   {
@@ -458,8 +902,9 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Self-learning"
-    ]
+      "Other Projects"
+    ],
+    "techstack": []
   },
   {
     "id": 992095351,
@@ -470,7 +915,14 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Self-learning"
+      "Data Analytics",
+      "Self-learning",
+      "Analytics Engineering",
+      "Community contribution"
+    ],
+    "techstack": [
+      "Docker",
+      "Mage"
     ]
   },
   {
@@ -483,6 +935,10 @@
     "forks": 0,
     "tags": [
       "Other Projects"
+    ],
+    "techstack": [
+      "Git",
+      "GitHub"
     ]
   }
 ]

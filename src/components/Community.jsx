@@ -88,7 +88,9 @@ export default function Community() {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '2.5rem',
-          marginBottom: '3rem'
+          marginBottom: '3rem',
+          maxWidth: '900px',
+          margin: '0 auto 3rem auto'
         }}>
           {/* Members Stat Card */}
           <div className="stat-card" style={{
@@ -166,10 +168,10 @@ export default function Community() {
         <div
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          style={{ position: 'relative' }}
+          style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto' }}
         >
             <div className="glass-panel" style={{ padding: '0.6rem', overflow: 'hidden', background: 'rgba(0,0,0,0.4)', border: '1px solid var(--outline-low)' }}>
-            <div className="community-gallery" style={{ position: 'relative', aspectRatio: '16/9', maxHeight: '50vh', borderRadius: '8px', overflow: 'hidden', background: '#000', cursor: 'pointer' }}>
+            <div className="community-gallery" style={{ position: 'relative', aspectRatio: '21/9', maxHeight: '70vh', borderRadius: '8px', overflow: 'hidden', background: '#000', cursor: 'pointer' }}>
               {images.map((img, idx) => (
                 <img
                   key={idx}
