@@ -9,16 +9,17 @@
     "forks": 49,
     "tags": [
       "Community contribution",
-      "Data Analytics",
       "Self-learning",
       "Business Intelligence",
-      "Analytics Engineering"
+      "Analytics Engineering",
+      "Data Analytics"
     ],
     "techstack": [
       "Excel",
-      "PowerBI",
+      "Power BI",
       "Python",
       "SQL",
+      "Snowflake",
       "Spark",
       "Tableau"
     ]
@@ -32,13 +33,14 @@
     "stars": 35,
     "forks": 5,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Business Intelligence",
+      "Data Analytics"
     ],
     "techstack": [
       "Airflow",
+      "BeautifulSoup",
       "Docker",
       "Excel",
       "Git",
@@ -48,10 +50,11 @@
       "Metabase",
       "Pandas",
       "PostgreSQL",
-      "PowerBI",
+      "Power BI",
       "Python",
-      "SQL",
-      "Seaborn"
+      "Requests",
+      "Seaborn",
+      "Selenium"
     ]
   },
   {
@@ -63,13 +66,13 @@
     "stars": 31,
     "forks": 10,
     "tags": [
-      "Data Analytics",
-      "Self-learning",
       "Analytics Engineering",
-      "Community contribution"
+      "Self-learning",
+      "Community contribution",
+      "Data Analytics"
     ],
     "techstack": [
-      "DBT",
+      "DBeaver",
       "Docker",
       "Git",
       "GitHub",
@@ -90,11 +93,12 @@
     "stars": 31,
     "forks": 10,
     "tags": [
-      "Self-learning",
       "Analytics Engineering",
+      "Self-learning",
       "Community contribution"
     ],
     "techstack": [
+      "DBeaver",
       "Docker",
       "Git",
       "GitHub",
@@ -112,22 +116,22 @@
     "stars": 27,
     "forks": 4,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Business Intelligence",
+      "Data Analytics"
     ],
     "techstack": [
       "Airflow",
-      "DBT",
       "Docker",
       "Git",
       "GitHub",
       "Jupyter",
       "Pandas",
-      "PowerBI",
+      "Power BI",
       "Python",
       "SQL",
+      "Snowflake",
       "dbt"
     ]
   },
@@ -141,10 +145,10 @@
     "forks": 5,
     "tags": [
       "Community contribution",
-      "Data Analytics",
       "Self-learning",
       "Business Intelligence",
-      "Analytics Engineering"
+      "Analytics Engineering",
+      "Data Analytics"
     ],
     "techstack": [
       "Docker",
@@ -164,16 +168,15 @@
     "stars": 15,
     "forks": 2,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Business Intelligence",
+      "Data Analytics"
     ],
     "techstack": [
       "Airflow",
-      "DBT",
       "Pandas",
-      "PowerBI",
+      "Power BI",
       "Python",
       "SQL",
       "dbt"
@@ -188,22 +191,26 @@
     "stars": 13,
     "forks": 5,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics",
       "Analytics Engineering",
-      "Community contribution"
+      "Community contribution",
+      "Business Intelligence",
+      "Data Analytics"
     ],
     "techstack": [
-      "DBT",
+      "BeautifulSoup",
+      "DLT",
       "Git",
       "GitHub",
+      "GitHub Actions",
       "Mage",
       "Matplotlib",
       "MongoDB",
       "PostgreSQL",
       "Python",
+      "Requests",
       "SQL",
       "Seaborn",
+      "Supabase",
       "dbt"
     ]
   },
@@ -216,14 +223,16 @@
     "stars": 12,
     "forks": 1,
     "tags": [
+      "Analytics Engineering",
       "Business Intelligence",
-      "Data Analytics",
-      "Analytics Engineering"
+      "Data Analytics"
     ],
     "techstack": [
-      "GCP",
-      "PowerBI",
+      "BigQuery",
+      "GitHub Actions",
+      "Power BI",
       "SQL",
+      "Snowflake",
       "VS Code"
     ]
   },
@@ -236,12 +245,13 @@
     "stars": 10,
     "forks": 3,
     "tags": [
-      "Self-learning",
-      "Analytics Engineering"
+      "Analytics Engineering",
+      "Self-learning"
     ],
     "techstack": [
       "Git",
       "GitHub",
+      "GitHub Actions",
       "Mage"
     ]
   },
@@ -254,16 +264,18 @@
     "stars": 9,
     "forks": 2,
     "tags": [
-      "Data Analytics",
-      "Self-learning",
       "Analytics Engineering",
-      "Community contribution"
+      "Self-learning",
+      "Community contribution",
+      "Data Analytics"
     ],
     "techstack": [
-      "DBT",
+      "Databricks",
       "Docker",
       "Git",
       "GitHub",
+      "GitHub Actions",
+      "Kestra",
       "Mage",
       "Python",
       "SQL",
@@ -282,7 +294,6 @@
       "Analytics Engineering"
     ],
     "techstack": [
-      "DBT",
       "Docker",
       "Git",
       "GitHub",
@@ -302,20 +313,21 @@
     "stars": 7,
     "forks": 2,
     "tags": [
-      "Data Analytics",
-      "Self-learning",
       "Analytics Engineering",
-      "Community contribution"
+      "Self-learning",
+      "Community contribution",
+      "Data Analytics"
     ],
     "techstack": [
       "Airflow",
-      "DBT",
       "Git",
       "GitHub",
+      "GitHub Actions",
       "Mage",
       "PostgreSQL",
       "Python",
       "SQL",
+      "Supabase",
       "dbt"
     ]
   },
@@ -328,10 +340,10 @@
     "stars": 4,
     "forks": 1,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Business Intelligence",
+      "Data Analytics"
     ],
     "techstack": [
       "AWS",
@@ -343,6 +355,7 @@
       "PostgreSQL",
       "SQL",
       "Spark",
+      "Superset",
       "Trino"
     ]
   },
@@ -356,21 +369,23 @@
     "forks": 0,
     "tags": [
       "Community contribution",
-      "Data Analytics",
       "Self-learning",
       "Business Intelligence",
-      "Analytics Engineering"
+      "Analytics Engineering",
+      "Data Analytics"
     ],
     "techstack": [
       "Airflow",
-      "GCP",
+      "BigQuery",
       "Git",
       "GitHub",
+      "GitHub Actions",
       "Looker",
-      "PowerBI",
+      "Power BI",
       "Python",
       "SQL",
-      "Spark"
+      "Spark",
+      "Superset"
     ]
   },
   {
@@ -382,10 +397,10 @@
     "stars": 3,
     "forks": 4,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics",
       "Analytics Engineering",
-      "Community contribution"
+      "Community contribution",
+      "Business Intelligence",
+      "Data Analytics"
     ],
     "techstack": [
       "Docker",
@@ -404,19 +419,21 @@
     "stars": 3,
     "forks": 1,
     "tags": [
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Data Analytics"
     ],
     "techstack": [
-      "DBT",
+      "DLT",
       "Dagster",
+      "GitHub Actions",
       "Mage",
       "MongoDB",
       "Python",
       "React",
       "SQL",
       "Scikit-learn",
+      "Snowflake",
       "dbt"
     ]
   },
@@ -446,7 +463,8 @@
       "Data Analytics"
     ],
     "techstack": [
-      "PowerBI"
+      "Figma",
+      "Power BI"
     ]
   },
   {
@@ -458,9 +476,9 @@
     "stars": 1,
     "forks": 2,
     "tags": [
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Data Analytics"
     ],
     "techstack": [
       "Airflow",
@@ -469,7 +487,8 @@
       "PostgreSQL",
       "Python",
       "Redis",
-      "SQL"
+      "SQL",
+      "SQL Server"
     ]
   },
   {
@@ -481,20 +500,20 @@
     "stars": 1,
     "forks": 0,
     "tags": [
-      "Data Analytics",
-      "Self-learning",
       "Analytics Engineering",
-      "Community contribution"
+      "Self-learning",
+      "Community contribution",
+      "Data Analytics"
     ],
     "techstack": [
       "Airflow",
       "Azure",
-      "DBT",
       "Docker",
       "Git",
       "Mage",
       "Python",
       "SQL",
+      "Snowflake",
       "VS Code",
       "dbt"
     ]
@@ -509,17 +528,18 @@
     "forks": 0,
     "tags": [
       "Community contribution",
-      "Data Analytics",
       "Self-learning",
       "Business Intelligence",
-      "Analytics Engineering"
+      "Analytics Engineering",
+      "Data Analytics"
     ],
     "techstack": [
       "Docker",
       "JavaScript",
       "Mage",
       "Metabase",
-      "SQL"
+      "SQL",
+      "SQL Server"
     ]
   },
   {
@@ -531,30 +551,52 @@
     "stars": 1,
     "forks": 0,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics",
       "Analytics Engineering",
-      "Community contribution"
+      "Community contribution",
+      "Business Intelligence",
+      "Data Analytics"
     ],
     "techstack": [
       "AWS",
+      "Airbyte",
       "Airflow",
       "Azure",
-      "DBT",
+      "BeautifulSoup",
+      "BigQuery",
+      "Confluence",
+      "DBeaver",
+      "DLT",
       "Dagster",
+      "Databricks",
       "Excel",
+      "Figma",
+      "Fivetran",
+      "GA4",
       "GCP",
       "Git",
       "GitHub",
+      "JQL",
+      "JavaScript",
+      "Jira",
+      "KQL",
+      "Kestra",
       "Looker",
+      "MQL",
       "Mage",
       "Metabase",
       "MongoDB",
+      "Notion",
+      "Oracle",
       "PostgreSQL",
-      "PowerBI",
+      "Power BI",
       "Python",
       "SQL",
+      "SQL Server",
+      "Selenium",
+      "Snowflake",
       "Spark",
+      "Supabase",
+      "Superset",
       "VS Code",
       "dbt"
     ]
@@ -568,10 +610,10 @@
     "stars": 1,
     "forks": 0,
     "tags": [
-      "Business Intelligence",
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Business Intelligence",
+      "Data Analytics"
     ],
     "techstack": [
       "Git",
@@ -603,12 +645,13 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
-      "Self-learning",
       "Analytics Engineering",
-      "Community contribution"
+      "Self-learning",
+      "Community contribution",
+      "Data Analytics"
     ],
     "techstack": [
+      "Airbyte",
       "Docker",
       "Git",
       "GitHub",
@@ -629,7 +672,7 @@
       "Business Intelligence"
     ],
     "techstack": [
-      "PowerBI"
+      "Power BI"
     ]
   },
   {
@@ -674,15 +717,16 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
       "Analytics Engineering",
-      "Community contribution"
+      "Community contribution",
+      "Data Analytics"
     ],
     "techstack": [
       "FastAPI",
       "Jupyter",
       "Matplotlib",
       "NumPy",
+      "Oracle",
       "Pandas",
       "Parquet",
       "Python",
@@ -702,8 +746,8 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
-      "Self-learning"
+      "Self-learning",
+      "Data Analytics"
     ],
     "techstack": [
       "Git",
@@ -719,8 +763,8 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
-      "Analytics Engineering"
+      "Analytics Engineering",
+      "Data Analytics"
     ],
     "techstack": [
       "Git",
@@ -743,9 +787,9 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Data Analytics"
     ],
     "techstack": [
       "Docker",
@@ -797,18 +841,18 @@
     "forks": 0,
     "tags": [
       "Community contribution",
-      "Data Analytics",
       "Self-learning",
       "Business Intelligence",
-      "Analytics Engineering"
+      "Analytics Engineering",
+      "Data Analytics"
     ],
     "techstack": [
-      "GCP",
+      "BigQuery",
       "Jupyter",
       "Matplotlib",
       "Pandas",
       "PostgreSQL",
-      "PowerBI",
+      "Power BI",
       "Python",
       "SQL",
       "Seaborn",
@@ -826,8 +870,8 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
-      "Self-learning"
+      "Self-learning",
+      "Data Analytics"
     ],
     "techstack": [
       "Git",
@@ -863,6 +907,7 @@
       "FastAPI",
       "Git",
       "GitHub",
+      "GitHub Actions",
       "Matplotlib",
       "Pandas",
       "Python",
@@ -878,19 +923,20 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
+      "Analytics Engineering",
       "Self-learning",
-      "Analytics Engineering"
+      "Data Analytics"
     ],
     "techstack": [
       "Avro",
+      "BigQuery",
       "Docker",
-      "GCP",
       "Kafka",
       "Mage",
       "PostgreSQL",
       "Python",
-      "SQL"
+      "SQL",
+      "Snowflake"
     ]
   },
   {
@@ -915,13 +961,14 @@
     "stars": 0,
     "forks": 0,
     "tags": [
-      "Data Analytics",
-      "Self-learning",
       "Analytics Engineering",
-      "Community contribution"
+      "Self-learning",
+      "Community contribution",
+      "Data Analytics"
     ],
     "techstack": [
       "Docker",
+      "GitHub Actions",
       "Mage"
     ]
   },
@@ -938,7 +985,8 @@
     ],
     "techstack": [
       "Git",
-      "GitHub"
+      "GitHub",
+      "Requests"
     ]
   }
 ]

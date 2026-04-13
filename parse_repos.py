@@ -2,15 +2,37 @@ import json
 import urllib.request
 import urllib.error
 import concurrent.futures
-import time
+import os
+from datetime import datetime
 
-# Use the existing search output
-with open('/home/tunguyenn99/.gemini/antigravity/brain/acec29b2-879e-42a3-a56b-77604c7cf57a/.system_generated/steps/135/output.txt', 'r') as f:
-    data = json.load(f)
-
-items = data['items']
+# Fetch repos from GitHub API
+def fetch_github_repos(username):
+    """Fetch all public repos for a GitHub user"""
+    repos = []
+    page = 1
+    per_page = 100
+    
+    while True:
+        url = f"https://api.github.com/users/{username}/repos?per_page={per_page}&page={page}&sort=updated&direction=desc"
+        try:
+            req = urllib.request.Request(url, headers={
+                'User-Agent': 'Mozilla/5.0',
+                'Accept': 'application/vnd.github.v3+json'
+            })
+            with urllib.request.urlopen(req, timeout=10) as response:
+                page_data = json.loads(response.read().decode('utf-8'))
+                if not page_data:
+                    break
+                repos.extend(page_data)
+                page += 1
+        except Exception as e:
+            print(f"Error fetching page {page}: {e}")
+            break
+    
+    return repos
 
 def fetch_readme(repo_name, default_branch):
+    """Fetch README from repository with multiple fallback URLs"""
     urls = [
         f"https://raw.githubusercontent.com/tunguyenn99/{repo_name}/{default_branch}/README.md",
         f"https://raw.githubusercontent.com/tunguyenn99/{repo_name}/main/README.md",
@@ -28,137 +50,212 @@ def fetch_readme(repo_name, default_branch):
             continue
     return ""
 
-def process_repo(repo):
-    name = repo.get('name', '')
-    desc = repo.get('description') or ''
-    default_branch = repo.get('default_branch', 'main')
-    is_fork = repo.get('fork', False)
-    readme = fetch_readme(name, default_branch)
-    readme_lower = readme.lower()
-    
-    content_to_check = (name + " " + desc + " " + readme_lower)
-    
-    tags = set()
-    
-    # 1. Analytics Engineering
-    if any(x in content_to_check for x in ['dbt', 'dagster', 'airflow', 'trino', 'mage', 'iceberg', 'snowflake', 'elt', 'kestra', 'pipeline']):
-        tags.add('Analytics Engineering')
-        
-    # 2. Data Analytics
-    if any(x in content_to_check for x in ['analytics', 'analysis', 'cohort', 'machine learning', 'ml', 'faker', 'jupyter', 'crawl', 'scraping']):
-        tags.add('Data Analytics')
-        
-    # 3. Business Intelligence
-    if any(x in content_to_check for x in ['power bi', 'dashboard', 'metabase', 'pbi', 'bi ', 'visualization', 'business intelligence']):
-        tags.add('Business Intelligence')
-        
-    # 4. Self-learning
-    if any(x in content_to_check for x in ['i-learn', 'learn-', 'intro-to', 'foundations', 'fundamentals', 'tutorial', 're-learn', 'notes', 'docs', 'leetcode']):
-        tags.add('Self-learning')
-        
-    # 5. Community contribution
-    # We'll use specific keywords or status (like forks or specific public project names)
-    if is_fork or any(x in content_to_check for x in ['community', 'contribution', 'public', 'free', 'xom data', 'shared', 'open-source']):
-        tags.add('Community contribution')
-
-    # Fallback
-    if not tags:
-        tags.add('Other Projects')
-    
-    # Extract techstack from README
-    techstack = extract_techstack(readme)
-        
-    return {
-        'id': repo['id'],
-        'title': name,
-        'description': desc,
-        'url': repo['html_url'],
-        'language': repo.get('language') or 'N/A',
-        'stars': repo.get('stargazers_count', 0),
-        'forks': repo.get('forks_count', 0),
-        'tags': list(tags),
-        'techstack': techstack
-    }
-
-def extract_techstack(readme):
-    """Extract tech stack information from README"""
+def extract_techstack(readme, repo_name, description):
+    """
+    Extract tech stack from README content with comprehensive pattern matching
+    Returns list of detected technologies
+    """
     if not readme:
         return []
     
-    readme_lower = readme.lower()
+    content_to_check = (repo_name + " " + (description or "") + " " + readme).lower()
     
-    # Map of tech names to search patterns
-    tech_map = {
-        'Python': ['python'],
-        'SQL': ['sql', 'postgres', 'mysql', 'snowflake', 't-sql', 'bigquery'],
-        'Pandas': ['pandas'],
-        'NumPy': ['numpy'],
-        'Spark': ['spark', 'pyspark'],
-        'Airflow': ['airflow'],
-        'dbt': ['dbt'],
-        'DBT': ['dbt'],
-        'Dagster': ['dagster'],
-        'Trino': ['trino', 'presto'],
-        'Mage': ['mage'],
-        'Docker': ['docker'],
-        'Kubernetes': ['kubernetes', 'k8s'],
-        'AWS': ['aws', 'amazon web services'],
-        'GCP': ['gcp', 'google cloud', 'bigquery'],
-        'Azure': ['azure', 'microsoft azure'],
-        'Docker': ['docker'],
-        'Jupyter': ['jupyter'],
-        'Streamlit': ['streamlit'],
-        'FastAPI': ['fastapi'],
-        'Flask': ['flask'],
-        'Django': ['django'],
-        'React': ['react'],
-        'JavaScript': ['javascript', 'node.js', 'nodejs'],
-        'PowerBI': ['power bi', 'powerbi', 'pbi'],
-        'Tableau': ['tableau'],
-        'Metabase': ['metabase'],
-        'Looker': ['looker'],
-        'Elasticsearch': ['elasticsearch'],
-        'MongoDB': ['mongodb'],
-        'PostgreSQL': ['postgresql', 'postgres'],
-        'MySQL': ['mysql'],
-        'Redis': ['redis'],
-        'Kafka': ['kafka'],
-        'Git': ['git'],
-        'GitHub': ['github'],
-        'Scikit-learn': ['scikit-learn', 'sklearn'],
-        'TensorFlow': ['tensorflow'],
-        'PyTorch': ['pytorch'],
-        'Matplotlib': ['matplotlib'],
-        'Seaborn': ['seaborn'],
-        'Plotly': ['plotly'],
-        'Iceberg': ['iceberg', 'apache iceberg'],
-        'Parquet': ['parquet'],
-        'Avro': ['avro'],
-        'Excel': ['excel', 'xlsxwriter'],
-        'VS Code': ['vs code', 'vscode'],
+    # Comprehensive tech detection with patterns
+    tech_patterns = {
+        # Data Engineering & Orchestration
+        'dbt': r'\bdbt\b',
+        'Airflow': r'airflow|apache.?airflow',
+        'Spark': r'spark|pyspark|apache.?spark',
+        'Databricks': r'databricks',
+        'Kestra': r'kestra',
+        'Dagster': r'dagster',
+        'Mage': r'mage\.ai|mageai',
+        'Fivetran': r'fivetran',
+        'Airbyte': r'airbyte',
+        'DLT': r'\bdlt\b|data.?load.?tool',
+        
+        # Databases & Data Platforms
+        'Snowflake': r'snowflake',
+        'BigQuery': r'bigquery|big.?query',
+        'PostgreSQL': r'postgresql|postgres\b',
+        'MySQL': r'mysql\b',
+        'MongoDB': r'mongodb',
+        'Supabase': r'supabase',
+        'Trino': r'trino|presto',
+        'Iceberg': r'iceberg|apache.?iceberg',
+        'Redis': r'redis\b',
+        'Elasticsearch': r'elasticsearch',
+        'Oracle': r'\boracle\b',
+        'SQL Server': r'sql.?server|mssql',
+        
+        # Cloud Platforms
+        'GCP': r'\bgcp\b|google.?cloud.?platform|google.?cloud\b',
+        'AWS': r'\baws\b|amazon.?web.?services',
+        'Azure': r'\bazure\b|microsoft.?azure',
+        
+        # Infrastructure & DevOps
+        'Docker': r'docker',
+        'Kubernetes': r'kubernetes|k8s\b',
+        'GitHub Actions': r'github.?actions?|workflows?',
+        
+        # Programming Languages
+        'Python': r'\bpython\b|\.py\b',
+        'SQL': r'\bsql\b',
+        'JavaScript': r'javascript|node\.js|nodejs',
+        'Java': r'\bjava\b|\.java',
+        'Go': r'\bgo\b|golang',
+        'Rust': r'\brust\b',
+        
+        # Data Processing Libraries
+        'Pandas': r'pandas',
+        'NumPy': r'numpy',
+        'Scikit-learn': r'scikit.?learn|sklearn',
+        'TensorFlow': r'tensorflow',
+        'PyTorch': r'pytorch',
+        
+        # Visualization & BI Tools
+        'Power BI': r'power.?bi|powerbi',
+        'Tableau': r'tableau',
+        'Metabase': r'metabase',
+        'Looker': r'looker(?!\s)',
+        'Superset': r'superset|apache.?superset',
+        'Matplotlib': r'matplotlib',
+        'Seaborn': r'seaborn',
+        'Plotly': r'plotly',
+        
+        # Web Frameworks & APIs
+        'FastAPI': r'fastapi',
+        'Flask': r'flask\b',
+        'Django': r'django\b',
+        'React': r'react\.js|react\b',
+        'Vue': r'vue\.js|vue\b',
+        
+        # Data Formats & Serialization
+        'Parquet': r'parquet',
+        'Avro': r'avro\b',
+        'JSON': r'json\b',
+        'CSV': r'csv\b',
+        'XML': r'xml\b',
+        'Protobuf': r'protobuf|proto\b',
+        
+        # Web Scraping & HTTP
+        'Selenium': r'selenium',
+        'BeautifulSoup': r'beautifulsoup|bs4\b',
+        'Requests': r'requests.?library|import requests|requests\b',
+        'Scrapy': r'scrapy',
+        
+        # Development Tools
+        'Git': r'\bgit\b',
+        'GitHub': r'github\.com|@github',
+        'GitLab': r'gitlab',
+        'VS Code': r'vscode|vs.?code',
+        'Jupyter': r'jupyter',
+        'DBeaver': r'dbeaver',
+        
+        # Testing & Quality
+        'Pytest': r'pytest',
+        'unittest': r'unittest',
+        'Jira': r'jira\b',
+        'Confluence': r'confluence',
+        
+        # Other Tools
+        'Excel': r'excel|xlsxwriter',
+        'Notion': r'notion',
+        'Figma': r'figma',
+        'Streamlit': r'streamlit',
+        'uv': r'\buv\b|uv.?python|uv.?package',
+        'GA4': r'ga4|google.?analytics',
+        'SmartLook': r'smartlook',
+        'Faker': r'faker\b|faker\.py',
+        'Kafka': r'kafka|apache\.?kafka',
+        'MQ': r'rabbitmq|ibm\.?mq',
     }
     
     detected_tech = set()
     
-    for tech, patterns in tech_map.items():
-        for pattern in patterns:
-            if pattern in readme_lower:
+    import re
+    for tech, pattern in tech_patterns.items():
+        try:
+            if re.search(pattern, content_to_check):
                 detected_tech.add(tech)
-                break
+        except:
+            # Fallback to simple string matching if regex fails
+            if pattern.replace('\\b', '').lower() in content_to_check:
+                detected_tech.add(tech)
     
     return sorted(list(detected_tech))
 
-# Filter only public repos
-public_items = [item for item in items if not item.get('private', False)]
+def process_repo(repo):
+    """Process a single repository to extract metadata and tech stack"""
+    name = repo.get('name', '')
+    desc = repo.get('description') or ''
+    default_branch = repo.get('default_branch', 'main')
+    url = repo.get('html_url', '')
+    
+    # Fetch README
+    readme = fetch_readme(name, default_branch)
+    has_readme = len(readme) > 0
+    readme_lines = len(readme.split('\n')) if readme else 0
+    readme_excerpt = readme[:500] if readme else ''
+    
+    # Extract metadata
+    language = repo.get('language') or 'N/A'
+    stars = repo.get('stargazers_count', 0)
+    forks = repo.get('forks_count', 0)
+    is_fork = repo.get('fork', False)
+    is_private = repo.get('private', False)
+    
+    # Parse dates
+    created_at = repo.get('created_at', '').split('T')[0]
+    updated_at = repo.get('updated_at', '').split('T')[0]
+    
+    # Extract topics directly from GitHub API (user-defined tags)
+    topics = repo.get('topics', [])
+    if not topics:
+        topics = []
+    
+    # Extract tech stack
+    techstack = extract_techstack(readme, name, desc)
+    
+    return {
+        'name': name,
+        'description': desc,
+        'url': url,
+        'language': language,
+        'stars': stars,
+        'forks': forks,
+        'is_fork': is_fork,
+        'is_private': is_private,
+        'created_at': created_at,
+        'updated_at': updated_at,
+        'topics': topics,
+        'has_readme': has_readme,
+        'readme_lines': readme_lines,
+        'readme_excerpt': readme_excerpt,
+        'techstack': techstack
+    }
 
-print(f"Fetching and analyzing readmes for {len(public_items)} public repos...")
-with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-    results = list(executor.map(process_repo, public_items))
+# Fetch repos from GitHub API
+print("Fetching repos from GitHub API...")
+repos = fetch_github_repos('tunguyenn99')
+
+# Filter only public repos
+public_repos = [repo for repo in repos if not repo.get('private', False)]
+
+print(f"Processing {len(public_repos)} public repos...")
+with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+    results = list(executor.map(process_repo, public_repos))
 
 # Sort by stars descending
 results.sort(key=lambda x: x['stars'], reverse=True)
 
-with open('/home/tunguyenn99/my-project/personal-websites-portfolio/src/data/projects.json', 'w') as f:
+# Save to repos_analysis.json
+output_path = '/home/tunguyenn99/my-project/personal-websites-portfolio/repos_analysis.json'
+with open(output_path, 'w') as f:
     json.dump(results, f, indent=2)
 
-print("Done. Saved to src/data/projects.json")
+print(f"✅ Analyzed {len(results)} repos. Saved to repos_analysis.json")
+print(f"Sample tech stacks:")
+for repo in results[:3]:
+    print(f"  - {repo['name']}: {', '.join(repo['techstack'][:5])}{'...' if len(repo['techstack']) > 5 else ''}")
+

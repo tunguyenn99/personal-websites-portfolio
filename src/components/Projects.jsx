@@ -1,160 +1,179 @@
 import React, { useState } from 'react';
-import { Star, GitFork, ExternalLink, Database, Code } from 'lucide-react';
+import { Star, GitFork, ExternalLink, Database, FileText, Calendar, Code2, Cloud, BarChart3, Workflow, Download, Layers } from 'lucide-react';
 import {
   SiPython, SiPostgresql, SiDbt, SiApacheairflow, SiSnowflake,
   SiDatabricks, SiSupabase, SiApachespark, SiAirbyte, SiSelenium,
   SiGooglecloud, SiGooglebigquery, SiLooker, SiApachesuperset,
   SiMetabase, SiGoogleanalytics, SiJira, SiConfluence, SiFigma,
-  SiNotion, SiDbeaver, SiMongodb
+  SiNotion, SiDbeaver, SiMongodb, SiDocker, SiKubernetes
 } from 'react-icons/si';
-import { Download, Layers, Cloud, Workflow, BarChart3, Users, FileText, Terminal, Eye } from 'lucide-react';
-import projectsData from '../data/projects.json';
+import reposData from '../../repos_analysis.json';
 
-// Priority order for tools display
-const toolPriority = [
-  // Engineering & Data Processing
-  'dbt', 'DBT', 'Airflow', 'Spark', 'Databricks', 'Kestra', 'Dagster', 'Mage', 'Fivetran', 'Airbyte', 'DLT',
-  // Databases & Data Platforms
-  'Snowflake', 'BigQuery', 'PostgreSQL', 'Apache Iceberg', 'Trino',
-  // Cloud & Infrastructure
-  'Docker', 'Kubernetes', 'GCP', 'AWS', 'Azure',
-  // Languages & Coding
-  'Python', 'SQL', 'JavaScript',
-  // BI & Visualization
-  'Power BI', 'Looker', 'Metabase', 'Superset', 'Tableau'
+// Convert kebab-case to Title Case
+const formatTopic = (topic) => {
+  return topic
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
+// Get all unique topics from the full dataset
+const getAllTopics = () => {
+  const topicsSet = new Set();
+  reposData.forEach(repo => {
+    repo.topics.forEach(topic => topicsSet.add(topic));
+  });
+  return Array.from(topicsSet).sort();
+};
+
+const topicPriority = [
+  'analytics-engineer',
+  'data-analytics',
+  'business-intelligence',
+  'self-learning',
+  'community-contribution',
+  'profile-portfolio'
 ];
 
-const brightColorMap = {
-  'Python': '#FF6B6B',
-  'SQL': '#4ECDC4',
+const topicColors = {
+  'analytics-engineer': '#FF694B',
+  'data-analytics': '#4ECDC4',
+  'business-intelligence': '#FFD700',
+  'self-learning': '#6C63FF',
+  'community-contribution': '#00FF00',
+  'profile-portfolio': '#FF6B9D'
+};
+
+// Tech stack priority and colors
+const techPriority = [
+  'dbt', 'Airflow', 'Spark', 'Databricks', 'Kestra', 'Dagster', 'Mage', 
+  'Snowflake', 'BigQuery', 'PostgreSQL', 'Trino', 'MongoDB', 'Supabase',
+  'Docker', 'Kubernetes', 'GCP', 'AWS', 'Azure', 'GitHub Actions',
+  'Python', 'SQL', 'JavaScript', 'Requests', 'BeautifulSoup', 'Selenium'
+];
+
+const techColors = {
   'dbt': '#FF694B',
-  'DBT': '#FF694B',
   'Airflow': '#23D9FF',
-  'Snowflake': '#29B5E8',
-  'PostgreSQL': '#61DAFB',
-  'BigQuery': '#5DADE2',
   'Spark': '#FF9D00',
   'Databricks': '#FF3621',
-  'GCP': '#5DADE2',
+  'Kestra': '#FF6B6B',
+  'Dagster': '#1890FF',
+  'Mage': '#9D4EDD',
+  'Snowflake': '#29B5E8',
+  'BigQuery': '#5DADE2',
+  'PostgreSQL': '#61DAFB',
+  'Trino': '#4ECDC4',
+  'MongoDB': '#00ED64',
+  'Supabase': '#3ECF8E',
   'Docker': '#2496ED',
   'Kubernetes': '#326CE5',
   'AWS': '#FF9900',
-  'Azure': '#5DADE2',
-  'Looker': '#5DADE2',
-  'Superset': '#00D9FF',
-  'Metabase': '#5199FF',
-  'Trino': '#4ECDC4',
-  'Mage': '#FF00FF',
-  'Dagster': '#5DADE2',
-  'Kestra': '#FF6B6B',
-  'Fivetran': '#FF7B7B',
-  'Airbyte': '#6557FF',
-  'Power BI': '#FFD700',
-  'Tableau': '#FF9D00'
+  'GCP': '#4285F4',
+  'Azure': '#0078D4',
+  'GitHub Actions': '#2088F0',
+  'Python': '#3776AB',
+  'SQL': '#4ECDC4',
+  'JavaScript': '#F1E05A',
+  'BeautifulSoup': '#3776AB',
+  'Requests': '#FFE135',
+  'Selenium': '#00FF00',
+  'Pandas': '#130654',
+  'NumPy': '#013243',
+  'Matplotlib': '#01A4D6',
+  'Seaborn': '#0173B2',
+  'Plotly': '#636EFA',
+  'Git': '#F1502F',
+  'GitHub': '#181717',
+  'Jupyter': '#F37726',
+  'Streamlit': '#FF0000'
 };
 
-// Map tech names to icons and colors
+// Tech icon mapping
 const techIcons = {
-  'Python': { icon: <SiPython size={14} />, color: '#3776AB' },
-  'SQL': { icon: <SiPostgresql size={14} />, color: '#336791' },
-  'dbt': { icon: <SiDbt size={14} />, color: '#FF694B' },
-  'DBT': { icon: <SiDbt size={14} />, color: '#FF694B' },
-  'Airflow': { icon: <SiApacheairflow size={14} />, color: '#017CEE' },
-  'Snowflake': { icon: <SiSnowflake size={14} />, color: '#29B5E8' },
-  'PostgreSQL': { icon: <SiPostgresql size={14} />, color: '#336791' },
-  'BigQuery': { icon: <SiGooglebigquery size={14} />, color: '#3367D6' },
-  'Spark': { icon: <SiApachespark size={14} />, color: '#E25A1C' },
-  'Databricks': { icon: <SiDatabricks size={14} />, color: '#FF3621' },
-  'GCP': { icon: <SiGooglecloud size={14} />, color: '#4285F4' },
-  'Looker': { icon: <SiLooker size={14} />, color: '#4285F4' },
-  'Superset': { icon: <SiApachesuperset size={14} />, color: '#00A2D3' },
-  'Metabase': { icon: <SiMetabase size={14} />, color: '#509EE3' },
-  'MongoDB': { icon: <SiMongodb size={14} />, color: '#13AA52' },
-  'Supabase': { icon: <SiSupabase size={14} />, color: '#3ECF8E' },
-  'Airbyte': { icon: <SiAirbyte size={14} />, color: '#6557FF' },
-  'DLT': { icon: <Download size={14} />, color: '#FF694B' },
-  'Fivetran': { icon: <Code size={14} />, color: '#005DFF' },
-  'Dagster': { icon: <Workflow size={14} />, color: '#1890FF' },
-  'Kestra': { icon: <Workflow size={14} />, color: '#FF6B6B' },
-  'Mage': { icon: <Code size={14} />, color: '#9D4EDD' },
-  'Docker': { icon: <Code size={14} />, color: '#2496ED' },
-  'Kubernetes': { icon: <Layers size={14} />, color: '#326CE5' },
-  'AWS': { icon: <Cloud size={14} />, color: '#FF9900' },
-  'Azure': { icon: <Cloud size={14} />, color: '#0078D4' },
-  'Looker Studio': { icon: <SiLooker size={14} />, color: '#4285F4' },
-  'Power BI': { icon: <BarChart3 size={14} />, color: '#F2C811' },
-  'Tableau': { icon: <BarChart3 size={14} />, color: '#E8704A' },
-  'GA4': { icon: <SiGoogleanalytics size={14} />, color: '#E37400' },
-  'SmartLook': { icon: <Eye size={14} />, color: '#FF6B35' },
-  'Jira': { icon: <SiJira size={14} />, color: '#0052CC' },
-  'Confluence': { icon: <SiConfluence size={14} />, color: '#0052CC' },
-  'Figma': { icon: <SiFigma size={14} />, color: '#F24E1E' },
-  'VS Code': { icon: <Code size={14} />, color: '#007ACC' },
-  'DBeaver': { icon: <SiDbeaver size={14} />, color: '#382923' },
-  'Excel': { icon: <FileText size={14} />, color: '#217346' },
-  'Notion': { icon: <SiNotion size={14} />, color: '#000000' },
-  'Selenium': { icon: <SiSelenium size={14} />, color: '#43B02A' },
-  'BeautifulSoup': { icon: <Code size={14} />, color: '#3776AB' },
-  'Pandas': { icon: <Code size={14} />, color: '#150458' },
-  'Jupyter': { icon: <Code size={14} />, color: '#F37726' },
-  'Streamlit': { icon: <Code size={14} />, color: '#FF0000' },
-  'FastAPI': { icon: <Code size={14} />, color: '#009688' },
-  'Flask': { icon: <Code size={14} />, color: '#000000' },
-  'Django': { icon: <Code size={14} />, color: '#092E20' },
-  'React': { icon: <Code size={14} />, color: '#61DAFB' },
-  'Git': { icon: <Code size={14} />, color: '#F1502F' },
-  'GitHub': { icon: <Code size={14} />, color: '#181717' },
-  'NumPy': { icon: <Code size={14} />, color: '#013243' },
-  'Scikit-learn': { icon: <Code size={14} />, color: '#F7931E' },
-  'TensorFlow': { icon: <Code size={14} />, color: '#FF6F00' },
-  'PyTorch': { icon: <Code size={14} />, color: '#EE4C2C' },
-  'Matplotlib': { icon: <BarChart3 size={14} />, color: '#11557C' },
-  'Seaborn': { icon: <BarChart3 size={14} />, color: '#0173B2' },
-  'Plotly': { icon: <BarChart3 size={14} />, color: '#636EFA' },
-  'Iceberg': { icon: <Layers size={14} />, color: '#0078D4' },
-  'Parquet': { icon: <FileText size={14} />, color: '#50E6FF' },
-  'Avro': { icon: <FileText size={14} />, color: '#7C3ECC' },
-  'Elasticsearch': { icon: <Database size={14} />, color: '#005571' },
-  'Redis': { icon: <Database size={14} />, color: '#DC382D' },
-  'Kafka': { icon: <Workflow size={14} />, color: '#000000' },
-  'MySQL': { icon: <SiPostgresql size={14} />, color: '#00758F' },
-  'Oracle': { icon: <Database size={14} />, color: '#F80000' },
-  'SQL Server': { icon: <Database size={14} />, color: '#CC2927' },
-  'KQL': { icon: <Terminal size={14} />, color: '#0078D4' },
-  'MQL': { icon: <Terminal size={14} />, color: '#13AA52' },
-  'JQL': { icon: <Terminal size={14} />, color: '#0052CC' }
+  'Python': <SiPython size={14} color="#3776AB" />,
+  'SQL': <SiPostgresql size={14} color="#336791" />,
+  'dbt': <SiDbt size={14} color="#FF694B" />,
+  'Airflow': <SiApacheairflow size={14} color="#017CEE" />,
+  'Snowflake': <SiSnowflake size={14} color="#29B5E8" />,
+  'BigQuery': <SiGooglebigquery size={14} color="#3367D6" />,
+  'PostgreSQL': <SiPostgresql size={14} color="#336791" />,
+  'Spark': <SiApachespark size={14} color="#E25A1C" />,
+  'Databricks': <SiDatabricks size={14} color="#FF3621" />,
+  'GCP': <SiGooglecloud size={14} color="#4285F4" />,
+  'Looker': <SiLooker size={14} color="#4285F4" />,
+  'Superset': <SiApachesuperset size={14} color="#00A2D3" />,
+  'Metabase': <SiMetabase size={14} color="#509EE3" />,
+  'MongoDB': <SiMongodb size={14} color="#13AA52" />,
+  'Supabase': <SiSupabase size={14} color="#3ECF8E" />,
+  'Airbyte': <SiAirbyte size={14} color="#6557FF" />,
+  'Docker': <SiDocker size={14} color="#2496ED" />,
+  'Kubernetes': <SiKubernetes size={14} color="#326CE5" />,
+  'AWS': <Cloud size={14} color="#FF9900" />,
+  'Azure': <Cloud size={14} color="#0078D4" />,
+  'GitHub Actions': <Code2 size={14} color="#2088F0" />,
+  'Selenium': <SiSelenium size={14} color="#43B02A" />,
+  'BeautifulSoup': <Code2 size={14} color="#3776AB" />,
+  'Requests': <Download size={14} color="#FFE135" />,
+  'Trino': <Database size={14} color="#4ECDC4" />,
+  'DLT': <Download size={14} color="#FF694B" />,
+  'Fivetran': <Code2 size={14} color="#005DFF" />,
+  'Dagster': <Workflow size={14} color="#1890FF" />,
+  'Kestra': <Workflow size={14} color="#FF6B6B" />,
+  'Mage': <Code2 size={14} color="#9D4EDD" />,
+  'Power BI': <BarChart3 size={14} color="#F2C811" />,
+  'Tableau': <BarChart3 size={14} color="#E8704A" />,
+  'Excel': <FileText size={14} color="#217346" />,
+  'Git': <Code2 size={14} color="#F1502F" />,
+  'GitHub': <Code2 size={14} color="#181717" />,
+  'Jupyter': <Code2 size={14} color="#F37726" />,
+  'Pandas': <Code2 size={14} color="#130654" />,
+  'NumPy': <Code2 size={14} color="#013243" />,
+  'Matplotlib': <BarChart3 size={14} color="#01A4D6" />,
+  'Seaborn': <BarChart3 size={14} color="#0173B2" />,
+  'Plotly': <BarChart3 size={14} color="#636EFA" />,
+  'Jira': <SiJira size={14} color="#0052CC" />,
+  'Confluence': <SiConfluence size={14} color="#0052CC" />,
+  'Figma': <SiFigma size={14} color="#F24E1E" />,
+  'Notion': <SiNotion size={14} color="#000000" />,
+  'DBeaver': <SiDbeaver size={14} color="#382923" />
 };
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('Top 10 Starring Projects');
 
-  // Define explicit filter order
-  const filterOrder = [
-    'Top 10 Starring Projects',
-    'Analytics Engineering',
-    'Data Analytics',
-    'Business Intelligence',
-    'Self-learning',
-    'Community contribution',
-    'Other Projects'
-  ];
-
-  // Get all unique tags from the full dataset
-  const existingTags = new Set();
-  projectsData.forEach(proj => {
-    proj.tags.forEach(tag => existingTags.add(tag));
-  });
-
-  // Combine ordered filters with any extra tags found
+  // Get all unique topics
+  const allTopics = getAllTopics();
+  
+  // Create filter list
   const filters = [
-    ...filterOrder.filter(f => f === 'Top 10 Starring Projects' || existingTags.has(f)),
-    ...Array.from(existingTags).filter(t => !filterOrder.includes(t))
+    'Top 10 Starring Projects',
+    ...allTopics.sort((a, b) => {
+      const priorityA = topicPriority.indexOf(a);
+      const priorityB = topicPriority.indexOf(b);
+      if (priorityA === -1 && priorityB === -1) return 0;
+      if (priorityA === -1) return 1;
+      if (priorityB === -1) return -1;
+      return priorityA - priorityB;
+    })
   ];
 
   // Dynamic filtering logic
   const filteredProjects = activeFilter === 'Top 10 Starring Projects'
-    ? [...projectsData].sort((a, b) => (b.stars || 0) - (a.stars || 0)).slice(0, 10)
-    : projectsData.filter(proj => proj.tags.includes(activeFilter));
+    ? [...reposData].sort((a, b) => (b.stars || 0) - (a.stars || 0)).slice(0, 9)
+    : reposData.filter(repo => repo.topics.includes(activeFilter)).slice(0, 9);
+
+  // Sort tech stack by priority
+  const sortTechStack = (techs) => {
+    return [...techs].sort((a, b) => {
+      const priorityA = techPriority.indexOf(a);
+      const priorityB = techPriority.indexOf(b);
+      if (priorityA === -1 && priorityB === -1) return 0;
+      if (priorityA === -1) return 1;
+      if (priorityB === -1) return -1;
+      return priorityA - priorityB;
+    });
+  };
 
   return (
     <section id="projects" className="section">
@@ -163,118 +182,174 @@ export default function Projects() {
         
         {/* Filter UI */}
         <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '3rem', justifyContent: 'center' }}>
-          {filters.map(filter => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              style={{
-                padding: '0.5rem 1rem',
-                borderRadius: '9999px',
-                border: `1px solid ${activeFilter === filter ? 'var(--primary)' : 'rgba(255,255,255,0.1)'}`,
-                background: activeFilter === filter ? 'rgba(139, 92, 246, 0.2)' : 'rgba(0,0,0,0.2)',
-                color: activeFilter === filter ? 'var(--primary)' : 'var(--text-muted)',
-                cursor: 'pointer',
-                transition: 'all 0.3s',
-                fontWeight: 500,
-                backdropFilter: 'blur(10px)'
-              }}
-            >
-              {filter}
-            </button>
-          ))}
+          {filters.map(filter => {
+            const isTopGenres = filter === 'Top 10 Starring Projects';
+            const color = topicColors[filter] || '#8B5CF6';
+            return (
+              <button
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
+                style={{
+                  padding: '0.5rem 1rem',
+                  borderRadius: '9999px',
+                  border: `1px solid ${activeFilter === filter ? color : 'rgba(255,255,255,0.1)'}`,
+                  background: activeFilter === filter ? `${color}20` : 'rgba(0,0,0,0.2)',
+                  color: activeFilter === filter ? color : 'var(--text-muted)',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s',
+                  fontWeight: 500,
+                  backdropFilter: 'blur(10px)'
+                }}
+              >
+                {isTopGenres ? filter : formatTopic(filter)}
+              </button>
+            );
+          })}
         </div>
 
         <div className="card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
-        {filteredProjects.map((proj, idx) => (
-          <a key={proj.id || idx} href={proj.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="glass-panel equal-panel" style={{ height: '100%', transition: 'transform 0.3s', border: '1px solid var(--outline-low)' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                <Database size={24} color="var(--primary)" />
-                <div style={{ display: 'flex', gap: '1rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}><Star size={14} /> {proj.stars || 0}</span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}><GitFork size={14} /> {proj.forks || 0}</span>
-                </div>
-              </div>
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                {proj.title} <ExternalLink size={16} color="var(--primary)" />
-              </h3>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', flex: 1, marginBottom: '1.5rem' }}>
-                {proj.description || "Data Engineering and Analytics Project."}
-              </p>
-
-              {/* Techstack section */}
-              {proj.techstack && proj.techstack.length > 0 && (
-                <div style={{ marginBottom: '1.5rem' }}>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', alignItems: 'center' }}>
-                    {
-                      (() => {
-                        // Deduplicate and sort by priority
-                        const uniqueTech = [...new Set(proj.techstack)];
-                        const sorted = uniqueTech.sort((a, b) => {
-                          const priorityA = toolPriority.indexOf(a);
-                          const priorityB = toolPriority.indexOf(b);
-                          if (priorityA === -1 && priorityB === -1) return 0;
-                          if (priorityA === -1) return 1;
-                          if (priorityB === -1) return -1;
-                          return priorityA - priorityB;
-                        });
-                        
-                        // Show top 3, count rest
-                        const topThree = sorted.slice(0, 3);
-                        const remaining = sorted.length - 3;
-                        
-                        return (
-                          <>
-                            {topThree.map(tech => {
-                              const techData = techIcons[tech];
-                              const color = brightColorMap[tech] || techData?.color || '#8B5CF6';
-                              if (!techData) return null;
-                              return (
-                                <span key={tech} style={{
-                                  background: `${color}20`,
-                                  color: color,
-                                  border: `1px solid ${color}60`,
-                                  display: 'inline-flex',
-                                  alignItems: 'center',
-                                  gap: '0.3rem',
-                                  padding: '0.3rem 0.5rem',
-                                  fontSize: '0.7rem',
-                                  fontWeight: 600,
-                                  borderRadius: '4px',
-                                  boxShadow: `0 0 8px ${color}30`
-                                }}>
-                                  <span style={{ display: 'flex', alignItems: 'center', color: color }}>
-                                    {techData.icon}
-                                  </span>
-                                  <span>{tech}</span>
-                                </span>
-                              );
-                            })}
-                            {remaining > 0 && (
-                              <span style={{
-                                background: 'rgba(139, 92, 246, 0.15)',
-                                color: 'rgba(139, 92, 246, 0.8)',
-                                border: '1px solid rgba(139, 92, 246, 0.4)',
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                padding: '0.3rem 0.5rem',
-                                fontSize: '0.7rem',
-                                fontWeight: 600,
-                                borderRadius: '4px'
-                              }}>
-                                +{remaining}
-                              </span>
-                            )}
-                          </>
-                        );
-                      })()
-                    }
+          {filteredProjects.map((repo, idx) => (
+            <a key={repo.name || idx} href={repo.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="glass-panel equal-panel" style={{ height: '100%', transition: 'transform 0.3s', border: '1px solid var(--outline-low)', display: 'flex', flexDirection: 'column' }}>
+                {/* Header with stars and forks */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                  <Database size={24} color="var(--primary)" />
+                  <div style={{ display: 'flex', gap: '1rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}><Star size={14} /> {repo.stars || 0}</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}><GitFork size={14} /> {repo.forks || 0}</span>
                   </div>
                 </div>
-              )}
-            </div>
-          </a>
-        ))}
+
+                {/* Title and external link */}
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', wordBreak: 'break-word' }}>
+                  {repo.name} <ExternalLink size={16} color="var(--primary)" />
+                </h3>
+
+                {/* Description */}
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
+                  {repo.description !== 'N/A' ? repo.description : 'Data project by tunguyenn99'}
+                </p>
+
+                {/* Language and README info */}
+                <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap', fontSize: '0.75rem' }}>
+                  {repo.language !== 'N/A' && (
+                    <span style={{
+                      background: 'rgba(139, 92, 246, 0.1)',
+                      color: 'var(--primary)',
+                      padding: '0.25rem 0.5rem',
+                      borderRadius: '4px',
+                      border: '1px solid rgba(139, 92, 246, 0.3)'
+                    }}>
+                      🔧 {repo.language}
+                    </span>
+                  )}
+                  {repo.has_readme && (
+                    <span style={{
+                      background: 'rgba(76, 205, 196, 0.1)',
+                      color: '#4ECDC4',
+                      padding: '0.25rem 0.5rem',
+                      borderRadius: '4px',
+                      border: '1px solid rgba(76, 205, 196, 0.3)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.25rem'
+                    }}>
+                      <FileText size={12} /> {repo.readme_lines}L
+                    </span>
+                  )}
+                  <span style={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    padding: '0.25rem 0.5rem',
+                    borderRadius: '4px',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.25rem',
+                    color: 'var(--text-muted)'
+                  }}>
+                    <Calendar size={12} /> {repo.updated_at}
+                  </span>
+                </div>
+
+                {/* Tags/Topics */}
+                {repo.topics && repo.topics.length > 0 && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1rem' }}>
+                    {repo.topics.map(topic => {
+                      const color = topicColors[topic] || '#8B5CF6';
+                      return (
+                        <span key={topic} style={{
+                          background: `${color}20`,
+                          color: color,
+                          border: `1px solid ${color}40`,
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '0.3rem',
+                          padding: '0.3rem 0.5rem',
+                          fontSize: '0.7rem',
+                          fontWeight: 600,
+                          borderRadius: '4px',
+                          boxShadow: `0 0 8px ${color}20`
+                        }}>
+                          {formatTopic(topic)}
+                        </span>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* Tech Stack */}
+                {repo.techstack && repo.techstack.length > 0 && (
+                  <div style={{ marginTop: 'auto' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: '600' }}>
+                      <Code2 size={12} /> TECH STACK
+                    </div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                      {sortTechStack(repo.techstack).slice(0, 3).map(tech => {
+                        const color = techColors[tech] || '#8B5CF6';
+                        const icon = techIcons[tech];
+                        return (
+                          <span key={tech} style={{
+                            background: `${color}20`,
+                            color: color,
+                            border: `1px solid ${color}50`,
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '0.35rem',
+                            padding: '0.35rem 0.6rem',
+                            fontSize: '0.7rem',
+                            fontWeight: 700,
+                            borderRadius: '4px',
+                            boxShadow: `0 0 6px ${color}25`,
+                            whiteSpace: 'nowrap'
+                          }}>
+                            {icon && <span style={{ display: 'flex', alignItems: 'center', lineHeight: 1 }}>{icon}</span>}
+                            {tech}
+                          </span>
+                        );
+                      })}
+                      {repo.techstack.length > 3 && (
+                        <span style={{
+                          background: 'rgba(139, 92, 246, 0.15)',
+                          color: 'rgba(139, 92, 246, 0.9)',
+                          border: '1px solid rgba(139, 92, 246, 0.4)',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          padding: '0.35rem 0.6rem',
+                          fontSize: '0.7rem',
+                          fontWeight: 700,
+                          borderRadius: '4px',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s'
+                        }}>
+                          +{repo.techstack.length - 3}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
