@@ -4,12 +4,12 @@
     "description": "Th\u01b0 vi\u1ec7n s\u00e1ch c\u1ee7a X\u00f3m - Free & Public \ud83d\ude0e",
     "url": "https://github.com/tunguyenn99/thu_vien_cua_xom_data",
     "language": "N/A",
-    "stars": 187,
-    "forks": 49,
+    "stars": 188,
+    "forks": 50,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-07-25",
-    "updated_at": "2026-04-12",
+    "updated_at": "2026-04-16",
     "topics": [
       "community-contribution"
     ],
@@ -214,7 +214,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-04-13",
+    "updated_at": "2026-04-16",
     "topics": [
       "analytics-engineer"
     ],
@@ -387,8 +387,7 @@
     "created_at": "2025-05-27",
     "updated_at": "2026-04-12",
     "topics": [
-      "profile-portfolio" , 
-      "data-analytics"
+      "profile-portfolio"
     ],
     "has_readme": true,
     "readme_lines": 39,
@@ -501,7 +500,6 @@
     "created_at": "2025-05-28",
     "updated_at": "2026-04-13",
     "topics": [
-      "profile-portfolio" , 
       "data-analytics"
     ],
     "has_readme": true,
@@ -509,8 +507,66 @@
     "readme_excerpt": "# \ud83e\udde0 Data Analytics Portfolio by tunguyenn99\n\nWelcome to my personal analytics portfolio!  \nThis repository showcases a curated collection of data analysis and visualization projects using **Power BI**, with a strong focus on storytelling, business context, and visual clarity.\n\nEach project in this repo is presented as a standalone dashboard, designed to explore real-world challenges and translate raw data into actionable insights.\n\n---\n\n## \ud83d\udcc1 Projects Included (Updating)\n\n### \u26a1 [Electrics Retaile",
     "techstack": [
       "Figma",
+      "Power BI"
+    ]
+  },
+  {
+    "name": "tunguyenn99",
+    "description": "Init my profile",
+    "url": "https://github.com/tunguyenn99/tunguyenn99",
+    "language": "N/A",
+    "stars": 1,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-05-28",
+    "updated_at": "2026-04-16",
+    "topics": [
+      "profile-portfolio"
+    ],
+    "has_readme": true,
+    "readme_lines": 119,
+    "readme_excerpt": "<div align=\"center\">\n  <img src=\"https://github.com/AzmSurov/AzmSurov/raw/master/Rainbow.gif\" width=\"100%\" />\n</div>\n\n<h1 align=\"center\">\ud83d\ude80 Decoding Data with Tu Nguyen</h1>\n\n<p align=\"center\">\n  <img src=\"https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=24&pause=500&color=FFFFFF&center=true&vCenter=true&width=800&lines=Senior+Data+Analyst+%7C+Analytics+Engineer+%7C+BI+Developer;Engineering+the+Truth+Behind+Every+Transaction;Python+%7C+SQL+%7C+dbt+%7C+Airflow+%7C+Modern+Data+Stack;Sca",
+    "techstack": [
+      "AWS",
+      "Airbyte",
+      "Airflow",
+      "Azure",
+      "BeautifulSoup",
+      "BigQuery",
+      "Confluence",
+      "DBeaver",
+      "DLT",
+      "Dagster",
+      "Databricks",
+      "Excel",
+      "Figma",
+      "Fivetran",
+      "GA4",
+      "GCP",
+      "GitHub",
+      "JSON",
+      "JavaScript",
+      "Jira",
+      "Kestra",
+      "Looker",
+      "Metabase",
+      "MongoDB",
+      "Notion",
+      "Oracle",
+      "PostgreSQL",
       "Power BI",
-      "Git"
+      "Python",
+      "SQL",
+      "SQL Server",
+      "Selenium",
+      "SmartLook",
+      "Snowflake",
+      "Spark",
+      "Supabase",
+      "Superset",
+      "VS Code",
+      "dbt"
     ]
   },
   {
@@ -564,65 +620,6 @@
       "Redis",
       "SQL",
       "SQL Server"
-    ]
-  },
-  {
-    "name": "tunguyenn99",
-    "description": "Init my profile",
-    "url": "https://github.com/tunguyenn99/tunguyenn99",
-    "language": "N/A",
-    "stars": 1,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-05-28",
-    "updated_at": "2026-04-13",
-    "topics": [
-      "profile-portfolio"
-    ],
-    "has_readme": true,
-    "readme_lines": 119,
-    "readme_excerpt": "<div align=\"center\">\n  <img src=\"https://github.com/AzmSurov/AzmSurov/raw/master/Rainbow.gif\" width=\"100%\" />\n</div>\n\n<h1 align=\"center\">\ud83d\ude80 Decoding Data with Tu Nguyen</h1>\n\n<p align=\"center\">\n  <img src=\"https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=24&pause=500&color=FFFFFF&center=true&vCenter=true&width=800&lines=Senior+Data+Analyst+%7C+Analytics+Engineer+%7C+BI+Developer;Engineering+the+Truth+Behind+Every+Transaction;Python+%7C+SQL+%7C+dbt+%7C+Airflow+%7C+Modern+Data+Stack;Sca",
-    "techstack": [
-      "AWS",
-      "Airbyte",
-      "Airflow",
-      "Azure",
-      "BeautifulSoup",
-      "BigQuery",
-      "Confluence",
-      "DBeaver",
-      "DLT",
-      "Dagster",
-      "Databricks",
-      "Excel",
-      "Figma",
-      "Fivetran",
-      "GA4",
-      "GCP",
-      "GitHub",
-      "JSON",
-      "JavaScript",
-      "Jira",
-      "Kestra",
-      "Looker",
-      "Metabase",
-      "MongoDB",
-      "Notion",
-      "Oracle",
-      "PostgreSQL",
-      "Power BI",
-      "Python",
-      "SQL",
-      "SQL Server",
-      "Selenium",
-      "SmartLook",
-      "Snowflake",
-      "Spark",
-      "Supabase",
-      "Superset",
-      "VS Code",
-      "dbt"
     ]
   },
   {
