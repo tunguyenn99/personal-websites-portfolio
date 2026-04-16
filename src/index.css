@@ -298,6 +298,10 @@ h3,
 }
 
 @media (max-width: 768px) {
+  .responsive-grid[style] {
+    grid-template-columns: 1fr !important;
+  }
+
   :root {
     --container-padding: 1.5rem;
   }

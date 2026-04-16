@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Star, GitFork, ExternalLink, Database, FileText, Calendar, Code2, Cloud, BarChart3, Workflow, Download, Layers } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Star, GitFork, ExternalLink, Database, FileText, Calendar, Code2, Cloud, BarChart3, Workflow, Download, Layers, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   SiPython, SiPostgresql, SiDbt, SiApacheairflow, SiSnowflake,
   SiDatabricks, SiSupabase, SiApachespark, SiAirbyte, SiSelenium,
@@ -8,6 +8,7 @@ import {
   SiNotion, SiDbeaver, SiMongodb, SiDocker, SiKubernetes
 } from 'react-icons/si';
 import reposData from '../../repos_analysis.json';
+import { techStackData } from './Techstack';
 
 // Convert kebab-case to Title Case
 const formatTopic = (topic) => {
@@ -89,41 +90,26 @@ const techColors = {
   'Streamlit': '#FF0000'
 };
 
-// Tech icon mapping
-const techIcons = {
-  'Python': <SiPython size={14} color="#3776AB" />,
-  'SQL': <SiPostgresql size={14} color="#336791" />,
-  'dbt': <SiDbt size={14} color="#FF694B" />,
-  'Airflow': <SiApacheairflow size={14} color="#017CEE" />,
-  'Snowflake': <SiSnowflake size={14} color="#29B5E8" />,
-  'BigQuery': <SiGooglebigquery size={14} color="#3367D6" />,
-  'PostgreSQL': <SiPostgresql size={14} color="#336791" />,
-  'Spark': <SiApachespark size={14} color="#E25A1C" />,
-  'Databricks': <SiDatabricks size={14} color="#FF3621" />,
-  'GCP': <SiGooglecloud size={14} color="#4285F4" />,
-  'Looker': <SiLooker size={14} color="#4285F4" />,
-  'Superset': <SiApachesuperset size={14} color="#00A2D3" />,
-  'Metabase': <SiMetabase size={14} color="#509EE3" />,
-  'MongoDB': <SiMongodb size={14} color="#13AA52" />,
-  'Supabase': <SiSupabase size={14} color="#3ECF8E" />,
-  'Airbyte': <SiAirbyte size={14} color="#6557FF" />,
+// Flatten the centralized techstack icons
+const centralizedTechIcons = {};
+techStackData.forEach(group => {
+  group.items.forEach(item => {
+    centralizedTechIcons[item.name] = item.icon;
+    // Map alternative names used in reposData
+    if (item.name === 'Apache Spark') centralizedTechIcons['Spark'] = item.icon;
+    if (item.name === 'Looker Studio') centralizedTechIcons['Looker'] = item.icon;
+    if (item.name === 'GA4 / Analytics') centralizedTechIcons['Google Analytics'] = item.icon;
+    if (item.name === 'VS Code') centralizedTechIcons['Visual Studio'] = item.icon;
+  });
+});
+
+// Tech icon fallback mapping (for technologies not present in Techstack.jsx)
+const fallbackTechIcons = {
   'Docker': <SiDocker size={14} color="#2496ED" />,
   'Kubernetes': <SiKubernetes size={14} color="#326CE5" />,
-  'AWS': <Cloud size={14} color="#FF9900" />,
-  'Azure': <Cloud size={14} color="#0078D4" />,
   'GitHub Actions': <Code2 size={14} color="#2088F0" />,
-  'Selenium': <SiSelenium size={14} color="#43B02A" />,
-  'BeautifulSoup': <Code2 size={14} color="#3776AB" />,
   'Requests': <Download size={14} color="#FFE135" />,
   'Trino': <Database size={14} color="#4ECDC4" />,
-  'DLT': <Download size={14} color="#FF694B" />,
-  'Fivetran': <Code2 size={14} color="#005DFF" />,
-  'Dagster': <Workflow size={14} color="#1890FF" />,
-  'Kestra': <Workflow size={14} color="#FF6B6B" />,
-  'Mage': <Code2 size={14} color="#9D4EDD" />,
-  'Power BI': <BarChart3 size={14} color="#F2C811" />,
-  'Tableau': <BarChart3 size={14} color="#E8704A" />,
-  'Excel': <FileText size={14} color="#217346" />,
   'Git': <Code2 size={14} color="#F1502F" />,
   'GitHub': <Code2 size={14} color="#181717" />,
   'Jupyter': <Code2 size={14} color="#F37726" />,
@@ -131,16 +117,13 @@ const techIcons = {
   'NumPy': <Code2 size={14} color="#013243" />,
   'Matplotlib': <BarChart3 size={14} color="#01A4D6" />,
   'Seaborn': <BarChart3 size={14} color="#0173B2" />,
-  'Plotly': <BarChart3 size={14} color="#636EFA" />,
-  'Jira': <SiJira size={14} color="#0052CC" />,
-  'Confluence': <SiConfluence size={14} color="#0052CC" />,
-  'Figma': <SiFigma size={14} color="#F24E1E" />,
-  'Notion': <SiNotion size={14} color="#000000" />,
-  'DBeaver': <SiDbeaver size={14} color="#382923" />
+  'Plotly': <BarChart3 size={14} color="#636EFA" />
 };
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('Top 10 Starring Projects');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
 
   // Get all unique topics
   const allTopics = getAllTopics();
@@ -160,8 +143,49 @@ export default function Projects() {
 
   // Dynamic filtering logic
   const filteredProjects = activeFilter === 'Top 10 Starring Projects'
-    ? [...reposData].sort((a, b) => (b.stars || 0) - (a.stars || 0)).slice(0, 9)
-    : reposData.filter(repo => repo.topics.includes(activeFilter)).slice(0, 9);
+    ? [...reposData].sort((a, b) => (b.stars || 0) - (a.stars || 0))
+    : reposData.filter(repo => repo.topics.includes(activeFilter));
+
+  const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+  
+  const paginatedProjects = useMemo(() => {
+    const start = (currentPage - 1) * itemsPerPage;
+    return filteredProjects.slice(start, start + itemsPerPage);
+  }, [filteredProjects, currentPage]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeFilter]);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const getPageItems = (total, current) => {
+    if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+    const delta = 1;
+    const range = [];
+    for (let i = 1; i <= total; i++) {
+      if (i === 1 || i === total || (i >= current - delta && i <= current + delta)) {
+        range.push(i);
+      }
+    }
+    const rangeWithDots = [];
+    let l;
+    for (const i of range) {
+      if (l) {
+        if (i - l === 2) {
+          rangeWithDots.push(l + 1);
+        } else if (i - l > 2) {
+          rangeWithDots.push('...');
+        }
+      }
+      rangeWithDots.push(i);
+      l = i;
+    }
+    return rangeWithDots;
+  };
 
   // Sort tech stack by priority
   const sortTechStack = (techs) => {
@@ -208,7 +232,7 @@ export default function Projects() {
         </div>
 
         <div className="card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
-          {filteredProjects.map((repo, idx) => (
+          {paginatedProjects.map((repo, idx) => (
             <a key={repo.name || idx} href={repo.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="glass-panel equal-panel" style={{ height: '100%', transition: 'transform 0.3s', border: '1px solid var(--outline-low)', display: 'flex', flexDirection: 'column' }}>
                 {/* Header with stars and forks */}
@@ -230,72 +254,7 @@ export default function Projects() {
                   {repo.description !== 'N/A' ? repo.description : 'Data project by tunguyenn99'}
                 </p>
 
-                {/* Language and README info */}
-                <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap', fontSize: '0.75rem' }}>
-                  {repo.language !== 'N/A' && (
-                    <span style={{
-                      background: 'rgba(139, 92, 246, 0.1)',
-                      color: 'var(--primary)',
-                      padding: '0.25rem 0.5rem',
-                      borderRadius: '4px',
-                      border: '1px solid rgba(139, 92, 246, 0.3)'
-                    }}>
-                      🔧 {repo.language}
-                    </span>
-                  )}
-                  {repo.has_readme && (
-                    <span style={{
-                      background: 'rgba(76, 205, 196, 0.1)',
-                      color: '#4ECDC4',
-                      padding: '0.25rem 0.5rem',
-                      borderRadius: '4px',
-                      border: '1px solid rgba(76, 205, 196, 0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.25rem'
-                    }}>
-                      <FileText size={12} /> {repo.readme_lines}L
-                    </span>
-                  )}
-                  <span style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    padding: '0.25rem 0.5rem',
-                    borderRadius: '4px',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.25rem',
-                    color: 'var(--text-muted)'
-                  }}>
-                    <Calendar size={12} /> {repo.updated_at}
-                  </span>
-                </div>
 
-                {/* Tags/Topics */}
-                {repo.topics && repo.topics.length > 0 && (
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1rem' }}>
-                    {repo.topics.map(topic => {
-                      const color = topicColors[topic] || '#8B5CF6';
-                      return (
-                        <span key={topic} style={{
-                          background: `${color}20`,
-                          color: color,
-                          border: `1px solid ${color}40`,
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '0.3rem',
-                          padding: '0.3rem 0.5rem',
-                          fontSize: '0.7rem',
-                          fontWeight: 600,
-                          borderRadius: '4px',
-                          boxShadow: `0 0 8px ${color}20`
-                        }}>
-                          {formatTopic(topic)}
-                        </span>
-                      );
-                    })}
-                  </div>
-                )}
 
                 {/* Tech Stack */}
                 {repo.techstack && repo.techstack.length > 0 && (
@@ -306,7 +265,7 @@ export default function Projects() {
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
                       {sortTechStack(repo.techstack).slice(0, 3).map(tech => {
                         const color = techColors[tech] || '#8B5CF6';
-                        const icon = techIcons[tech];
+                        const icon = centralizedTechIcons[tech] || fallbackTechIcons[tech];
                         return (
                           <span key={tech} style={{
                             background: `${color}20`,
@@ -351,6 +310,82 @@ export default function Projects() {
             </a>
           ))}
         </div>
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div style={{
+            marginTop: '4rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '0.5rem'
+          }}>
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid var(--outline-low)',
+                color: 'var(--text-main)',
+                padding: '0.75rem',
+                borderRadius: '12px',
+                cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+                opacity: currentPage === 1 ? 0.3 : 1
+              }}
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              {getPageItems(totalPages, currentPage).map((item, idx) => {
+                if (item === '...') {
+                  return (
+                    <div key={`dots-${idx}`} style={{ width: '36px', textAlign: 'center', color: 'var(--text-muted)' }}>...</div>
+                  );
+                }
+                const pageNumber = item;
+                const isActive = currentPage === pageNumber;
+                return (
+                  <button
+                    key={pageNumber}
+                    onClick={() => handlePageChange(pageNumber)}
+                    aria-label={`Go to page ${pageNumber}`}
+                    style={{
+                      minWidth: '36px',
+                      height: '36px',
+                      borderRadius: '10px',
+                      border: '1px solid',
+                      borderColor: isActive ? 'var(--primary)' : 'var(--outline-low)',
+                      background: isActive ? 'var(--primary)' : 'rgba(255,255,255,0.05)',
+                      color: isActive ? 'var(--on-primary)' : 'var(--text-main)',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    {pageNumber}
+                  </button>
+                );
+              })}
+            </div>
+
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid var(--outline-low)',
+                color: 'var(--text-main)',
+                padding: '0.75rem',
+                borderRadius: '12px',
+                cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+                opacity: currentPage === totalPages ? 0.3 : 1
+              }}
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

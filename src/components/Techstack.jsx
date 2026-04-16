@@ -12,8 +12,7 @@ import {
   Eye, FileText, Layout, Users
 } from 'lucide-react';
 
-export default function Techstack() {
-  const stack = [
+export const techStackData = [
     {
       category: "Programming & Query Languages",
       icon: <Terminal size={20} />,
@@ -93,6 +92,7 @@ export default function Techstack() {
     }
   ];
 
+export default function Techstack() {
   return (
     <section id="techstack" className="section">
       <div className="container">
@@ -103,7 +103,7 @@ export default function Techstack() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '2.5rem'
         }}>
-        {stack.map((group, idx) => (
+        {techStackData.map((group, idx) => (
           <div key={idx} className="glass-panel animate-fade-in" style={{
             animationDelay: `${idx * 0.1}s`,
             border: '1px solid var(--outline-low)',

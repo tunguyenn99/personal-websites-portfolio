@@ -6,7 +6,7 @@ export default function Experience() {
     {
       title: "Full-time",
       icon: <Briefcase size={16} />,
-      accentColor: "var(--primary)",
+      accentColor: "#aadd51",
       items: [
         {
           role: "Senior Data Analyst",
@@ -41,7 +41,7 @@ export default function Experience() {
     {
       title: "Part-time / Remote",
       icon: <Clock size={16} />,
-      accentColor: "var(--secondary)",
+      accentColor: "#7bd0ff",
       items: [
         {
           role: "Data Analytics Engineer",
