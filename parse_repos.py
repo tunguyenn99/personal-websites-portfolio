@@ -250,7 +250,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
 results.sort(key=lambda x: x['stars'], reverse=True)
 
 # Save to repos_analysis.json
-output_path = '/home/tunguyenn99/my-project/personal-websites-portfolio/repos_analysis.json'
+output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'repos_analysis.json')
 with open(output_path, 'w') as f:
     json.dump(results, f, indent=2)
 
