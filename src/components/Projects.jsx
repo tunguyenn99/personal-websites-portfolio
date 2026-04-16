@@ -231,7 +231,7 @@ export default function Projects() {
           })}
         </div>
 
-        <div className="card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
+        <div className="card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2.5rem', justifyContent: 'center' }}>
           {paginatedProjects.map((repo, idx) => (
             <a key={repo.name || idx} href={repo.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="glass-panel equal-panel" style={{ height: '100%', transition: 'transform 0.3s', border: '1px solid var(--outline-low)', display: 'flex', flexDirection: 'column' }}>
@@ -265,7 +265,9 @@ export default function Projects() {
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
                       {sortTechStack(repo.techstack).slice(0, 3).map(tech => {
                         const color = techColors[tech] || '#8B5CF6';
-                        const icon = centralizedTechIcons[tech] || fallbackTechIcons[tech];
+                        const rawIcon = centralizedTechIcons[tech] || fallbackTechIcons[tech];
+                        const icon = rawIcon ? React.cloneElement(rawIcon, { size: 14 }) : null;
+                        
                         return (
                           <span key={tech} style={{
                             background: `${color}20`,
@@ -281,7 +283,7 @@ export default function Projects() {
                             boxShadow: `0 0 6px ${color}25`,
                             whiteSpace: 'nowrap'
                           }}>
-                            {icon && <span style={{ display: 'flex', alignItems: 'center', lineHeight: 1 }}>{icon}</span>}
+                            {icon && <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1 }}>{icon}</span>}
                             {tech}
                           </span>
                         );
