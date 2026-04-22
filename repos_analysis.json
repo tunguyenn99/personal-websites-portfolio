@@ -5,7 +5,7 @@
     "url": "https://github.com/tunguyenn99/thu_vien_cua_xom_data",
     "language": "N/A",
     "stars": 189,
-    "forks": 50,
+    "forks": 51,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-07-25",
@@ -31,12 +31,12 @@
     "description": "A pipeline to crawl jobs from TopCV",
     "url": "https://github.com/tunguyenn99/crawl-topcv-jobs",
     "language": "Python",
-    "stars": 35,
+    "stars": 34,
     "forks": 5,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-09-05",
-    "updated_at": "2026-04-12",
+    "updated_at": "2026-04-21",
     "topics": [
       "analytics-engineer"
     ],
@@ -214,7 +214,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-04-20",
+    "updated_at": "2026-04-21",
     "topics": [
       "analytics-engineer"
     ],
@@ -376,6 +376,32 @@
     ]
   },
   {
+    "name": "weather-streaming-pipeline",
+    "description": "A streaming pipeline from Weather API",
+    "url": "https://github.com/tunguyenn99/weather-streaming-pipeline",
+    "language": "Python",
+    "stars": 4,
+    "forks": 5,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-03-29",
+    "updated_at": "2026-04-21",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 142,
+    "readme_excerpt": "# \ud83c\udf00 Weather Data Streaming Pipeline\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Status-Active-success?style=for-the-badge\" alt=\"Status\">\n  <img src=\"https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge\" alt=\"Maintained\">\n  <img src=\"https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge\" alt=\"PRs Welcome\">\n</p>\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=w",
+    "techstack": [
+      "Docker",
+      "JSON",
+      "Kafka",
+      "Python",
+      "Spark",
+      "uv"
+    ]
+  },
+  {
     "name": "portfolio-data-analytics",
     "description": "A collection of my data analytics and BI projects.",
     "url": "https://github.com/tunguyenn99/portfolio-data-analytics",
@@ -463,32 +489,6 @@
     ]
   },
   {
-    "name": "weather-streaming-pipeline",
-    "description": "A streaming pipeline from Weather API",
-    "url": "https://github.com/tunguyenn99/weather-streaming-pipeline",
-    "language": "Python",
-    "stars": 3,
-    "forks": 4,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-03-29",
-    "updated_at": "2026-04-12",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 142,
-    "readme_excerpt": "# \ud83c\udf00 Weather Data Streaming Pipeline\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Status-Active-success?style=for-the-badge\" alt=\"Status\">\n  <img src=\"https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge\" alt=\"Maintained\">\n  <img src=\"https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge\" alt=\"PRs Welcome\">\n</p>\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=w",
-    "techstack": [
-      "Docker",
-      "JSON",
-      "Kafka",
-      "Python",
-      "Spark",
-      "uv"
-    ]
-  },
-  {
     "name": "dashboard-showcase",
     "description": "My BI Dashboard Showcase",
     "url": "https://github.com/tunguyenn99/dashboard-showcase",
@@ -520,7 +520,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-05-28",
-    "updated_at": "2026-04-21",
+    "updated_at": "2026-04-22",
     "topics": [
       "profile-portfolio"
     ],
