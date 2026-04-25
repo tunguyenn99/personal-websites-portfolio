@@ -100,7 +100,7 @@ export default function Techstack() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
           gap: '2.5rem'
         }}>
         {techStackData.map((group, idx) => (

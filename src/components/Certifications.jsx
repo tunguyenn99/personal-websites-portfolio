@@ -5,7 +5,6 @@ import certs from '../data/certifications.json';
 export default function Certifications() {
   const [selectedOrg, setSelectedOrg] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
-  const [showMoreOrgs, setShowMoreOrgs] = useState(false);
   const itemsPerPage = 9;
 
   // Derive unique categories/organizations with counts
@@ -53,38 +52,12 @@ export default function Certifications() {
     document.getElementById('certifications').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  // Compute condensed pagination items (1 ... n-1 n) around current page
-  const getPageItems = (total, current) => {
-    if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
-    const delta = 1; // show current +/- delta
-    const range = [];
-    for (let i = 1; i <= total; i++) {
-      if (i === 1 || i === total || (i >= current - delta && i <= current + delta)) {
-        range.push(i);
-      }
-    }
-    const rangeWithDots = [];
-    let l;
-    for (const i of range) {
-      if (l) {
-        if (i - l === 2) {
-          rangeWithDots.push(l + 1);
-        } else if (i - l > 2) {
-          rangeWithDots.push('...');
-        }
-      }
-      rangeWithDots.push(i);
-      l = i;
-    }
-    return rangeWithDots;
-  };
-
   return (
     <section id="certifications" className="section">
       <div className="container">
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', marginBottom: '3rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <h2 className="section-title" style={{ marginBottom: 0 }}>Certifications</h2>
+          <div className="cert-header-container" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <h2 className="section-title" style={{ marginBottom: 0 }}>Professional Certifications</h2>
             <div style={{
               padding: '0.4rem 1rem',
               background: 'var(--primary)',
@@ -108,59 +81,17 @@ export default function Certifications() {
             paddingBottom: '0.5rem',
             overflowX: 'auto'
           }}>
-            {/* Main Filter Organizations */}
-            {orgs.map((org, idx) => {
-              const mainOrgs = ['All', 'Google', 'IBM', 'Microsoft'];
-              const isMainOrg = mainOrgs.includes(org.name);
-              
-              if (!isMainOrg && !showMoreOrgs) return null;
-              
-              return (
-                <button
-                  key={org.name}
-                  onClick={() => setSelectedOrg(org.name)}
-                  style={{
-                    padding: '0.6rem 1.25rem',
-                    borderRadius: '100px',
-                    border: '1px solid',
-                    borderColor: selectedOrg === org.name ? 'var(--primary)' : 'var(--outline-low)',
-                    background: selectedOrg === org.name ? 'rgba(170, 221, 81, 0.1)' : 'rgba(255, 255, 255, 0.02)',
-                    color: selectedOrg === org.name ? 'var(--primary)' : 'var(--text-muted)',
-                    fontSize: '0.85rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    transition: 'all 0.3s ease',
-                    whiteSpace: 'nowrap'
-                  }}
-                >
-                  {org.name}
-                  <span style={{
-                    fontSize: '0.75rem',
-                    opacity: 0.6,
-                    background: selectedOrg === org.name ? 'var(--primary)' : 'rgba(255,255,255,0.1)',
-                    color: selectedOrg === org.name ? 'var(--on-primary)' : 'inherit',
-                    padding: '2px 8px',
-                    borderRadius: '10px'
-                  }}>
-                    {org.count}
-                  </span>
-                </button>
-              );
-            })}
-            
-            {/* More Button */}
-            {!showMoreOrgs && orgs.some(org => !['All', 'Google', 'IBM', 'Microsoft'].includes(org.name)) && (
+            {orgs.map(org => (
               <button
-                onClick={() => setShowMoreOrgs(true)}
+                key={org.name}
+                onClick={() => setSelectedOrg(org.name)}
                 style={{
                   padding: '0.6rem 1.25rem',
                   borderRadius: '100px',
-                  border: '1px solid var(--outline-low)',
-                  background: 'rgba(255, 255, 255, 0.02)',
-                  color: 'var(--text-muted)',
+                  border: '1px solid',
+                  borderColor: selectedOrg === org.name ? 'var(--primary)' : 'var(--outline-low)',
+                  background: selectedOrg === org.name ? 'rgba(170, 221, 81, 0.1)' : 'rgba(255, 255, 255, 0.02)',
+                  color: selectedOrg === org.name ? 'var(--primary)' : 'var(--text-muted)',
                   fontSize: '0.85rem',
                   fontWeight: 600,
                   cursor: 'pointer',
@@ -171,54 +102,45 @@ export default function Certifications() {
                   whiteSpace: 'nowrap'
                 }}
               >
-                More
+                {org.name}
+                <span style={{
+                  fontSize: '0.75rem',
+                  opacity: 0.6,
+                  background: selectedOrg === org.name ? 'var(--primary)' : 'rgba(255,255,255,0.1)',
+                  color: selectedOrg === org.name ? 'var(--on-primary)' : 'inherit',
+                  padding: '2px 8px',
+                  borderRadius: '10px'
+                }}>
+                  {org.count}
+                </span>
               </button>
-            )}
-            
-            {/* Collapse Button */}
-            {showMoreOrgs && (
-              <button
-                onClick={() => setShowMoreOrgs(false)}
-                style={{
-                  padding: '0.6rem 1.25rem',
-                  borderRadius: '100px',
-                  border: '1px solid var(--outline-low)',
-                  background: 'rgba(255, 255, 255, 0.02)',
-                  color: 'var(--text-muted)',
-                  fontSize: '0.85rem',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  transition: 'all 0.3s ease',
-                  whiteSpace: 'nowrap'
-                }}
-              >
-                Less
-              </button>
-            )}
+            ))}
           </div>
         </div>
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-          gridAutoRows: 'minmax(160px, auto)',
-          gap: '2.5rem',
-          minHeight: 'auto'
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
+          gridAutoRows: '200px',
+          gap: '2rem',
+          minHeight: '600px'
         }}>
           {paginatedCerts.map((cert, index) => (
             <div
               key={cert.title + index}
-              className="glass-panel cert-card equal-panel"
+              className="glass-panel cert-card"
               style={{
+                padding: '1.5rem',
+                display: 'flex',
+                flexDirection: 'column',
                 gap: '1.25rem',
                 position: 'relative',
                 overflow: 'hidden',
                 border: '1px solid var(--outline-low)',
                 background: 'rgba(255, 255, 255, 0.02)',
-                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
+                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                height: '100%',
+                boxSizing: 'border-box'
               }}
             >
               <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
@@ -239,9 +161,6 @@ export default function Certifications() {
                     src={cert.image}
                     alt={cert.title}
                     style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                    className="responsive-img"
-                    loading="lazy"
-                    decoding="async"
                   />
                 </div>
                 <div style={{ flex: 1 }}>
@@ -315,31 +234,30 @@ export default function Certifications() {
               <ChevronLeft size={20} />
             </button>
 
-            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-              {getPageItems(totalPages, currentPage).map((item, idx) => {
-                if (item === '...') {
-                  return (
-                    <div key={`dots-${idx}`} style={{ width: '36px', textAlign: 'center', color: 'var(--text-muted)' }}>...</div>
-                  );
-                }
-                const pageNumber = item;
-                const isActive = currentPage === pageNumber;
+            <div style={{ display: 'flex', gap: '0.5rem' }}>
+              {[...Array(totalPages)].map((_, i) => {
+                const pageNumber = i + 1;
+                const isActive = currentPage === pageNumber; // Kiểm tra trang hiện tại
+
                 return (
                   <button
                     key={pageNumber}
                     onClick={() => handlePageChange(pageNumber)}
-                    aria-label={`Go to page ${pageNumber}`}
                     style={{
-                      minWidth: '36px',
-                      height: '36px',
-                      borderRadius: '10px',
+                      width: '45px',
+                      height: '45px',
+                      borderRadius: '12px',
                       border: '1px solid',
+                      // Chỉ đổi màu border nếu là trang active
                       borderColor: isActive ? 'var(--primary)' : 'var(--outline-low)',
+                      // Chỉ đổi màu background nếu là trang active
                       background: isActive ? 'var(--primary)' : 'rgba(255,255,255,0.05)',
+                      // Chỉ đổi màu chữ nếu là trang active
                       color: isActive ? 'var(--on-primary)' : 'var(--text-main)',
                       fontWeight: 700,
                       cursor: 'pointer',
-                      transition: 'all 0.2s ease'
+                      transition: 'all 0.2s ease',
+                      boxShadow: isActive ? '0 0 15px rgba(var(--primary-rgb), 0.3)' : 'none'
                     }}
                   >
                     {pageNumber}
@@ -383,6 +301,16 @@ export default function Certifications() {
           .cert-link:hover {
             color: var(--primary) !important;
             text-decoration: underline !important;
+          }
+          @media (max-width: 768px) {
+            .cert-header-container {
+              flex-direction: column;
+              justify-content: center;
+              text-align: center;
+            }
+            .filter-container {
+              justify-content: center;
+            }
           }
         `}</style>
       </div>

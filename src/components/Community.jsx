@@ -73,12 +73,12 @@ export default function Community() {
         <div className="glass-panel" style={{ padding: '2.5rem', border: '1px solid var(--outline-low)' }}>
 
         {/* Header Section */}
-        <div style={{ marginBottom: '2.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', color: 'var(--primary)' }}>
+        <div className="community-header-wrapper" style={{ marginBottom: '2.5rem' }}>
+          <div className="community-subtitle" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', color: 'var(--primary)' }}>
             <TrendingUp size={20} />
             <span style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: '0.8rem' }}>Global Ecosystem</span>
           </div>
-          <h3 style={{ fontSize: '3rem', marginBottom: '0.5rem', fontFamily: 'Space Grotesk', fontWeight: 800 }}>
+          <h3 className="community-title" style={{ fontSize: '3rem', marginBottom: '0.5rem', fontFamily: 'Space Grotesk', fontWeight: 800 }}>
             Xóm Data <span style={{ color: 'var(--secondary)' }}>Hub</span>
           </h3>
         </div>
@@ -86,7 +86,7 @@ export default function Community() {
         {/* Stats Row with Background Graphs */}
         <div className="stats-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
           gap: '2.5rem',
           marginBottom: '3rem',
           maxWidth: '900px',
@@ -355,6 +355,8 @@ export default function Community() {
           .stats-grid { grid-template-columns: 1fr !important; justify-items: center !important; }
           .stat-card { max-width: min(320px, 92%) !important; padding: 1rem !important; border-radius: 12px !important; }
           .community-gallery img { position: absolute; left: 0; top: 0; }
+          .community-header-wrapper { text-align: center; }
+          .community-subtitle { justify-content: center; }
         }
       `}</style>
     </section>

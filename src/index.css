@@ -317,6 +317,15 @@ h3,
   .section-title {
     font-size: 2rem;
     margin-bottom: 2.5rem;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .glass-panel {
