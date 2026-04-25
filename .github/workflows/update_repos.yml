@@ -2,7 +2,9 @@ name: Daily Repos Update
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Chạy tự động vào lúc 0:00 UTC (khoảng 7h sáng giờ VN) mỗi ngày
+    # GitHub Actions không hỗ trợ random thời gian thực sự trong cron.
+    # Nên mình cài đặt 3 khung giờ ngẫu nhiên rải rác trong ngày (ví dụ: 2:30, 14:30, 20:30 UTC).
+    - cron: '30 2,14,20 * * *'
   workflow_dispatch: # Cho phép bạn bấm nút Run manuel bằng tay trên giao diện Github Actions
 
 jobs:

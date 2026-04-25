@@ -52,6 +52,31 @@ export default function Certifications() {
     document.getElementById('certifications').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const getPageItems = (total, current) => {
+    if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+    const delta = 1;
+    const range = [];
+    for (let i = 1; i <= total; i++) {
+      if (i === 1 || i === total || (i >= current - delta && i <= current + delta)) {
+        range.push(i);
+      }
+    }
+    const rangeWithDots = [];
+    let l;
+    for (const i of range) {
+      if (l) {
+        if (i - l === 2) {
+          rangeWithDots.push(l + 1);
+        } else if (i - l > 2) {
+          rangeWithDots.push('...');
+        }
+      }
+      rangeWithDots.push(i);
+      l = i;
+    }
+    return rangeWithDots;
+  };
+
   return (
     <section id="certifications" className="section">
       <div className="container">
@@ -234,9 +259,14 @@ export default function Certifications() {
               <ChevronLeft size={20} />
             </button>
 
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
-              {[...Array(totalPages)].map((_, i) => {
-                const pageNumber = i + 1;
+            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              {getPageItems(totalPages, currentPage).map((item, idx) => {
+                if (item === '...') {
+                  return (
+                    <div key={`dots-${idx}`} style={{ width: '36px', textAlign: 'center', color: 'var(--text-muted)' }}>...</div>
+                  );
+                }
+                const pageNumber = item;
                 const isActive = currentPage === pageNumber; // Kiểm tra trang hiện tại
 
                 return (
@@ -244,9 +274,9 @@ export default function Certifications() {
                     key={pageNumber}
                     onClick={() => handlePageChange(pageNumber)}
                     style={{
-                      width: '45px',
-                      height: '45px',
-                      borderRadius: '12px',
+                      minWidth: '36px',
+                      height: '36px',
+                      borderRadius: '10px',
                       border: '1px solid',
                       // Chỉ đổi màu border nếu là trang active
                       borderColor: isActive ? 'var(--primary)' : 'var(--outline-low)',
