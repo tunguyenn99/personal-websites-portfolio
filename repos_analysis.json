@@ -242,6 +242,40 @@
     ]
   },
   {
+    "name": "from-tiki-crawler-to-lakehouse",
+    "description": "A lakehouse to store data of books on Tiki",
+    "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
+    "language": "Python",
+    "stars": 12,
+    "forks": 4,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-26",
+    "topics": [
+      "analytics-engineering"
+    ],
+    "has_readme": true,
+    "readme_lines": 186,
+    "readme_excerpt": "<div align=\"center\">\n  <h1>Tiki Lakehouse Project \ud83c\udf0a\ud83d\uded2</h1>\n  <p><em>A modern open-source Data Pipeline & Lakehouse simulating E-Commerce operations</em></p>\n\n  [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)]()\n  [![dbt](https://img.shields.io/badge/dbt-DuckDB-FF694B?logo=dbt&logoColor=white)]()\n  [![Trino](https://img.shields.io/badge/Trino-Query_Engine-DD00A1?logo=trino&logoColor=white)]()\n  [![MinIO](https://img.shields.io/badge/MinIO-S3_Storage-C7202C?log",
+    "techstack": [
+      "Airflow",
+      "Docker",
+      "GitHub",
+      "GitHub Actions",
+      "Iceberg",
+      "Parquet",
+      "PostgreSQL",
+      "Pytest",
+      "Python",
+      "SQL",
+      "Superset",
+      "Trino",
+      "dbt",
+      "uv"
+    ]
+  },
+  {
     "name": "data-warehouse-tk-kimball",
     "description": "Docs l\u1ea1i \"The Data Warehouse Toolkit\" c\u1ee7a Ralph Kimball theo \u00fd m\u00ecnh",
     "url": "https://github.com/tunguyenn99/data-warehouse-tk-kimball",
@@ -457,40 +491,6 @@
       "Spark",
       "Superset",
       "Trino"
-    ]
-  },
-  {
-    "name": "from-tiki-crawler-to-lakehouse",
-    "description": "A lakehouse to store data of books on Tiki",
-    "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
-    "language": "Python",
-    "stars": 3,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-04-16",
-    "updated_at": "2026-04-26",
-    "topics": [
-      "analytics-engineering"
-    ],
-    "has_readme": true,
-    "readme_lines": 186,
-    "readme_excerpt": "<div align=\"center\">\n  <h1>Tiki Lakehouse Project \ud83c\udf0a\ud83d\uded2</h1>\n  <p><em>A modern open-source Data Pipeline & Lakehouse simulating E-Commerce operations</em></p>\n\n  [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)]()\n  [![dbt](https://img.shields.io/badge/dbt-DuckDB-FF694B?logo=dbt&logoColor=white)]()\n  [![Trino](https://img.shields.io/badge/Trino-Query_Engine-DD00A1?logo=trino&logoColor=white)]()\n  [![MinIO](https://img.shields.io/badge/MinIO-S3_Storage-C7202C?log",
-    "techstack": [
-      "Airflow",
-      "Docker",
-      "GitHub",
-      "GitHub Actions",
-      "Iceberg",
-      "Parquet",
-      "PostgreSQL",
-      "Pytest",
-      "Python",
-      "SQL",
-      "Superset",
-      "Trino",
-      "dbt",
-      "uv"
     ]
   },
   {
