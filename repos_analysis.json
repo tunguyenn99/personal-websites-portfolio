@@ -176,6 +176,43 @@
     ]
   },
   {
+    "name": "gold-price-monitoring",
+    "description": "Applied MDS into monitoring Vietnam's Gold Price",
+    "url": "https://github.com/tunguyenn99/gold-price-monitoring",
+    "language": "Python",
+    "stars": 15,
+    "forks": 7,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-03-22",
+    "updated_at": "2026-04-26",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 164,
+    "readme_excerpt": "# \ud83d\udcc8 Vietnam Gold Price Monitor \u2014 Modern Data Stack\n\n[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)\n[![Ubuntu](https://img.shields.io/badge/Ubuntu-E9431F?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)\n[![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)](https://www.getdbt.com/)\n[![dlt](https://img.shields.io/badge/dlt-FFDC00?style=for-the-badge&logo=p",
+    "techstack": [
+      "BeautifulSoup",
+      "CSV",
+      "DLT",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "Go",
+      "JSON",
+      "Matplotlib",
+      "MongoDB",
+      "PostgreSQL",
+      "Python",
+      "Requests",
+      "Seaborn",
+      "Supabase",
+      "dbt",
+      "uv"
+    ]
+  },
+  {
     "name": "how-to-use-python-faker",
     "description": "An introduction to Faker in Python",
     "url": "https://github.com/tunguyenn99/how-to-use-python-faker",
@@ -200,43 +237,6 @@
       "Power BI",
       "Python",
       "SQL",
-      "dbt",
-      "uv"
-    ]
-  },
-  {
-    "name": "gold-price-monitoring",
-    "description": "Applied MDS into monitoring Vietnam's Gold Price",
-    "url": "https://github.com/tunguyenn99/gold-price-monitoring",
-    "language": "Python",
-    "stars": 14,
-    "forks": 6,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-03-22",
-    "updated_at": "2026-04-25",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 164,
-    "readme_excerpt": "# \ud83d\udcc8 Vietnam Gold Price Monitor \u2014 Modern Data Stack\n\n[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)\n[![Ubuntu](https://img.shields.io/badge/Ubuntu-E9431F?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)\n[![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)](https://www.getdbt.com/)\n[![dlt](https://img.shields.io/badge/dlt-FFDC00?style=for-the-badge&logo=p",
-    "techstack": [
-      "BeautifulSoup",
-      "CSV",
-      "DLT",
-      "Git",
-      "GitHub",
-      "GitHub Actions",
-      "Go",
-      "JSON",
-      "Matplotlib",
-      "MongoDB",
-      "PostgreSQL",
-      "Python",
-      "Requests",
-      "Seaborn",
-      "Supabase",
       "dbt",
       "uv"
     ]
@@ -460,6 +460,40 @@
     ]
   },
   {
+    "name": "from-tiki-crawler-to-lakehouse",
+    "description": "A lakehouse to store data of books on Tiki",
+    "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
+    "language": "Python",
+    "stars": 3,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-26",
+    "topics": [
+      "analytics-engineering"
+    ],
+    "has_readme": true,
+    "readme_lines": 186,
+    "readme_excerpt": "<div align=\"center\">\n  <h1>Tiki Lakehouse Project \ud83c\udf0a\ud83d\uded2</h1>\n  <p><em>A modern open-source Data Pipeline & Lakehouse simulating E-Commerce operations</em></p>\n\n  [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)]()\n  [![dbt](https://img.shields.io/badge/dbt-DuckDB-FF694B?logo=dbt&logoColor=white)]()\n  [![Trino](https://img.shields.io/badge/Trino-Query_Engine-DD00A1?logo=trino&logoColor=white)]()\n  [![MinIO](https://img.shields.io/badge/MinIO-S3_Storage-C7202C?log",
+    "techstack": [
+      "Airflow",
+      "Docker",
+      "GitHub",
+      "GitHub Actions",
+      "Iceberg",
+      "Parquet",
+      "PostgreSQL",
+      "Pytest",
+      "Python",
+      "SQL",
+      "Superset",
+      "Trino",
+      "dbt",
+      "uv"
+    ]
+  },
+  {
     "name": "dagster-dlthub-snowflake",
     "description": "Modern ELT Pipeline",
     "url": "https://github.com/tunguyenn99/dagster-dlthub-snowflake",
@@ -520,7 +554,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-05-28",
-    "updated_at": "2026-04-25",
+    "updated_at": "2026-04-26",
     "topics": [
       "profile-portfolio"
     ],
