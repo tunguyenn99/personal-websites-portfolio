@@ -31,12 +31,12 @@
     "description": "A pipeline to crawl jobs from TopCV",
     "url": "https://github.com/tunguyenn99/crawl-topcv-jobs",
     "language": "Python",
-    "stars": 35,
+    "stars": 36,
     "forks": 5,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-09-05",
-    "updated_at": "2026-04-22",
+    "updated_at": "2026-04-27",
     "topics": [
       "analytics-engineer"
     ],
@@ -176,6 +176,40 @@
     ]
   },
   {
+    "name": "from-tiki-crawler-to-lakehouse",
+    "description": "A lakehouse to store data of books on Tiki",
+    "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
+    "language": "Python",
+    "stars": 15,
+    "forks": 5,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-27",
+    "topics": [
+      "analytics-engineering"
+    ],
+    "has_readme": true,
+    "readme_lines": 186,
+    "readme_excerpt": "<div align=\"center\">\n  <h1>Tiki Lakehouse Project \ud83c\udf0a\ud83d\uded2</h1>\n  <p><em>A modern open-source Data Pipeline & Lakehouse simulating E-Commerce operations</em></p>\n\n  [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)]()\n  [![dbt](https://img.shields.io/badge/dbt-DuckDB-FF694B?logo=dbt&logoColor=white)]()\n  [![Trino](https://img.shields.io/badge/Trino-Query_Engine-DD00A1?logo=trino&logoColor=white)]()\n  [![MinIO](https://img.shields.io/badge/MinIO-S3_Storage-C7202C?log",
+    "techstack": [
+      "Airflow",
+      "Docker",
+      "GitHub",
+      "GitHub Actions",
+      "Iceberg",
+      "Parquet",
+      "PostgreSQL",
+      "Pytest",
+      "Python",
+      "SQL",
+      "Superset",
+      "Trino",
+      "dbt",
+      "uv"
+    ]
+  },
+  {
     "name": "gold-price-monitoring",
     "description": "Applied MDS into monitoring Vietnam's Gold Price",
     "url": "https://github.com/tunguyenn99/gold-price-monitoring",
@@ -237,40 +271,6 @@
       "Power BI",
       "Python",
       "SQL",
-      "dbt",
-      "uv"
-    ]
-  },
-  {
-    "name": "from-tiki-crawler-to-lakehouse",
-    "description": "A lakehouse to store data of books on Tiki",
-    "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
-    "language": "Python",
-    "stars": 14,
-    "forks": 4,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-04-16",
-    "updated_at": "2026-04-27",
-    "topics": [
-      "analytics-engineering"
-    ],
-    "has_readme": true,
-    "readme_lines": 186,
-    "readme_excerpt": "<div align=\"center\">\n  <h1>Tiki Lakehouse Project \ud83c\udf0a\ud83d\uded2</h1>\n  <p><em>A modern open-source Data Pipeline & Lakehouse simulating E-Commerce operations</em></p>\n\n  [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)]()\n  [![dbt](https://img.shields.io/badge/dbt-DuckDB-FF694B?logo=dbt&logoColor=white)]()\n  [![Trino](https://img.shields.io/badge/Trino-Query_Engine-DD00A1?logo=trino&logoColor=white)]()\n  [![MinIO](https://img.shields.io/badge/MinIO-S3_Storage-C7202C?log",
-    "techstack": [
-      "Airflow",
-      "Docker",
-      "GitHub",
-      "GitHub Actions",
-      "Iceberg",
-      "Parquet",
-      "PostgreSQL",
-      "Pytest",
-      "Python",
-      "SQL",
-      "Superset",
-      "Trino",
       "dbt",
       "uv"
     ]
@@ -523,6 +523,34 @@
     ]
   },
   {
+    "name": "first-osdp-using-bruin",
+    "description": "",
+    "url": "https://github.com/tunguyenn99/first-osdp-using-bruin",
+    "language": "N/A",
+    "stars": 2,
+    "forks": 1,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-04-26",
+    "updated_at": "2026-04-27",
+    "topics": [
+      "self-learning"
+    ],
+    "has_readme": true,
+    "readme_lines": 90,
+    "readme_excerpt": "# First OSDP Using Bruin \ud83d\ude80\n\nCh\u00e0o m\u1eebng b\u1ea1n \u0111\u1ebfn v\u1edbi d\u1ef1 \u00e1n **Open Source Data Pipeline (OSDP)** \u0111\u1ea7u ti\u00ean c\u1ee7a t\u00f4i s\u1eed d\u1ee5ng **Bruin**. \u0110\u00e2y l\u00e0 m\u1ed9t d\u1ef1 \u00e1n m\u1eabu minh h\u1ecda c\u00e1ch x\u00e2y d\u1ef1ng m\u1ed9t \u0111\u01b0\u1eddng \u1ed1ng d\u1eef li\u1ec7u hi\u1ec7n \u0111\u1ea1i, m\u00e3 ngu\u1ed3n m\u1edf, t\u1eadp trung v\u00e0o t\u00ednh \u0111\u01a1n gi\u1ea3n v\u00e0 hi\u1ec7u qu\u1ea3.\n\n---\n\n## \ud83c\udf1f C\u00e1c T\u00ednh n\u0103ng N\u1ed5i b\u1eadt\n\n- **\u01afu ti\u00ean m\u00e3 ngu\u1ed3n (Code-first)**: X\u00e2y d\u1ef1ng c\u00e1c \u0111\u01b0\u1eddng \u1ed1ng d\u1eef li\u1ec7u m\u1ea1nh m\u1ebd b\u1eb1ng SQL, Python v\u00e0 c\u1ea5u h\u00ecnh YAML quen thu\u1ed9c.\n- **T\u00edch h\u1ee3p s\u1eb5n Ingestr**: N\u1ea1p d\u1eef li\u1ec7u t\u1eeb h\u01a1n 30 ngu\u1ed3n kh\u00e1c nhau (Shopify, Stripe, G",
+    "techstack": [
+      "BigQuery",
+      "Databricks",
+      "GitHub",
+      "PostgreSQL",
+      "Python",
+      "SQL",
+      "Snowflake",
+      "VS Code"
+    ]
+  },
+  {
     "name": "dashboard-showcase",
     "description": "My BI Dashboard Showcase",
     "url": "https://github.com/tunguyenn99/dashboard-showcase",
@@ -718,7 +746,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-04-26",
+    "updated_at": "2026-04-27",
     "topics": [
       "profile-portfolio"
     ],
@@ -728,34 +756,6 @@
     "techstack": [
       "JSON",
       "React"
-    ]
-  },
-  {
-    "name": "first-osdp-using-bruin",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/first-osdp-using-bruin",
-    "language": "N/A",
-    "stars": 0,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-04-26",
-    "updated_at": "2026-04-26",
-    "topics": [
-      "self-learning"
-    ],
-    "has_readme": true,
-    "readme_lines": 90,
-    "readme_excerpt": "# First OSDP Using Bruin \ud83d\ude80\n\nCh\u00e0o m\u1eebng b\u1ea1n \u0111\u1ebfn v\u1edbi d\u1ef1 \u00e1n **Open Source Data Pipeline (OSDP)** \u0111\u1ea7u ti\u00ean c\u1ee7a t\u00f4i s\u1eed d\u1ee5ng **Bruin**. \u0110\u00e2y l\u00e0 m\u1ed9t d\u1ef1 \u00e1n m\u1eabu minh h\u1ecda c\u00e1ch x\u00e2y d\u1ef1ng m\u1ed9t \u0111\u01b0\u1eddng \u1ed1ng d\u1eef li\u1ec7u hi\u1ec7n \u0111\u1ea1i, m\u00e3 ngu\u1ed3n m\u1edf, t\u1eadp trung v\u00e0o t\u00ednh \u0111\u01a1n gi\u1ea3n v\u00e0 hi\u1ec7u qu\u1ea3.\n\n---\n\n## \ud83c\udf1f C\u00e1c T\u00ednh n\u0103ng N\u1ed5i b\u1eadt\n\n- **\u01afu ti\u00ean m\u00e3 ngu\u1ed3n (Code-first)**: X\u00e2y d\u1ef1ng c\u00e1c \u0111\u01b0\u1eddng \u1ed1ng d\u1eef li\u1ec7u m\u1ea1nh m\u1ebd b\u1eb1ng SQL, Python v\u00e0 c\u1ea5u h\u00ecnh YAML quen thu\u1ed9c.\n- **T\u00edch h\u1ee3p s\u1eb5n Ingestr**: N\u1ea1p d\u1eef li\u1ec7u t\u1eeb h\u01a1n 30 ngu\u1ed3n kh\u00e1c nhau (Shopify, Stripe, G",
-    "techstack": [
-      "BigQuery",
-      "Databricks",
-      "GitHub",
-      "PostgreSQL",
-      "Python",
-      "SQL",
-      "Snowflake",
-      "VS Code"
     ]
   },
   {
