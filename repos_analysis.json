@@ -65,6 +65,36 @@
     ]
   },
   {
+    "name": "dbt-trino-minio-iceberg-mage",
+    "description": "On-premises ELT Pipeline",
+    "url": "https://github.com/tunguyenn99/dbt-trino-minio-iceberg-mage",
+    "language": "Python",
+    "stars": 32,
+    "forks": 10,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-07-08",
+    "updated_at": "2026-04-29",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 390,
+    "readme_excerpt": "# \ud83e\uddca DBT + Trino + MinIO + Iceberg \u2013 Data Lakehouse Dev Stack\n\nD\u1ef1 \u00e1n n\u00e0y thi\u1ebft l\u1eadp m\u1ed9t m\u00f4i tr\u01b0\u1eddng ph\u00e1t tri\u1ec3n \u0111\u1ea7y \u0111\u1ee7 cho Data Lakehouse s\u1eed d\u1ee5ng Trino, Iceberg, MinIO v\u00e0 DBT, k\u00e8m theo c\u00f4ng c\u1ee5 orchestrator Mage \u0111\u1ec3 qu\u1ea3n l\u00fd pipelines.\n\n---\n\n![Project Architecture](./images/s00-project-architect.png)\n\n---\n\n## \ud83d\udcc2 C\u1ea5u tr\u00fac th\u01b0 m\u1ee5c d\u1ef1 \u00e1n\n\n```\ndbt-trino-minio-iceberg-mage/\n\u251c\u2500\u2500 conf/                           # C\u1ea5u h\u00ecnh Hive Metastore\n\u2502   \u2514\u2500\u2500 core-site.xml\n\u2502   \u2514\u2500\u2500 metastore-site.xml\n\u251c\u2500\u2500 containers/          ",
+    "techstack": [
+      "DBeaver",
+      "Docker",
+      "Git",
+      "GitHub",
+      "Iceberg",
+      "Python",
+      "SQL",
+      "Trino",
+      "XML",
+      "dbt"
+    ]
+  },
+  {
     "name": "distributed-data-processing",
     "description": "Efficient Data Processing in Distributed Database (Vietnamese docs)",
     "url": "https://github.com/tunguyenn99/distributed-data-processing",
@@ -88,36 +118,6 @@
       "GitHub",
       "SQL",
       "Trino"
-    ]
-  },
-  {
-    "name": "dbt-trino-minio-iceberg-mage",
-    "description": "On-premises ELT Pipeline",
-    "url": "https://github.com/tunguyenn99/dbt-trino-minio-iceberg-mage",
-    "language": "Python",
-    "stars": 31,
-    "forks": 10,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-07-08",
-    "updated_at": "2026-04-12",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 390,
-    "readme_excerpt": "# \ud83e\uddca DBT + Trino + MinIO + Iceberg \u2013 Data Lakehouse Dev Stack\n\nD\u1ef1 \u00e1n n\u00e0y thi\u1ebft l\u1eadp m\u1ed9t m\u00f4i tr\u01b0\u1eddng ph\u00e1t tri\u1ec3n \u0111\u1ea7y \u0111\u1ee7 cho Data Lakehouse s\u1eed d\u1ee5ng Trino, Iceberg, MinIO v\u00e0 DBT, k\u00e8m theo c\u00f4ng c\u1ee5 orchestrator Mage \u0111\u1ec3 qu\u1ea3n l\u00fd pipelines.\n\n---\n\n![Project Architecture](./images/s00-project-architect.png)\n\n---\n\n## \ud83d\udcc2 C\u1ea5u tr\u00fac th\u01b0 m\u1ee5c d\u1ef1 \u00e1n\n\n```\ndbt-trino-minio-iceberg-mage/\n\u251c\u2500\u2500 conf/                           # C\u1ea5u h\u00ecnh Hive Metastore\n\u2502   \u2514\u2500\u2500 core-site.xml\n\u2502   \u2514\u2500\u2500 metastore-site.xml\n\u251c\u2500\u2500 containers/          ",
-    "techstack": [
-      "DBeaver",
-      "Docker",
-      "Git",
-      "GitHub",
-      "Iceberg",
-      "Python",
-      "SQL",
-      "Trino",
-      "XML",
-      "dbt"
     ]
   },
   {
@@ -180,12 +180,12 @@
     "description": "A lakehouse to store data of books on Tiki",
     "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
     "language": "Python",
-    "stars": 16,
-    "forks": 5,
+    "stars": 17,
+    "forks": 6,
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-16",
-    "updated_at": "2026-04-27",
+    "updated_at": "2026-04-28",
     "topics": [
       "analytics-engineering"
     ],
@@ -219,7 +219,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-04-28",
+    "updated_at": "2026-04-29",
     "topics": [
       "analytics-engineer"
     ],
@@ -499,7 +499,7 @@
     "url": "https://github.com/tunguyenn99/first-osdp-using-bruin",
     "language": "N/A",
     "stars": 3,
-    "forks": 1,
+    "forks": 2,
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-26",
@@ -582,7 +582,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-05-28",
-    "updated_at": "2026-04-28",
+    "updated_at": "2026-04-29",
     "topics": [
       "profile-portfolio"
     ],
