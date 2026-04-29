@@ -152,40 +152,16 @@
     ]
   },
   {
-    "name": "i-learn-docker",
-    "description": "H\u1ecdc Docker tr\u00ean Ubuntu",
-    "url": "https://github.com/tunguyenn99/i-learn-docker",
-    "language": "Python",
-    "stars": 18,
-    "forks": 5,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-06-25",
-    "updated_at": "2026-04-12",
-    "topics": [
-      "self-learning"
-    ],
-    "has_readme": true,
-    "readme_lines": 159,
-    "readme_excerpt": "# \ud83c\udfae H\u01b0\u1edbng D\u1eabn H\u1ecdc Docker C\u01a1 B\u1ea3n\n\nCh\u00e0o m\u1eebng b\u1ea1n \u0111\u1ebfn v\u1edbi repo h\u01b0\u1edbng d\u1eabn h\u1ecdc Docker! \u0110\u00e2y l\u00e0 t\u00e0i li\u1ec7u d\u00e0nh cho ng\u01b0\u1eddi m\u1edbi b\u1eaft \u0111\u1ea7u, gi\u00fac b\u1ea1n hi\u1ec3u v\u00e0 th\u1ef1c h\u00e0nh c\u00e1c kh\u00e1i ni\u1ec7m c\u01a1 b\u1ea3n v\u1ec1 Docker m\u1ed9t c\u00e1ch c\u00f3 h\u1ec7 th\u1ed1ng.\n\n<img src=\"https://nimtechnology.com/wp-content/uploads/2021/07/8323.1565281088.png\" alt=\"docker overview\" width=\"800\" />\n\n---\n\n## \ud83d\udcda M\u1ee5c l\u1ee5c\n\n1. [Docker l\u00e0 g\u00ec?](#docker-l\u00e0-g\u00ec)\n2. [C\u00e0i \u0111\u1eb7t Docker tr\u00ean Ubuntu](#c\u00e0i-\u0111\u1eb7t-docker-tr\u00ean-ubuntu)\n3. [C\u00e1c l\u1ec7nh Docker c\u01a1 b\u1ea3n](#c\u00e1c-l\u1ec7nh-docker-c\u01a1-b\u1ea3n)\n4. [",
-    "techstack": [
-      "Docker",
-      "Metabase",
-      "Python",
-      "Redis"
-    ]
-  },
-  {
     "name": "from-tiki-crawler-to-lakehouse",
     "description": "A lakehouse to store data of books on Tiki",
     "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
     "language": "Python",
-    "stars": 17,
+    "stars": 18,
     "forks": 6,
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-16",
-    "updated_at": "2026-04-28",
+    "updated_at": "2026-04-29",
     "topics": [
       "analytics-engineering"
     ],
@@ -207,6 +183,30 @@
       "Trino",
       "dbt",
       "uv"
+    ]
+  },
+  {
+    "name": "i-learn-docker",
+    "description": "H\u1ecdc Docker tr\u00ean Ubuntu",
+    "url": "https://github.com/tunguyenn99/i-learn-docker",
+    "language": "Python",
+    "stars": 18,
+    "forks": 5,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-06-25",
+    "updated_at": "2026-04-12",
+    "topics": [
+      "self-learning"
+    ],
+    "has_readme": true,
+    "readme_lines": 159,
+    "readme_excerpt": "# \ud83c\udfae H\u01b0\u1edbng D\u1eabn H\u1ecdc Docker C\u01a1 B\u1ea3n\n\nCh\u00e0o m\u1eebng b\u1ea1n \u0111\u1ebfn v\u1edbi repo h\u01b0\u1edbng d\u1eabn h\u1ecdc Docker! \u0110\u00e2y l\u00e0 t\u00e0i li\u1ec7u d\u00e0nh cho ng\u01b0\u1eddi m\u1edbi b\u1eaft \u0111\u1ea7u, gi\u00fac b\u1ea1n hi\u1ec3u v\u00e0 th\u1ef1c h\u00e0nh c\u00e1c kh\u00e1i ni\u1ec7m c\u01a1 b\u1ea3n v\u1ec1 Docker m\u1ed9t c\u00e1ch c\u00f3 h\u1ec7 th\u1ed1ng.\n\n<img src=\"https://nimtechnology.com/wp-content/uploads/2021/07/8323.1565281088.png\" alt=\"docker overview\" width=\"800\" />\n\n---\n\n## \ud83d\udcda M\u1ee5c l\u1ee5c\n\n1. [Docker l\u00e0 g\u00ec?](#docker-l\u00e0-g\u00ec)\n2. [C\u00e0i \u0111\u1eb7t Docker tr\u00ean Ubuntu](#c\u00e0i-\u0111\u1eb7t-docker-tr\u00ean-ubuntu)\n3. [C\u00e1c l\u1ec7nh Docker c\u01a1 b\u1ea3n](#c\u00e1c-l\u1ec7nh-docker-c\u01a1-b\u1ea3n)\n4. [",
+    "techstack": [
+      "Docker",
+      "Metabase",
+      "Python",
+      "Redis"
     ]
   },
   {
@@ -746,7 +746,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-04-28",
+    "updated_at": "2026-04-29",
     "topics": [
       "profile-portfolio"
     ],
