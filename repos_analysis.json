@@ -190,12 +190,12 @@
     "description": "H\u1ecdc Docker tr\u00ean Ubuntu",
     "url": "https://github.com/tunguyenn99/i-learn-docker",
     "language": "Python",
-    "stars": 18,
+    "stars": 17,
     "forks": 5,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-06-25",
-    "updated_at": "2026-04-12",
+    "updated_at": "2026-05-02",
     "topics": [
       "self-learning"
     ],
@@ -219,7 +219,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-05-01",
+    "updated_at": "2026-05-02",
     "topics": [
       "analytics-engineer"
     ],
@@ -582,7 +582,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-05-28",
-    "updated_at": "2026-05-01",
+    "updated_at": "2026-05-02",
     "topics": [
       "profile-portfolio"
     ],
