@@ -219,7 +219,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-05-02",
+    "updated_at": "2026-05-03",
     "topics": [
       "analytics-engineer"
     ],
@@ -582,12 +582,12 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-05-28",
-    "updated_at": "2026-05-02",
+    "updated_at": "2026-05-03",
     "topics": [
       "profile-portfolio"
     ],
     "has_readme": true,
-    "readme_lines": 118,
+    "readme_lines": 117,
     "readme_excerpt": "<div align=\"center\">\n  <img src=\"https://github.com/AzmSurov/AzmSurov/raw/master/Rainbow.gif\" width=\"100%\" />\n</div>\n\n<h1 align=\"center\">\ud83d\ude80 Decoding Data with Tu Nguyen</h1>\n\n<p align=\"center\">\n  <img src=\"https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=24&pause=500&color=FFFFFF&center=true&vCenter=true&width=800&lines=Senior+Data+Analyst+%7C+Analytics+Engineer+%7C+BI+Developer;Engineering+the+Truth+Behind+Every+Transaction;Python+%7C+SQL+%7C+dbt+%7C+Airflow+%7C+Modern+Data+Stack;Sca",
     "techstack": [
       "AWS",
