@@ -2,6 +2,34 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Award, ExternalLink, Calendar, Briefcase, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
 import certs from '../data/certifications.json';
 
+import googleLogo from '../assets/company-logo/google.png';
+import ibmLogo from '../assets/company-logo/ibm-logo.png';
+import microsoftLogo from '../assets/company-logo/microsoft.png';
+import hackerrankLogo from '../assets/company-logo/hackerrank.png';
+import dremioLogo from '../assets/company-logo/dremio.png';
+import oracleLogo from '../assets/company-logo/oracle.png';
+import dagsterLogo from '../assets/company-logo/dagster.jpg';
+import dbtLogo from '../assets/company-logo/dbt.png';
+import airbyteLogo from '../assets/company-logo/airbyte.png';
+import mongodbLogo from '../assets/company-logo/mongodb.png';
+import worldquantLogo from '../assets/company-logo/worldquant.jpg';
+import otherLogo from '../assets/company-logo/other.png';
+
+const ORG_LOGOS = {
+  'Google': googleLogo,
+  'IBM': ibmLogo,
+  'Microsoft': microsoftLogo,
+  'HackerRank': hackerrankLogo,
+  'Dremio': dremioLogo,
+  'Oracle': oracleLogo,
+  'Dagster Labs': dagsterLogo,
+  'dbt Labs': dbtLogo,
+  'Airbyte': airbyteLogo,
+  'MongoDB': mongodbLogo,
+  'WorldQuant University': worldquantLogo,
+  'Others': otherLogo
+};
+
 export default function Certifications() {
   const [selectedOrg, setSelectedOrg] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
@@ -183,7 +211,7 @@ export default function Certifications() {
                   boxShadow: '0 8px 16px rgba(0,0,0,0.2)'
                 }}>
                   <img
-                    src={cert.image}
+                    src={ORG_LOGOS[cert.organization] || cert.image}
                     alt={cert.title}
                     style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                   />
