@@ -4,12 +4,12 @@
     "description": "Th\u01b0 vi\u1ec7n s\u00e1ch c\u1ee7a X\u00f3m - Free & Public \ud83d\ude0e",
     "url": "https://github.com/tunguyenn99/thu_vien_cua_xom_data",
     "language": "N/A",
-    "stars": 190,
-    "forks": 52,
+    "stars": 194,
+    "forks": 53,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-07-25",
-    "updated_at": "2026-04-22",
+    "updated_at": "2026-05-04",
     "topics": [
       "community-contribution"
     ],
@@ -31,12 +31,12 @@
     "description": "A pipeline to crawl jobs from TopCV",
     "url": "https://github.com/tunguyenn99/crawl-topcv-jobs",
     "language": "Python",
-    "stars": 35,
+    "stars": 37,
     "forks": 5,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-09-05",
-    "updated_at": "2026-04-22",
+    "updated_at": "2026-05-08",
     "topics": [
       "analytics-engineer"
     ],
@@ -65,6 +65,36 @@
     ]
   },
   {
+    "name": "dbt-trino-minio-iceberg-mage",
+    "description": "On-premises ELT Pipeline",
+    "url": "https://github.com/tunguyenn99/dbt-trino-minio-iceberg-mage",
+    "language": "Python",
+    "stars": 32,
+    "forks": 10,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-07-08",
+    "updated_at": "2026-04-29",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 390,
+    "readme_excerpt": "# \ud83e\uddca DBT + Trino + MinIO + Iceberg \u2013 Data Lakehouse Dev Stack\n\nD\u1ef1 \u00e1n n\u00e0y thi\u1ebft l\u1eadp m\u1ed9t m\u00f4i tr\u01b0\u1eddng ph\u00e1t tri\u1ec3n \u0111\u1ea7y \u0111\u1ee7 cho Data Lakehouse s\u1eed d\u1ee5ng Trino, Iceberg, MinIO v\u00e0 DBT, k\u00e8m theo c\u00f4ng c\u1ee5 orchestrator Mage \u0111\u1ec3 qu\u1ea3n l\u00fd pipelines.\n\n---\n\n![Project Architecture](./images/s00-project-architect.png)\n\n---\n\n## \ud83d\udcc2 C\u1ea5u tr\u00fac th\u01b0 m\u1ee5c d\u1ef1 \u00e1n\n\n```\ndbt-trino-minio-iceberg-mage/\n\u251c\u2500\u2500 conf/                           # C\u1ea5u h\u00ecnh Hive Metastore\n\u2502   \u2514\u2500\u2500 core-site.xml\n\u2502   \u2514\u2500\u2500 metastore-site.xml\n\u251c\u2500\u2500 containers/          ",
+    "techstack": [
+      "DBeaver",
+      "Docker",
+      "Git",
+      "GitHub",
+      "Iceberg",
+      "Python",
+      "SQL",
+      "Trino",
+      "XML",
+      "dbt"
+    ]
+  },
+  {
     "name": "distributed-data-processing",
     "description": "Efficient Data Processing in Distributed Database (Vietnamese docs)",
     "url": "https://github.com/tunguyenn99/distributed-data-processing",
@@ -88,36 +118,6 @@
       "GitHub",
       "SQL",
       "Trino"
-    ]
-  },
-  {
-    "name": "dbt-trino-minio-iceberg-mage",
-    "description": "On-premises ELT Pipeline",
-    "url": "https://github.com/tunguyenn99/dbt-trino-minio-iceberg-mage",
-    "language": "Python",
-    "stars": 31,
-    "forks": 10,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-07-08",
-    "updated_at": "2026-04-12",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 390,
-    "readme_excerpt": "# \ud83e\uddca DBT + Trino + MinIO + Iceberg \u2013 Data Lakehouse Dev Stack\n\nD\u1ef1 \u00e1n n\u00e0y thi\u1ebft l\u1eadp m\u1ed9t m\u00f4i tr\u01b0\u1eddng ph\u00e1t tri\u1ec3n \u0111\u1ea7y \u0111\u1ee7 cho Data Lakehouse s\u1eed d\u1ee5ng Trino, Iceberg, MinIO v\u00e0 DBT, k\u00e8m theo c\u00f4ng c\u1ee5 orchestrator Mage \u0111\u1ec3 qu\u1ea3n l\u00fd pipelines.\n\n---\n\n![Project Architecture](./images/s00-project-architect.png)\n\n---\n\n## \ud83d\udcc2 C\u1ea5u tr\u00fac th\u01b0 m\u1ee5c d\u1ef1 \u00e1n\n\n```\ndbt-trino-minio-iceberg-mage/\n\u251c\u2500\u2500 conf/                           # C\u1ea5u h\u00ecnh Hive Metastore\n\u2502   \u2514\u2500\u2500 core-site.xml\n\u2502   \u2514\u2500\u2500 metastore-site.xml\n\u251c\u2500\u2500 containers/          ",
-    "techstack": [
-      "DBeaver",
-      "Docker",
-      "Git",
-      "GitHub",
-      "Iceberg",
-      "Python",
-      "SQL",
-      "Trino",
-      "XML",
-      "dbt"
     ]
   },
   {
@@ -152,16 +152,50 @@
     ]
   },
   {
+    "name": "from-tiki-crawler-to-lakehouse",
+    "description": "A lakehouse to store data of books on Tiki",
+    "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
+    "language": "Python",
+    "stars": 18,
+    "forks": 8,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-05-06",
+    "topics": [
+      "analytics-engineering"
+    ],
+    "has_readme": true,
+    "readme_lines": 186,
+    "readme_excerpt": "<div align=\"center\">\n  <h1>Tiki Lakehouse Project \ud83c\udf0a\ud83d\uded2</h1>\n  <p><em>A modern open-source Data Pipeline & Lakehouse simulating E-Commerce operations</em></p>\n\n  [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)]()\n  [![dbt](https://img.shields.io/badge/dbt-DuckDB-FF694B?logo=dbt&logoColor=white)]()\n  [![Trino](https://img.shields.io/badge/Trino-Query_Engine-DD00A1?logo=trino&logoColor=white)]()\n  [![MinIO](https://img.shields.io/badge/MinIO-S3_Storage-C7202C?log",
+    "techstack": [
+      "Airflow",
+      "Docker",
+      "GitHub",
+      "GitHub Actions",
+      "Iceberg",
+      "Parquet",
+      "PostgreSQL",
+      "Pytest",
+      "Python",
+      "SQL",
+      "Superset",
+      "Trino",
+      "dbt",
+      "uv"
+    ]
+  },
+  {
     "name": "i-learn-docker",
     "description": "H\u1ecdc Docker tr\u00ean Ubuntu",
     "url": "https://github.com/tunguyenn99/i-learn-docker",
     "language": "Python",
-    "stars": 18,
+    "stars": 17,
     "forks": 5,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-06-25",
-    "updated_at": "2026-04-12",
+    "updated_at": "2026-05-02",
     "topics": [
       "self-learning"
     ],
@@ -173,6 +207,43 @@
       "Metabase",
       "Python",
       "Redis"
+    ]
+  },
+  {
+    "name": "gold-price-monitoring",
+    "description": "Applied MDS into monitoring Vietnam's Gold Price",
+    "url": "https://github.com/tunguyenn99/gold-price-monitoring",
+    "language": "Python",
+    "stars": 15,
+    "forks": 8,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-03-22",
+    "updated_at": "2026-05-09",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 164,
+    "readme_excerpt": "# \ud83d\udcc8 Vietnam Gold Price Monitor \u2014 Modern Data Stack\n\n[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)\n[![Ubuntu](https://img.shields.io/badge/Ubuntu-E9431F?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)\n[![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)](https://www.getdbt.com/)\n[![dlt](https://img.shields.io/badge/dlt-FFDC00?style=for-the-badge&logo=p",
+    "techstack": [
+      "BeautifulSoup",
+      "CSV",
+      "DLT",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "Go",
+      "JSON",
+      "Matplotlib",
+      "MongoDB",
+      "PostgreSQL",
+      "Python",
+      "Requests",
+      "Seaborn",
+      "Supabase",
+      "dbt",
+      "uv"
     ]
   },
   {
@@ -200,43 +271,6 @@
       "Power BI",
       "Python",
       "SQL",
-      "dbt",
-      "uv"
-    ]
-  },
-  {
-    "name": "gold-price-monitoring",
-    "description": "Applied MDS into monitoring Vietnam's Gold Price",
-    "url": "https://github.com/tunguyenn99/gold-price-monitoring",
-    "language": "Python",
-    "stars": 13,
-    "forks": 5,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-03-22",
-    "updated_at": "2026-04-24",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 164,
-    "readme_excerpt": "# \ud83d\udcc8 Vietnam Gold Price Monitor \u2014 Modern Data Stack\n\n[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)\n[![Ubuntu](https://img.shields.io/badge/Ubuntu-E9431F?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)\n[![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)](https://www.getdbt.com/)\n[![dlt](https://img.shields.io/badge/dlt-FFDC00?style=for-the-badge&logo=p",
-    "techstack": [
-      "BeautifulSoup",
-      "CSV",
-      "DLT",
-      "Git",
-      "GitHub",
-      "GitHub Actions",
-      "Go",
-      "JSON",
-      "Matplotlib",
-      "MongoDB",
-      "PostgreSQL",
-      "Python",
-      "Requests",
-      "Seaborn",
-      "Supabase",
       "dbt",
       "uv"
     ]
@@ -324,12 +358,12 @@
     "description": "C\u00e0i \u0111\u1eb7t Ubuntu tr\u00ean Windows (WSL)",
     "url": "https://github.com/tunguyenn99/how-to-ubuntu-install-wsl",
     "language": "N/A",
-    "stars": 7,
+    "stars": 8,
     "forks": 0,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-06-29",
-    "updated_at": "2026-04-13",
+    "updated_at": "2026-05-09",
     "topics": [
       "community-contribution"
     ],
@@ -380,12 +414,12 @@
     "description": "A streaming pipeline from Weather API",
     "url": "https://github.com/tunguyenn99/weather-streaming-pipeline",
     "language": "Python",
-    "stars": 4,
+    "stars": 6,
     "forks": 5,
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-29",
-    "updated_at": "2026-04-21",
+    "updated_at": "2026-05-06",
     "topics": [
       "analytics-engineer"
     ],
@@ -460,6 +494,34 @@
     ]
   },
   {
+    "name": "first-osdp-using-bruin",
+    "description": "",
+    "url": "https://github.com/tunguyenn99/first-osdp-using-bruin",
+    "language": "N/A",
+    "stars": 3,
+    "forks": 2,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-04-26",
+    "updated_at": "2026-04-27",
+    "topics": [
+      "self-learning"
+    ],
+    "has_readme": true,
+    "readme_lines": 90,
+    "readme_excerpt": "# First OSDP Using Bruin \ud83d\ude80\n\nCh\u00e0o m\u1eebng b\u1ea1n \u0111\u1ebfn v\u1edbi d\u1ef1 \u00e1n **Open Source Data Pipeline (OSDP)** \u0111\u1ea7u ti\u00ean c\u1ee7a t\u00f4i s\u1eed d\u1ee5ng **Bruin**. \u0110\u00e2y l\u00e0 m\u1ed9t d\u1ef1 \u00e1n m\u1eabu minh h\u1ecda c\u00e1ch x\u00e2y d\u1ef1ng m\u1ed9t \u0111\u01b0\u1eddng \u1ed1ng d\u1eef li\u1ec7u hi\u1ec7n \u0111\u1ea1i, m\u00e3 ngu\u1ed3n m\u1edf, t\u1eadp trung v\u00e0o t\u00ednh \u0111\u01a1n gi\u1ea3n v\u00e0 hi\u1ec7u qu\u1ea3.\n\n---\n\n## \ud83c\udf1f C\u00e1c T\u00ednh n\u0103ng N\u1ed5i b\u1eadt\n\n- **\u01afu ti\u00ean m\u00e3 ngu\u1ed3n (Code-first)**: X\u00e2y d\u1ef1ng c\u00e1c \u0111\u01b0\u1eddng \u1ed1ng d\u1eef li\u1ec7u m\u1ea1nh m\u1ebd b\u1eb1ng SQL, Python v\u00e0 c\u1ea5u h\u00ecnh YAML quen thu\u1ed9c.\n- **T\u00edch h\u1ee3p s\u1eb5n Ingestr**: N\u1ea1p d\u1eef li\u1ec7u t\u1eeb h\u01a1n 30 ngu\u1ed3n kh\u00e1c nhau (Shopify, Stripe, G",
+    "techstack": [
+      "BigQuery",
+      "Databricks",
+      "GitHub",
+      "PostgreSQL",
+      "Python",
+      "SQL",
+      "Snowflake",
+      "VS Code"
+    ]
+  },
+  {
     "name": "dagster-dlthub-snowflake",
     "description": "Modern ELT Pipeline",
     "url": "https://github.com/tunguyenn99/dagster-dlthub-snowflake",
@@ -520,12 +582,12 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-05-28",
-    "updated_at": "2026-04-25",
+    "updated_at": "2026-05-09",
     "topics": [
       "profile-portfolio"
     ],
     "has_readme": true,
-    "readme_lines": 119,
+    "readme_lines": 118,
     "readme_excerpt": "<div align=\"center\">\n  <img src=\"https://github.com/AzmSurov/AzmSurov/raw/master/Rainbow.gif\" width=\"100%\" />\n</div>\n\n<h1 align=\"center\">\ud83d\ude80 Decoding Data with Tu Nguyen</h1>\n\n<p align=\"center\">\n  <img src=\"https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=24&pause=500&color=FFFFFF&center=true&vCenter=true&width=800&lines=Senior+Data+Analyst+%7C+Analytics+Engineer+%7C+BI+Developer;Engineering+the+Truth+Behind+Every+Transaction;Python+%7C+SQL+%7C+dbt+%7C+Airflow+%7C+Modern+Data+Stack;Sca",
     "techstack": [
       "AWS",
@@ -672,6 +734,28 @@
       "Python",
       "Scikit-learn",
       "TensorFlow"
+    ]
+  },
+  {
+    "name": "personal-websites-portfolio",
+    "description": "",
+    "url": "https://github.com/tunguyenn99/personal-websites-portfolio",
+    "language": "JavaScript",
+    "stars": 0,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-04-11",
+    "updated_at": "2026-05-09",
+    "topics": [
+      "profile-portfolio"
+    ],
+    "has_readme": true,
+    "readme_lines": 159,
+    "readme_excerpt": "# \ud83d\ude80 Trang Web Portfolio C\u00e1 Nh\u00e2n\n\nM\u1ed9t trang web portfolio c\u00e1 nh\u00e2n \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng b\u1eb1ng **React + Vite** v\u1edbi thi\u1ebft k\u1ebf hi\u1ec7n \u0111\u1ea1i, responsive, v\u00e0 hi\u1ec7u su\u1ea5t cao.\n\n## \ud83d\udccb M\u00f4 T\u1ea3 D\u1ef1 \u00c1n\n\nD\u1ef1 \u00e1n n\u00e0y l\u00e0 m\u1ed9t trang web portfolio to\u00e0n di\u1ec7n \u0111\u1ec3 gi\u1edbi thi\u1ec7u v\u1ec1 b\u1ea3n th\u00e2n, k\u1ef9 n\u0103ng, kinh nghi\u1ec7m l\u00e0m vi\u1ec7c, c\u00e1c d\u1ef1 \u00e1n \u0111\u00e3 th\u1ef1c hi\u1ec7n, ch\u1ee9ng ch\u1ec9 \u0111\u1ea1t \u0111\u01b0\u1ee3c, c\u1ed9ng \u0111\u1ed3ng qu\u1ea3n l\u00fd, v\u00e0 th\u00f4ng tin li\u00ean h\u1ec7.\n\n---\n\n## \ud83c\udfd7\ufe0f C\u1ea5u Tr\u00fac D\u1ef1 \u00c1n\n\n```\npersonal-websites-portfolio/\n\u251c\u2500\u2500 src/\n\u2502   \u251c\u2500\u2500 components/          # C\u00e1c component React ch\u00ednh\n\u2502   \u2502   \u251c\u2500",
+    "techstack": [
+      "JSON",
+      "React"
     ]
   },
   {
