@@ -303,6 +303,34 @@
     ]
   },
   {
+    "name": "dbt-databricks-kestra",
+    "description": "ELT Pipeline on Modern Data platforms",
+    "url": "https://github.com/tunguyenn99/dbt-databricks-kestra",
+    "language": "Jupyter Notebook",
+    "stars": 10,
+    "forks": 2,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-06-19",
+    "updated_at": "2026-06-01",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 174,
+    "readme_excerpt": "# \ud83e\udde0 HR Analytics with dbt, Databricks & Kestra\n\nThis project demonstrates a modern data pipeline for **HR analytics** using [**dbt**](https://www.getdbt.com/), [**Databricks**](https://www.databricks.com/), and [**Kestra**](https://kestra.io/). It explores workforce data to uncover insights about **diversity**, **retention**, and **pay equity**.\n\n---\n\n## \ud83e\uddf0 Tech Stack\n\n- **DBT (Data Build Tool)** \u2013 SQL-based transformation framework used to build modular, testable, and maintainable data pipelines",
+    "techstack": [
+      "Databricks",
+      "Docker",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "Kestra",
+      "SQL",
+      "dbt"
+    ]
+  },
+  {
     "name": "i-learn-git",
     "description": "I try to learn git",
     "url": "https://github.com/tunguyenn99/i-learn-git",
@@ -323,34 +351,6 @@
       "Git",
       "GitHub Actions",
       "GitLab"
-    ]
-  },
-  {
-    "name": "dbt-databricks-kestra",
-    "description": "ELT Pipeline on Modern Data platforms",
-    "url": "https://github.com/tunguyenn99/dbt-databricks-kestra",
-    "language": "Jupyter Notebook",
-    "stars": 9,
-    "forks": 2,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-06-19",
-    "updated_at": "2026-04-12",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 174,
-    "readme_excerpt": "# \ud83e\udde0 HR Analytics with dbt, Databricks & Kestra\n\nThis project demonstrates a modern data pipeline for **HR analytics** using [**dbt**](https://www.getdbt.com/), [**Databricks**](https://www.databricks.com/), and [**Kestra**](https://kestra.io/). It explores workforce data to uncover insights about **diversity**, **retention**, and **pay equity**.\n\n---\n\n## \ud83e\uddf0 Tech Stack\n\n- **DBT (Data Build Tool)** \u2013 SQL-based transformation framework used to build modular, testable, and maintainable data pipelines",
-    "techstack": [
-      "Databricks",
-      "Docker",
-      "Git",
-      "GitHub",
-      "GitHub Actions",
-      "Kestra",
-      "SQL",
-      "dbt"
     ]
   },
   {
@@ -573,6 +573,34 @@
     ]
   },
   {
+    "name": "ecommerce-data-modeling",
+    "description": "This repository contains a modern data warehouse (DWH) and analytics platform designed for the Olist Brazilian E-Commerce Dataset (over 1M+ rows of customers, items, reviews, and geo coordinates).  It implements a complete end-to-end ELT pipeline using DuckDB as the local OLAP database, dbt Core for Kimball dimensional transformations",
+    "url": "https://github.com/tunguyenn99/ecommerce-data-modeling",
+    "language": "Python",
+    "stars": 1,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-05-25",
+    "updated_at": "2026-06-01",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 188,
+    "readme_excerpt": "# \ud83d\uded2 Olist E-Commerce Data Warehouse & Analytics Platform\n\nThis repository contains a modern data warehouse (DWH) and analytics platform designed for the **Olist Brazilian E-Commerce Dataset** (over 1M+ rows of customers, items, reviews, and geo coordinates). \n\nIt implements a complete end-to-end ELT pipeline using **DuckDB** as the local OLAP database, **dbt Core** for Kimball dimensional transformations, **Astronomer Cosmos & Apache Airflow** for orchestrating task groups, **Bruin CLI** for con",
+    "techstack": [
+      "Airflow",
+      "CSV",
+      "Git",
+      "Python",
+      "Rust",
+      "SQL",
+      "dbt",
+      "uv"
+    ]
+  },
+  {
     "name": "tunguyenn99",
     "description": "Init my profile",
     "url": "https://github.com/tunguyenn99/tunguyenn99",
@@ -747,7 +775,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-05-31",
+    "updated_at": "2026-06-01",
     "topics": [
       "profile-portfolio"
     ],
@@ -757,34 +785,6 @@
     "techstack": [
       "JSON",
       "React"
-    ]
-  },
-  {
-    "name": "ecommerce-data-modeling",
-    "description": "This repository contains a modern data warehouse (DWH) and analytics platform designed for the Olist Brazilian E-Commerce Dataset (over 1M+ rows of customers, items, reviews, and geo coordinates).  It implements a complete end-to-end ELT pipeline using DuckDB as the local OLAP database, dbt Core for Kimball dimensional transformations",
-    "url": "https://github.com/tunguyenn99/ecommerce-data-modeling",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-05-25",
-    "updated_at": "2026-05-31",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 188,
-    "readme_excerpt": "# \ud83d\uded2 Olist E-Commerce Data Warehouse & Analytics Platform\n\nThis repository contains a modern data warehouse (DWH) and analytics platform designed for the **Olist Brazilian E-Commerce Dataset** (over 1M+ rows of customers, items, reviews, and geo coordinates). \n\nIt implements a complete end-to-end ELT pipeline using **DuckDB** as the local OLAP database, **dbt Core** for Kimball dimensional transformations, **Astronomer Cosmos & Apache Airflow** for orchestrating task groups, **Bruin CLI** for con",
-    "techstack": [
-      "Airflow",
-      "CSV",
-      "Git",
-      "Python",
-      "Rust",
-      "SQL",
-      "dbt",
-      "uv"
     ]
   },
   {
