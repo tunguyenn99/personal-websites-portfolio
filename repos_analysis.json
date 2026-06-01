@@ -195,7 +195,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-05-31",
+    "updated_at": "2026-06-01",
     "topics": [
       "analytics-engineer"
     ],
@@ -738,6 +738,28 @@
     ]
   },
   {
+    "name": "personal-websites-portfolio",
+    "description": "",
+    "url": "https://github.com/tunguyenn99/personal-websites-portfolio",
+    "language": "JavaScript",
+    "stars": 0,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-04-11",
+    "updated_at": "2026-05-31",
+    "topics": [
+      "profile-portfolio"
+    ],
+    "has_readme": true,
+    "readme_lines": 159,
+    "readme_excerpt": "# \ud83d\ude80 Trang Web Portfolio C\u00e1 Nh\u00e2n\n\nM\u1ed9t trang web portfolio c\u00e1 nh\u00e2n \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng b\u1eb1ng **React + Vite** v\u1edbi thi\u1ebft k\u1ebf hi\u1ec7n \u0111\u1ea1i, responsive, v\u00e0 hi\u1ec7u su\u1ea5t cao.\n\n## \ud83d\udccb M\u00f4 T\u1ea3 D\u1ef1 \u00c1n\n\nD\u1ef1 \u00e1n n\u00e0y l\u00e0 m\u1ed9t trang web portfolio to\u00e0n di\u1ec7n \u0111\u1ec3 gi\u1edbi thi\u1ec7u v\u1ec1 b\u1ea3n th\u00e2n, k\u1ef9 n\u0103ng, kinh nghi\u1ec7m l\u00e0m vi\u1ec7c, c\u00e1c d\u1ef1 \u00e1n \u0111\u00e3 th\u1ef1c hi\u1ec7n, ch\u1ee9ng ch\u1ec9 \u0111\u1ea1t \u0111\u01b0\u1ee3c, c\u1ed9ng \u0111\u1ed3ng qu\u1ea3n l\u00fd, v\u00e0 th\u00f4ng tin li\u00ean h\u1ec7.\n\n---\n\n## \ud83c\udfd7\ufe0f C\u1ea5u Tr\u00fac D\u1ef1 \u00c1n\n\n```\npersonal-websites-portfolio/\n\u251c\u2500\u2500 src/\n\u2502   \u251c\u2500\u2500 components/          # C\u00e1c component React ch\u00ednh\n\u2502   \u2502   \u251c\u2500",
+    "techstack": [
+      "JSON",
+      "React"
+    ]
+  },
+  {
     "name": "ecommerce-data-modeling",
     "description": "This repository contains a modern data warehouse (DWH) and analytics platform designed for the Olist Brazilian E-Commerce Dataset (over 1M+ rows of customers, items, reviews, and geo coordinates).  It implements a complete end-to-end ELT pipeline using DuckDB as the local OLAP database, dbt Core for Kimball dimensional transformations",
     "url": "https://github.com/tunguyenn99/ecommerce-data-modeling",
@@ -763,28 +785,6 @@
       "SQL",
       "dbt",
       "uv"
-    ]
-  },
-  {
-    "name": "personal-websites-portfolio",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/personal-websites-portfolio",
-    "language": "JavaScript",
-    "stars": 0,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-04-11",
-    "updated_at": "2026-05-31",
-    "topics": [
-      "profile-portfolio"
-    ],
-    "has_readme": true,
-    "readme_lines": 159,
-    "readme_excerpt": "# \ud83d\ude80 Trang Web Portfolio C\u00e1 Nh\u00e2n\n\nM\u1ed9t trang web portfolio c\u00e1 nh\u00e2n \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng b\u1eb1ng **React + Vite** v\u1edbi thi\u1ebft k\u1ebf hi\u1ec7n \u0111\u1ea1i, responsive, v\u00e0 hi\u1ec7u su\u1ea5t cao.\n\n## \ud83d\udccb M\u00f4 T\u1ea3 D\u1ef1 \u00c1n\n\nD\u1ef1 \u00e1n n\u00e0y l\u00e0 m\u1ed9t trang web portfolio to\u00e0n di\u1ec7n \u0111\u1ec3 gi\u1edbi thi\u1ec7u v\u1ec1 b\u1ea3n th\u00e2n, k\u1ef9 n\u0103ng, kinh nghi\u1ec7m l\u00e0m vi\u1ec7c, c\u00e1c d\u1ef1 \u00e1n \u0111\u00e3 th\u1ef1c hi\u1ec7n, ch\u1ee9ng ch\u1ec9 \u0111\u1ea1t \u0111\u01b0\u1ee3c, c\u1ed9ng \u0111\u1ed3ng qu\u1ea3n l\u00fd, v\u00e0 th\u00f4ng tin li\u00ean h\u1ec7.\n\n---\n\n## \ud83c\udfd7\ufe0f C\u1ea5u Tr\u00fac D\u1ef1 \u00c1n\n\n```\npersonal-websites-portfolio/\n\u251c\u2500\u2500 src/\n\u2502   \u251c\u2500\u2500 components/          # C\u00e1c component React ch\u00ednh\n\u2502   \u2502   \u251c\u2500",
-    "techstack": [
-      "JSON",
-      "React"
     ]
   },
   {
