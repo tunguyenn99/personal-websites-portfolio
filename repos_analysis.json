@@ -766,28 +766,6 @@
     ]
   },
   {
-    "name": "learn-fabric-analytics-engineer",
-    "description": "I learn DP-600 for fun ^^",
-    "url": "https://github.com/tunguyenn99/learn-fabric-analytics-engineer",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-06-22",
-    "updated_at": "2026-06-22",
-    "topics": [],
-    "has_readme": true,
-    "readme_lines": 125,
-    "readme_excerpt": "# Learn Fabric Analytics Engineer (DP-600) Course Assistant\n\nI learn DP-600 for fun ^^\n\nThis repository is designed to crawl the DP-600 YouTube playlist and extract timed transcripts for all the videos, making it easy to study course materials offline.\n\n---\n\n## \ud83d\udee0\ufe0f Project Structure & Flow\n\n```mermaid\ngraph TD\n    A[YouTube Playlist URL] -->|assets/crawl_playlist.py| B[output/playlist_videos.md]\n    B -->|assets/extract_transcripts.py| C[output/transcripts/ *.txt]\n    B -->|assets/extract_transcr",
-    "techstack": [
-      "Git",
-      "Power BI",
-      "Python",
-      "Spark"
-    ]
-  },
-  {
     "name": "personal-websites-portfolio",
     "description": "",
     "url": "https://github.com/tunguyenn99/personal-websites-portfolio",
@@ -807,6 +785,28 @@
     "techstack": [
       "JSON",
       "React"
+    ]
+  },
+  {
+    "name": "learn-fabric-analytics-engineer",
+    "description": "I learn DP-600 for fun ^^",
+    "url": "https://github.com/tunguyenn99/learn-fabric-analytics-engineer",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-06-22",
+    "updated_at": "2026-06-22",
+    "topics": [],
+    "has_readme": true,
+    "readme_lines": 125,
+    "readme_excerpt": "# Learn Fabric Analytics Engineer (DP-600) Course Assistant\n\nI learn DP-600 for fun ^^\n\nThis repository is designed to crawl the DP-600 YouTube playlist and extract timed transcripts for all the videos, making it easy to study course materials offline.\n\n---\n\n## \ud83d\udee0\ufe0f Project Structure & Flow\n\n```mermaid\ngraph TD\n    A[YouTube Playlist URL] -->|assets/crawl_playlist.py| B[output/playlist_videos.md]\n    B -->|assets/extract_transcripts.py| C[output/transcripts/ *.txt]\n    B -->|assets/extract_transcr",
+    "techstack": [
+      "Git",
+      "Power BI",
+      "Python",
+      "Spark"
     ]
   },
   {
