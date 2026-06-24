@@ -579,33 +579,11 @@
     ]
   },
   {
-    "name": "dashboard-showcase",
-    "description": "My BI Dashboard Showcase",
-    "url": "https://github.com/tunguyenn99/dashboard-showcase",
-    "language": "Jupyter Notebook",
-    "stars": 2,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-05-28",
-    "updated_at": "2026-04-13",
-    "topics": [
-      "data-analytics"
-    ],
-    "has_readme": true,
-    "readme_lines": 50,
-    "readme_excerpt": "# \ud83e\udde0 Data Analytics Portfolio by tunguyenn99\n\nWelcome to my personal analytics portfolio!  \nThis repository showcases a curated collection of data analysis and visualization projects using **Power BI**, with a strong focus on storytelling, business context, and visual clarity.\n\nEach project in this repo is presented as a standalone dashboard, designed to explore real-world challenges and translate raw data into actionable insights.\n\n---\n\n## \ud83d\udcc1 Projects Included (Updating)\n\n### \u26a1 [Electrics Retaile",
-    "techstack": [
-      "Figma",
-      "Power BI"
-    ]
-  },
-  {
     "name": "tunguyenn99",
     "description": "Init my profile",
     "url": "https://github.com/tunguyenn99/tunguyenn99",
     "language": "N/A",
-    "stars": 1,
+    "stars": 2,
     "forks": 0,
     "is_fork": false,
     "is_private": false,
@@ -657,6 +635,28 @@
       "Superset",
       "VS Code",
       "dbt"
+    ]
+  },
+  {
+    "name": "dashboard-showcase",
+    "description": "My BI Dashboard Showcase",
+    "url": "https://github.com/tunguyenn99/dashboard-showcase",
+    "language": "Jupyter Notebook",
+    "stars": 2,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-05-28",
+    "updated_at": "2026-04-13",
+    "topics": [
+      "data-analytics"
+    ],
+    "has_readme": true,
+    "readme_lines": 50,
+    "readme_excerpt": "# \ud83e\udde0 Data Analytics Portfolio by tunguyenn99\n\nWelcome to my personal analytics portfolio!  \nThis repository showcases a curated collection of data analysis and visualization projects using **Power BI**, with a strong focus on storytelling, business context, and visual clarity.\n\nEach project in this repo is presented as a standalone dashboard, designed to explore real-world challenges and translate raw data into actionable insights.\n\n---\n\n## \ud83d\udcc1 Projects Included (Updating)\n\n### \u26a1 [Electrics Retaile",
+    "techstack": [
+      "Figma",
+      "Power BI"
     ]
   },
   {
@@ -775,7 +775,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-06-23",
+    "updated_at": "2026-06-24",
     "topics": [
       "profile-portfolio"
     ],
