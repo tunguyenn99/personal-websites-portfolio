@@ -195,7 +195,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-06-23",
+    "updated_at": "2026-06-24",
     "topics": [
       "analytics-engineer"
     ],
@@ -610,12 +610,12 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-05-28",
-    "updated_at": "2026-06-19",
+    "updated_at": "2026-06-24",
     "topics": [
       "profile-portfolio"
     ],
     "has_readme": true,
-    "readme_lines": 293,
+    "readme_lines": 292,
     "readme_excerpt": "<div align=\"center\">\n  <img src=\"assets/banner.svg\" width=\"100%\" alt=\"Tu Nguyen Banner\" />\n</div>\n\n<p align=\"center\">\n  <img src=\"https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=800&lines=Senior+Analytics+Engineer+%7C+Analytics+Engineer+%7C+BI+Developer;Engineering+the+Truth+Behind+Every+Transaction;Python+%7C+SQL+%7C+dbt+%7C+Airflow+%7C+Modern+Data+Stack;Scaling+Omnichannel+Intelligence+for+Retail+%26+FinTech\"/",
     "techstack": [
       "AWS",
