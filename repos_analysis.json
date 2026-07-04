@@ -4,12 +4,12 @@
     "description": "Th\u01b0 vi\u1ec7n s\u00e1ch c\u1ee7a X\u00f3m - Free & Public \ud83d\ude0e",
     "url": "https://github.com/tunguyenn99/thu_vien_cua_xom_data",
     "language": "N/A",
-    "stars": 336,
+    "stars": 337,
     "forks": 98,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-07-25",
-    "updated_at": "2026-07-02",
+    "updated_at": "2026-07-04",
     "topics": [
       "community-contribution"
     ],
@@ -24,6 +24,28 @@
       "Snowflake",
       "Spark",
       "Tableau"
+    ]
+  },
+  {
+    "name": "data-road-map-by-roles",
+    "description": "If I had to start over from scratch",
+    "url": "https://github.com/tunguyenn99/data-road-map-by-roles",
+    "language": "N/A",
+    "stars": 67,
+    "forks": 11,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-06-25",
+    "updated_at": "2026-07-04",
+    "topics": [],
+    "has_readme": true,
+    "readme_lines": 127,
+    "readme_excerpt": "# \ud83d\uddfa\ufe0f Data Career Roadmaps \u2014 M\u1ee5c l\u1ee5c\r\n\r\n> *N\u1ebfu b\u1ea1n \u0111ang \u0111\u1ecdc trang n\u00e0y, c\u00f3 th\u1ec3 b\u1ea1n \u0111ang \u1edf m\u1ed9t trong nh\u1eefng ng\u00e3 r\u1ebd sau: v\u1eeba t\u1ed1t nghi\u1ec7p v\u00e0 t\u1ef1 h\u1ecfi \"data career b\u1eaft \u0111\u1ea7u t\u1eeb \u0111\u00e2u?\", \u0111ang l\u00e0m DA nh\u01b0ng mu\u1ed1n growth m\u1ea1nh h\u01a1n, ho\u1eb7c \u0111ang \u1edf ng\u00e0nh kh\u00e1c m\u00e0 nghe n\u00f3i \"data is the new oil\" qu\u00e1 nhi\u1ec1u l\u1ea7n. D\u00f9 b\u1ea1n \u1edf \u0111\u00e2u \u2014 b\u1ea1n \u0111\u1ebfn \u0111\u00fang ch\u1ed7 r\u1ed3i. B\u1ed9 roadmaps n\u00e0y kh\u00f4ng ph\u1ea3i l\u00fd thuy\u1ebft su\u00f4ng \u2014 m\u00e0 l\u00e0 b\u1ea3n \u0111\u1ed3 th\u1ef1c t\u1ebf, vi\u1ebft t\u1eeb g\u00f3c nh\u00ecn c\u1ee7a ng\u01b0\u1eddi \u0111\u00e3 \u0111i qua v\u00e0 \u0111ang \u0111i c\u00f9ng b\u1ea1n.*\r\n\r\n## T\u1ed5ng quan\r\n\r\nB\u1ed9 6 Career Roadmaps cho c\u00e1c vai t",
+    "techstack": [
+      "Git",
+      "Python",
+      "SQL",
+      "dbt"
     ]
   },
   {
@@ -492,28 +514,6 @@
     ]
   },
   {
-    "name": "data-road-map-by-roles",
-    "description": "If I had to start over from scratch",
-    "url": "https://github.com/tunguyenn99/data-road-map-by-roles",
-    "language": "N/A",
-    "stars": 4,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-06-25",
-    "updated_at": "2026-07-03",
-    "topics": [],
-    "has_readme": true,
-    "readme_lines": 127,
-    "readme_excerpt": "# \ud83d\uddfa\ufe0f Data Career Roadmaps \u2014 M\u1ee5c l\u1ee5c\r\n\r\n> *N\u1ebfu b\u1ea1n \u0111ang \u0111\u1ecdc trang n\u00e0y, c\u00f3 th\u1ec3 b\u1ea1n \u0111ang \u1edf m\u1ed9t trong nh\u1eefng ng\u00e3 r\u1ebd sau: v\u1eeba t\u1ed1t nghi\u1ec7p v\u00e0 t\u1ef1 h\u1ecfi \"data career b\u1eaft \u0111\u1ea7u t\u1eeb \u0111\u00e2u?\", \u0111ang l\u00e0m DA nh\u01b0ng mu\u1ed1n growth m\u1ea1nh h\u01a1n, ho\u1eb7c \u0111ang \u1edf ng\u00e0nh kh\u00e1c m\u00e0 nghe n\u00f3i \"data is the new oil\" qu\u00e1 nhi\u1ec1u l\u1ea7n. D\u00f9 b\u1ea1n \u1edf \u0111\u00e2u \u2014 b\u1ea1n \u0111\u1ebfn \u0111\u00fang ch\u1ed7 r\u1ed3i. B\u1ed9 roadmaps n\u00e0y kh\u00f4ng ph\u1ea3i l\u00fd thuy\u1ebft su\u00f4ng \u2014 m\u00e0 l\u00e0 b\u1ea3n \u0111\u1ed3 th\u1ef1c t\u1ebf, vi\u1ebft t\u1eeb g\u00f3c nh\u00ecn c\u1ee7a ng\u01b0\u1eddi \u0111\u00e3 \u0111i qua v\u00e0 \u0111ang \u0111i c\u00f9ng b\u1ea1n.*\r\n\r\n## T\u1ed5ng quan\r\n\r\nB\u1ed9 6 Career Roadmaps cho c\u00e1c vai t",
-    "techstack": [
-      "Git",
-      "Python",
-      "SQL",
-      "dbt"
-    ]
-  },
-  {
     "name": "i-learn-apache-iceberg",
     "description": "H\u01b0\u1edbng d\u1eabn self-host v\u00e0 t\u00ecm hi\u1ec3u Apache Iceberg",
     "url": "https://github.com/tunguyenn99/i-learn-apache-iceberg",
@@ -797,7 +797,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-07-03",
+    "updated_at": "2026-07-04",
     "topics": [
       "profile-portfolio"
     ],
