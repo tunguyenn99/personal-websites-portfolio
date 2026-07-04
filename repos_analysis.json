@@ -31,8 +31,8 @@
     "description": "If I had to start over from scratch",
     "url": "https://github.com/tunguyenn99/data-road-map-by-roles",
     "language": "N/A",
-    "stars": 67,
-    "forks": 11,
+    "stars": 81,
+    "forks": 13,
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-06-25",
@@ -376,6 +376,34 @@
     ]
   },
   {
+    "name": "ecommerce-data-modeling",
+    "description": "This repository contains a modern data warehouse (DWH) and analytics platform designed for the Olist Brazilian E-Commerce Dataset (over 1M+ rows of customers, items, reviews, and geo coordinates).  It implements a complete end-to-end ELT pipeline using DuckDB as the local OLAP database, dbt Core for Kimball dimensional transformations",
+    "url": "https://github.com/tunguyenn99/ecommerce-data-modeling",
+    "language": "Python",
+    "stars": 8,
+    "forks": 2,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-05-25",
+    "updated_at": "2026-07-04",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 188,
+    "readme_excerpt": "# \ud83d\uded2 Olist E-Commerce Data Warehouse & Analytics Platform\n\nThis repository contains a modern data warehouse (DWH) and analytics platform designed for the **Olist Brazilian E-Commerce Dataset** (over 1M+ rows of customers, items, reviews, and geo coordinates). \n\nIt implements a complete end-to-end ELT pipeline using **DuckDB** as the local OLAP database, **dbt Core** for Kimball dimensional transformations, **Astronomer Cosmos & Apache Airflow** for orchestrating task groups, **Bruin CLI** for con",
+    "techstack": [
+      "Airflow",
+      "CSV",
+      "Git",
+      "Python",
+      "Rust",
+      "SQL",
+      "dbt",
+      "uv"
+    ]
+  },
+  {
     "name": "how-to-ubuntu-install-wsl",
     "description": "C\u00e0i \u0111\u1eb7t Ubuntu tr\u00ean Windows (WSL)",
     "url": "https://github.com/tunguyenn99/how-to-ubuntu-install-wsl",
@@ -399,34 +427,6 @@
       "Python",
       "VS Code",
       "dbt"
-    ]
-  },
-  {
-    "name": "ecommerce-data-modeling",
-    "description": "This repository contains a modern data warehouse (DWH) and analytics platform designed for the Olist Brazilian E-Commerce Dataset (over 1M+ rows of customers, items, reviews, and geo coordinates).  It implements a complete end-to-end ELT pipeline using DuckDB as the local OLAP database, dbt Core for Kimball dimensional transformations",
-    "url": "https://github.com/tunguyenn99/ecommerce-data-modeling",
-    "language": "Python",
-    "stars": 7,
-    "forks": 2,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-05-25",
-    "updated_at": "2026-06-27",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 188,
-    "readme_excerpt": "# \ud83d\uded2 Olist E-Commerce Data Warehouse & Analytics Platform\n\nThis repository contains a modern data warehouse (DWH) and analytics platform designed for the **Olist Brazilian E-Commerce Dataset** (over 1M+ rows of customers, items, reviews, and geo coordinates). \n\nIt implements a complete end-to-end ELT pipeline using **DuckDB** as the local OLAP database, **dbt Core** for Kimball dimensional transformations, **Astronomer Cosmos & Apache Airflow** for orchestrating task groups, **Bruin CLI** for con",
-    "techstack": [
-      "Airflow",
-      "CSV",
-      "Git",
-      "Python",
-      "Rust",
-      "SQL",
-      "dbt",
-      "uv"
     ]
   },
   {
