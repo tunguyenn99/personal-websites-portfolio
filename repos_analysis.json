@@ -31,7 +31,7 @@
     "description": "If I had to start over from scratch",
     "url": "https://github.com/tunguyenn99/data-road-map-by-roles",
     "language": "N/A",
-    "stars": 138,
+    "stars": 139,
     "forks": 19,
     "is_fork": false,
     "is_private": false,
@@ -785,6 +785,30 @@
       "Python",
       "Scikit-learn",
       "TensorFlow"
+    ]
+  },
+  {
+    "name": "i-learn-api",
+    "description": "",
+    "url": "https://github.com/tunguyenn99/i-learn-api",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-10-04",
+    "updated_at": "2026-07-06",
+    "topics": [
+      "self-learning"
+    ],
+    "has_readme": true,
+    "readme_lines": 187,
+    "readme_excerpt": "# \ud83c\udfa7 I LEARN API\n\n> Link xem video: [freeCodeCamp.org](https://www.youtube.com/watch?v=WXsD0ZgxjRw&t=529s)\n\n## \ud83d\uddc2\ufe0f M\u1ee5c l\u1ee5c\n\n1. [Gi\u1edbi thi\u1ec7u v\u1ec1 API](#1-api-l\u00e0-g\u00ec)\n2. [Giao th\u1ee9c HTTP](#2-giao-th\u1ee9c-http)\n3. [C\u00e1c th\u00e0nh ph\u1ea7n c\u1ee7a HTTP Request & Response](#3-c\u00e1c-th\u00e0nh-ph\u1ea7n-c\u1ee7a-http-request--response)\n4. [C\u00e1c ph\u01b0\u01a1ng th\u1ee9c (HTTP Verbs)](#4-c\u00e1c-ph\u01b0\u01a1ng-th\u1ee9c-http-verbs)\n5. [REST APIs](#5-rest-apis)\n6. [C\u00e1ch ho\u1ea1t \u0111\u1ed9ng c\u1ee7a REST API](#6-c\u00e1ch-ho\u1ea1t-\u0111\u1ed9ng-c\u1ee7a-rest-api)\n7. [Use Case: Spotify API](#7-use-case-rest-api-c",
+    "techstack": [
+      "JSON",
+      "Python",
+      "Requests",
+      "XML"
     ]
   },
   {
