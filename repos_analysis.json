@@ -4,12 +4,12 @@
     "description": "Th\u01b0 vi\u1ec7n s\u00e1ch c\u1ee7a X\u00f3m - Free & Public \ud83d\ude0e",
     "url": "https://github.com/tunguyenn99/thu_vien_cua_xom_data",
     "language": "N/A",
-    "stars": 339,
+    "stars": 340,
     "forks": 101,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-07-25",
-    "updated_at": "2026-07-05",
+    "updated_at": "2026-07-06",
     "topics": [
       "community-contribution"
     ],
@@ -31,8 +31,8 @@
     "description": "If I had to start over from scratch",
     "url": "https://github.com/tunguyenn99/data-road-map-by-roles",
     "language": "N/A",
-    "stars": 121,
-    "forks": 18,
+    "stars": 138,
+    "forks": 19,
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-06-25",
@@ -178,12 +178,12 @@
     "description": "A lakehouse to store data of books on Tiki",
     "url": "https://github.com/tunguyenn99/from-tiki-crawler-to-lakehouse",
     "language": "Python",
-    "stars": 19,
+    "stars": 20,
     "forks": 9,
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-16",
-    "updated_at": "2026-06-04",
+    "updated_at": "2026-07-06",
     "topics": [
       "analytics-engineering"
     ],
@@ -797,7 +797,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-07-05",
+    "updated_at": "2026-07-06",
     "topics": [
       "profile-portfolio"
     ],
