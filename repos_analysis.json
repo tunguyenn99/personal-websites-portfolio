@@ -217,7 +217,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-07-12",
+    "updated_at": "2026-07-13",
     "topics": [
       "analytics-engineer"
     ],
@@ -788,28 +788,6 @@
     ]
   },
   {
-    "name": "learn-dp600-track",
-    "description": "My DP-600 Learning Track",
-    "url": "https://github.com/tunguyenn99/learn-dp600-track",
-    "language": "Jupyter Notebook",
-    "stars": 0,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-07-06",
-    "updated_at": "2026-07-12",
-    "topics": [],
-    "has_readme": true,
-    "readme_lines": 157,
-    "readme_excerpt": "# Microsoft Fabric Analytics Engineer (DP-600) Course Track\n\nKho l\u01b0u tr\u1eef n\u00e0y ch\u1ee9a t\u00e0i li\u1ec7u h\u01b0\u1edbng d\u1eabn th\u1ef1c h\u00e0nh (Lab manuals) \u0111\u01b0\u1ee3c bi\u00ean so\u1ea1n v\u00e0 d\u1ecbch sang ti\u1ebfng Vi\u1ec7t \u0111\u1ec3 chu\u1ea9n b\u1ecb cho k\u1ef3 thi **DP-600: Implementing Analytics Solutions Using Microsoft Fabric**. \n\nC\u00e1c b\u00e0i th\u1ef1c h\u00e0nh \u0111\u01b0\u1ee3c c\u1ea5u tr\u00fac r\u00f5 r\u00e0ng, \u0111i k\u00e8m h\u00ecnh \u1ea3nh minh h\u1ecda \u0111\u1ea7y \u0111\u1ee7 v\u00e0 c\u00e1c b\u1ed9 d\u1eef li\u1ec7u m\u1eabu (`dataset/`) t\u01b0\u01a1ng \u1ee9ng cho t\u1eebng ch\u01b0\u01a1ng. To\u00e0n b\u1ed9 t\u00e0i li\u1ec7u h\u01b0\u1edbng d\u1eabn s\u1eed d\u1ee5ng ti\u1ebfng Vi\u1ec7t l\u00e0m ng\u00f4n ng\u1eef ch\u00ednh, \u0111\u1ed3ng th\u1eddi gi\u1eef nguy\u00ean c\u00e1c thu\u1eadt ng\u1eef chuy\u00ean",
-    "techstack": [
-      "CSV",
-      "Power BI",
-      "SQL",
-      "Spark"
-    ]
-  },
-  {
     "name": "personal-websites-portfolio",
     "description": "",
     "url": "https://github.com/tunguyenn99/personal-websites-portfolio",
@@ -829,6 +807,28 @@
     "techstack": [
       "JSON",
       "React"
+    ]
+  },
+  {
+    "name": "learn-dp600-track",
+    "description": "My DP-600 Learning Track",
+    "url": "https://github.com/tunguyenn99/learn-dp600-track",
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-07-06",
+    "updated_at": "2026-07-12",
+    "topics": [],
+    "has_readme": true,
+    "readme_lines": 157,
+    "readme_excerpt": "# Microsoft Fabric Analytics Engineer (DP-600) Course Track\n\nKho l\u01b0u tr\u1eef n\u00e0y ch\u1ee9a t\u00e0i li\u1ec7u h\u01b0\u1edbng d\u1eabn th\u1ef1c h\u00e0nh (Lab manuals) \u0111\u01b0\u1ee3c bi\u00ean so\u1ea1n v\u00e0 d\u1ecbch sang ti\u1ebfng Vi\u1ec7t \u0111\u1ec3 chu\u1ea9n b\u1ecb cho k\u1ef3 thi **DP-600: Implementing Analytics Solutions Using Microsoft Fabric**. \n\nC\u00e1c b\u00e0i th\u1ef1c h\u00e0nh \u0111\u01b0\u1ee3c c\u1ea5u tr\u00fac r\u00f5 r\u00e0ng, \u0111i k\u00e8m h\u00ecnh \u1ea3nh minh h\u1ecda \u0111\u1ea7y \u0111\u1ee7 v\u00e0 c\u00e1c b\u1ed9 d\u1eef li\u1ec7u m\u1eabu (`dataset/`) t\u01b0\u01a1ng \u1ee9ng cho t\u1eebng ch\u01b0\u01a1ng. To\u00e0n b\u1ed9 t\u00e0i li\u1ec7u h\u01b0\u1edbng d\u1eabn s\u1eed d\u1ee5ng ti\u1ebfng Vi\u1ec7t l\u00e0m ng\u00f4n ng\u1eef ch\u00ednh, \u0111\u1ed3ng th\u1eddi gi\u1eef nguy\u00ean c\u00e1c thu\u1eadt ng\u1eef chuy\u00ean",
+    "techstack": [
+      "CSV",
+      "Power BI",
+      "SQL",
+      "Spark"
     ]
   },
   {
