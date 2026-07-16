@@ -217,7 +217,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-07-15",
+    "updated_at": "2026-07-16",
     "topics": [
       "analytics-engineer"
     ],
@@ -660,6 +660,52 @@
     ]
   },
   {
+    "name": "learn-dp600-track",
+    "description": "My DP-600 Learning Track",
+    "url": "https://github.com/tunguyenn99/learn-dp600-track",
+    "language": "Jupyter Notebook",
+    "stars": 2,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-07-06",
+    "updated_at": "2026-07-16",
+    "topics": [],
+    "has_readme": true,
+    "readme_lines": 157,
+    "readme_excerpt": "# Microsoft Fabric Analytics Engineer (DP-600) Course Track\n\nKho l\u01b0u tr\u1eef n\u00e0y ch\u1ee9a t\u00e0i li\u1ec7u h\u01b0\u1edbng d\u1eabn th\u1ef1c h\u00e0nh (Lab manuals) \u0111\u01b0\u1ee3c bi\u00ean so\u1ea1n v\u00e0 d\u1ecbch sang ti\u1ebfng Vi\u1ec7t \u0111\u1ec3 chu\u1ea9n b\u1ecb cho k\u1ef3 thi **DP-600: Implementing Analytics Solutions Using Microsoft Fabric**. \n\nC\u00e1c b\u00e0i th\u1ef1c h\u00e0nh \u0111\u01b0\u1ee3c c\u1ea5u tr\u00fac r\u00f5 r\u00e0ng, \u0111i k\u00e8m h\u00ecnh \u1ea3nh minh h\u1ecda \u0111\u1ea7y \u0111\u1ee7 v\u00e0 c\u00e1c b\u1ed9 d\u1eef li\u1ec7u m\u1eabu (`dataset/`) t\u01b0\u01a1ng \u1ee9ng cho t\u1eebng ch\u01b0\u01a1ng. To\u00e0n b\u1ed9 t\u00e0i li\u1ec7u h\u01b0\u1edbng d\u1eabn s\u1eed d\u1ee5ng ti\u1ebfng Vi\u1ec7t l\u00e0m ng\u00f4n ng\u1eef ch\u00ednh, \u0111\u1ed3ng th\u1eddi gi\u1eef nguy\u00ean c\u00e1c thu\u1eadt ng\u1eef chuy\u00ean",
+    "techstack": [
+      "CSV",
+      "Power BI",
+      "SQL",
+      "Spark"
+    ]
+  },
+  {
+    "name": "i-learn-api",
+    "description": "",
+    "url": "https://github.com/tunguyenn99/i-learn-api",
+    "language": "Python",
+    "stars": 2,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-10-04",
+    "updated_at": "2026-07-16",
+    "topics": [
+      "self-learning"
+    ],
+    "has_readme": true,
+    "readme_lines": 187,
+    "readme_excerpt": "# \ud83c\udfa7 I LEARN API\n\n> Link xem video: [freeCodeCamp.org](https://www.youtube.com/watch?v=WXsD0ZgxjRw&t=529s)\n\n## \ud83d\uddc2\ufe0f M\u1ee5c l\u1ee5c\n\n1. [Gi\u1edbi thi\u1ec7u v\u1ec1 API](#1-api-l\u00e0-g\u00ec)\n2. [Giao th\u1ee9c HTTP](#2-giao-th\u1ee9c-http)\n3. [C\u00e1c th\u00e0nh ph\u1ea7n c\u1ee7a HTTP Request & Response](#3-c\u00e1c-th\u00e0nh-ph\u1ea7n-c\u1ee7a-http-request--response)\n4. [C\u00e1c ph\u01b0\u01a1ng th\u1ee9c (HTTP Verbs)](#4-c\u00e1c-ph\u01b0\u01a1ng-th\u1ee9c-http-verbs)\n5. [REST APIs](#5-rest-apis)\n6. [C\u00e1ch ho\u1ea1t \u0111\u1ed9ng c\u1ee7a REST API](#6-c\u00e1ch-ho\u1ea1t-\u0111\u1ed9ng-c\u1ee7a-rest-api)\n7. [Use Case: Spotify API](#7-use-case-rest-api-c",
+    "techstack": [
+      "JSON",
+      "Python",
+      "Requests",
+      "XML"
+    ]
+  },
+  {
     "name": "dashboard-showcase",
     "description": "My BI Dashboard Showcase",
     "url": "https://github.com/tunguyenn99/dashboard-showcase",
@@ -679,52 +725,6 @@
     "techstack": [
       "Figma",
       "Power BI"
-    ]
-  },
-  {
-    "name": "i-learn-api",
-    "description": "",
-    "url": "https://github.com/tunguyenn99/i-learn-api",
-    "language": "Python",
-    "stars": 1,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-10-04",
-    "updated_at": "2026-07-14",
-    "topics": [
-      "self-learning"
-    ],
-    "has_readme": true,
-    "readme_lines": 187,
-    "readme_excerpt": "# \ud83c\udfa7 I LEARN API\n\n> Link xem video: [freeCodeCamp.org](https://www.youtube.com/watch?v=WXsD0ZgxjRw&t=529s)\n\n## \ud83d\uddc2\ufe0f M\u1ee5c l\u1ee5c\n\n1. [Gi\u1edbi thi\u1ec7u v\u1ec1 API](#1-api-l\u00e0-g\u00ec)\n2. [Giao th\u1ee9c HTTP](#2-giao-th\u1ee9c-http)\n3. [C\u00e1c th\u00e0nh ph\u1ea7n c\u1ee7a HTTP Request & Response](#3-c\u00e1c-th\u00e0nh-ph\u1ea7n-c\u1ee7a-http-request--response)\n4. [C\u00e1c ph\u01b0\u01a1ng th\u1ee9c (HTTP Verbs)](#4-c\u00e1c-ph\u01b0\u01a1ng-th\u1ee9c-http-verbs)\n5. [REST APIs](#5-rest-apis)\n6. [C\u00e1ch ho\u1ea1t \u0111\u1ed9ng c\u1ee7a REST API](#6-c\u00e1ch-ho\u1ea1t-\u0111\u1ed9ng-c\u1ee7a-rest-api)\n7. [Use Case: Spotify API](#7-use-case-rest-api-c",
-    "techstack": [
-      "JSON",
-      "Python",
-      "Requests",
-      "XML"
-    ]
-  },
-  {
-    "name": "learn-dp600-track",
-    "description": "My DP-600 Learning Track",
-    "url": "https://github.com/tunguyenn99/learn-dp600-track",
-    "language": "Jupyter Notebook",
-    "stars": 1,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-07-06",
-    "updated_at": "2026-07-14",
-    "topics": [],
-    "has_readme": true,
-    "readme_lines": 157,
-    "readme_excerpt": "# Microsoft Fabric Analytics Engineer (DP-600) Course Track\n\nKho l\u01b0u tr\u1eef n\u00e0y ch\u1ee9a t\u00e0i li\u1ec7u h\u01b0\u1edbng d\u1eabn th\u1ef1c h\u00e0nh (Lab manuals) \u0111\u01b0\u1ee3c bi\u00ean so\u1ea1n v\u00e0 d\u1ecbch sang ti\u1ebfng Vi\u1ec7t \u0111\u1ec3 chu\u1ea9n b\u1ecb cho k\u1ef3 thi **DP-600: Implementing Analytics Solutions Using Microsoft Fabric**. \n\nC\u00e1c b\u00e0i th\u1ef1c h\u00e0nh \u0111\u01b0\u1ee3c c\u1ea5u tr\u00fac r\u00f5 r\u00e0ng, \u0111i k\u00e8m h\u00ecnh \u1ea3nh minh h\u1ecda \u0111\u1ea7y \u0111\u1ee7 v\u00e0 c\u00e1c b\u1ed9 d\u1eef li\u1ec7u m\u1eabu (`dataset/`) t\u01b0\u01a1ng \u1ee9ng cho t\u1eebng ch\u01b0\u01a1ng. To\u00e0n b\u1ed9 t\u00e0i li\u1ec7u h\u01b0\u1edbng d\u1eabn s\u1eed d\u1ee5ng ti\u1ebfng Vi\u1ec7t l\u00e0m ng\u00f4n ng\u1eef ch\u00ednh, \u0111\u1ed3ng th\u1eddi gi\u1eef nguy\u00ean c\u00e1c thu\u1eadt ng\u1eef chuy\u00ean",
-    "techstack": [
-      "CSV",
-      "Power BI",
-      "SQL",
-      "Spark"
     ]
   },
   {
