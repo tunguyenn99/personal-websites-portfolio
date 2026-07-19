@@ -62,29 +62,10 @@
     "topics": [
       "analytics-engineer"
     ],
-    "has_readme": true,
-    "readme_lines": 227,
-    "readme_excerpt": "# CRAWL TOPCV JOBS (Learning Purposes)\n\nCrawler nh\u1eb9 nh\u00e0ng \u0111\u1ec3 thu th\u1eadp tin tuy\u1ec3n d\u1ee5ng **Data Analyst** tr\u00ean TopCV, t\u1ef1 \u0111\u1ed9ng gh\u00e9p **chi ti\u1ebft job** + **th\u00f4ng tin c\u00f4ng ty** v\u00e0o m\u1ed9t **Pandas DataFrame**, xu\u1ea5t **CSV/XLSX**, v\u00e0 (m\u1edbi) **orchestrate b\u1eb1ng Airflow**.\n\n---\n\n## \ud83d\ude0e Ki\u1ebfn tr\u00fac pipeline\n![Pipeline Architecture](imgs/00-architect.png)\n\n---\n\n## \u2705 T\u00ednh n\u0103ng\n\n* Crawl t\u1eeb trang search (\u0111a trang).\n* V\u00e0o t\u1eebng `job_url` l\u1ea5y: m\u1ee9c l\u01b0\u01a1ng, \u0111\u1ecba \u0111i\u1ec3m, kinh nghi\u1ec7m, deadline, m\u00f4 t\u1ea3/y\u00eau c\u1ea7u/quy\u1ec1n l\u1ee3i, tag, \u0111\u1ecba ch\u1ec9 ",
-    "techstack": [
-      "Airflow",
-      "BeautifulSoup",
-      "CSV",
-      "Docker",
-      "Excel",
-      "GitHub",
-      "JSON",
-      "Matplotlib",
-      "Metabase",
-      "Pandas",
-      "PostgreSQL",
-      "Power BI",
-      "Python",
-      "Requests",
-      "Seaborn",
-      "Selenium",
-      "XML",
-      "uv"
-    ]
+    "has_readme": false,
+    "readme_lines": 0,
+    "readme_excerpt": "",
+    "techstack": []
   },
   {
     "name": "distributed-data-processing",
@@ -843,7 +824,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-07-18",
+    "updated_at": "2026-07-19",
     "topics": [
       "profile-portfolio"
     ],
