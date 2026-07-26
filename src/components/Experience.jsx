@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Clock, Users, Star, ExternalLink, Calendar, Wrench } from 'lucide-react';
+import { Briefcase, Clock, Users, Star, ExternalLink, Calendar } from 'lucide-react';
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState('fulltime');
@@ -471,31 +471,6 @@ export default function Experience() {
               }}>
                 {item.description}
               </p>
-
-              {/* Skill Tags */}
-              {item.skills && item.skills.length > 0 && (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', flexWrap: 'wrap', marginTop: '0.25rem', position: 'relative', zIndex: 1 }}>
-                  <span style={{ fontSize: '0.725rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.25rem', fontWeight: 600 }}>
-                    <Wrench size={12} /> Skills:
-                  </span>
-                  {item.skills.map((skill, sIdx) => (
-                    <span
-                      key={sIdx}
-                      style={{
-                        fontSize: '0.725rem',
-                        fontWeight: 600,
-                        color: 'var(--text-main)',
-                        background: 'var(--surface-low)',
-                        border: '1px solid var(--outline-low)',
-                        padding: '0.15rem 0.55rem',
-                        borderRadius: '6px'
-                      }}
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              )}
             </div>
           ))}
         </div>
