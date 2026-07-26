@@ -263,6 +263,7 @@ export default function Experience() {
   };
 
   const currentTabInfo = tabOptions.find(t => t.id === activeTab);
+  const activeTabColor = currentTabInfo?.color || 'var(--primary)';
   const currentList = experienceData[activeTab] || [];
 
   return (
@@ -326,7 +327,7 @@ export default function Experience() {
           })}
         </div>
 
-        {/* Ultra-Clean Experience List matching LinkedIn */}
+        {/* Ultra-Clean Experience List matching active tab color */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {currentList.map((item, idx) => (
             <div
@@ -334,7 +335,7 @@ export default function Experience() {
               className="glass-panel"
               style={{
                 padding: '1.5rem 1.75rem',
-                border: '1px solid var(--outline-low)',
+                border: `1px solid var(--outline-low)`,
                 background: 'var(--surface-container)',
                 borderRadius: '16px',
                 display: 'flex',
@@ -346,7 +347,7 @@ export default function Experience() {
                 overflow: 'hidden'
               }}
             >
-              {/* Subtle Company Text Watermark (Logo Chìm Mờ Background) */}
+              {/* Subtle Company Text Watermark matching active tab color */}
               <div style={{
                 position: 'absolute',
                 right: '-10px',
@@ -354,8 +355,8 @@ export default function Experience() {
                 fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
                 fontWeight: 900,
                 fontFamily: 'Space Grotesk, sans-serif',
-                color: item.brandColor,
-                opacity: 0.05,
+                color: activeTabColor,
+                opacity: 0.06,
                 pointerEvents: 'none',
                 userSelect: 'none',
                 letterSpacing: '0.05em',
@@ -382,12 +383,12 @@ export default function Experience() {
                     width: '36px',
                     height: '36px',
                     borderRadius: '10px',
-                    background: `${item.brandColor}18`,
-                    border: `1px solid ${item.brandColor}33`,
+                    background: 'var(--surface-low)',
+                    border: `1px solid var(--outline-low)`,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: item.brandColor,
+                    color: activeTabColor,
                     fontWeight: 800,
                     fontSize: '0.8rem',
                     letterSpacing: '-0.02em',
@@ -405,7 +406,7 @@ export default function Experience() {
                       fontSize: '1.15rem',
                       fontWeight: 800,
                       fontFamily: 'Space Grotesk',
-                      color: item.brandColor,
+                      color: activeTabColor,
                       textDecoration: 'none',
                       display: 'inline-flex',
                       alignItems: 'center',
