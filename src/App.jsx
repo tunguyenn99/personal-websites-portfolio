@@ -3,12 +3,6 @@ import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Techstack from './components/Techstack';
-import Community from './components/Community';
-import Certifications from './components/Certifications';
-import Contact from './components/Contact';
-import ScrollToTop from './components/ScrollToTop';
-
 import ArchitectureFlow from './components/ArchitectureFlow';
 
 import { Analytics } from "@vercel/analytics/react";
@@ -32,7 +26,6 @@ function App() {
         <Experience />
         <Projects />
         <ArchitectureFlow />
-        <Techstack />
         <Community />
         <Certifications />
         <Contact />
