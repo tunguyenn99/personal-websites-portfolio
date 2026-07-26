@@ -237,7 +237,7 @@ export default function Experience() {
                   padding: '0.65rem 1.25rem',
                   borderRadius: '12px',
                   border: 'none',
-                  background: isActive ? 'var(--surface-container)' : 'transparent',
+                  background: isActive ? `${tab.color}15` : 'transparent',
                   color: isActive ? 'var(--text-main)' : 'var(--text-muted)',
                   cursor: 'pointer',
                   fontWeight: isActive ? 700 : 500,
@@ -248,12 +248,12 @@ export default function Experience() {
                 }}
               >
                 <span style={{ color: tab.color, display: 'flex' }}>{tab.icon}</span>
-                <span>{tab.label}</span>
+                <span style={{ color: isActive ? tab.color : 'inherit' }}>{tab.label}</span>
                 <span style={{
                   fontSize: '0.725rem',
                   padding: '0.15rem 0.5rem',
                   borderRadius: '9999px',
-                  background: isActive ? 'var(--tag-bg)' : 'var(--surface-low)',
+                  background: isActive ? `${tab.color}22` : 'var(--surface-low)',
                   color: isActive ? tab.color : 'var(--text-muted)',
                   fontWeight: 700
                 }}>
@@ -264,13 +264,15 @@ export default function Experience() {
           })}
         </div>
 
-        {/* Ultra-Clean Experience List with Company Image Logos & Background Watermarks */}
+        {/* Ultra-Clean Experience List synchronized with Active Tab Accent Color */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {currentList.map((item, idx) => (
             <div
               key={idx}
               className="glass-panel"
               style={{
+                '--active-accent': activeTabColor,
+                '--active-accent-glow': `${activeTabColor}33`,
                 padding: '1.5rem 1.75rem',
                 border: '1px solid var(--outline-low)',
                 background: 'var(--surface-container)',
@@ -278,8 +280,6 @@ export default function Experience() {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '0.85rem',
-                transition: 'all 0.25s ease',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.02)',
                 position: 'relative',
                 overflow: 'hidden'
               }}

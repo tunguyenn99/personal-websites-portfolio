@@ -160,15 +160,15 @@ h3,
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: clamp(1.5rem, 3vw, 2.5rem);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .glass-panel:hover {
-  transform: translateY(-5px) scale(1.008) !important;
-  background: var(--glass-bg-hover) !important;
-  border-color: var(--primary) !important;
-  box-shadow: var(--card-shadow-hover) !important;
+  transform: translateY(-5px) scale(1.008);
+  background: var(--glass-bg-hover);
+  border-color: var(--active-accent, var(--primary));
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 0 25px var(--active-accent-glow, rgba(0, 210, 127, 0.2));
 }
 
 /* Tonal Shifts */
