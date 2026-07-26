@@ -437,7 +437,7 @@ export default function ArchitectureFlow() {
                     <button
                       onClick={() => setActiveStep((prev) => (prev < flowSteps.length - 1 ? prev + 1 : 0))}
                       style={{
-                        background: 'none', border: 'none', color: 'var(--primary)',
+                        background: 'none', border: 'none', color: flowSteps[activeStep].accentColor,
                         cursor: 'pointer', fontWeight: 700, fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.3rem'
                       }}
                     >
