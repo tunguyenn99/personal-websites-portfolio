@@ -92,21 +92,21 @@ export default function AboutMe() {
           {/* Location */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 500 }}>
             <MapPin size={16} color="var(--primary)" />
-            <span>Hanoi Capital Region, Vietnam // 21.0285° N, 105.8542° E</span>
+            <span>Hanoi Capital Region, Vietnam</span>
           </div>
         </div>
 
         {/* Right Column: Clean Profile Image */}
         <div className="animate-fade-in" style={{ animationDelay: '0.3s', display: 'flex', justifyContent: 'center' }}>
           <div
+            className="glass-panel"
             style={{
               width: '100%',
               maxWidth: '360px',
               height: '460px',
               borderRadius: '24px',
               overflow: 'hidden',
-              border: '1px solid var(--outline-low)',
-              boxShadow: '0 15px 35px rgba(0,0,0,0.06)',
+              padding: 0,
               position: 'relative',
               background: 'var(--surface-container)'
             }}
