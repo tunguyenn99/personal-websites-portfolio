@@ -10,7 +10,6 @@ import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
 import ArchitectureFlow from './components/ArchitectureFlow';
-import Testimonials from './components/Testimonials';
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -35,7 +34,6 @@ function App() {
         <ArchitectureFlow />
         <Techstack />
         <Community />
-        <Testimonials />
         <Certifications />
         <Contact />
       </main>

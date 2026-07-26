@@ -43,7 +43,6 @@ export default function Navbar() {
     { name: 'Architecture', href: '#architecture' },
     { name: 'Techstack', href: '#techstack' },
     { name: 'Community', href: '#community' },
-    { name: 'Recommendations', href: '#testimonials' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ];
