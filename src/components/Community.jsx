@@ -131,9 +131,9 @@ export default function Community() {
             }}>
               <div style={{ position: 'relative', zIndex: 10 }}>
                 <div className="stat-number stat-number-secondary">
-                  <CountUp end={200} suffix="+ 🌟" />
+                  <CountUp end={communityData?.github?.total_stars || 839} suffix="+ 🌟" />
                 </div>
-                <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Books Library Stars</div>
+                <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Total GitHub Stars</div>
               </div>
               {/* Background Area Graph (Stars) */}
               <div style={{ position: 'absolute', bottom: -15, left: 0, width: '100%', height: '80%', opacity: 0.3, filter: 'blur(20px)', zIndex: 0 }}>

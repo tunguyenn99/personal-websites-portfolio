@@ -252,7 +252,7 @@ def parse_member_count(text):
             num_val *= 1000000000
     return int(num_val), f"{num_str}{unit.upper() if unit else ''}"
 
-def update_community_stats():
+def update_community_stats(total_stars=0):
     """Fetch Facebook group member count and update community_stats.json"""
     print("\nFetching Facebook group member count...")
     urls = [
@@ -309,32 +309,36 @@ def update_community_stats():
         except Exception:
             pass
             
+    fb_stats = fb_data and {
+        'url': 'https://www.facebook.com/groups/1707916343455196/',
+        'member_count': fb_data['count'],
+        'formatted_count': fb_data['formatted'],
+        'raw_text': fb_data['raw_text'],
+        'updated_at': datetime.now().isoformat()
+    } or existing.get('facebook_group') or {
+        'url': 'https://www.facebook.com/groups/1707916343455196/',
+        'member_count': 104100,
+        'formatted_count': '104.1K',
+        'raw_text': '104.1K members',
+        'updated_at': datetime.now().isoformat()
+    }
+
     if fb_data:
-        community_stats = {
-            'facebook_group': {
-                'url': 'https://www.facebook.com/groups/1707916343455196/',
-                'member_count': fb_data['count'],
-                'formatted_count': fb_data['formatted'],
-                'raw_text': fb_data['raw_text'],
-                'updated_at': datetime.now().isoformat()
-            }
-        }
         print(f"✅ Extracted FB group member count: {fb_data['formatted']} ({fb_data['count']} members)")
     else:
         print("⚠️ Could not fetch live FB group stats, using existing/fallback stats")
-        community_stats = existing or {
-            'facebook_group': {
-                'url': 'https://www.facebook.com/groups/1707916343455196/',
-                'member_count': 104100,
-                'formatted_count': '104.1K',
-                'raw_text': '104.1K members',
-                'updated_at': datetime.now().isoformat()
-            }
+
+    community_stats = {
+        'facebook_group': fb_stats,
+        'github': {
+            'total_stars': total_stars,
+            'updated_at': datetime.now().isoformat()
         }
+    }
         
     with open(stats_file, 'w') as f:
         json.dump(community_stats, f, indent=2)
-    print(f"✅ Saved community stats to community_stats.json")
+    print(f"✅ Saved community stats (FB: {fb_stats.get('formatted_count')}, GitHub Stars: {total_stars}) to community_stats.json")
 
 # Fetch repos from GitHub API
 print("Fetching repos from GitHub API...")
@@ -355,12 +359,14 @@ output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'repos_an
 with open(output_path, 'w') as f:
     json.dump(results, f, indent=2)
 
-print(f"✅ Analyzed {len(results)} repos. Saved to repos_analysis.json")
+total_stars = sum(r.get('stars', 0) for r in results)
+print(f"✅ Analyzed {len(results)} repos ({total_stars} total stars). Saved to repos_analysis.json")
 print(f"Sample tech stacks:")
 for repo in results[:3]:
     print(f"  - {repo['name']}: {', '.join(repo['techstack'][:5])}{'...' if len(repo['techstack']) > 5 else ''}")
 
 # Run community stats update
-update_community_stats()
+update_community_stats(total_stars=total_stars)
+
 
 
