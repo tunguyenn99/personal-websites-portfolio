@@ -3,7 +3,7 @@ import {
   Database, Terminal, Cloud, BarChart3, Workflow,
   PieChart, Code, Download, Layers, ShieldCheck,
   Eye, FileText, Layout, Users, ArrowRight, Activity, CheckCircle2,
-  Grid, GitBranch
+  Grid, GitBranch, ArrowUpRight
 } from 'lucide-react';
 import {
   SiPython, SiPostgresql, SiDbt, SiApacheairflow, SiSnowflake,
@@ -14,74 +14,69 @@ import {
 } from 'react-icons/si';
 
 export default function ArchitectureFlow() {
-  const [activeStep, setActiveStep] = useState(0);
+  const [selectedStage, setSelectedStage] = useState(null);
   const [viewMode, setViewMode] = useState('pipeline'); // 'pipeline' | 'matrix'
 
-  // Stage-by-stage pipeline flow
+  // Stage-by-stage pipeline flow (6 stages for 3x2 Grid)
   const flowSteps = [
     {
       id: 'ingestion',
       stage: '01. Ingestion',
       title: 'Sources & Ingestion',
       icon: <Download size={22} color="var(--primary)" />,
+      accentColor: 'var(--primary)',
       tools: [
         { name: 'Airbyte', icon: <SiAirbyte color="#6557FF" /> },
         { name: 'Fivetran', icon: <Code size={14} color="#005DFF" /> },
         { name: 'DLT', icon: <Download size={14} color="#FF694B" /> },
         { name: 'Selenium', icon: <SiSelenium color="#43B02A" /> },
-        { name: 'BeautifulSoup', icon: <Code size={14} color="#3776AB" /> },
         { name: 'Python ETL', icon: <SiPython color="#3776AB" /> },
-        { name: 'PostgreSQL / MySQL', icon: <SiPostgresql color="#336791" /> },
       ],
-      tagline: 'Multi-source Data Extraction & Ingestion',
-      description: 'Extracting high-volume transactional logs, payment streams, and e-commerce APIs across VNPAY, TNEX, and UpBase systems.',
+      tagline: 'Multi-source Data Extraction',
+      description: 'Extracting high-volume transactional logs, payment streams, and e-commerce APIs across VNPAY & TNEX.',
       highlights: [
-        'Automated CDC (Change Data Capture) & batch syncs',
-        'Partitioned daily raw file extraction to cloud storage',
-        'API & Web Scraping (Selenium / BeautifulSoup)'
+        'Automated CDC & batch syncs',
+        'Partitioned daily raw file extraction',
+        'API & Web Scraping (Selenium)'
       ]
     },
     {
       id: 'storage',
-      stage: '02. Storage & Warehousing',
-      title: 'Platforms & Warehouses',
+      stage: '02. Warehousing',
+      title: 'Storage & Warehousing',
       icon: <Layers size={22} color="#0284C7" />,
+      accentColor: '#0284C7',
       tools: [
         { name: 'BigQuery', icon: <SiGooglebigquery color="#3367D6" /> },
         { name: 'Snowflake', icon: <SiSnowflake color="#29B5E8" /> },
         { name: 'Databricks', icon: <SiDatabricks color="#FF3621" /> },
-        { name: 'PostgreSQL', icon: <SiPostgresql color="#336791" /> },
-        { name: 'GCP', icon: <SiGooglecloud color="#4285F4" /> },
-        { name: 'AWS', icon: <Cloud size={14} color="#FF9900" /> },
-        { name: 'Azure', icon: <Cloud size={14} color="#0078D4" /> },
-        { name: 'Supabase', icon: <SiSupabase color="#3ECF8E" /> },
-        { name: 'MongoDB', icon: <SiMongodb color="#13AA52" /> }
+        { name: 'AWS S3 / GCP', icon: <Cloud size={14} color="#FF9900" /> },
       ],
-      tagline: 'Enterprise Cloud Data Warehousing',
-      description: 'Centralized cloud data warehouses serving as the single source of truth for all business and financial analytics domains.',
+      tagline: 'Enterprise Cloud Warehouse',
+      description: 'Centralized cloud data warehouses serving as the single source of truth for financial & business domains.',
       highlights: [
-        'Separation of compute & storage for cost optimization',
-        'Role-based access control (RBAC) & data security',
-        'Clustered & partitioned tables for sub-second query performance'
+        'Separation of compute & storage',
+        'Role-based access control (RBAC)',
+        'Clustered & partitioned tables'
       ]
     },
     {
       id: 'transformation',
-      stage: '03. Transformation & CI/CD',
-      title: 'dbt & Data Engineering',
+      stage: '03. Transformation',
+      title: 'dbt & CI/CD Pipeline',
       icon: <Workflow size={22} color="#E11D48" />,
+      accentColor: '#E11D48',
       tools: [
         { name: 'dbt Core/Cloud', icon: <SiDbt color="#FF694B" /> },
         { name: 'Apache Spark', icon: <SiApachespark color="#E25A1C" /> },
         { name: 'SQL', icon: <SiPostgresql color="#336791" /> },
-        { name: 'Python', icon: <SiPython color="#3776AB" /> },
         { name: 'GitHub Actions', icon: <ShieldCheck size={14} color="var(--primary)" /> },
       ],
-      tagline: 'Kimball Dimensional Modeling & Testing',
+      tagline: 'Kimball Dimensional Modeling',
       description: 'Transforming raw schemas into production-ready Data Marts (Staging → Intermediate → Marts) with full CI/CD testing.',
       highlights: [
-        'Automated dbt test assertions & documentation deployments',
-        'Star-schema & Snowflake dimensional data modeling',
+        'Automated dbt test assertions',
+        'Star-schema dimensional modeling',
         'Slim CI PR checks via GitHub Actions'
       ]
     },
@@ -90,62 +85,59 @@ export default function ArchitectureFlow() {
       stage: '04. Orchestration',
       title: 'Workflow Orchestration',
       icon: <Activity size={22} color="#7C3AED" />,
+      accentColor: '#7C3AED',
       tools: [
         { name: 'Apache Airflow', icon: <SiApacheairflow color="#017CEE" /> },
         { name: 'Astronomer', icon: <Workflow size={14} color="#23D9FF" /> },
         { name: 'Dagster', icon: <Workflow size={14} color="#1890FF" /> },
         { name: 'Kestra', icon: <Workflow size={14} color="#FF6B6B" /> },
-        { name: 'Mage', icon: <Code size={14} color="#9D4EDD" /> }
       ],
       tagline: 'DAG Execution & Monitoring',
       description: 'Scheduling complex DAG dependencies with SLA alerts, automatic retries, and real-time pipeline monitoring.',
       highlights: [
-        'Modular Python DAG definitions & custom operators',
-        'Slack/Email alert triggers on pipeline failure',
-        'Backfill capability for historical data re-processing'
+        'Modular Python DAG definitions',
+        'Slack/Email alert triggers on failure',
+        'Backfill for historical re-processing'
       ]
     },
     {
       id: 'serving',
-      stage: '05. BI & Visualization',
-      title: 'Analytics & Executive Serving',
+      stage: '05. BI & Analytics',
+      title: 'Executive BI & Serving',
       icon: <BarChart3 size={22} color="#059669" />,
+      accentColor: '#059669',
       tools: [
         { name: 'Power BI', icon: <BarChart3 size={14} color="#F2C811" /> },
         { name: 'Looker Studio', icon: <SiLooker color="#4285F4" /> },
         { name: 'Superset', icon: <SiApachesuperset color="#00A2D3" /> },
         { name: 'Metabase', icon: <SiMetabase color="#509EE3" /> },
-        { name: 'GA4 / Analytics', icon: <SiGoogleanalytics color="#E37400" /> },
-        { name: 'SmartLook', icon: <Eye size={14} color="#FF6B35" /> }
       ],
       tagline: 'Actionable Business Intelligence',
-      description: 'Delivering real-time executive dashboards, Cohort retention analysis, and financial KPIs for business decision-makers.',
+      description: 'Delivering real-time executive dashboards, Cohort retention analysis, and financial KPIs for decision-makers.',
       highlights: [
         'Automated semantic model refreshes',
-        'Interactive drill-down reports & executive KPIs',
-        'Self-service analytics for business teams'
+        'Interactive drill-down reports',
+        'Self-service analytics for business'
       ]
     },
     {
       id: 'collaboration',
-      stage: '06. Collaboration & Tools',
-      title: 'Dev Productivity & Ops',
+      stage: '06. Dev & Ops',
+      title: 'Productivity & Collaboration',
       icon: <Users size={22} color="#D97706" />,
+      accentColor: '#D97706',
       tools: [
         { name: 'Jira', icon: <SiJira color="#0052CC" /> },
         { name: 'Confluence', icon: <SiConfluence color="#0052CC" /> },
         { name: 'Figma', icon: <SiFigma color="#F24E1E" /> },
         { name: 'VS Code', icon: <Code size={14} color="#007ACC" /> },
-        { name: 'DBeaver', icon: <SiDbeaver color="#382923" /> },
-        { name: 'Excel', icon: <FileText size={14} color="#217346" /> },
-        { name: 'Notion', icon: <SiNotion color="#000000" /> }
       ],
       tagline: 'Cross-functional Agile Workflow',
       description: 'Utilizing modern developer tooling, documentation standards, and agile collaboration platforms for team efficiency.',
       highlights: [
-        'Agile sprint planning with Jira & Confluence',
-        'UI/UX wireframing for BI dashboards with Figma',
-        'Clean documentation in Notion & Markdown'
+        'Agile sprint planning with Jira',
+        'UI/UX wireframing for dashboards',
+        'Clean documentation in Notion/Docs'
       ]
     }
   ];
@@ -245,7 +237,7 @@ export default function ArchitectureFlow() {
             Data Architecture & Tech Stack
           </h2>
           <p style={{ color: 'var(--text-muted)', maxWidth: '680px', margin: '0 auto', fontSize: '1.05rem' }}>
-            An interactive blueprint of how my data pipelines flow, integrated with my full production technology stack.
+            An end-to-end overview of how my data pipelines flow, integrated with my full production technology stack.
           </p>
 
           {/* Mode Switcher Buttons */}
@@ -258,20 +250,20 @@ export default function ArchitectureFlow() {
               onClick={() => setViewMode('pipeline')}
               style={{
                 display: 'flex', alignItems: 'center', gap: '0.5rem',
-                padding: '0.5rem 1.25rem', borderRadius: '9999px',
+                padding: '0.55rem 1.35rem', borderRadius: '9999px',
                 border: 'none',
                 background: viewMode === 'pipeline' ? 'var(--primary)' : 'transparent',
                 color: viewMode === 'pipeline' ? 'var(--on-primary)' : 'var(--text-muted)',
                 cursor: 'pointer', fontWeight: 700, fontSize: '0.85rem', transition: 'all 0.3s'
               }}
             >
-              <GitBranch size={16} /> Pipeline Stage Explorer
+              <GitBranch size={16} /> 3x2 Architecture Pipeline Grid
             </button>
             <button
               onClick={() => setViewMode('matrix')}
               style={{
                 display: 'flex', alignItems: 'center', gap: '0.5rem',
-                padding: '0.5rem 1.25rem', borderRadius: '9999px',
+                padding: '0.55rem 1.35rem', borderRadius: '9999px',
                 border: 'none',
                 background: viewMode === 'matrix' ? 'var(--primary)' : 'transparent',
                 color: viewMode === 'matrix' ? 'var(--on-primary)' : 'var(--text-muted)',
@@ -283,149 +275,92 @@ export default function ArchitectureFlow() {
           </div>
         </div>
 
-        {/* View Mode 1: Interactive Pipeline Stage Explorer */}
+        {/* View Mode 1: 3x2 Grid Layout for Pipeline Stages */}
         {viewMode === 'pipeline' && (
-          <div>
-            {/* Pipeline Stage Buttons */}
-            <div className="filter-container" style={{
-              display: 'flex', gap: '0.85rem', overflowX: 'auto', paddingBottom: '0.75rem',
-              marginBottom: '2.5rem', WebkitOverflowScrolling: 'touch'
-            }}>
-              {flowSteps.map((step, idx) => {
-                const isActive = activeStep === idx;
-                return (
-                  <button
-                    key={step.id}
-                    onClick={() => setActiveStep(idx)}
-                    style={{
-                      flex: '0 0 auto',
-                      minWidth: '175px',
-                      padding: '1.15rem 1rem',
-                      borderRadius: '16px',
-                      border: isActive ? '2px solid var(--primary)' : '1px solid var(--outline-low)',
-                      background: isActive ? 'var(--surface-container)' : 'var(--glass-bg)',
-                      color: isActive ? 'var(--text-main)' : 'var(--text-muted)',
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                      transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                      boxShadow: isActive ? '0 10px 25px rgba(0, 98, 65, 0.15)' : 'none',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '0.6rem',
-                      position: 'relative'
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                      <span style={{ fontSize: '0.68rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: isActive ? 'var(--primary)' : 'var(--text-muted)' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
+            gap: '1.75rem'
+          }}>
+            {flowSteps.map((step, idx) => {
+              const isSelected = selectedStage === idx;
+              return (
+                <div
+                  key={step.id}
+                  className="glass-panel"
+                  onClick={() => setSelectedStage(isSelected ? null : idx)}
+                  style={{
+                    padding: '1.75rem',
+                    border: isSelected ? `2px solid ${step.accentColor}` : '1px solid var(--outline-low)',
+                    background: 'var(--surface-container)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justify: 'space-between',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    position: 'relative',
+                    boxShadow: isSelected ? '0 12px 30px rgba(0,0,0,0.12)' : '0 4px 15px rgba(0,0,0,0.03)'
+                  }}
+                >
+                  <div>
+                    {/* Stage Header Badge & Icon */}
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                      <span style={{
+                        fontSize: '0.725rem', fontWeight: 800, textTransform: 'uppercase',
+                        letterSpacing: '0.1em', color: step.accentColor, background: 'var(--tag-bg)',
+                        padding: '0.3rem 0.65rem', borderRadius: '8px', border: '1px solid var(--tag-border)'
+                      }}>
                         {step.stage}
                       </span>
-                      {step.icon}
+                      <div style={{ padding: '0.5rem', borderRadius: '10px', background: 'var(--surface-low)', display: 'flex' }}>
+                        {step.icon}
+                      </div>
                     </div>
-                    <h4 style={{ fontSize: '0.9rem', fontWeight: 700, fontFamily: 'Space Grotesk', lineHeight: 1.2, margin: 0 }}>
+
+                    {/* Stage Title & Tagline */}
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, fontFamily: 'Space Grotesk', margin: '0 0 0.4rem 0', color: 'var(--text-main)' }}>
                       {step.title}
-                    </h4>
-                  </button>
-                );
-              })}
-            </div>
+                    </h3>
+                    <p style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--secondary)', marginBottom: '0.85rem' }}>
+                      {step.tagline}
+                    </p>
 
-            {/* Active Stage Detailed Card */}
-            <div className="glass-panel" style={{
-              padding: 'clamp(2rem, 4vw, 3rem)',
-              border: '1px solid var(--outline-low)',
-              background: 'var(--surface-container)',
-              boxShadow: '0 15px 35px rgba(0,0,0,0.06)'
-            }}>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
-                gap: '2.5rem',
-                alignItems: 'center'
-              }}>
-                {/* Left Column: Description & Highlights */}
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                    <div style={{
-                      padding: '0.6rem', borderRadius: '12px', background: 'var(--tag-bg)',
-                      border: '1px solid var(--tag-border)', display: 'flex'
-                    }}>
-                      {flowSteps[activeStep].icon}
-                    </div>
-                    <div>
-                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--primary)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                        {flowSteps[activeStep].stage}
-                      </span>
-                      <h3 style={{ fontSize: '1.75rem', fontWeight: 800, fontFamily: 'Space Grotesk', margin: 0, color: 'var(--text-main)' }}>
-                        {flowSteps[activeStep].title}
-                      </h3>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.55, marginBottom: '1.25rem' }}>
+                      {step.description}
+                    </p>
+
+                    {/* Checklist Highlights */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.25rem' }}>
+                      {step.highlights.map((hItem, hIdx) => (
+                        <div key={hIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.825rem', color: 'var(--text-main)' }}>
+                          <CheckCircle2 size={15} color={step.accentColor} style={{ flexShrink: 0 }} />
+                          <span>{hItem}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  <p style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.95rem', marginBottom: '1rem' }}>
-                    {flowSteps[activeStep].tagline}
-                  </p>
-
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                    {flowSteps[activeStep].description}
-                  </p>
-
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                    {flowSteps[activeStep].highlights.map((item, hIdx) => (
-                      <div key={hIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.875rem', color: 'var(--text-main)' }}>
-                        <CheckCircle2 size={16} color="var(--primary)" style={{ flexShrink: 0 }} />
-                        <span>{item}</span>
-                      </div>
-                    ))}
+                  {/* Tools Badges Footer */}
+                  <div style={{ borderTop: '1px solid var(--outline-low)', paddingTop: '1rem', marginTop: 'auto' }}>
+                    <span style={{ fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--text-muted)', display: 'block', marginBottom: '0.6rem' }}>
+                      Core Stack
+                    </span>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                      {step.tools.map((tool, tIdx) => (
+                        <div key={tIdx} style={{
+                          display: 'flex', alignItems: 'center', gap: '0.4rem',
+                          padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'var(--surface-low)',
+                          border: '1px solid var(--outline-low)'
+                        }}>
+                          <span style={{ fontSize: '1rem', display: 'flex' }}>{tool.icon}</span>
+                          <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-main)' }}>{tool.name}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-
-                {/* Right Column: Stack Badges for Active Stage */}
-                <div style={{
-                  background: 'var(--surface-low)', padding: '2rem', borderRadius: '16px',
-                  border: '1px solid var(--outline-low)', display: 'flex', flexDirection: 'column', gap: '1.25rem'
-                }}>
-                  <h4 style={{ fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-muted)', margin: 0 }}>
-                    Integrated Technologies
-                  </h4>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-                    {flowSteps[activeStep].tools.map((tool, tIdx) => (
-                      <div key={tIdx} style={{
-                        display: 'flex', alignItems: 'center', gap: '0.6rem',
-                        padding: '0.55rem 0.95rem', borderRadius: '12px', background: 'var(--surface-container)',
-                        border: '1px solid var(--outline-low)', boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
-                      }}>
-                        <span style={{ fontSize: '1.2rem', display: 'flex' }}>{tool.icon}</span>
-                        <span style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text-main)' }}>{tool.name}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div style={{
-                    marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--outline-low)',
-                    display: 'flex', justifyContent: 'space-between', alignItems: 'center'
-                  }}>
-                    <button
-                      onClick={() => setActiveStep((prev) => (prev > 0 ? prev - 1 : flowSteps.length - 1))}
-                      style={{
-                        background: 'none', border: 'none', color: 'var(--text-muted)',
-                        cursor: 'pointer', fontWeight: 600, fontSize: '0.85rem'
-                      }}
-                    >
-                      ← Previous Stage
-                    </button>
-                    <button
-                      onClick={() => setActiveStep((prev) => (prev < flowSteps.length - 1 ? prev + 1 : 0))}
-                      style={{
-                        background: 'none', border: 'none', color: 'var(--primary)',
-                        cursor: 'pointer', fontWeight: 700, fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.3rem'
-                      }}
-                    >
-                      Next Stage <ArrowRight size={14} />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         )}
 
@@ -434,7 +369,7 @@ export default function ArchitectureFlow() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
-            gap: '2rem'
+            gap: '1.75rem'
           }}>
             {techCategories.map((group, gIdx) => (
               <div key={gIdx} className="glass-panel" style={{
