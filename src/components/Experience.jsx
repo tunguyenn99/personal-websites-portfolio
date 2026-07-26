@@ -23,7 +23,7 @@ export default function Experience() {
         isCurrent: true,
         tag: 'Full-time',
         initials: 'GP',
-        brandColor: '#0055A5',
+        brandColor: '#F37021',
         watermark: 'GPBANK',
         description: 'Build cool systems, learn new wisdoms ^^',
         skills: ['dbt (DBT)', 'Apache Airflow', 'Python', 'SQL', 'Data Warehousing']
