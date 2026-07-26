@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&family=Inter:wght@300..900&display=swap');
 
 :root {
-  /* STARBUCKS ESPRESSO & EMERALD PREMIUM DESIGN TOKENS */
+  /* STARBUCKS ESPRESSO & EMERALD PREMIUM DESIGN TOKENS (DARK MODE DEFAULT) */
   --primary: #00D27F;         /* Vibrant Starbucks Emerald Green */
   --on-primary: #041C12;      /* Deep Forest Black for high contrast on green */
   --secondary: #E2B857;       /* Warm Caramel Gold Accent */
@@ -19,6 +19,27 @@
 
   --glass-bg: rgba(23, 46, 39, 0.75);
   --glass-border: rgba(0, 210, 127, 0.22);
+}
+
+[data-theme="light"] {
+  /* STARBUCKS WARM SOFT CREAM & HOUSE GREEN (LIGHT MODE) */
+  --primary: #006241;         /* Starbucks House Green */
+  --on-primary: #FFFFFF;      /* White text on House Green button */
+  --secondary: #B8860B;       /* Warm Coffee Gold Accent */
+  --on-secondary: #FFFFFF;
+  --surface: #F2F0EB;         /* Warm Soft Cream Coffee Canvas */
+  --surface-low: #E5E2DA;     /* Soft Cream Well */
+  --surface-container: #FFFFFF; /* Pure White Card Surface */
+  --surface-high: #F9F8F6;    /* Active Card Surface */
+  --surface-highest: #DDD9CF;
+
+  --text-main: #1E3932;       /* Starbucks Deep Evergreen Text */
+  --text-muted: #4D6D63;      /* Muted Evergreen Text */
+  --outline: #006241;
+  --outline-low: rgba(0, 98, 65, 0.15);
+
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(0, 98, 65, 0.18);
 }
 
 /* Mobile-friendly defaults */
