@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Clock, Users, Star, ExternalLink, Calendar, MapPin, Wrench } from 'lucide-react';
+import { Briefcase, Clock, Users, Star, ExternalLink, Calendar, Wrench } from 'lucide-react';
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState('fulltime');
@@ -439,23 +439,8 @@ export default function Experience() {
                   )}
                 </div>
 
-                {/* Period & Location Tags */}
+                {/* Period Tag */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
-                  <span style={{
-                    fontSize: '0.75rem',
-                    fontWeight: 600,
-                    color: 'var(--text-muted)',
-                    background: 'var(--surface-low)',
-                    padding: '0.25rem 0.65rem',
-                    borderRadius: '8px',
-                    border: '1px solid var(--outline-low)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.3rem'
-                  }}>
-                    <MapPin size={12} color="var(--text-muted)" />
-                    {item.location}
-                  </span>
 
                   <span style={{
                     fontSize: '0.75rem',
