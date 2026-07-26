@@ -13,7 +13,7 @@ import cloudaceLogo from '../assets/company-logo/cloudace.png';
 import fixmaLogo from '../assets/company-logo/fixma.png';
 import vietcleaningLogo from '../assets/company-logo/vietcleaning.png';
 import bravebitsLogo from '../assets/company-logo/bravebits.png';
-import xomdataLogo from '../assets/company-logo/xomdata.png';
+import xomdataLogo from '../assets/company-logo/xomdata.svg';
 import mindxLogo from '../assets/company-logo/mindx.png';
 import alphasightsLogo from '../assets/company-logo/alphasights.png';
 import archesLogo from '../assets/company-logo/arches.png';
