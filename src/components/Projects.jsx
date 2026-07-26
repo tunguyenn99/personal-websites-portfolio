@@ -205,7 +205,15 @@ export default function Projects() {
         <h2 className="section-title">Highlighted Projects</h2>
         
         {/* Filter UI */}
-        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '3rem', justifyContent: 'center' }}>
+        <div className="filter-container" style={{
+          display: 'flex',
+          gap: '0.75rem',
+          marginBottom: '3rem',
+          overflowX: 'auto',
+          paddingBottom: '0.5rem',
+          WebkitOverflowScrolling: 'touch',
+          justifyContent: 'flex-start'
+        }}>
           {filters.map(filter => {
             const isTopGenres = filter === 'Top 10 Starring Projects';
             const color = topicColors[filter] || '#8B5CF6';
@@ -221,8 +229,9 @@ export default function Projects() {
                   color: activeFilter === filter ? color : 'var(--text-muted)',
                   cursor: 'pointer',
                   transition: 'all 0.3s',
-                  fontWeight: 500,
-                  backdropFilter: 'blur(10px)'
+                  fontWeight: 600,
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0
                 }}
               >
                 {isTopGenres ? filter : formatTopic(filter)}

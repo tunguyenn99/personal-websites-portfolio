@@ -145,7 +145,7 @@ export default function Experience() {
 
         <div className="card-grid responsive-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
           gap: '2.5rem',
           alignItems: 'stretch'
         }}>

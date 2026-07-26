@@ -174,9 +174,8 @@ export default function Certifications() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
-          gridAutoRows: '200px',
-          gap: '2rem',
-          minHeight: '600px'
+          gridAutoRows: 'minmax(200px, auto)',
+          gap: '2rem'
         }}>
           {paginatedCerts.map((cert, index) => (
             <div

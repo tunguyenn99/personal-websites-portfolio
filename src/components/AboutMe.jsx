@@ -58,7 +58,7 @@ export default function AboutMe() {
               {titles[titleIndex]}
             </span>
           </div>
-          <h1 style={{ fontSize: '5rem', fontWeight: 700, lineHeight: 1.1, margin: '0 0 2rem 0', fontFamily: 'Space Grotesk' }}>
+          <h1 style={{ fontSize: 'clamp(2.5rem, 7vw, 4.75rem)', fontWeight: 700, lineHeight: 1.1, margin: '0 0 1.5rem 0', fontFamily: 'Space Grotesk' }}>
             Hi there, I'm <br />
             <span style={{ color: 'var(--primary)', position: 'relative' }}>
               Tu Nguyen
@@ -67,17 +67,17 @@ export default function AboutMe() {
               </svg>
             </span>
           </h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: '650px', fontWeight: 400, minHeight: '4.5em' }}>
+          <p style={{ fontSize: 'clamp(1rem, 3.5vw, 1.25rem)', color: 'var(--text-muted)', marginBottom: '2rem', maxWidth: '650px', fontWeight: 400 }}>
             {displayedText}
             {!isTypingComplete && <span className="typing-cursor">|</span>}
           </p>
 
-          <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem', justifyContent: 'inherit' }}>
             <a href="#projects" className="btn-primary">Explore Work <ArrowRight size={18} /></a>
             <a href="https://github.com/tunguyenn99" target="_blank" rel="noreferrer" className="btn-secondary"><Github size={18} /> Source Code</a>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: 500 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 500 }}>
             <MapPin size={18} color="var(--secondary)" /> <span>Hanoi, Vietnam // 21.0285° N, 105.8542° E</span>
           </div>
         </div>
@@ -88,17 +88,20 @@ export default function AboutMe() {
 
             <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2 }}>
               <div style={{ position: 'absolute', width: '350px', height: '350px', background: 'var(--primary)', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.15 }}></div>
-              <div style={{
-                width: '100%',
-                maxWidth: '380px',
-                height: '480px',
-                borderRadius: '24px',
-                overflow: 'hidden',
-                border: '1px solid rgba(255,255,255,0.1)',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-                position: 'relative',
-                transform: 'perspective(1000px) rotateY(-5deg)'
-              }}>
+              <div
+                className="profile-card-wrapper"
+                style={{
+                  width: '100%',
+                  maxWidth: '380px',
+                  height: '480px',
+                  borderRadius: '24px',
+                  overflow: 'hidden',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                  position: 'relative',
+                  transform: 'perspective(1000px) rotateY(-5deg)'
+                }}
+              >
                 <img
                   src={profilePic}
                   alt="Tu Nguyen"
@@ -121,17 +124,15 @@ export default function AboutMe() {
       <style>{`
         @media (max-width: 1024px) {
           #about .responsive-grid { gap: 2rem !important; }
-          #about h1 { font-size: 4rem !important; }
         }
         @media (max-width: 900px) {
           #about .responsive-grid { grid-template-columns: 1fr !important; text-align: center; }
           #about .responsive-grid div { display: flex; flex-direction: column; align-items: center; }
           #about .responsive-grid p { margin-left: auto; margin-right: auto; }
-          #about h1 { font-size: 3.5rem !important; }
         }
         @media (max-width: 480px) {
-          #about h1 { font-size: 2.75rem !important; }
-          #about .glass-panel { height: 400px !important; }
+          #about .glass-panel { height: 350px !important; }
+          .profile-card-wrapper { height: 300px !important; max-width: 260px !important; }
         }
       `}</style>
     </section>
