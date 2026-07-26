@@ -102,7 +102,7 @@ export default function Community() {
               position: 'relative',
               padding: '2.5rem 2rem',
               borderRadius: '16px',
-              background: 'rgba(255,255,255,0.03)',
+              background: 'var(--surface-container)',
               overflow: 'hidden',
               border: '1px solid var(--outline-low)'
             }}>
@@ -110,7 +110,7 @@ export default function Community() {
                 <div className="stat-number">
                   <CountUp end={communityData?.facebook_group?.member_count || 104100} formatK={true} suffix="+" />
                 </div>
-                <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Active Members</div>
+                <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 800, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Active Members</div>
               </div>
               {/* Background Area Graph (Members) */}
               <div style={{ position: 'absolute', bottom: -15, left: 0, width: '100%', height: '80%', opacity: 0.35, filter: 'blur(20px)', zIndex: 0 }}>
@@ -125,7 +125,7 @@ export default function Community() {
               position: 'relative',
               padding: '2.5rem 2rem',
               borderRadius: '16px',
-              background: 'rgba(255,255,255,0.03)',
+              background: 'var(--surface-container)',
               overflow: 'hidden',
               border: '1px solid var(--outline-low)'
             }}>
@@ -133,7 +133,7 @@ export default function Community() {
                 <div className="stat-number stat-number-secondary">
                   <CountUp end={communityData?.github?.total_stars || 839} suffix="+ 🌟" />
                 </div>
-                <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Total GitHub Stars</div>
+                <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 800, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Total GitHub Stars</div>
               </div>
               {/* Background Area Graph (Stars) */}
               <div style={{ position: 'absolute', bottom: -15, left: 0, width: '100%', height: '80%', opacity: 0.3, filter: 'blur(20px)', zIndex: 0 }}>

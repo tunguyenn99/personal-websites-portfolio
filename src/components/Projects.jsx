@@ -216,8 +216,8 @@ export default function Projects() {
                 style={{
                   padding: '0.5rem 1rem',
                   borderRadius: '9999px',
-                  border: `1px solid ${activeFilter === filter ? color : 'rgba(255,255,255,0.1)'}`,
-                  background: activeFilter === filter ? `${color}20` : 'rgba(0,0,0,0.2)',
+                  border: `1px solid ${activeFilter === filter ? color : 'var(--outline-low)'}`,
+                  background: activeFilter === filter ? `${color}20` : 'var(--surface-container)',
                   color: activeFilter === filter ? color : 'var(--text-muted)',
                   cursor: 'pointer',
                   transition: 'all 0.3s',

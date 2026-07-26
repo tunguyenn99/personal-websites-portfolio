@@ -27,25 +27,25 @@
 }
 
 [data-theme="light"] {
-  /* STARBUCKS WARM SOFT CREAM & HOUSE GREEN (LIGHT MODE) */
+  /* STARBUCKS HIGH-CONTRAST WARM SOFT CREAM & EVERGREEN PALETTE */
   --primary: #006241;         /* Starbucks House Green */
   --on-primary: #FFFFFF;      /* White text on House Green button */
-  --secondary: #B8860B;       /* Warm Coffee Gold Accent */
+  --secondary: #9E6B00;       /* Rich Deep Roasted Coffee Gold (high-contrast for stats & text) */
   --on-secondary: #FFFFFF;
-  --surface: #F2F0EB;         /* Warm Soft Cream Coffee Canvas */
-  --surface-low: #E5E2DA;     /* Soft Cream Well */
+  --surface: #F4F2EC;         /* Soft Warm Coffee Cream Canvas */
+  --surface-low: #E8E5DD;     /* Soft Cream Well */
   --surface-container: #FFFFFF; /* Pure White Card Surface */
-  --surface-high: #F9F8F6;    /* Active Card Surface */
+  --surface-high: #F8F7F4;    /* Active Card Surface */
   --surface-highest: #DDD9CF;
 
-  --text-main: #1E3932;       /* Starbucks Deep Evergreen Text */
-  --text-muted: #4D6D63;      /* Muted Evergreen Text */
+  --text-main: #0B221A;       /* Ultra-Deep Evergreen Obsidian (High contrast, crisp text) */
+  --text-muted: #26443B;      /* Deep Slate Evergreen (High contrast secondary text) */
   --outline: #006241;
-  --outline-low: rgba(0, 98, 65, 0.15);
+  --outline-low: rgba(0, 98, 65, 0.22);
 
-  --glass-bg: rgba(255, 255, 255, 0.92);
+  --glass-bg: rgba(255, 255, 255, 0.95);
   --glass-bg-hover: #FFFFFF;
-  --glass-border: rgba(0, 98, 65, 0.2);
+  --glass-border: rgba(0, 98, 65, 0.22);
   --card-shadow-hover: 0 15px 35px rgba(0, 98, 65, 0.12), 0 0 15px rgba(0, 98, 65, 0.08);
   --btn-primary-hover: #004d33;
   --tag-bg: rgba(0, 98, 65, 0.08);
