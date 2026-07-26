@@ -235,6 +235,107 @@ def process_repo(repo):
         'techstack': techstack
     }
 
+def parse_member_count(text):
+    import re
+    match = re.search(r'([\d\.,]+)\s*([KMBkmb])?', text)
+    if not match:
+        return None, text
+    num_str, unit = match.groups()
+    num_val = float(num_str.replace(',', ''))
+    if unit:
+        u = unit.upper()
+        if u == 'K':
+            num_val *= 1000
+        elif u == 'M':
+            num_val *= 1000000
+        elif u == 'B':
+            num_val *= 1000000000
+    return int(num_val), f"{num_str}{unit.upper() if unit else ''}"
+
+def update_community_stats():
+    """Fetch Facebook group member count and update community_stats.json"""
+    print("\nFetching Facebook group member count...")
+    urls = [
+        'https://www.facebook.com/groups/1707916343455196/',
+        'https://www.facebook.com/groups/xomdata/'
+    ]
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1',
+        'Upgrade-Insecure-Requests': '1'
+    }
+    
+    fb_data = None
+    import re
+    for url in urls:
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                html = resp.read().decode('utf-8', errors='ignore')
+                match = re.search(r'\"formatted_count_text\"\s*:\s*\"([^\"]+)\"', html)
+                if match:
+                    count_text = match.group(1)
+                    count_num, formatted = parse_member_count(count_text)
+                    fb_data = {
+                        'count': count_num,
+                        'formatted': formatted,
+                        'raw_text': count_text
+                    }
+                    break
+                match2 = re.search(r'(\d+(?:\.\d+)?[KMB]?)\s*(?:members|thành viên)', html, re.IGNORECASE)
+                if match2:
+                    count_text = match2.group(1)
+                    count_num, formatted = parse_member_count(count_text)
+                    fb_data = {
+                        'count': count_num,
+                        'formatted': formatted,
+                        'raw_text': count_text
+                    }
+                    break
+        except Exception as e:
+            print(f"Error fetching {url}: {e}")
+            
+    stats_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'community_stats.json')
+    existing = {}
+    if os.path.exists(stats_file):
+        try:
+            with open(stats_file, 'r') as f:
+                existing = json.load(f)
+        except Exception:
+            pass
+            
+    if fb_data:
+        community_stats = {
+            'facebook_group': {
+                'url': 'https://www.facebook.com/groups/1707916343455196/',
+                'member_count': fb_data['count'],
+                'formatted_count': fb_data['formatted'],
+                'raw_text': fb_data['raw_text'],
+                'updated_at': datetime.now().isoformat()
+            }
+        }
+        print(f"✅ Extracted FB group member count: {fb_data['formatted']} ({fb_data['count']} members)")
+    else:
+        print("⚠️ Could not fetch live FB group stats, using existing/fallback stats")
+        community_stats = existing or {
+            'facebook_group': {
+                'url': 'https://www.facebook.com/groups/1707916343455196/',
+                'member_count': 104100,
+                'formatted_count': '104.1K',
+                'raw_text': '104.1K members',
+                'updated_at': datetime.now().isoformat()
+            }
+        }
+        
+    with open(stats_file, 'w') as f:
+        json.dump(community_stats, f, indent=2)
+    print(f"✅ Saved community stats to community_stats.json")
+
 # Fetch repos from GitHub API
 print("Fetching repos from GitHub API...")
 repos = fetch_github_repos('tunguyenn99')
@@ -258,4 +359,8 @@ print(f"✅ Analyzed {len(results)} repos. Saved to repos_analysis.json")
 print(f"Sample tech stacks:")
 for repo in results[:3]:
     print(f"  - {repo['name']}: {', '.join(repo['techstack'][:5])}{'...' if len(repo['techstack']) > 5 else ''}")
+
+# Run community stats update
+update_community_stats()
+
 

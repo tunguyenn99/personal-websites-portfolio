@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Users, Heart, ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
 import { SiFacebook, SiGithub } from 'react-icons/si';
+import communityData from '../../community_stats.json';
 
 // Asset Imports
 import img1 from '../assets/community/xom_data_fb.png';
@@ -11,7 +12,7 @@ import img4 from '../assets/community/top_posts.png';
 const images = [img1, img2, img3, img4];
 
 // Animated Number Component
-function CountUp({ end, duration = 2000, suffix = "" }) {
+function CountUp({ end, duration = 2000, suffix = "", formatK = false }) {
   const [count, setCount] = useState(0);
   const elementRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -46,7 +47,11 @@ function CountUp({ end, duration = 2000, suffix = "" }) {
     window.requestAnimationFrame(step);
   }, [isVisible, end, duration]);
 
-  return <span ref={elementRef}>{count.toLocaleString()}{suffix}</span>;
+  const displayValue = formatK && count >= 1000
+    ? `${(count / 1000).toFixed(1)}K`
+    : count.toLocaleString();
+
+  return <span ref={elementRef}>{displayValue}{suffix}</span>;
 }
 
 export default function Community() {
@@ -103,7 +108,7 @@ export default function Community() {
             }}>
               <div style={{ position: 'relative', zIndex: 10 }}>
                 <div className="stat-number">
-                  <CountUp end={80000} suffix="+" />
+                  <CountUp end={communityData?.facebook_group?.member_count || 104100} formatK={true} suffix="+" />
                 </div>
                 <div style={{ fontSize: '0.9rem', opacity: 0.7, textTransform: 'uppercase', fontWeight: 700, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Active Members</div>
               </div>
@@ -215,7 +220,7 @@ export default function Community() {
                     {activeSlide === 3 && "Top-Tier Knowledge Sharing"}
                   </h4>
                   <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', maxWidth: '100%', lineHeight: 1.6 }}>
-                    {activeSlide === 0 && "Connecting 75k hearts and minds in Vietnam's most active data-driven community."}
+                    {activeSlide === 0 && `Connecting ${communityData?.facebook_group?.formatted_count || '104.1K'} hearts and minds in Vietnam's most active data-driven community.`}
                     {activeSlide === 1 && "Unprecedented growth driven by high-quality content and community-first values."}
                     {activeSlide === 2 && "Built for builders, hobbyists, and experts alike across all STEM and data domains."}
                     {activeSlide === 3 && "Empowering the next generation of data professionals with open resources and deep insights."}
