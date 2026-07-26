@@ -4,6 +4,10 @@ import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import ArchitectureFlow from './components/ArchitectureFlow';
+import Community from './components/Community';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
