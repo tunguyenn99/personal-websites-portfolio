@@ -1,26 +1,22 @@
 import React, { useState } from 'react';
-import {
-  Briefcase,
-  Clock,
-  Users,
-  Star,
-  ExternalLink,
-  Calendar,
-  Landmark,
-  Zap,
-  CreditCard,
-  ShoppingBag,
-  Store,
-  TrendingUp,
-  Cloud,
-  LineChart,
-  Sparkles,
-  Code2,
-  GraduationCap,
-  Globe,
-  Handshake,
-  Building2
-} from 'lucide-react';
+import { Briefcase, Clock, Users, Star, ExternalLink, Calendar } from 'lucide-react';
+
+// Import Company Logo Assets
+import gpbankLogo from '../assets/company-logo/gpbank.png';
+import tnexLogo from '../assets/company-logo/tnex.png';
+import vnpayLogo from '../assets/company-logo/vnpay.png';
+import shopeeLogo from '../assets/company-logo/shopee.png';
+import mpiLogo from '../assets/company-logo/mpi.png';
+import hvLogo from '../assets/company-logo/hvgroup.png';
+import upbaseLogo from '../assets/company-logo/upbase.png';
+import cloudaceLogo from '../assets/company-logo/cloudace.png';
+import fixmaLogo from '../assets/company-logo/fixma.png';
+import vietcleaningLogo from '../assets/company-logo/vietcleaning.png';
+import bravebitsLogo from '../assets/company-logo/bravebits.png';
+import xomdataLogo from '../assets/company-logo/xomdata.png';
+import mindxLogo from '../assets/company-logo/mindx.png';
+import alphasightsLogo from '../assets/company-logo/alphasights.png';
+import archesLogo from '../assets/company-logo/arches.png';
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState('fulltime');
@@ -41,9 +37,7 @@ export default function Experience() {
         role: 'Senior Analytics Engineer @ Engineering Team',
         period: 'Jun 2026 - Present',
         isCurrent: true,
-        initials: 'GP',
-        icon: <Landmark size={18} />,
-        watermarkIcon: <Landmark size={130} />,
+        logo: gpbankLogo,
         description: 'Build cool systems, learn new wisdoms ^^'
       },
       {
@@ -53,9 +47,7 @@ export default function Experience() {
         role: 'Senior Data Analyst',
         period: 'Sep 2025 - Jun 2026',
         isCurrent: false,
-        initials: 'TN',
-        icon: <Zap size={18} />,
-        watermarkIcon: <Zap size={130} />,
+        logo: tnexLogo,
         description: 'Solved meaningful challenges, influencing strategy, and growing with a curious, data-driven team.'
       },
       {
@@ -65,9 +57,7 @@ export default function Experience() {
         role: 'Data Analyst',
         period: 'Apr 2023 - Sep 2025',
         isCurrent: false,
-        initials: 'VN',
-        icon: <CreditCard size={18} />,
-        watermarkIcon: <CreditCard size={130} />,
+        logo: vnpayLogo,
         description: 'Conducted in-depth data analysis and built automated reports on performance metrics and risk warnings for cheating across VNPAY’s ecosystem services on E-wallet and Banking Applications, including VnShop, VnTicket, VnEvent, and Telecom Services.'
       },
       {
@@ -77,9 +67,7 @@ export default function Experience() {
         role: 'Project Management Officer @ New Sellers Flow',
         period: 'Nov 2021 - Apr 2023',
         isCurrent: false,
-        initials: 'SH',
-        icon: <ShoppingBag size={18} />,
-        watermarkIcon: <ShoppingBag size={130} />,
+        logo: shopeeLogo,
         description: 'Responsible for data analysis and campaign operations for the New Seller Flow team, supporting new Shopee sellers participating in the "Potential Sellers" program.'
       },
       {
@@ -89,9 +77,7 @@ export default function Experience() {
         role: 'Consultant Network Operator',
         period: 'Oct 2020 - Nov 2021',
         isCurrent: false,
-        initials: 'MPI',
-        icon: <Building2 size={18} />,
-        watermarkIcon: <Building2 size={130} />,
+        logo: mpiLogo,
         description: 'Managed the "Consultant" section on the National Portal for Small and Medium Enterprise (SME) Support.'
       }
     ],
@@ -103,9 +89,7 @@ export default function Experience() {
         role: 'Analytics Engineer',
         period: 'Feb 2026 - Jul 2026',
         isCurrent: false,
-        initials: 'HV',
-        icon: <TrendingUp size={18} />,
-        watermarkIcon: <TrendingUp size={130} />,
+        logo: hvLogo,
         description: 'Architected and deployed a comprehensive BI ecosystem to unify fragmented e-commerce data, providing the executive team with visibility into sales performance, marketing ROI and inventory health.'
       },
       {
@@ -115,9 +99,7 @@ export default function Experience() {
         role: 'Data Analytics Engineer',
         period: 'Jan 2026 - Jul 2026',
         isCurrent: false,
-        initials: 'UB',
-        icon: <Store size={18} />,
-        watermarkIcon: <Store size={130} />,
+        logo: upbaseLogo,
         description: 'Collaborated with a high-energy team of data enthusiasts to architect a scalable data infrastructure for an omnichannel e-commerce ecosystem. Focused on transforming fragmented raw data into high-performance Data Marts and OLAP Cubes to power frontend visualizations.'
       },
       {
@@ -127,9 +109,7 @@ export default function Experience() {
         role: 'Business Intelligence Developer',
         period: 'Dec 2025 - Feb 2026',
         isCurrent: false,
-        initials: 'CA',
-        icon: <Cloud size={18} />,
-        watermarkIcon: <Cloud size={130} />,
+        logo: cloudaceLogo,
         description: 'Developed a centralized, interactive dashboard system to streamline institutional reporting and improve data-driven decision-making for school leadership.'
       },
       {
@@ -139,9 +119,7 @@ export default function Experience() {
         role: 'Business Intelligence Developer',
         period: 'Sep 2024 - Aug 2025',
         isCurrent: false,
-        initials: 'FX',
-        icon: <LineChart size={18} />,
-        watermarkIcon: <LineChart size={130} />,
+        logo: fixmaLogo,
         description: 'Designed and deployed embedded BI solutions and automated business intelligence systems.'
       },
       {
@@ -151,9 +129,7 @@ export default function Experience() {
         role: 'Business Intelligence Analyst',
         period: 'Jan 2025 - May 2025',
         isCurrent: false,
-        initials: 'VC',
-        icon: <Sparkles size={18} />,
-        watermarkIcon: <Sparkles size={130} />,
+        logo: vietcleaningLogo,
         description: 'Analyzed service booking funnels, customer churn rate, and staff allocation efficiency.'
       },
       {
@@ -163,9 +139,7 @@ export default function Experience() {
         role: 'Data Analyst (Outsource)',
         period: 'Mar 2024 - Jul 2024',
         isCurrent: false,
-        initials: 'BB',
-        icon: <Code2 size={18} />,
-        watermarkIcon: <Code2 size={130} />,
+        logo: bravebitsLogo,
         description: 'Supported report development and data analysis on customer and product insights to drive business decisions for global Shopify applications.'
       }
     ],
@@ -177,9 +151,7 @@ export default function Experience() {
         role: 'Co-Owner',
         period: 'Apr 2025 - Present',
         isCurrent: true,
-        initials: 'XD',
-        icon: <Users size={18} />,
-        watermarkIcon: <Users size={130} />,
+        logo: xomdataLogo,
         description: 'Search "Xóm Data" on Facebook to find us! Co-owner of Vietnam\'s top data community for learners and practitioners.'
       },
       {
@@ -189,9 +161,7 @@ export default function Experience() {
         role: 'Data Instructor',
         period: 'May 2023 - Feb 2026',
         isCurrent: false,
-        initials: 'MX',
-        icon: <GraduationCap size={18} />,
-        watermarkIcon: <GraduationCap size={130} />,
+        logo: mindxLogo,
         description: 'Taught data-related courses (D4E, BI), managed classroom activities, assessed student progress, and provided career guidance to ensure successful learning outcomes.'
       },
       {
@@ -201,9 +171,7 @@ export default function Experience() {
         role: 'Data Curriculum Designer',
         period: 'Feb 2025 - Dec 2025',
         isCurrent: false,
-        initials: 'MX',
-        icon: <GraduationCap size={18} />,
-        watermarkIcon: <GraduationCap size={130} />,
+        logo: mindxLogo,
         description: 'Crafted industry-relevant learning experiences that empower professionals to turn raw data into actionable insights. Designed structured learning paths bridging SQL, Python, Power BI, and data modeling.'
       }
     ],
@@ -215,9 +183,7 @@ export default function Experience() {
         role: 'Advisor',
         period: 'Apr 2023 - Feb 2026',
         isCurrent: false,
-        initials: 'AS',
-        icon: <Globe size={18} />,
-        watermarkIcon: <Globe size={130} />,
+        logo: alphasightsLogo,
         description: 'Collaborated with AlphaSights branches in Seoul, Tokyo, Hong Kong, and Shanghai, bringing expertise with a strong focus on the Southeast Asia market to deliver practical insights for forward-thinking businesses.'
       },
       {
@@ -227,9 +193,7 @@ export default function Experience() {
         role: 'Advisor',
         period: 'Feb 2025 - Feb 2026',
         isCurrent: false,
-        initials: 'AG',
-        icon: <Handshake size={18} />,
-        watermarkIcon: <Handshake size={130} />,
+        logo: archesLogo,
         description: 'Arches connects Asia\'s industry specialists across sectors and functions with Investment & Corporate Strategy clients to assess an industry, a market, or a company to evaluate its business risks or opportunities.'
       }
     ]
@@ -300,7 +264,7 @@ export default function Experience() {
           })}
         </div>
 
-        {/* Ultra-Clean Experience List with Watermark Logos */}
+        {/* Ultra-Clean Experience List with Company Image Logos & Background Watermarks */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {currentList.map((item, idx) => (
             <div
@@ -320,22 +284,27 @@ export default function Experience() {
                 overflow: 'hidden'
               }}
             >
-              {/* Watermark Logo Icon Background (Logo Chìm Mờ) */}
-              <div style={{
-                position: 'absolute',
-                right: '-15px',
-                bottom: '-25px',
-                color: activeTabColor,
-                opacity: 0.05,
-                pointerEvents: 'none',
-                userSelect: 'none',
-                transform: 'rotate(-10deg)',
-                zIndex: 0
-              }}>
-                {item.watermarkIcon}
-              </div>
+              {/* Subtle Company Image Logo Background Watermark (Logo Chìm Mờ Image) */}
+              <img
+                src={item.logo}
+                alt={item.company}
+                style={{
+                  position: 'absolute',
+                  right: '-15px',
+                  bottom: '-20px',
+                  width: '130px',
+                  height: '130px',
+                  objectFit: 'contain',
+                  opacity: 0.08,
+                  pointerEvents: 'none',
+                  userSelect: 'none',
+                  transform: 'rotate(-8deg)',
+                  filter: 'grayscale(30%)',
+                  zIndex: 0
+                }}
+              />
 
-              {/* Row Header: Company Logo Icon, Company Name & Role */}
+              {/* Row Header: Company Logo Image Badge, Company Name & Role */}
               <div style={{
                 display: 'flex',
                 justify: 'space-between',
@@ -346,20 +315,30 @@ export default function Experience() {
                 zIndex: 1
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-                  {/* Company Logo Icon Badge */}
+                  {/* Company Logo Image Badge */}
                   <div style={{
                     width: '38px',
                     height: '38px',
                     borderRadius: '11px',
-                    background: 'var(--surface-low)',
+                    background: '#FFFFFF',
                     border: '1px solid var(--outline-low)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: activeTabColor,
-                    flexShrink: 0
+                    padding: '4px',
+                    boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
+                    flexShrink: 0,
+                    overflow: 'hidden'
                   }}>
-                    {item.icon}
+                    <img
+                      src={item.logo}
+                      alt={item.company}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain'
+                      }}
+                    />
                   </div>
 
                   <a
