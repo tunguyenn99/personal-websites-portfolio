@@ -40,8 +40,10 @@ export default function Navbar() {
     { name: 'About Me', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Architecture', href: '#architecture' },
     { name: 'Techstack', href: '#techstack' },
     { name: 'Community', href: '#community' },
+    { name: 'Recommendations', href: '#testimonials' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ];
