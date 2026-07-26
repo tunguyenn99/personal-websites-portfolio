@@ -372,7 +372,7 @@ export default function ArchitectureFlow() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                     {flowSteps[activeStep].highlights.map((item, hIdx) => (
                       <div key={hIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.875rem', color: 'var(--text-main)' }}>
-                        <CheckCircle2 size={16} color="var(--primary)" flexShrink={0} />
+                        <CheckCircle2 size={16} color="var(--primary)" style={{ flexShrink: 0 }} />
                         <span>{item}</span>
                       </div>
                     ))}
