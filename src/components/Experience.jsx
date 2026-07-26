@@ -1,5 +1,26 @@
 import React, { useState } from 'react';
-import { Briefcase, Clock, Users, Star, ExternalLink, Calendar } from 'lucide-react';
+import {
+  Briefcase,
+  Clock,
+  Users,
+  Star,
+  ExternalLink,
+  Calendar,
+  Landmark,
+  Zap,
+  CreditCard,
+  ShoppingBag,
+  Store,
+  TrendingUp,
+  Cloud,
+  LineChart,
+  Sparkles,
+  Code2,
+  GraduationCap,
+  Globe,
+  Handshake,
+  Building2
+} from 'lucide-react';
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState('fulltime');
@@ -19,14 +40,11 @@ export default function Experience() {
         url: 'https://www.gpbank.com.vn/',
         role: 'Senior Analytics Engineer @ Engineering Team',
         period: 'Jun 2026 - Present',
-        location: 'Hanoi Capital Region · On-site',
         isCurrent: true,
-        tag: 'Full-time',
         initials: 'GP',
-        brandColor: '#F37021',
-        watermark: 'GPBANK',
-        description: 'Build cool systems, learn new wisdoms ^^',
-        skills: ['dbt (DBT)', 'Apache Airflow', 'Python', 'SQL', 'Data Warehousing']
+        icon: <Landmark size={18} />,
+        watermarkIcon: <Landmark size={130} />,
+        description: 'Build cool systems, learn new wisdoms ^^'
       },
       {
         company: 'TNEX',
@@ -34,14 +52,11 @@ export default function Experience() {
         url: 'https://www.tnex.com.vn/',
         role: 'Senior Data Analyst',
         period: 'Sep 2025 - Jun 2026',
-        location: 'Hanoi Capital Region · On-site',
         isCurrent: false,
-        tag: 'Full-time',
         initials: 'TN',
-        brandColor: '#00B4D8',
-        watermark: 'TNEX',
-        description: 'Solved meaningful challenges, influencing strategy, and growing with a curious, data-driven team.',
-        skills: ['dbt (DBT)', 'AWS Cloud9', 'SQL', 'Python']
+        icon: <Zap size={18} />,
+        watermarkIcon: <Zap size={130} />,
+        description: 'Solved meaningful challenges, influencing strategy, and growing with a curious, data-driven team.'
       },
       {
         company: 'VNPAY',
@@ -49,14 +64,11 @@ export default function Experience() {
         url: 'https://vnpay.vn/',
         role: 'Data Analyst',
         period: 'Apr 2023 - Sep 2025',
-        location: 'Hanoi Capital Region · On-site',
         isCurrent: false,
-        tag: 'Full-time',
         initials: 'VN',
-        brandColor: '#0052CC',
-        watermark: 'VNPAY',
-        description: 'Conducted in-depth data analysis and built automated reports on performance metrics and risk warnings for cheating across VNPAY’s ecosystem services on E-wallet and Banking Applications, including VnShop, VnTicket, VnEvent, and Telecom Services.',
-        skills: ['Python', 'MongoDB', 'SQL', 'Power BI', 'Risk Analysis']
+        icon: <CreditCard size={18} />,
+        watermarkIcon: <CreditCard size={130} />,
+        description: 'Conducted in-depth data analysis and built automated reports on performance metrics and risk warnings for cheating across VNPAY’s ecosystem services on E-wallet and Banking Applications, including VnShop, VnTicket, VnEvent, and Telecom Services.'
       },
       {
         company: 'Shopee',
@@ -64,29 +76,23 @@ export default function Experience() {
         url: 'https://shopee.vn/',
         role: 'Project Management Officer @ New Sellers Flow',
         period: 'Nov 2021 - Apr 2023',
-        location: 'Hanoi, Vietnam · On-site',
         isCurrent: false,
-        tag: 'Full-time',
         initials: 'SH',
-        brandColor: '#EE4D2D',
-        watermark: 'SHOPEE',
-        description: 'Responsible for data analysis and campaign operations for the New Seller Flow team, supporting new Shopee sellers participating in the "Potential Sellers" program.',
-        skills: ['Strategy', 'Data Analysis', 'SQL', 'Presentation Skills']
+        icon: <ShoppingBag size={18} />,
+        watermarkIcon: <ShoppingBag size={130} />,
+        description: 'Responsible for data analysis and campaign operations for the New Seller Flow team, supporting new Shopee sellers participating in the "Potential Sellers" program.'
       },
       {
-        company: 'Ministry of Planning and Investment, Vietnam',
-        companyFull: 'MPI Vietnam',
+        company: 'MPI Vietnam',
+        companyFull: 'Ministry of Planning and Investment',
         url: 'https://www.mpi.gov.vn/',
         role: 'Consultant Network Operator',
         period: 'Oct 2020 - Nov 2021',
-        location: 'Hanoi, Vietnam · On-site',
         isCurrent: false,
-        tag: 'Government',
         initials: 'MPI',
-        brandColor: '#B8860B',
-        watermark: 'MPI',
-        description: 'Managed the "Consultant" section on the National Portal for Small and Medium Enterprise (SME) Support.',
-        skills: ['Strategy', 'Microsoft Outlook', 'Database Management']
+        icon: <Building2 size={18} />,
+        watermarkIcon: <Building2 size={130} />,
+        description: 'Managed the "Consultant" section on the National Portal for Small and Medium Enterprise (SME) Support.'
       }
     ],
     parttime: [
@@ -96,14 +102,11 @@ export default function Experience() {
         url: 'https://hvgroup.com.vn/',
         role: 'Analytics Engineer',
         period: 'Feb 2026 - Jul 2026',
-        location: 'Ho Chi Minh City · Remote',
         isCurrent: false,
-        tag: 'Freelance',
         initials: 'HV',
-        brandColor: '#7C3AED',
-        watermark: 'HV GROUP',
-        description: 'Architected and deployed a comprehensive BI ecosystem to unify fragmented e-commerce data, providing the executive team with visibility into sales performance, marketing ROI and inventory health.',
-        skills: ['Microsoft Power BI', 'Power BI Embedded Analytics', 'dbt', 'SQL']
+        icon: <TrendingUp size={18} />,
+        watermarkIcon: <TrendingUp size={130} />,
+        description: 'Architected and deployed a comprehensive BI ecosystem to unify fragmented e-commerce data, providing the executive team with visibility into sales performance, marketing ROI and inventory health.'
       },
       {
         company: 'UpBase',
@@ -111,14 +114,11 @@ export default function Experience() {
         url: 'https://upbase.asia/',
         role: 'Data Analytics Engineer',
         period: 'Jan 2026 - Jul 2026',
-        location: 'Hanoi Capital Region · Remote',
         isCurrent: false,
-        tag: 'Freelance',
         initials: 'UB',
-        brandColor: '#2563EB',
-        watermark: 'UPBASE',
-        description: 'Collaborated with a high-energy team of data enthusiasts to architect a scalable data infrastructure for an omnichannel e-commerce ecosystem. Focused on transforming fragmented raw data into high-performance Data Marts and OLAP Cubes to power frontend visualizations.',
-        skills: ['dbt (DBT)', 'Apache Superset', 'Python', 'SQL']
+        icon: <Store size={18} />,
+        watermarkIcon: <Store size={130} />,
+        description: 'Collaborated with a high-energy team of data enthusiasts to architect a scalable data infrastructure for an omnichannel e-commerce ecosystem. Focused on transforming fragmented raw data into high-performance Data Marts and OLAP Cubes to power frontend visualizations.'
       },
       {
         company: 'Cloud Ace Vietnam',
@@ -126,14 +126,11 @@ export default function Experience() {
         url: 'https://vn.cloud-ace.com/',
         role: 'Business Intelligence Developer',
         period: 'Dec 2025 - Feb 2026',
-        location: 'Hanoi Capital Region · Remote',
         isCurrent: false,
-        tag: 'Freelance',
         initials: 'CA',
-        brandColor: '#4285F4',
-        watermark: 'CLOUD ACE',
-        description: 'Developed a centralized, interactive dashboard system to streamline institutional reporting and improve data-driven decision-making for school leadership.',
-        skills: ['Google BigQuery', 'Google Looker Studio', 'GCP']
+        icon: <Cloud size={18} />,
+        watermarkIcon: <Cloud size={130} />,
+        description: 'Developed a centralized, interactive dashboard system to streamline institutional reporting and improve data-driven decision-making for school leadership.'
       },
       {
         company: 'FIXMA',
@@ -141,14 +138,11 @@ export default function Experience() {
         url: 'https://fixma.vn/',
         role: 'Business Intelligence Developer',
         period: 'Sep 2024 - Aug 2025',
-        location: 'Hanoi Capital Region · Remote',
         isCurrent: false,
-        tag: 'Freelance',
         initials: 'FX',
-        brandColor: '#0EA5E9',
-        watermark: 'FIXMA',
-        description: 'Designed and deployed embedded BI solutions and automated business intelligence systems.',
-        skills: ['Power BI Embedded Analytics', 'Microsoft Power BI', 'SQL']
+        icon: <LineChart size={18} />,
+        watermarkIcon: <LineChart size={130} />,
+        description: 'Designed and deployed embedded BI solutions and automated business intelligence systems.'
       },
       {
         company: 'VietCleaning',
@@ -156,14 +150,11 @@ export default function Experience() {
         url: 'https://vietcleaning.vn/',
         role: 'Business Intelligence Analyst',
         period: 'Jan 2025 - May 2025',
-        location: 'Hanoi Capital Region · Remote',
         isCurrent: false,
-        tag: 'Freelance',
         initials: 'VC',
-        brandColor: '#10B981',
-        watermark: 'VIETCLEAN',
-        description: 'Analyzed service booking funnels, customer churn rate, and staff allocation efficiency.',
-        skills: ['Microsoft Power BI', 'Power BI Embedded Analytics', 'Excel']
+        icon: <Sparkles size={18} />,
+        watermarkIcon: <Sparkles size={130} />,
+        description: 'Analyzed service booking funnels, customer churn rate, and staff allocation efficiency.'
       },
       {
         company: 'BraveBits',
@@ -171,14 +162,11 @@ export default function Experience() {
         url: 'https://bravebits.co/',
         role: 'Data Analyst (Outsource)',
         period: 'Mar 2024 - Jul 2024',
-        location: 'Hanoi Capital Region · Hybrid',
         isCurrent: false,
-        tag: 'Freelance',
         initials: 'BB',
-        brandColor: '#F59E0B',
-        watermark: 'BRAVEBITS',
-        description: 'Supported report development and data analysis on customer and product insights to drive business decisions for global Shopify applications.',
-        skills: ['Google Looker Studio', 'Google BigQuery', 'SQL']
+        icon: <Code2 size={18} />,
+        watermarkIcon: <Code2 size={130} />,
+        description: 'Supported report development and data analysis on customer and product insights to drive business decisions for global Shopify applications.'
       }
     ],
     community: [
@@ -188,14 +176,11 @@ export default function Experience() {
         url: 'https://www.facebook.com/groups/xomdata/',
         role: 'Co-Owner',
         period: 'Apr 2025 - Present',
-        location: 'Hanoi Capital Region · Remote',
         isCurrent: true,
-        tag: 'Self-employed',
         initials: 'XD',
-        brandColor: '#1877F2',
-        watermark: 'XÓM DATA',
-        description: 'Search "Xóm Data" on Facebook to find us! Co-owner of Vietnam\'s top data community for learners and practitioners.',
-        skills: ['Community Leadership', 'Technical Sharing', 'Data Career Mentoring']
+        icon: <Users size={18} />,
+        watermarkIcon: <Users size={130} />,
+        description: 'Search "Xóm Data" on Facebook to find us! Co-owner of Vietnam\'s top data community for learners and practitioners.'
       },
       {
         company: 'MindX Technology School',
@@ -203,14 +188,11 @@ export default function Experience() {
         url: 'https://mindx.edu.vn/',
         role: 'Data Instructor',
         period: 'May 2023 - Feb 2026',
-        location: 'Hanoi Capital Region · Hybrid',
         isCurrent: false,
-        tag: 'Part-time',
         initials: 'MX',
-        brandColor: '#EC4899',
-        watermark: 'MINDX',
-        description: 'Taught data-related courses (D4E, BI), managed classroom activities, assessed student progress, and provided career guidance to ensure successful learning outcomes.',
-        skills: ['SQL', 'Python', 'Power BI', 'Mentoring']
+        icon: <GraduationCap size={18} />,
+        watermarkIcon: <GraduationCap size={130} />,
+        description: 'Taught data-related courses (D4E, BI), managed classroom activities, assessed student progress, and provided career guidance to ensure successful learning outcomes.'
       },
       {
         company: 'MindX Technology School',
@@ -218,14 +200,11 @@ export default function Experience() {
         url: 'https://mindx.edu.vn/',
         role: 'Data Curriculum Designer',
         period: 'Feb 2025 - Dec 2025',
-        location: 'Hanoi Capital Region · Remote',
         isCurrent: false,
-        tag: 'Part-time',
         initials: 'MX',
-        brandColor: '#EC4899',
-        watermark: 'MINDX',
-        description: 'Crafted industry-relevant learning experiences that empower professionals to turn raw data into actionable insights. Designed structured learning paths bridging SQL, Python, Power BI, and data modeling.',
-        skills: ['Curriculum Design', 'SQL', 'Python', 'Power BI', 'Data Modeling']
+        icon: <GraduationCap size={18} />,
+        watermarkIcon: <GraduationCap size={130} />,
+        description: 'Crafted industry-relevant learning experiences that empower professionals to turn raw data into actionable insights. Designed structured learning paths bridging SQL, Python, Power BI, and data modeling.'
       }
     ],
     advisor: [
@@ -235,14 +214,11 @@ export default function Experience() {
         url: 'https://www.alphasights.com/',
         role: 'Advisor',
         period: 'Apr 2023 - Feb 2026',
-        location: 'Seoul, South Korea · Remote',
         isCurrent: false,
-        tag: 'Freelance',
         initials: 'AS',
-        brandColor: '#6366F1',
-        watermark: 'ALPHASIGHTS',
-        description: 'Collaborated with AlphaSights branches in Seoul, Tokyo, Hong Kong, and Shanghai, bringing expertise with a strong focus on the Southeast Asia market to deliver practical insights for forward-thinking businesses.',
-        skills: ['Industry Advisory', 'Market Intelligence', 'Fintech Insights']
+        icon: <Globe size={18} />,
+        watermarkIcon: <Globe size={130} />,
+        description: 'Collaborated with AlphaSights branches in Seoul, Tokyo, Hong Kong, and Shanghai, bringing expertise with a strong focus on the Southeast Asia market to deliver practical insights for forward-thinking businesses.'
       },
       {
         company: 'Arches',
@@ -250,14 +226,11 @@ export default function Experience() {
         url: 'https://arches-global.com/',
         role: 'Advisor',
         period: 'Feb 2025 - Feb 2026',
-        location: 'Tokyo, Japan · Remote',
         isCurrent: false,
-        tag: 'Freelance',
         initials: 'AG',
-        brandColor: '#8B5CF6',
-        watermark: 'ARCHES',
-        description: 'Arches connects Asia\'s industry specialists across sectors and functions with Investment & Corporate Strategy clients to assess an industry, a market, or a company to evaluate its business risks or opportunities.',
-        skills: ['Expert Advisory', 'Corporate Strategy', 'Knowledge Sharing']
+        icon: <Handshake size={18} />,
+        watermarkIcon: <Handshake size={130} />,
+        description: 'Arches connects Asia\'s industry specialists across sectors and functions with Investment & Corporate Strategy clients to assess an industry, a market, or a company to evaluate its business risks or opportunities.'
       }
     ]
   };
@@ -327,7 +300,7 @@ export default function Experience() {
           })}
         </div>
 
-        {/* Ultra-Clean Experience List matching active tab color */}
+        {/* Ultra-Clean Experience List with Watermark Logos */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {currentList.map((item, idx) => (
             <div
@@ -335,7 +308,7 @@ export default function Experience() {
               className="glass-panel"
               style={{
                 padding: '1.5rem 1.75rem',
-                border: `1px solid var(--outline-low)`,
+                border: '1px solid var(--outline-low)',
                 background: 'var(--surface-container)',
                 borderRadius: '16px',
                 display: 'flex',
@@ -347,27 +320,22 @@ export default function Experience() {
                 overflow: 'hidden'
               }}
             >
-              {/* Subtle Company Text Watermark matching active tab color */}
+              {/* Watermark Logo Icon Background (Logo Chìm Mờ) */}
               <div style={{
                 position: 'absolute',
-                right: '-10px',
-                bottom: '-15px',
-                fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
-                fontWeight: 900,
-                fontFamily: 'Space Grotesk, sans-serif',
+                right: '-15px',
+                bottom: '-25px',
                 color: activeTabColor,
-                opacity: 0.06,
+                opacity: 0.05,
                 pointerEvents: 'none',
                 userSelect: 'none',
-                letterSpacing: '0.05em',
-                transform: 'rotate(-5deg)',
-                whiteSpace: 'nowrap',
+                transform: 'rotate(-10deg)',
                 zIndex: 0
               }}>
-                {item.watermark}
+                {item.watermarkIcon}
               </div>
 
-              {/* Row Header: Company Badge, Company Name & Role */}
+              {/* Row Header: Company Logo Icon, Company Name & Role */}
               <div style={{
                 display: 'flex',
                 justify: 'space-between',
@@ -378,24 +346,20 @@ export default function Experience() {
                 zIndex: 1
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-                  {/* Company Logo Badge */}
+                  {/* Company Logo Icon Badge */}
                   <div style={{
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '10px',
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '11px',
                     background: 'var(--surface-low)',
-                    border: `1px solid var(--outline-low)`,
+                    border: '1px solid var(--outline-low)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: activeTabColor,
-                    fontWeight: 800,
-                    fontSize: '0.8rem',
-                    letterSpacing: '-0.02em',
-                    fontFamily: 'Space Grotesk',
                     flexShrink: 0
                   }}>
-                    {item.initials}
+                    {item.icon}
                   </div>
 
                   <a
@@ -442,7 +406,6 @@ export default function Experience() {
 
                 {/* Period Tag */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
-
                   <span style={{
                     fontSize: '0.75rem',
                     fontWeight: 700,
