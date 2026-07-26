@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Clock, Users, Star, ExternalLink, Calendar, ChevronRight } from 'lucide-react';
+import { Briefcase, Clock, Users, Star, ExternalLink, Calendar } from 'lucide-react';
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState('fulltime');
@@ -21,6 +21,9 @@ export default function Experience() {
         period: 'Feb 2026 - Present',
         isCurrent: true,
         tag: 'Banking & Finance',
+        initials: 'GP',
+        brandColor: '#0055A5',
+        watermark: 'GPBANK',
         description: 'Leading core banking analytics, risk modeling data pipelines, and executive reporting for GPBank.'
       },
       {
@@ -31,6 +34,9 @@ export default function Experience() {
         period: 'Sept 2025 - Feb 2026',
         isCurrent: false,
         tag: 'Fintech Banking',
+        initials: 'TN',
+        brandColor: '#00B4D8',
+        watermark: 'TNEX',
         description: 'Led data-driven growth initiatives, user cohort analytics, and executive pipeline reporting for digital banking platform.'
       },
       {
@@ -41,6 +47,9 @@ export default function Experience() {
         period: 'Apr 2023 - Sept 2025',
         isCurrent: false,
         tag: 'Payment Gateway',
+        initials: 'VN',
+        brandColor: '#0052CC',
+        watermark: 'VNPAY',
         description: 'Processed millions of transaction logs daily to build fraud detection models and commercial growth dashboards.'
       },
       {
@@ -51,6 +60,9 @@ export default function Experience() {
         period: 'Nov 2021 - Apr 2023',
         isCurrent: false,
         tag: 'E-Commerce',
+        initials: 'SH',
+        brandColor: '#EE4D2D',
+        watermark: 'SHOPEE',
         description: 'Coordinated regional logistics metrics, seller operations analytics, and cross-functional project tracking.'
       },
       {
@@ -61,6 +73,9 @@ export default function Experience() {
         period: 'Oct 2020 - Nov 2021',
         isCurrent: false,
         tag: 'Government & Enterprise',
+        initials: 'MPI',
+        brandColor: '#B8860B',
+        watermark: 'MPI',
         description: 'Managed enterprise databases and consultant networks for national development programs.'
       }
     ],
@@ -73,6 +88,9 @@ export default function Experience() {
         period: 'Jan 2026 - Present',
         isCurrent: true,
         tag: 'E-Commerce Tech',
+        initials: 'UB',
+        brandColor: '#2563EB',
+        watermark: 'UPBASE',
         description: 'Architecting automated dbt data pipelines and multi-channel sales aggregation for e-commerce brands.'
       },
       {
@@ -83,6 +101,9 @@ export default function Experience() {
         period: 'Feb 2026 - Present',
         isCurrent: true,
         tag: 'Conglomerate',
+        initials: 'HV',
+        brandColor: '#7C3AED',
+        watermark: 'HV GROUP',
         description: 'Designing centralized BigQuery data stack and dimensional models across corporate subsidiaries.'
       },
       {
@@ -93,6 +114,9 @@ export default function Experience() {
         period: 'Dec 2025 - Feb 2026',
         isCurrent: false,
         tag: 'Cloud Partner',
+        initials: 'CA',
+        brandColor: '#4285F4',
+        watermark: 'CLOUD ACE',
         description: 'Delivering Google Cloud Platform BI architectures and Looker Studio data models.'
       },
       {
@@ -103,6 +127,9 @@ export default function Experience() {
         period: 'Sept 2024 - Aug 2025',
         isCurrent: false,
         tag: 'Tech Solutions',
+        initials: 'FX',
+        brandColor: '#0EA5E9',
+        watermark: 'FIXMA',
         description: 'Built end-to-end business intelligence reports and operational telemetry tracking.'
       },
       {
@@ -113,6 +140,9 @@ export default function Experience() {
         period: 'Jan 2025 - May 2025',
         isCurrent: false,
         tag: 'Services & Operations',
+        initials: 'VC',
+        brandColor: '#10B981',
+        watermark: 'VIETCLEAN',
         description: 'Analyzed service booking funnels, customer churn rate, and staff allocation efficiency.'
       },
       {
@@ -123,6 +153,9 @@ export default function Experience() {
         period: 'Mar 2024 - July 2024',
         isCurrent: false,
         tag: 'Global SaaS',
+        initials: 'BB',
+        brandColor: '#F59E0B',
+        watermark: 'BRAVEBITS',
         description: 'Product telemetry and user engagement analysis for Shopify global applications.'
       }
     ],
@@ -135,6 +168,9 @@ export default function Experience() {
         period: 'Apr 2025 - Present',
         isCurrent: true,
         tag: 'Data Community',
+        initials: 'XD',
+        brandColor: '#1877F2',
+        watermark: 'XÓM DATA',
         description: 'Founded and managing Vietnam\'s premier data community for knowledge sharing, webinars, and career guidance.'
       },
       {
@@ -145,6 +181,9 @@ export default function Experience() {
         period: 'May 2023 - Present',
         isCurrent: true,
         tag: 'Tech Education',
+        initials: 'MX',
+        brandColor: '#EC4899',
+        watermark: 'MINDX',
         description: 'Instructed over 300+ students in SQL, Python, Power BI, and Analytics Engineering best practices.'
       },
       {
@@ -155,6 +194,9 @@ export default function Experience() {
         period: 'Feb 2025 - Dec 2025',
         isCurrent: false,
         tag: 'Curriculum R&D',
+        initials: 'MX',
+        brandColor: '#EC4899',
+        watermark: 'MINDX',
         description: 'Designed industry-standard syllabus for Data Engineering and Analytics Engineering courses.'
       }
     ],
@@ -167,6 +209,9 @@ export default function Experience() {
         period: 'Apr 2023 - Present',
         isCurrent: true,
         tag: 'Global Advisory',
+        initials: 'AS',
+        brandColor: '#6366F1',
+        watermark: 'ALPHASIGHTS',
         description: 'Providing expert consultations for international investment funds on Vietnam\'s fintech & data landscape.'
       },
       {
@@ -177,6 +222,9 @@ export default function Experience() {
         period: 'Feb 2025 - Feb 2026',
         isCurrent: false,
         tag: 'Expert Network',
+        initials: 'AG',
+        brandColor: '#8B5CF6',
+        watermark: 'ARCHES',
         description: 'Consulting on regional e-commerce logistics, payment gateway trends, and tech talent markets.'
       }
     ]
@@ -246,7 +294,7 @@ export default function Experience() {
           })}
         </div>
 
-        {/* Minimalist Ultra-Clean Experience List */}
+        {/* Minimalist Ultra-Clean Experience List with Subtle Watermarks */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {currentList.map((item, idx) => (
             <div
@@ -261,18 +309,62 @@ export default function Experience() {
                 flexDirection: 'column',
                 gap: '0.75rem',
                 transition: 'all 0.25s ease',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.02)'
+                boxShadow: '0 2px 10px rgba(0,0,0,0.02)',
+                position: 'relative',
+                overflow: 'hidden'
               }}
             >
-              {/* Row Header: Company & Role */}
+              {/* Subtle Company Text Watermark (Logo Chìm Mờ Background) */}
+              <div style={{
+                position: 'absolute',
+                right: '-10px',
+                bottom: '-15px',
+                fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
+                fontWeight: 900,
+                fontFamily: 'Space Grotesk, sans-serif',
+                color: item.brandColor,
+                opacity: 0.05,
+                pointerEvents: 'none',
+                userSelect: 'none',
+                letterSpacing: '0.05em',
+                transform: 'rotate(-5deg)',
+                whiteSpace: 'nowrap',
+                zIndex: 0
+              }}>
+                {item.watermark}
+              </div>
+
+              {/* Row Header: Company Badge, Company Name & Role */}
               <div style={{
                 display: 'flex',
                 justify: 'space-between',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                gap: '0.75rem'
+                gap: '0.75rem',
+                position: 'relative',
+                zIndex: 1
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  {/* Company Logo Badge */}
+                  <div style={{
+                    width: '34px',
+                    height: '34px',
+                    borderRadius: '10px',
+                    background: `${item.brandColor}18`,
+                    border: `1px solid ${item.brandColor}33`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: item.brandColor,
+                    fontWeight: 800,
+                    fontSize: '0.75rem',
+                    letterSpacing: '-0.02em',
+                    fontFamily: 'Space Grotesk',
+                    flexShrink: 0
+                  }}>
+                    {item.initials}
+                  </div>
+
                   <a
                     href={item.url}
                     target="_blank"
@@ -281,7 +373,7 @@ export default function Experience() {
                       fontSize: '1.15rem',
                       fontWeight: 800,
                       fontFamily: 'Space Grotesk',
-                      color: currentTabInfo?.color || 'var(--primary)',
+                      color: item.brandColor,
                       textDecoration: 'none',
                       display: 'inline-flex',
                       alignItems: 'center',
@@ -316,7 +408,7 @@ export default function Experience() {
                 </div>
 
                 {/* Period Tag */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', position: 'relative', zIndex: 1 }}>
                   <span style={{
                     fontSize: '0.75rem',
                     fontWeight: 700,
@@ -340,7 +432,9 @@ export default function Experience() {
                 color: 'var(--text-muted)',
                 fontSize: '0.9rem',
                 lineHeight: 1.6,
-                margin: 0
+                margin: 0,
+                position: 'relative',
+                zIndex: 1
               }}>
                 {item.description}
               </p>
