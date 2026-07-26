@@ -114,7 +114,7 @@ export default function Techstack() {
             <div style={{
               display: 'flex', alignItems: 'center', gap: '0.75rem',
               marginBottom: '1.5rem', paddingBottom: '0.875rem',
-              borderBottom: '1px solid rgba(255,255,255,0.05)'
+              borderBottom: '1px solid var(--outline-low)'
             }}>
               <div style={{ color: 'var(--primary)', opacity: 0.8 }}>
                 {group.icon}
@@ -139,7 +139,7 @@ export default function Techstack() {
                   className="tech-item-hover"
                   style={{
                     display: 'flex', alignItems: 'center', gap: '0.5rem',
-                    background: 'rgba(255,255,255,0.02)',
+                    background: 'var(--surface-container)',
                     padding: '0.5rem 0.75rem', borderRadius: '6px',
                     border: '1px solid transparent',
                     transition: 'all 0.3s'
@@ -168,8 +168,8 @@ export default function Techstack() {
 
       <style>{`
         .tech-item-hover:hover {
-          background: rgba(170, 221, 81, 0.05) !important;
-          border-color: rgba(170, 221, 81, 0.2) !important;
+          background: var(--tag-bg) !important;
+          border-color: var(--tag-border) !important;
           transform: translateY(-2px);
         }
         .tech-item-hover:hover span {

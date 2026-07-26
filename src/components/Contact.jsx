@@ -6,7 +6,7 @@ export default function Contact() {
     <section id="contact" className="section" style={{ paddingBottom: '10rem' }}>
       <div className="container">
         <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '3rem' }}>Let's Connect</h2>
-        <div className="glass-panel" style={{ textAlign: 'center', padding: '4rem 2rem', background: 'linear-gradient(180deg, rgba(30,41,59,0.7) 0%, rgba(170,221,81,0.05) 100%)', border: '1px solid var(--outline-low)' }}>
+        <div className="glass-panel" style={{ textAlign: 'center', padding: '4rem 2rem', background: 'var(--glass-bg)', border: '1px solid var(--outline-low)' }}>
         <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
           I'm always open to discussing new data pipelines, system designs, open-source projects, or potential opportunities. 
         </p>

@@ -143,7 +143,7 @@ export default function Certifications() {
                   borderRadius: '100px',
                   border: '1px solid',
                   borderColor: selectedOrg === org.name ? 'var(--primary)' : 'var(--outline-low)',
-                  background: selectedOrg === org.name ? 'rgba(170, 221, 81, 0.1)' : 'rgba(255, 255, 255, 0.02)',
+                  background: selectedOrg === org.name ? 'var(--tag-bg)' : 'var(--surface-container)',
                   color: selectedOrg === org.name ? 'var(--primary)' : 'var(--text-muted)',
                   fontSize: '0.85rem',
                   fontWeight: 600,
@@ -158,8 +158,8 @@ export default function Certifications() {
                 {org.name}
                 <span style={{
                   fontSize: '0.75rem',
-                  opacity: 0.6,
-                  background: selectedOrg === org.name ? 'var(--primary)' : 'rgba(255,255,255,0.1)',
+                  opacity: 0.8,
+                  background: selectedOrg === org.name ? 'var(--primary)' : 'var(--surface-low)',
                   color: selectedOrg === org.name ? 'var(--on-primary)' : 'inherit',
                   padding: '2px 8px',
                   borderRadius: '10px'
@@ -190,7 +190,7 @@ export default function Certifications() {
                 position: 'relative',
                 overflow: 'hidden',
                 border: '1px solid var(--outline-low)',
-                background: 'rgba(255, 255, 255, 0.02)',
+                background: 'var(--glass-bg)',
                 transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
                 height: '100%',
                 boxSizing: 'border-box'
@@ -208,7 +208,7 @@ export default function Certifications() {
                   justifyContent: 'center',
                   padding: '4px',
                   flexShrink: 0,
-                  boxShadow: '0 8px 16px rgba(0,0,0,0.2)'
+                  boxShadow: '0 8px 16px rgba(0,0,0,0.1)'
                 }}>
                   <img
                     src={ORG_LOGOS[cert.organization] || cert.image}
@@ -236,7 +236,7 @@ export default function Certifications() {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid var(--outline-low)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-muted)', fontSize: '0.8rem' }}>
                   <Calendar size={14} /> {cert.date}
                 </div>
@@ -275,7 +275,7 @@ export default function Certifications() {
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
               style={{
-                background: 'rgba(255,255,255,0.05)',
+                background: 'var(--surface-container)',
                 border: '1px solid var(--outline-low)',
                 color: 'var(--text-main)',
                 padding: '0.75rem',
@@ -309,13 +309,12 @@ export default function Certifications() {
                       // Chỉ đổi màu border nếu là trang active
                       borderColor: isActive ? 'var(--primary)' : 'var(--outline-low)',
                       // Chỉ đổi màu background nếu là trang active
-                      background: isActive ? 'var(--primary)' : 'rgba(255,255,255,0.05)',
+                      background: isActive ? 'var(--primary)' : 'var(--surface-container)',
                       // Chỉ đổi màu chữ nếu là trang active
                       color: isActive ? 'var(--on-primary)' : 'var(--text-main)',
                       fontWeight: 700,
                       cursor: 'pointer',
-                      transition: 'all 0.2s ease',
-                      boxShadow: isActive ? '0 0 15px rgba(var(--primary-rgb), 0.3)' : 'none'
+                      transition: 'all 0.2s ease'
                     }}
                   >
                     {pageNumber}
@@ -328,7 +327,7 @@ export default function Certifications() {
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
               style={{
-                background: 'rgba(255,255,255,0.05)',
+                background: 'var(--surface-container)',
                 border: '1px solid var(--outline-low)',
                 color: 'var(--text-main)',
                 padding: '0.75rem',
@@ -351,10 +350,11 @@ export default function Certifications() {
             border-radius: 10px;
           }
           .cert-card:hover {
-            background: rgba(255, 255, 255, 0.05) !important;
+            background: var(--glass-bg-hover) !important;
             border-color: var(--primary) !important;
             transform: translateY(-8px) scale(1.02) !important;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+            box-shadow: var(--card-shadow-hover) !important;
+          }(0,0,0,0.3) !important;
           }
           .cert-link:hover {
             color: var(--primary) !important;
