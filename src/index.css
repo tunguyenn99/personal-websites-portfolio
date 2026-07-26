@@ -158,8 +158,8 @@ h3,
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  border-radius: 18px;
-  padding: 2rem;
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -177,19 +177,19 @@ h3,
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 clamp(1.25rem, 5vw, 4.5rem);
 }
 
 .section {
-  padding: 8rem 0;
+  padding: clamp(4.5rem, 8vw, 7rem) 0;
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
   font-weight: 800;
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
   color: var(--text-main);
   position: relative;
   display: inline-block;
