@@ -5,7 +5,7 @@ export default function Experience() {
   const [activeTab, setActiveTab] = useState('fulltime');
 
   const tabOptions = [
-    { id: 'fulltime', label: 'Full-time Career', icon: <Briefcase size={16} />, color: 'var(--accent-fulltime)', count: 4 },
+    { id: 'fulltime', label: 'Full-time Career', icon: <Briefcase size={16} />, color: 'var(--accent-fulltime)', count: 5 },
     { id: 'parttime', label: 'Part-time & AE', icon: <Clock size={16} />, color: 'var(--accent-parttime)', count: 6 },
     { id: 'community', label: 'Community & Teaching', icon: <Users size={16} />, color: 'var(--accent-community)', count: 3 },
     { id: 'advisor', label: 'Advisory & Consulting', icon: <Star size={16} />, color: 'var(--accent-advisor)', count: 2 }
@@ -14,14 +14,24 @@ export default function Experience() {
   const experienceData = {
     fulltime: [
       {
+        company: 'GPBank',
+        companyFull: 'Global Petro Bank (GPBank)',
+        url: 'https://www.gpbank.com.vn/',
+        role: 'Senior Data Analyst',
+        period: 'Feb 2026 - Present',
+        isCurrent: true,
+        tag: 'Banking & Finance',
+        description: 'Leading core banking analytics, risk modeling data pipelines, and executive reporting for GPBank.'
+      },
+      {
         company: 'TNEX',
         companyFull: 'TNEX Digital Bank',
         url: 'https://www.tnex.com.vn/',
         role: 'Senior Data Analyst',
-        period: 'Sept 2025 - Present',
-        isCurrent: true,
+        period: 'Sept 2025 - Feb 2026',
+        isCurrent: false,
         tag: 'Fintech Banking',
-        description: 'Leading data-driven growth initiatives, cohort analytics, and executive pipeline reporting for Vietnam digital banking platform.'
+        description: 'Led data-driven growth initiatives, user cohort analytics, and executive pipeline reporting for digital banking platform.'
       },
       {
         company: 'VNPAY',

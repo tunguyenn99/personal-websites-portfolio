@@ -35,7 +35,7 @@ export default function ArchitectureFlow() {
         { name: 'PostgreSQL / MySQL', icon: <SiPostgresql color="#336791" /> },
       ],
       tagline: 'Multi-source Data Extraction & Ingestion',
-      description: 'Extracting high-volume transactional logs, payment streams, and e-commerce APIs across VNPAY, TNEX, and UpBase systems.',
+      description: 'Extracting high-volume transactional logs, payment streams, and e-commerce APIs across VNPAY, GPBank, and UpBase systems.',
       highlights: [
         'Automated CDC (Change Data Capture) & batch syncs',
         'Partitioned daily raw file extraction to cloud storage',
