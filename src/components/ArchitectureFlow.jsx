@@ -240,52 +240,53 @@ export default function ArchitectureFlow() {
   return (
     <section id="architecture" className="section" style={{ position: 'relative' }}>
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <span style={{
-            fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.15em',
-            textTransform: 'uppercase', color: 'var(--primary)', fontFamily: 'Space Grotesk'
-          }}>
-            End-to-End Modern Data Stack
-          </span>
-          <h2 className="section-title" style={{ display: 'block', marginTop: '0.5rem', marginBottom: '1rem' }}>
-            Data Architecture & Tech Stack
-          </h2>
-          <p style={{ color: 'var(--text-muted)', maxWidth: '680px', margin: '0 auto', fontSize: '1.05rem' }}>
-            Select any architectural stage below to explore its pipeline workflow and integrated tech stack.
-          </p>
-
-          {/* Mode Switcher Buttons */}
+        <div style={{ marginBottom: '2.5rem' }}>
+          <h2 className="section-title">Data Architecture & Tech Stack</h2>
           <div style={{
-            display: 'inline-flex', gap: '0.5rem', marginTop: '1.75rem',
-            background: 'var(--surface-low)', padding: '0.35rem', borderRadius: '9999px',
-            border: '1px solid var(--outline-low)'
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1.25rem',
+            marginTop: '-1rem'
           }}>
-            <button
-              onClick={() => setViewMode('pipeline')}
-              style={{
-                display: 'flex', alignItems: 'center', gap: '0.5rem',
-                padding: '0.55rem 1.35rem', borderRadius: '9999px',
-                border: 'none',
-                background: viewMode === 'pipeline' ? 'var(--primary)' : 'transparent',
-                color: viewMode === 'pipeline' ? 'var(--on-primary)' : 'var(--text-muted)',
-                cursor: 'pointer', fontWeight: 700, fontSize: '0.85rem', transition: 'all 0.3s'
-              }}
-            >
-              <GitBranch size={16} /> 3x2 Stage Selector
-            </button>
-            <button
-              onClick={() => setViewMode('matrix')}
-              style={{
-                display: 'flex', alignItems: 'center', gap: '0.5rem',
-                padding: '0.55rem 1.35rem', borderRadius: '9999px',
-                border: 'none',
-                background: viewMode === 'matrix' ? 'var(--primary)' : 'transparent',
-                color: viewMode === 'matrix' ? 'var(--on-primary)' : 'var(--text-muted)',
-                cursor: 'pointer', fontWeight: 700, fontSize: '0.85rem', transition: 'all 0.3s'
-              }}
-            >
-              <Grid size={16} /> Categorized Stack Matrix
-            </button>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', margin: 0, maxWidth: '640px' }}>
+              Select any architectural stage below to explore its pipeline workflow and integrated tech stack.
+            </p>
+
+            {/* Mode Switcher Buttons */}
+            <div style={{
+              display: 'inline-flex', gap: '0.5rem',
+              background: 'var(--surface-low)', padding: '0.35rem', borderRadius: '9999px',
+              border: '1px solid var(--outline-low)'
+            }}>
+              <button
+                onClick={() => setViewMode('pipeline')}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: '0.5rem',
+                  padding: '0.55rem 1.35rem', borderRadius: '9999px',
+                  border: 'none',
+                  background: viewMode === 'pipeline' ? 'var(--primary)' : 'transparent',
+                  color: viewMode === 'pipeline' ? 'var(--on-primary)' : 'var(--text-muted)',
+                  cursor: 'pointer', fontWeight: 700, fontSize: '0.85rem', transition: 'all 0.3s'
+                }}
+              >
+                <GitBranch size={16} /> 3x2 Stage Selector
+              </button>
+              <button
+                onClick={() => setViewMode('matrix')}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: '0.5rem',
+                  padding: '0.55rem 1.35rem', borderRadius: '9999px',
+                  border: 'none',
+                  background: viewMode === 'matrix' ? 'var(--primary)' : 'transparent',
+                  color: viewMode === 'matrix' ? 'var(--on-primary)' : 'var(--text-muted)',
+                  cursor: 'pointer', fontWeight: 700, fontSize: '0.85rem', transition: 'all 0.3s'
+                }}
+              >
+                <Grid size={16} /> Categorized Stack Matrix
+              </button>
+            </div>
           </div>
         </div>
 
