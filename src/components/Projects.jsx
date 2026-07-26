@@ -37,12 +37,12 @@ const topicPriority = [
 ];
 
 const topicColors = {
-  'analytics-engineer': '#FF694B',
-  'data-analytics': '#4ECDC4',
-  'business-intelligence': '#FFD700',
-  'self-learning': '#6C63FF',
-  'community-contribution': '#00FF00',
-  'profile-portfolio': '#FF6B9D'
+  'analytics-engineer': '#E11D48',
+  'data-analytics': '#0284C7',
+  'business-intelligence': '#D97706',
+  'self-learning': '#7C3AED',
+  'community-contribution': '#059669',
+  'profile-portfolio': '#DB2777'
 };
 
 // Tech stack priority and colors

@@ -6,7 +6,7 @@ export default function Experience() {
     {
       title: "Full-time",
       icon: <Briefcase size={16} />,
-      accentColor: "#aadd51",
+      accentColor: "var(--accent-fulltime)",
       items: [
         {
           role: "Senior Data Analyst",
@@ -41,7 +41,7 @@ export default function Experience() {
     {
       title: "Part-time / Remote",
       icon: <Clock size={16} />,
-      accentColor: "#7bd0ff",
+      accentColor: "var(--accent-parttime)",
       items: [
         {
           role: "Data Analytics Engineer",
@@ -90,7 +90,7 @@ export default function Experience() {
     {
       title: "Community & Teaching",
       icon: <Users size={16} />,
-      accentColor: "#f59e0b",
+      accentColor: "var(--accent-community)",
       items: [
         {
           role: "Co-Owner",
@@ -118,7 +118,7 @@ export default function Experience() {
     {
       title: "Advisor",
       icon: <Star size={16} />,
-      accentColor: "#10b981",
+      accentColor: "var(--accent-advisor)",
       items: [
         {
           role: "Advisor",

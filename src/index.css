@@ -24,6 +24,11 @@
   --btn-primary-hover: #00ea8d;
   --tag-bg: rgba(0, 210, 127, 0.12);
   --tag-border: rgba(0, 210, 127, 0.3);
+
+  --accent-fulltime: #00D27F;
+  --accent-parttime: #7BD0FF;
+  --accent-community: #E2B857;
+  --accent-advisor: #10B981;
 }
 
 [data-theme="light"] {
@@ -50,6 +55,11 @@
   --btn-primary-hover: #004d33;
   --tag-bg: rgba(0, 98, 65, 0.08);
   --tag-border: rgba(0, 98, 65, 0.2);
+
+  --accent-fulltime: #006241;
+  --accent-parttime: #0284C7;
+  --accent-community: #9E6B00;
+  --accent-advisor: #047857;
 }
 
 /* Mobile-friendly defaults */
