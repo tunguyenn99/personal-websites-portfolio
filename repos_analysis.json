@@ -834,6 +834,29 @@
     ]
   },
   {
+    "name": "engineering-with-xommates",
+    "description": "Vibing and Coding",
+    "url": "https://github.com/tunguyenn99/engineering-with-xommates",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-07-27",
+    "updated_at": "2026-07-27",
+    "topics": [
+      "self-learning"
+    ],
+    "has_readme": true,
+    "readme_lines": 27,
+    "readme_excerpt": "# \ud83d\udcda Engineering With Xommates - Tri Th\u1ee9c & T\u00e0i Nguy\u00ean H\u1ecdc T\u1eadp Tech/Data\n\nKho l\u01b0u tr\u1eef v\u00e0 t\u1ed5 ch\u1ee9c t\u00e0i nguy\u00ean h\u1ecdc t\u1eadp k\u1ef9 thu\u1eadt d\u00e0nh cho K\u1ef9 s\u01b0 D\u1eef li\u1ec7u, AI, Machine Learning v\u00e0 H\u1ea1 t\u1ea7ng Ph\u1ea7n m\u1ec1m.\n\n---\n\n## \ud83d\udcc1 C\u1ea5u Tr\u00fac Th\u01b0 M\u1ee5c Chuy\u00ean M\u00f4n\n\n\u0110\u1ec3 tra c\u1ee9u chi ti\u1ebft c\u00e1c t\u00e0i li\u1ec7u h\u1ecdc t\u1eadp, vui l\u00f2ng truy c\u1eadp tr\u1ef1c ti\u1ebfp v\u00e0o `README.md` c\u1ee7a t\u1eebng th\u01b0 m\u1ee5c t\u01b0\u01a1ng \u1ee9ng b\u00ean d\u01b0\u1edbi:\n\n| Th\u01b0 M\u1ee5c H\u1ecdc T\u1eadp | L\u0129nh V\u1ef1c Chuy\u00ean M\u00f4n | N\u1ed9i Dung Ch\u00ednh | Link Tra C\u1ee9u |\n| :--- | :--- | :--- | :---: |\n| \ud83e\udd16 **`ai-agent/`** | AI Coding Agents & ",
+    "techstack": [
+      "GitHub Actions",
+      "Kafka",
+      "Kubernetes"
+    ]
+  },
+  {
     "name": "personal-websites-portfolio",
     "description": "",
     "url": "https://github.com/tunguyenn99/personal-websites-portfolio",
