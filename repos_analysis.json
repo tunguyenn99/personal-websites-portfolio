@@ -5,7 +5,7 @@
     "url": "https://github.com/tunguyenn99/thu_vien_cua_xom_data",
     "language": "N/A",
     "stars": 370,
-    "forks": 103,
+    "forks": 104,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-07-25",
@@ -217,7 +217,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-03-22",
-    "updated_at": "2026-07-27",
+    "updated_at": "2026-07-28",
     "topics": [
       "analytics-engineer"
     ],
@@ -430,6 +430,34 @@
     ]
   },
   {
+    "name": "portfolio-data-analytics",
+    "description": "A collection of my data analytics and BI projects.",
+    "url": "https://github.com/tunguyenn99/portfolio-data-analytics",
+    "language": "Jupyter Notebook",
+    "stars": 7,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-05-27",
+    "updated_at": "2026-07-28",
+    "topics": [
+      "profile-portfolio"
+    ],
+    "has_readme": true,
+    "readme_lines": 39,
+    "readme_excerpt": "# \ud83d\udcca Data Portfolio \u2013 Tu Nguyen\n\nWelcome to my personal data portfolio! This repository contains folders of end-to-end data projects I've worked on in areas such as **Data Analytics**, **Business Intelligence**, and **Automation**.\n\n---\n\n## \ud83d\udd75\ufe0f\u200d\u2640\ufe0f About my projects\n\nEach folder in this repository represents a standalone project, featuring data processing workflows, analysis logic, business context, or even reporting/dashboard artifacts.\n\n\ud83d\udce5 Download dataset: Due to the size limitation on Github, I ",
+    "techstack": [
+      "Airflow",
+      "BigQuery",
+      "GitHub Actions",
+      "Power BI",
+      "Python",
+      "SQL",
+      "Spark",
+      "Superset"
+    ]
+  },
+  {
     "name": "dbt-supabase-postgres",
     "description": "",
     "url": "https://github.com/tunguyenn99/dbt-supabase-postgres",
@@ -486,34 +514,6 @@
     ]
   },
   {
-    "name": "portfolio-data-analytics",
-    "description": "A collection of my data analytics and BI projects.",
-    "url": "https://github.com/tunguyenn99/portfolio-data-analytics",
-    "language": "Jupyter Notebook",
-    "stars": 5,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-05-27",
-    "updated_at": "2026-06-26",
-    "topics": [
-      "profile-portfolio"
-    ],
-    "has_readme": true,
-    "readme_lines": 39,
-    "readme_excerpt": "# \ud83d\udcca Data Portfolio \u2013 Tu Nguyen\n\nWelcome to my personal data portfolio! This repository contains folders of end-to-end data projects I've worked on in areas such as **Data Analytics**, **Business Intelligence**, and **Automation**.\n\n---\n\n## \ud83d\udd75\ufe0f\u200d\u2640\ufe0f About my projects\n\nEach folder in this repository represents a standalone project, featuring data processing workflows, analysis logic, business context, or even reporting/dashboard artifacts.\n\n\ud83d\udce5 Download dataset: Due to the size limitation on Github, I ",
-    "techstack": [
-      "Airflow",
-      "BigQuery",
-      "GitHub Actions",
-      "Power BI",
-      "Python",
-      "SQL",
-      "Spark",
-      "Superset"
-    ]
-  },
-  {
     "name": "i-learn-apache-iceberg",
     "description": "H\u01b0\u1edbng d\u1eabn self-host v\u00e0 t\u00ecm hi\u1ec3u Apache Iceberg",
     "url": "https://github.com/tunguyenn99/i-learn-apache-iceberg",
@@ -541,6 +541,51 @@
       "Spark",
       "Superset",
       "Trino"
+    ]
+  },
+  {
+    "name": "engineering-with-xommates",
+    "description": "Vibing and Coding",
+    "url": "https://github.com/tunguyenn99/engineering-with-xommates",
+    "language": "Python",
+    "stars": 3,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-07-27",
+    "updated_at": "2026-07-28",
+    "topics": [
+      "self-learning"
+    ],
+    "has_readme": true,
+    "readme_lines": 27,
+    "readme_excerpt": "# \ud83d\udcda Engineering With Xommates - Tri Th\u1ee9c & T\u00e0i Nguy\u00ean H\u1ecdc T\u1eadp Tech/Data\n\nKho l\u01b0u tr\u1eef v\u00e0 t\u1ed5 ch\u1ee9c t\u00e0i nguy\u00ean h\u1ecdc t\u1eadp k\u1ef9 thu\u1eadt d\u00e0nh cho K\u1ef9 s\u01b0 D\u1eef li\u1ec7u, AI, Machine Learning v\u00e0 H\u1ea1 t\u1ea7ng Ph\u1ea7n m\u1ec1m.\n\n---\n\n## \ud83d\udcc1 C\u1ea5u Tr\u00fac Th\u01b0 M\u1ee5c Chuy\u00ean M\u00f4n\n\n\u0110\u1ec3 tra c\u1ee9u chi ti\u1ebft c\u00e1c t\u00e0i li\u1ec7u h\u1ecdc t\u1eadp, vui l\u00f2ng truy c\u1eadp tr\u1ef1c ti\u1ebfp v\u00e0o `README.md` c\u1ee7a t\u1eebng th\u01b0 m\u1ee5c t\u01b0\u01a1ng \u1ee9ng b\u00ean d\u01b0\u1edbi:\n\n| Th\u01b0 M\u1ee5c H\u1ecdc T\u1eadp | L\u0129nh V\u1ef1c Chuy\u00ean M\u00f4n | N\u1ed9i Dung Ch\u00ednh | Link Tra C\u1ee9u |\n| :--- | :--- | :--- | :---: |\n| \ud83e\udd16 **`ai-agent/`** | AI Coding Agents & ",
+    "techstack": [
+      "GitHub Actions",
+      "Kafka",
+      "Kubernetes"
+    ]
+  },
+  {
+    "name": "dashboard-showcase",
+    "description": "My BI Dashboard Showcase",
+    "url": "https://github.com/tunguyenn99/dashboard-showcase",
+    "language": "Jupyter Notebook",
+    "stars": 3,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-05-28",
+    "updated_at": "2026-07-27",
+    "topics": [
+      "data-analytics"
+    ],
+    "has_readme": true,
+    "readme_lines": 50,
+    "readme_excerpt": "# \ud83e\udde0 Data Analytics Portfolio by tunguyenn99\n\nWelcome to my personal analytics portfolio!  \nThis repository showcases a curated collection of data analysis and visualization projects using **Power BI**, with a strong focus on storytelling, business context, and visual clarity.\n\nEach project in this repo is presented as a standalone dashboard, designed to explore real-world challenges and translate raw data into actionable insights.\n\n---\n\n## \ud83d\udcc1 Projects Included (Updating)\n\n### \u26a1 [Electrics Retaile",
+    "techstack": [
+      "Figma",
+      "Power BI"
     ]
   },
   {
@@ -706,28 +751,6 @@
     ]
   },
   {
-    "name": "dashboard-showcase",
-    "description": "My BI Dashboard Showcase",
-    "url": "https://github.com/tunguyenn99/dashboard-showcase",
-    "language": "Jupyter Notebook",
-    "stars": 2,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-05-28",
-    "updated_at": "2026-04-13",
-    "topics": [
-      "data-analytics"
-    ],
-    "has_readme": true,
-    "readme_lines": 50,
-    "readme_excerpt": "# \ud83e\udde0 Data Analytics Portfolio by tunguyenn99\n\nWelcome to my personal analytics portfolio!  \nThis repository showcases a curated collection of data analysis and visualization projects using **Power BI**, with a strong focus on storytelling, business context, and visual clarity.\n\nEach project in this repo is presented as a standalone dashboard, designed to explore real-world challenges and translate raw data into actionable insights.\n\n---\n\n## \ud83d\udcc1 Projects Included (Updating)\n\n### \u26a1 [Electrics Retaile",
-    "techstack": [
-      "Figma",
-      "Power BI"
-    ]
-  },
-  {
     "name": "metabase-from-scratch-to-embed",
     "description": "",
     "url": "https://github.com/tunguyenn99/metabase-from-scratch-to-embed",
@@ -831,29 +854,6 @@
       "Python",
       "Scikit-learn",
       "TensorFlow"
-    ]
-  },
-  {
-    "name": "engineering-with-xommates",
-    "description": "Vibing and Coding",
-    "url": "https://github.com/tunguyenn99/engineering-with-xommates",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-07-27",
-    "updated_at": "2026-07-27",
-    "topics": [
-      "self-learning"
-    ],
-    "has_readme": true,
-    "readme_lines": 27,
-    "readme_excerpt": "# \ud83d\udcda Engineering With Xommates - Tri Th\u1ee9c & T\u00e0i Nguy\u00ean H\u1ecdc T\u1eadp Tech/Data\n\nKho l\u01b0u tr\u1eef v\u00e0 t\u1ed5 ch\u1ee9c t\u00e0i nguy\u00ean h\u1ecdc t\u1eadp k\u1ef9 thu\u1eadt d\u00e0nh cho K\u1ef9 s\u01b0 D\u1eef li\u1ec7u, AI, Machine Learning v\u00e0 H\u1ea1 t\u1ea7ng Ph\u1ea7n m\u1ec1m.\n\n---\n\n## \ud83d\udcc1 C\u1ea5u Tr\u00fac Th\u01b0 M\u1ee5c Chuy\u00ean M\u00f4n\n\n\u0110\u1ec3 tra c\u1ee9u chi ti\u1ebft c\u00e1c t\u00e0i li\u1ec7u h\u1ecdc t\u1eadp, vui l\u00f2ng truy c\u1eadp tr\u1ef1c ti\u1ebfp v\u00e0o `README.md` c\u1ee7a t\u1eebng th\u01b0 m\u1ee5c t\u01b0\u01a1ng \u1ee9ng b\u00ean d\u01b0\u1edbi:\n\n| Th\u01b0 M\u1ee5c H\u1ecdc T\u1eadp | L\u0129nh V\u1ef1c Chuy\u00ean M\u00f4n | N\u1ed9i Dung Ch\u00ednh | Link Tra C\u1ee9u |\n| :--- | :--- | :--- | :---: |\n| \ud83e\udd16 **`ai-agent/`** | AI Coding Agents & ",
-    "techstack": [
-      "GitHub Actions",
-      "Kafka",
-      "Kubernetes"
     ]
   },
   {
