@@ -544,6 +544,37 @@
     ]
   },
   {
+    "name": "a-simple-t2s-flow",
+    "description": "A simple flow text-2-sql",
+    "url": "https://github.com/tunguyenn99/a-simple-t2s-flow",
+    "language": "Python",
+    "stars": 3,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-07-21",
+    "updated_at": "2026-08-10",
+    "topics": [
+      "analytics-engineering"
+    ],
+    "has_readme": true,
+    "readme_lines": 446,
+    "readme_excerpt": "# \ud83d\ude80 a-simple-t2s-flow (E-Commerce Data Warehouse Pipeline)\n\n[![CI Pipeline](https://github.com/tunguyenn99/a-simple-t2s-flow/actions/workflows/ci.yml/badge.svg)](https://github.com/tunguyenn99/a-simple-t2s-flow/actions/workflows/ci.yml)\n\n> **Modern End-to-End Data Pipeline**: Extracting e-commerce transaction data from **SQL Server OLTP** via **DLT (Data Load Tool)**, storing & transforming data in **DuckDB Warehouse** with **dbt (Bronze \u2192 Silver \u2192 Gold Medallion Architecture)**, and orchestrati",
+    "techstack": [
+      "Airflow",
+      "DLT",
+      "GitHub",
+      "GitHub Actions",
+      "Matplotlib",
+      "Python",
+      "Requests",
+      "SQL",
+      "SQL Server",
+      "Seaborn",
+      "dbt"
+    ]
+  },
+  {
     "name": "engineering-with-xommates",
     "description": "Vibing and Coding",
     "url": "https://github.com/tunguyenn99/engineering-with-xommates",
@@ -760,7 +791,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-08-09",
+    "updated_at": "2026-08-10",
     "topics": [
       "profile-portfolio"
     ],
@@ -876,37 +907,6 @@
       "Python",
       "Scikit-learn",
       "TensorFlow"
-    ]
-  },
-  {
-    "name": "a-simple-t2s-flow",
-    "description": "A simple flow text-2-sql",
-    "url": "https://github.com/tunguyenn99/a-simple-t2s-flow",
-    "language": "Python",
-    "stars": 0,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-07-21",
-    "updated_at": "2026-07-26",
-    "topics": [
-      "analytics-engineering"
-    ],
-    "has_readme": true,
-    "readme_lines": 446,
-    "readme_excerpt": "# \ud83d\ude80 a-simple-t2s-flow (E-Commerce Data Warehouse Pipeline)\n\n[![CI Pipeline](https://github.com/tunguyenn99/a-simple-t2s-flow/actions/workflows/ci.yml/badge.svg)](https://github.com/tunguyenn99/a-simple-t2s-flow/actions/workflows/ci.yml)\n\n> **Modern End-to-End Data Pipeline**: Extracting e-commerce transaction data from **SQL Server OLTP** via **DLT (Data Load Tool)**, storing & transforming data in **DuckDB Warehouse** with **dbt (Bronze \u2192 Silver \u2192 Gold Medallion Architecture)**, and orchestrati",
-    "techstack": [
-      "Airflow",
-      "DLT",
-      "GitHub",
-      "GitHub Actions",
-      "Matplotlib",
-      "Python",
-      "Requests",
-      "SQL",
-      "SQL Server",
-      "Seaborn",
-      "dbt"
     ]
   },
   {
