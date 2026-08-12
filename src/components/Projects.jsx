@@ -138,7 +138,7 @@ export default function Projects() {
   // Get all unique topics
   const allTopics = getAllTopics();
   const filters = ['Top 10 Starring Projects', ...allTopics];
-  const activeColor = topicColors[activeFilter] || '#00D27F';
+  const activeColor = 'var(--primary)';
 
   // Dynamic filtering logic
   const filteredProjects = useMemo(() => {
@@ -247,7 +247,6 @@ export default function Projects() {
         }}>
           {filters.map(filter => {
             const isTopGenres = filter === 'Top 10 Starring Projects';
-            const color = topicColors[filter] || '#8B5CF6';
             const isActive = activeFilter === filter;
             return (
               <button
@@ -259,15 +258,15 @@ export default function Projects() {
                   gap: '0.5rem',
                   padding: '0.55rem 1.15rem',
                   borderRadius: '9999px',
-                  border: isActive ? `1px solid ${color}77` : '1px solid transparent',
-                  background: isActive ? `${color}22` : 'transparent',
-                  color: isActive ? color : 'var(--text-muted)',
+                  border: isActive ? '1px solid rgba(0, 210, 127, 0.5)' : '1px solid transparent',
+                  background: isActive ? 'rgba(0, 210, 127, 0.15)' : 'transparent',
+                  color: isActive ? 'var(--primary)' : 'var(--text-muted)',
                   cursor: 'pointer',
                   fontWeight: isActive ? 800 : 600,
                   fontSize: '0.875rem',
                   fontFamily: 'Space Grotesk, sans-serif',
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                  boxShadow: isActive ? `0 0 20px ${color}25` : 'none',
+                  boxShadow: isActive ? '0 0 20px rgba(0, 210, 127, 0.2)' : 'none',
                   whiteSpace: 'nowrap',
                   flexShrink: 0
                 }}
@@ -278,7 +277,7 @@ export default function Projects() {
           })}
         </div>
 
-        {/* Custom Mobile Glass Dropdown (< 769px) - Identical layout to Experience dropdown */}
+        {/* Custom Mobile Glass Dropdown (< 769px) - Unified Emerald Theme */}
         <div className="mobile-filter-dropdown-container" style={{ position: 'relative', marginBottom: '2rem' }}>
           <div 
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -287,16 +286,16 @@ export default function Projects() {
               alignItems: 'center',
               justifyContent: 'space-between',
               background: 'var(--surface-container)',
-              border: `1.5px solid ${activeColor}66`,
+              border: '1.5px solid rgba(0, 210, 127, 0.4)',
               borderRadius: '16px',
               padding: '0.85rem 1.25rem',
               cursor: 'pointer',
-              boxShadow: `0 8px 25px ${activeColor}15`,
+              boxShadow: '0 8px 25px rgba(0, 210, 127, 0.1)',
               transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <span style={{ color: activeColor, display: 'flex' }}>{getTopicIcon(activeFilter, activeColor)}</span>
+              <span style={{ color: 'var(--primary)', display: 'flex' }}>{getTopicIcon(activeFilter, 'var(--primary)')}</span>
               <span style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-main)', fontFamily: 'Space Grotesk' }}>
                 {activeFilter === 'Top 10 Starring Projects' ? activeFilter : formatTopic(activeFilter)}
               </span>
@@ -304,8 +303,8 @@ export default function Projects() {
                 fontSize: '0.75rem',
                 padding: '0.2rem 0.6rem',
                 borderRadius: '9999px',
-                background: `${activeColor}25`,
-                color: activeColor,
+                background: 'rgba(0, 210, 127, 0.15)',
+                color: 'var(--primary)',
                 fontWeight: 800
               }}>
                 {getFilterCount(activeFilter)}
@@ -313,7 +312,7 @@ export default function Projects() {
             </div>
             <ChevronDown 
               size={20} 
-              color={activeColor} 
+              color="var(--primary)" 
               style={{ 
                 transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                 transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
@@ -347,7 +346,6 @@ export default function Projects() {
             >
               {filters.map((filter) => {
                 const isTopGenres = filter === 'Top 10 Starring Projects';
-                const color = topicColors[filter] || '#8B5CF6';
                 const isActive = activeFilter === filter;
                 const count = getFilterCount(filter);
                 return (
@@ -363,17 +361,19 @@ export default function Projects() {
                       justifyContent: 'space-between',
                       padding: '0.75rem 1rem',
                       borderRadius: '12px',
-                      background: isActive ? `${color}22` : 'transparent',
-                      border: isActive ? `1px solid ${color}55` : '1px solid transparent',
+                      background: isActive ? 'rgba(0, 210, 127, 0.15)' : 'transparent',
+                      border: isActive ? '1px solid rgba(0, 210, 127, 0.35)' : '1px solid transparent',
                       cursor: 'pointer',
                       transition: 'all 0.2s ease'
                     }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                      <span style={{ color, display: 'flex' }}>{getTopicIcon(filter, color)}</span>
+                      <span style={{ color: isActive ? 'var(--primary)' : 'var(--text-muted)', display: 'flex' }}>
+                        {getTopicIcon(filter, isActive ? 'var(--primary)' : 'var(--text-muted)')}
+                      </span>
                       <span style={{ 
                         fontWeight: isActive ? 800 : 600, 
-                        color: isActive ? color : 'var(--text-main)',
+                        color: isActive ? 'var(--primary)' : 'var(--text-main)',
                         fontSize: '0.9rem',
                         fontFamily: 'Space Grotesk'
                       }}>
@@ -385,13 +385,13 @@ export default function Projects() {
                         fontSize: '0.7rem',
                         padding: '0.15rem 0.55rem',
                         borderRadius: '9999px',
-                        background: isActive ? color : 'var(--surface-low)',
+                        background: isActive ? 'var(--primary)' : 'var(--surface-low)',
                         color: isActive ? 'var(--on-primary)' : 'var(--text-muted)',
                         fontWeight: 800
                       }}>
                         {count}
                       </span>
-                      {isActive && <Check size={16} color={color} />}
+                      {isActive && <Check size={16} color="var(--primary)" />}
                     </div>
                   </div>
                 );
