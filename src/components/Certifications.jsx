@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Award, ExternalLink, Calendar, Briefcase, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
+import { Award, ExternalLink, Calendar, Briefcase, ChevronLeft, ChevronRight, Filter, ChevronDown, Check } from 'lucide-react';
 import certs from '../data/certifications.json';
 
 import googleLogo from '../assets/company-logo/google.png';
@@ -32,6 +32,7 @@ const ORG_LOGOS = {
 
 export default function Certifications() {
   const [selectedOrg, setSelectedOrg] = useState('All');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
@@ -77,7 +78,8 @@ export default function Certifications() {
   // Smooth scroll to section top on page change
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    document.getElementById('certifications').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const el = document.getElementById('certifications');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const getPageItems = (total, current) => {
@@ -126,8 +128,8 @@ export default function Certifications() {
             </div>
           </div>
 
-          {/* Filter Chips */}
-          <div className="filter-container" style={{
+          {/* Desktop Filter Chips (>= 769px) */}
+          <div className="filter-container desktop-filter-pills" style={{
             display: 'flex',
             flexWrap: 'wrap',
             gap: '0.75rem',
@@ -168,6 +170,129 @@ export default function Certifications() {
                 </span>
               </button>
             ))}
+          </div>
+
+          {/* Custom Mobile Glass Dropdown (< 769px) - Identical layout to Experience and Projects */}
+          <div className="mobile-filter-dropdown-container" style={{ position: 'relative', marginBottom: '1rem' }}>
+            <div 
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                background: 'var(--surface-container)',
+                border: '1.5px solid rgba(0, 210, 127, 0.4)',
+                borderRadius: '16px',
+                padding: '0.85rem 1.25rem',
+                cursor: 'pointer',
+                boxShadow: '0 8px 25px rgba(0, 210, 127, 0.1)',
+                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <span style={{ color: 'var(--primary)', display: 'flex' }}>
+                  {selectedOrg === 'All' ? <Award size={18} color="var(--primary)" /> : <Filter size={18} color="var(--primary)" />}
+                </span>
+                <span style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-main)', fontFamily: 'Space Grotesk' }}>
+                  {selectedOrg}
+                </span>
+                <span style={{
+                  fontSize: '0.75rem',
+                  padding: '0.2rem 0.6rem',
+                  borderRadius: '9999px',
+                  background: 'rgba(0, 210, 127, 0.15)',
+                  color: 'var(--primary)',
+                  fontWeight: 800
+                }}>
+                  {orgs.find(o => o.name === selectedOrg)?.count || 0}
+                </span>
+              </div>
+              <ChevronDown 
+                size={20} 
+                color="var(--primary)" 
+                style={{ 
+                  transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                  transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                }} 
+              />
+            </div>
+
+            {/* Floating Dropdown Menu Options */}
+            {isDropdownOpen && (
+              <div 
+                style={{
+                  position: 'absolute',
+                  top: 'calc(100% + 8px)',
+                  left: 0,
+                  right: 0,
+                  zIndex: 100,
+                  maxHeight: '320px',
+                  overflowY: 'auto',
+                  background: 'rgba(15, 23, 42, 0.95)',
+                  backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
+                  border: '1px solid var(--glass-border)',
+                  borderRadius: '16px',
+                  padding: '0.5rem',
+                  boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.35rem',
+                  animation: 'dropdownFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
+                }}
+              >
+                {orgs.map((org) => {
+                  const isActive = selectedOrg === org.name;
+                  return (
+                    <div
+                      key={org.name}
+                      onClick={() => {
+                        setSelectedOrg(org.name);
+                        setIsDropdownOpen(false);
+                      }}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        padding: '0.75rem 1rem',
+                        borderRadius: '12px',
+                        background: isActive ? 'rgba(0, 210, 127, 0.15)' : 'transparent',
+                        border: isActive ? '1px solid rgba(0, 210, 127, 0.35)' : '1px solid transparent',
+                        cursor: 'pointer',
+                        transition: 'all 0.2s ease'
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                        <span style={{ color: 'var(--primary)', display: 'flex' }}>
+                          {org.name === 'All' ? <Award size={16} color="var(--primary)" /> : <Filter size={16} color="var(--primary)" />}
+                        </span>
+                        <span style={{ 
+                          fontWeight: isActive ? 800 : 600, 
+                          color: isActive ? 'var(--primary)' : 'var(--text-main)',
+                          fontSize: '0.9rem',
+                          fontFamily: 'Space Grotesk'
+                        }}>
+                          {org.name}
+                        </span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <span style={{
+                          fontSize: '0.7rem',
+                          padding: '0.15rem 0.55rem',
+                          borderRadius: '9999px',
+                          background: isActive ? 'var(--primary)' : 'var(--surface-low)',
+                          color: isActive ? 'var(--on-primary)' : 'var(--text-muted)',
+                          fontWeight: 800
+                        }}>
+                          {org.count}
+                        </span>
+                        {isActive && <Check size={16} color="var(--primary)" />}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
 
