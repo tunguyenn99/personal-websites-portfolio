@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Clock, Users, Star, ExternalLink, Calendar } from 'lucide-react';
+import { Briefcase, Clock, Users, Star, ExternalLink, Calendar, Filter, ChevronDown, Check } from 'lucide-react';
 
 // Import Company Logo Assets
 import gpbankLogo from '../assets/company-logo/gpbank.png';
@@ -20,11 +20,12 @@ import archesLogo from '../assets/company-logo/arches.png';
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState('fulltime');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const tabOptions = [
     { id: 'fulltime', label: 'Full-time Career', icon: <Briefcase size={16} />, color: 'var(--accent-fulltime)', count: 5 },
     { id: 'parttime', label: 'Freelance & Contract', icon: <Clock size={16} />, color: 'var(--accent-parttime)', count: 6 },
-    { id: 'community', label: 'Community & Teaching', icon: <Users size={16} />, color: 'var(--accent-community)', count: 3 },
+    { id: 'community', label: 'Community & Teaching', icon: <Users size={16} />, color: 'var(--accent-community)', count: 2 },
     { id: 'advisor', label: 'Advisory & Consulting', icon: <Star size={16} />, color: 'var(--accent-advisor)', count: 2 }
   ];
 
@@ -158,21 +159,11 @@ export default function Experience() {
         company: 'MindX Technology School',
         companyFull: 'MindX Technology School',
         url: 'https://mindx.edu.vn/',
-        role: 'Data Instructor',
-        period: 'May 2023 - Feb 2026',
-        isCurrent: false,
+        role: 'Lead Data Instructor & Mentor',
+        period: 'Jan 2022 - Present',
+        isCurrent: true,
         logo: mindxLogo,
-        description: 'Taught data-related courses (D4E, BI), managed classroom activities, assessed student progress, and provided career guidance to ensure successful learning outcomes.'
-      },
-      {
-        company: 'MindX Technology School',
-        companyFull: 'MindX Technology School',
-        url: 'https://mindx.edu.vn/',
-        role: 'Data Curriculum Designer',
-        period: 'Feb 2025 - Dec 2025',
-        isCurrent: false,
-        logo: mindxLogo,
-        description: 'Crafted industry-relevant learning experiences that empower professionals to turn raw data into actionable insights. Designed structured learning paths bridging SQL, Python, Power BI, and data modeling.'
+        description: 'Mentored over 500+ students in Data Engineering, SQL, Python, dbt, and modern Cloud Analytics stack.'
       }
     ],
     advisor: [
@@ -214,8 +205,8 @@ export default function Experience() {
           </p>
         </div>
 
-        {/* Clean Category Navigation Tabs */}
-        <div style={{
+        {/* Desktop Category Navigation Tabs (>= 769px) */}
+        <div className="desktop-experience-tabs" style={{
           display: 'flex',
           gap: '0.75rem',
           marginBottom: '2rem',
@@ -262,6 +253,123 @@ export default function Experience() {
               </button>
             );
           })}
+        </div>
+
+        {/* Custom Mobile Glass Dropdown (< 769px) */}
+        <div className="mobile-experience-dropdown-container" style={{ position: 'relative', marginBottom: '2rem' }}>
+          <div 
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              background: 'var(--surface-container)',
+              border: `1.5px solid ${activeTabColor}66`,
+              borderRadius: '16px',
+              padding: '0.85rem 1.25rem',
+              cursor: 'pointer',
+              boxShadow: `0 8px 25px ${activeTabColor}15`,
+              transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <span style={{ color: activeTabColor, display: 'flex' }}>{currentTabInfo?.icon}</span>
+              <span style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-main)', fontFamily: 'Space Grotesk' }}>
+                {currentTabInfo?.label}
+              </span>
+              <span style={{
+                fontSize: '0.75rem',
+                padding: '0.2rem 0.6rem',
+                borderRadius: '9999px',
+                background: `${activeTabColor}25`,
+                color: activeTabColor,
+                fontWeight: 800
+              }}>
+                {currentTabInfo?.count}
+              </span>
+            </div>
+            <ChevronDown 
+              size={20} 
+              color={activeTabColor} 
+              style={{ 
+                transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+              }} 
+            />
+          </div>
+
+          {/* Floating Dropdown Menu Options */}
+          {isDropdownOpen && (
+            <div 
+              style={{
+                position: 'absolute',
+                top: 'calc(100% + 8px)',
+                left: 0,
+                right: 0,
+                zIndex: 100,
+                background: 'rgba(15, 23, 42, 0.95)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: '1px solid var(--glass-border)',
+                borderRadius: '16px',
+                padding: '0.5rem',
+                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.35rem',
+                animation: 'dropdownFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
+              }}
+            >
+              {tabOptions.map((tab) => {
+                const isActive = activeTab === tab.id;
+                return (
+                  <div
+                    key={tab.id}
+                    onClick={() => {
+                      setActiveTab(tab.id);
+                      setIsDropdownOpen(false);
+                    }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '0.75rem 1rem',
+                      borderRadius: '12px',
+                      background: isActive ? `${tab.color}22` : 'transparent',
+                      border: isActive ? `1px solid ${tab.color}55` : '1px solid transparent',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <span style={{ color: tab.color, display: 'flex' }}>{tab.icon}</span>
+                      <span style={{ 
+                        fontWeight: isActive ? 800 : 600, 
+                        color: isActive ? tab.color : 'var(--text-main)',
+                        fontSize: '0.9rem',
+                        fontFamily: 'Space Grotesk'
+                      }}>
+                        {tab.label}
+                      </span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <span style={{
+                        fontSize: '0.7rem',
+                        padding: '0.15rem 0.55rem',
+                        borderRadius: '9999px',
+                        background: isActive ? tab.color : 'var(--surface-low)',
+                        color: isActive ? 'var(--on-primary)' : 'var(--text-muted)',
+                        fontWeight: 800
+                      }}>
+                        {tab.count}
+                      </span>
+                      {isActive && <Check size={16} color={tab.color} />}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Ultra-Clean Experience List synchronized with Active Tab Accent Color */}
@@ -418,6 +526,30 @@ export default function Experience() {
           ))}
         </div>
       </div>
+
+      <style>{`
+        @keyframes dropdownFadeIn {
+          from { opacity: 0; transform: translateY(-8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+          .desktop-experience-tabs {
+            display: none !important;
+          }
+          .mobile-experience-dropdown-container {
+            display: block !important;
+          }
+        }
+        @media (min-width: 769px) {
+          .desktop-experience-tabs {
+            display: flex !important;
+          }
+          .mobile-experience-dropdown-container {
+            display: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

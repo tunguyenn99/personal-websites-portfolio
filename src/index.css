@@ -412,6 +412,147 @@ h3,
   }
 }
 
+/* Glowing Pulse Dot for Live Status Badge */
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  opacity: 0.6;
+  animation: pulseGlow 1.8s ease-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Top Scroll Progress Indicator */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  z-index: 1000;
+  transition: width 0.1s ease-out;
+}
+
+/* Glassmorphic Mobile Bottom Tab Bar (< 768px) */
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top-btn {
+    bottom: 80px !important;
+    right: 16px !important;
+  }
+
+  .mobile-bottom-bar {
+    display: flex;
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: 440px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 9999px;
+    padding: 0.5rem 0.75rem;
+    z-index: 99;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .mobile-bottom-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.4rem 0.75rem;
+    border-radius: 9999px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    touch-action: manipulation;
+  }
+
+  .mobile-bottom-item.active {
+    color: var(--on-primary) !important;
+    background: var(--primary) !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 15px rgba(0, 210, 127, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .mobile-bottom-item.active svg {
+    color: var(--on-primary) !important;
+    stroke-width: 2.5px;
+  }
+
+  /* Padding bottom for section to prevent bottom bar overlap */
+  body {
+    padding-bottom: 75px;
+  }
+
+  /* Filter responsive toggle */
+  .desktop-filter-pills {
+    display: none !important;
+  }
+
+  .mobile-filter-dropdown {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-filter-pills {
+    display: flex !important;
+  }
+
+  .mobile-filter-dropdown {
+    display: none !important;
+  }
+}
+
+/* Touch targets optimization */
+button, a {
+  touch-action: manipulation;
+}
+
+.experience-glass-pills-bar::-webkit-scrollbar,
+.filter-container::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
 @media (max-width: 480px) {
   .section-title {
     font-size: 1.75rem;

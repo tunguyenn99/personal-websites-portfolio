@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { ArrowRight, MapPin, Sparkles, Copy, Check, Coffee } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { SiGithub as Github } from 'react-icons/si';
 import { FaLinkedin as Linkedin } from 'react-icons/fa';
 import profilePic from '../assets/avatar/github-avatar.jpg';
 
 export default function AboutMe() {
   const [titleIndex, setTitleIndex] = useState(0);
+  const [copied, setCopied] = useState(false);
   const titles = [
     "Senior Analytics Engineer @ GPBank",
     "Ex-TNEX, VNPAY & Shopee Data Leader",
     "Co-Owner @ Xóm Data Community"
   ];
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("contact@tunguyen.data");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
@@ -41,8 +49,34 @@ export default function AboutMe() {
       <div className="container responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }}>
         
         {/* Left Column: Minimal Typography & Bio */}
-        <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {/* Live Status Badge */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.6rem',
+              padding: '0.4rem 0.9rem',
+              borderRadius: '9999px',
+              background: 'var(--tag-bg)',
+              border: '1px solid var(--tag-border)',
+              marginBottom: '1.25rem',
+              boxShadow: '0 4px 15px rgba(0, 210, 127, 0.12)'
+            }}
+          >
+            <span className="pulse-dot"></span>
+            <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--primary)', letterSpacing: '0.04em' }}>
+              Available for Roles · 104K+ Community Reach
+            </span>
+          </motion.div>
+
           {/* Subtitle Badge */}
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '1.5rem', color: 'var(--primary)' }}>
             <span style={{ height: '1px', width: '28px', background: 'var(--primary)' }}></span>
@@ -78,15 +112,62 @@ export default function AboutMe() {
 
           {/* Action Buttons */}
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-            <a href="#projects" className="btn-primary" style={{ padding: '0.75rem 1.5rem', borderRadius: '12px' }}>
+            <motion.a 
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              href="#projects" 
+              className="btn-primary" 
+              style={{ padding: '0.75rem 1.5rem', borderRadius: '12px' }}
+            >
               Explore Work <ArrowRight size={18} />
-            </a>
-            <a href="https://github.com/tunguyenn99" target="_blank" rel="noreferrer" className="btn-secondary" style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem' }}>
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              href="https://linkedin.com/in/tunguyendata"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary"
+              style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem', background: 'var(--surface-container)', color: 'var(--secondary)', border: '1px solid var(--outline-low)' }}
+            >
+              <Coffee size={18} color="var(--secondary)" /> Book Coffee Chat
+            </motion.a>
+
+            <motion.button 
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleCopyEmail}
+              className="btn-secondary" 
+              style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem', cursor: 'pointer', border: '1px solid var(--outline-low)' }}
+            >
+              {copied ? <Check size={18} color="var(--primary)" /> : <Copy size={18} />}
+              <span>{copied ? 'Copied Email!' : 'Copy Email'}</span>
+            </motion.button>
+
+            <motion.a 
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              href="https://github.com/tunguyenn99" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn-secondary" 
+              style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem' }}
+            >
               <Github size={18} /> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/tunguyenn99/" target="_blank" rel="noreferrer" className="btn-secondary" style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem' }}>
+            </motion.a>
+
+            <motion.a 
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              href="https://www.linkedin.com/in/tunguyenn99/" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn-secondary" 
+              style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem' }}
+            >
               <Linkedin size={18} /> LinkedIn
-            </a>
+            </motion.a>
           </div>
 
           {/* Location */}
@@ -94,12 +175,18 @@ export default function AboutMe() {
             <MapPin size={16} color="var(--primary)" />
             <span>Hanoi Capital Region, Vietnam</span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column: Clean Profile Image */}
-        <div className="animate-fade-in" style={{ animationDelay: '0.3s', display: 'flex', justifyContent: 'center' }}>
-          <div
-            className="glass-panel"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.03, rotate: 1 }}
+            className="glass-panel profile-img-hover"
             style={{
               width: '100%',
               maxWidth: '360px',
@@ -123,8 +210,8 @@ export default function AboutMe() {
               }}
             />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 40%)' }}></div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
       </div>
 
@@ -136,3 +223,4 @@ export default function AboutMe() {
     </section>
   );
 }
+

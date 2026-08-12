@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Star, GitFork, ExternalLink, Database, FileText, Calendar, Code2, Cloud, BarChart3, Workflow, Download, Layers, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, GitFork, ExternalLink, Database, FileText, Calendar, Code2, Cloud, BarChart3, Workflow, Download, Layers, ChevronLeft, ChevronRight, Filter, ChevronDown, Check } from 'lucide-react';
 import {
   SiPython, SiPostgresql, SiDbt, SiApacheairflow, SiSnowflake,
   SiDatabricks, SiSupabase, SiApachespark, SiAirbyte, SiSelenium,
@@ -21,9 +21,15 @@ const formatTopic = (topic) => {
 // Get all unique topics from the full dataset
 const getAllTopics = () => {
   const topicsSet = new Set();
-  reposData.forEach(repo => {
-    repo.topics.forEach(topic => topicsSet.add(topic));
-  });
+  if (Array.isArray(reposData)) {
+    reposData.forEach(repo => {
+      if (repo && Array.isArray(repo.topics)) {
+        repo.topics.forEach(topic => {
+          if (topic) topicsSet.add(topic);
+        });
+      }
+    });
+  }
   return Array.from(topicsSet).sort();
 };
 
@@ -37,7 +43,10 @@ const topicPriority = [
 ];
 
 const topicColors = {
+  'Top 10 Starring Projects': '#00D27F',
   'analytics-engineer': '#E11D48',
+  'analytics-engineering': '#10B981',
+  'data-engineering': '#38BDF8',
   'data-analytics': '#0284C7',
   'business-intelligence': '#D97706',
   'self-learning': '#7C3AED',
@@ -122,36 +131,33 @@ const fallbackTechIcons = {
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('Top 10 Starring Projects');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
   // Get all unique topics
   const allTopics = getAllTopics();
-  
-  // Create filter list
-  const filters = [
-    'Top 10 Starring Projects',
-    ...allTopics.sort((a, b) => {
-      const priorityA = topicPriority.indexOf(a);
-      const priorityB = topicPriority.indexOf(b);
-      if (priorityA === -1 && priorityB === -1) return 0;
-      if (priorityA === -1) return 1;
-      if (priorityB === -1) return -1;
-      return priorityA - priorityB;
-    })
-  ];
+  const filters = ['Top 10 Starring Projects', ...allTopics];
+  const activeColor = topicColors[activeFilter] || '#00D27F';
 
   // Dynamic filtering logic
-  const filteredProjects = activeFilter === 'Top 10 Starring Projects'
-    ? [...reposData].sort((a, b) => (b.stars || 0) - (a.stars || 0))
-    : reposData.filter(repo => repo.topics.includes(activeFilter));
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === 'Top 10 Starring Projects') {
+      return [...reposData]
+        .sort((a, b) => (b.stars || b.stargazers_count || 0) - (a.stars || a.stargazers_count || 0))
+        .slice(0, 10);
+    }
+    return reposData.filter(repo => 
+      repo && Array.isArray(repo.topics) && repo.topics.includes(activeFilter)
+    );
+  }, [activeFilter]);
 
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
   
   const paginatedProjects = useMemo(() => {
     const start = (currentPage - 1) * itemsPerPage;
     return filteredProjects.slice(start, start + itemsPerPage);
-  }, [filteredProjects, currentPage]);
+  }, [filteredProjects, currentPage, itemsPerPage]);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -159,7 +165,8 @@ export default function Projects() {
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const el = document.getElementById('projects');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const getPageItems = (total, current) => {
@@ -189,9 +196,10 @@ export default function Projects() {
 
   // Sort tech stack by priority
   const sortTechStack = (techs) => {
+    if (!techs || !Array.isArray(techs)) return [];
     return [...techs].sort((a, b) => {
-      const priorityA = techPriority.indexOf(a);
-      const priorityB = techPriority.indexOf(b);
+      const priorityA = typeof techPriority !== 'undefined' ? techPriority.indexOf(a) : -1;
+      const priorityB = typeof techPriority !== 'undefined' ? techPriority.indexOf(b) : -1;
       if (priorityA === -1 && priorityB === -1) return 0;
       if (priorityA === -1) return 1;
       if (priorityB === -1) return -1;
@@ -199,37 +207,67 @@ export default function Projects() {
     });
   };
 
+  const getTopicIcon = (filter, color) => {
+    if (filter === 'Top 10 Starring Projects') return <Star size={16} color={color} />;
+    if (filter.includes('analytics-engineer') || filter.includes('analytics-engineering')) return <Workflow size={16} color={color} />;
+    if (filter.includes('data-engineering')) return <Database size={16} color={color} />;
+    if (filter.includes('bi') || filter.includes('analytics') || filter.includes('intelligence')) return <BarChart3 size={16} color={color} />;
+    if (filter.includes('learning')) return <Code2 size={16} color={color} />;
+    if (filter.includes('community')) return <Layers size={16} color={color} />;
+    if (filter.includes('portfolio') || filter.includes('profile')) return <FileText size={16} color={color} />;
+    return <Filter size={16} color={color} />;
+  };
+
+  const getFilterCount = (filter) => {
+    if (filter === 'Top 10 Starring Projects') {
+      return Math.min(reposData.length, 10);
+    }
+    return reposData.filter(repo => repo && Array.isArray(repo.topics) && repo.topics.includes(filter)).length;
+  };
+
   return (
     <section id="projects" className="section">
       <div className="container">
         <h2 className="section-title">Highlighted Projects</h2>
         
-        {/* Filter UI */}
-        <div className="filter-container" style={{
+        {/* Desktop Filter Pills (>= 769px) */}
+        <div className="filter-container desktop-filter-pills" style={{
           display: 'flex',
-          gap: '0.75rem',
-          marginBottom: '3rem',
+          alignItems: 'center',
+          gap: '0.5rem',
+          marginBottom: '2.5rem',
+          padding: '0.4rem',
+          background: 'var(--surface-container)',
+          borderRadius: '9999px',
+          border: '1px solid var(--outline-low)',
+          boxShadow: '0 8px 30px rgba(0, 0, 0, 0.25)',
           overflowX: 'auto',
-          paddingBottom: '0.5rem',
           WebkitOverflowScrolling: 'touch',
-          justifyContent: 'flex-start'
+          scrollbarWidth: 'none'
         }}>
           {filters.map(filter => {
             const isTopGenres = filter === 'Top 10 Starring Projects';
             const color = topicColors[filter] || '#8B5CF6';
+            const isActive = activeFilter === filter;
             return (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 style={{
-                  padding: '0.5rem 1rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '0.55rem 1.15rem',
                   borderRadius: '9999px',
-                  border: `1px solid ${activeFilter === filter ? color : 'var(--outline-low)'}`,
-                  background: activeFilter === filter ? `${color}20` : 'var(--surface-container)',
-                  color: activeFilter === filter ? color : 'var(--text-muted)',
+                  border: isActive ? `1px solid ${color}77` : '1px solid transparent',
+                  background: isActive ? `${color}22` : 'transparent',
+                  color: isActive ? color : 'var(--text-muted)',
                   cursor: 'pointer',
-                  transition: 'all 0.3s',
-                  fontWeight: 600,
+                  fontWeight: isActive ? 800 : 600,
+                  fontSize: '0.875rem',
+                  fontFamily: 'Space Grotesk, sans-serif',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                  boxShadow: isActive ? `0 0 20px ${color}25` : 'none',
                   whiteSpace: 'nowrap',
                   flexShrink: 0
                 }}
@@ -239,6 +277,129 @@ export default function Projects() {
             );
           })}
         </div>
+
+        {/* Custom Mobile Glass Dropdown (< 769px) - Identical layout to Experience dropdown */}
+        <div className="mobile-filter-dropdown-container" style={{ position: 'relative', marginBottom: '2rem' }}>
+          <div 
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              background: 'var(--surface-container)',
+              border: `1.5px solid ${activeColor}66`,
+              borderRadius: '16px',
+              padding: '0.85rem 1.25rem',
+              cursor: 'pointer',
+              boxShadow: `0 8px 25px ${activeColor}15`,
+              transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <span style={{ color: activeColor, display: 'flex' }}>{getTopicIcon(activeFilter, activeColor)}</span>
+              <span style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-main)', fontFamily: 'Space Grotesk' }}>
+                {activeFilter === 'Top 10 Starring Projects' ? activeFilter : formatTopic(activeFilter)}
+              </span>
+              <span style={{
+                fontSize: '0.75rem',
+                padding: '0.2rem 0.6rem',
+                borderRadius: '9999px',
+                background: `${activeColor}25`,
+                color: activeColor,
+                fontWeight: 800
+              }}>
+                {getFilterCount(activeFilter)}
+              </span>
+            </div>
+            <ChevronDown 
+              size={20} 
+              color={activeColor} 
+              style={{ 
+                transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+              }} 
+            />
+          </div>
+
+          {/* Floating Dropdown Menu Options */}
+          {isDropdownOpen && (
+            <div 
+              style={{
+                position: 'absolute',
+                top: 'calc(100% + 8px)',
+                left: 0,
+                right: 0,
+                zIndex: 100,
+                maxHeight: '320px',
+                overflowY: 'auto',
+                background: 'rgba(15, 23, 42, 0.95)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: '1px solid var(--glass-border)',
+                borderRadius: '16px',
+                padding: '0.5rem',
+                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.35rem',
+                animation: 'dropdownFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
+              }}
+            >
+              {filters.map((filter) => {
+                const isTopGenres = filter === 'Top 10 Starring Projects';
+                const color = topicColors[filter] || '#8B5CF6';
+                const isActive = activeFilter === filter;
+                const count = getFilterCount(filter);
+                return (
+                  <div
+                    key={filter}
+                    onClick={() => {
+                      setActiveFilter(filter);
+                      setIsDropdownOpen(false);
+                    }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '0.75rem 1rem',
+                      borderRadius: '12px',
+                      background: isActive ? `${color}22` : 'transparent',
+                      border: isActive ? `1px solid ${color}55` : '1px solid transparent',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <span style={{ color, display: 'flex' }}>{getTopicIcon(filter, color)}</span>
+                      <span style={{ 
+                        fontWeight: isActive ? 800 : 600, 
+                        color: isActive ? color : 'var(--text-main)',
+                        fontSize: '0.9rem',
+                        fontFamily: 'Space Grotesk'
+                      }}>
+                        {isTopGenres ? filter : formatTopic(filter)}
+                      </span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <span style={{
+                        fontSize: '0.7rem',
+                        padding: '0.15rem 0.55rem',
+                        borderRadius: '9999px',
+                        background: isActive ? color : 'var(--surface-low)',
+                        color: isActive ? 'var(--on-primary)' : 'var(--text-muted)',
+                        fontWeight: 800
+                      }}>
+                        {count}
+                      </span>
+                      {isActive && <Check size={16} color={color} />}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
 
         <div className="card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', gap: '2.5rem', justifyContent: 'center' }}>
           {paginatedProjects.map((repo, idx) => (
@@ -275,7 +436,7 @@ export default function Projects() {
                       {sortTechStack(repo.techstack).slice(0, 3).map(tech => {
                         const color = techColors[tech] || '#8B5CF6';
                         const rawIcon = centralizedTechIcons[tech] || fallbackTechIcons[tech];
-                        const icon = rawIcon ? React.cloneElement(rawIcon, { size: 14 }) : null;
+                        const icon = React.isValidElement(rawIcon) ? React.cloneElement(rawIcon, { size: 14 }) : null;
                         
                         return (
                           <span key={tech} style={{
@@ -398,6 +559,30 @@ export default function Projects() {
           </div>
         )}
       </div>
+
+      <style>{`
+        @keyframes dropdownFadeIn {
+          from { opacity: 0; transform: translateY(-8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+          .desktop-filter-pills {
+            display: none !important;
+          }
+          .mobile-filter-dropdown-container {
+            display: block !important;
+          }
+        }
+        @media (min-width: 769px) {
+          .desktop-filter-pills {
+            display: flex !important;
+          }
+          .mobile-filter-dropdown-container {
+            display: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -351,9 +351,8 @@ export default function Certifications() {
           .cert-card:hover {
             background: var(--glass-bg-hover) !important;
             border-color: var(--primary) !important;
-            transform: translateY(-8px) scale(1.02) !important;
-            box-shadow: var(--card-shadow-hover) !important;
-          }(0,0,0,0.3) !important;
+            transform: translateY(-6px) scale(1.01) !important;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3) !important;
           }
           .cert-link:hover {
             color: var(--primary) !important;
