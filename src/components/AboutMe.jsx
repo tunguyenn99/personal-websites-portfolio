@@ -111,67 +111,64 @@ export default function AboutMe() {
           </p>
 
           {/* Action Buttons */}
-          <div className="hero-actions" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-            <Motion.a
+          <div className="hero-actions">
+            <div className="hero-actions-primary">
+              <Motion.a
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.98 }}
               href="#projects" 
-              className="btn-primary" 
-              style={{ padding: '0.75rem 1.5rem', borderRadius: '12px' }}
-            >
-              Explore Work <ArrowRight size={18} />
-            </Motion.a>
+              className="btn-primary hero-action-btn"
+              >
+                Explore Work <ArrowRight size={18} />
+              </Motion.a>
 
-            <Motion.a
-              whileHover={{ scale: 1.04, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              href="https://linkedin.com/in/tunguyendata"
-              target="_blank"
-              rel="noreferrer"
-              className="btn-secondary"
-              style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem', background: 'var(--surface-container)', color: 'var(--secondary)', border: '1px solid var(--outline-low)' }}
-            >
-              <Coffee size={18} color="var(--secondary)" /> Book Coffee Chat
-            </Motion.a>
+              <Motion.a
+                whileHover={{ scale: 1.04, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                href="https://linkedin.com/in/tunguyendata"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-secondary hero-action-btn"
+              >
+                <Coffee size={18} /> Book Coffee Chat
+              </Motion.a>
 
-            <Motion.button
-              whileHover={{ scale: 1.04, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={handleCopyEmail}
-              aria-label={copied ? 'Email copied' : 'Copy email address'}
-              title={copied ? 'Email copied' : 'Copy email address'}
-              className="btn-secondary hero-social"
-              style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem', cursor: 'pointer', border: '1px solid var(--outline-low)' }}
-            >
-              {copied ? <Check size={18} color="var(--primary)" /> : <Copy size={18} />}
-              <span>{copied ? 'Copied Email!' : 'Copy Email'}</span>
-            </Motion.button>
+              <Motion.button
+                whileHover={{ scale: 1.04, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleCopyEmail}
+                aria-label={copied ? 'Email copied' : 'Copy email address'}
+                title={copied ? 'Email copied' : 'Copy email address'}
+                className="btn-secondary hero-action-btn"
+              >
+                {copied ? <Check size={18} /> : <Copy size={18} />}
+                <span>{copied ? 'Email Copied' : 'Copy Email'}</span>
+              </Motion.button>
+            </div>
 
-            <Motion.a
-              whileHover={{ scale: 1.04, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              href="https://github.com/tunguyenn99" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="btn-secondary" 
-              style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem' }}
-            >
-              <Github size={18} /> <span>GitHub</span>
-            </Motion.a>
+            <div className="hero-actions-social">
+              <Motion.a
+                whileHover={{ scale: 1.04, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                href="https://github.com/tunguyenn99"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-secondary hero-action-btn"
+              >
+                <Github size={18} /> <span>GitHub</span>
+              </Motion.a>
 
-            <Motion.a
-              whileHover={{ scale: 1.04, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              href="https://www.linkedin.com/in/tunguyenn99/" 
-              target="_blank" 
-              rel="noreferrer" 
-              aria-label="Open LinkedIn profile"
-              title="LinkedIn"
-              className="btn-secondary hero-social"
-              style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem' }}
-            >
-              <Linkedin size={18} /> <span>LinkedIn</span>
-            </Motion.a>
+              <Motion.a
+                whileHover={{ scale: 1.04, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                href="https://www.linkedin.com/in/tunguyenn99/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-secondary hero-action-btn"
+              >
+                <Linkedin size={18} /> <span>LinkedIn</span>
+              </Motion.a>
+            </div>
           </div>
 
           {/* Location */}

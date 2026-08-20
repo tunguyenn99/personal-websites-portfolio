@@ -257,31 +257,40 @@ h3,
 }
 
 .hero-actions {
-  align-items: stretch;
-  gap: 0.75rem !important;
   max-width: 720px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
 }
 
-.hero-actions > * {
+.hero-actions-primary,
+.hero-actions-social {
+  display: contents;
+}
+
+.hero-actions-primary > * {
+  grid-column: span 2;
+}
+
+.hero-actions-social > :first-child {
+  grid-column: 1 / span 2;
+}
+
+.hero-actions-social > :last-child {
+  grid-column: 3 / span 2;
+}
+
+.hero-action-btn {
+  width: 100%;
   min-height: 52px;
-}
-
-.hero-social {
-  width: 52px;
-  padding-inline: 0 !important;
   justify-content: center;
-}
-
-.hero-social span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  padding: 0.75rem 1rem !important;
+  border-radius: 12px !important;
+  gap: 0.5rem;
   white-space: nowrap;
-  border: 0;
+  text-align: center;
+  font-size: 0.82rem;
 }
 
 .section-title {
@@ -720,22 +729,6 @@ h3,
   }
 }
 
-@media (max-width: 900px) {
-  .hero-social {
-    width: auto;
-    padding-inline: 1.25rem !important;
-  }
-
-  .hero-social span {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-  }
-}
-
 /* Touch targets optimization */
 button, a {
   touch-action: manipulation;
@@ -746,6 +739,26 @@ button, a {
   display: none !important;
   width: 0 !important;
   height: 0 !important;
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-actions-primary > *,
+  .hero-actions-social > :first-child,
+  .hero-actions-social > :last-child {
+    grid-column: auto;
+  }
+
+  .hero-actions-primary > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .hero-action-btn {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -775,34 +788,7 @@ button, a {
   }
 
   .hero-actions {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem !important;
-  }
-
-  .hero-actions > :first-child {
-    grid-column: 1 / -1;
-  }
-
-  .hero-actions > * {
-    width: 100%;
-    min-width: 0;
-    justify-content: center;
-    padding-inline: 0.65rem !important;
-    font-size: 0.78rem;
-  }
-
-  .hero-social {
-    width: 100%;
-  }
-
-  .hero-social span {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
+    gap: 0.75rem;
   }
 
   .mobile-bottom-bar {
