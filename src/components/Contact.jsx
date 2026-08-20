@@ -1,7 +1,7 @@
 import { SiGithub as Github, SiFacebook as Facebook } from 'react-icons/si';
 import { FaLinkedin as Linkedin } from 'react-icons/fa';
 import { Mail, Sparkles, Coffee } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 
 export default function Contact() {
@@ -21,14 +21,14 @@ export default function Contact() {
           I'm always open to discussing new data pipelines, system designs, open-source projects, or potential opportunities. 
         </p>
 
-        <motion.div 
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto' }}
         >
-          <motion.a 
+          <Motion.a
             whileHover={{ y: -6, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={triggerConfetti}
@@ -41,9 +41,9 @@ export default function Contact() {
             <Coffee size={36} color="#FF9900" style={{ marginBottom: '1rem' }} />
             <h3 style={{ color: 'var(--text-main)', fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.35rem', fontFamily: 'Space Grotesk' }}>Coffee Chat</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Book 15-min Session</p>
-          </motion.a>
+          </Motion.a>
 
-          <motion.a 
+          <Motion.a
             whileHover={{ y: -6, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={triggerConfetti}
@@ -56,9 +56,9 @@ export default function Contact() {
             <Linkedin size={36} color="var(--secondary)" style={{ marginBottom: '1rem' }} />
             <h3 style={{ color: 'var(--text-main)', fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.35rem', fontFamily: 'Space Grotesk' }}>LinkedIn</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Professional Network</p>
-          </motion.a>
+          </Motion.a>
 
-          <motion.a 
+          <Motion.a
             whileHover={{ y: -6, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={triggerConfetti}
@@ -71,9 +71,9 @@ export default function Contact() {
             <Github size={36} color="var(--primary)" style={{ marginBottom: '1rem' }} />
             <h3 style={{ color: 'var(--text-main)', fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.35rem', fontFamily: 'Space Grotesk' }}>GitHub</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Discovery & Code</p>
-          </motion.a>
+          </Motion.a>
 
-          <motion.a 
+          <Motion.a
             whileHover={{ y: -6, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={triggerConfetti}
@@ -86,11 +86,9 @@ export default function Contact() {
             <Facebook size={36} color="#1877F2" style={{ marginBottom: '1rem' }} />
             <h3 style={{ color: 'var(--text-main)', fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.35rem', fontFamily: 'Space Grotesk' }}>Xóm Data</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Join the Community</p>
-          </motion.a>
-        </motion.div>
+          </Motion.a>
+        </Motion.div>
       </div>
     </section>
   );
 }
-
-

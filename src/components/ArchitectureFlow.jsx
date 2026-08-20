@@ -262,6 +262,7 @@ export default function ArchitectureFlow() {
             }}>
               <button
                 onClick={() => setViewMode('pipeline')}
+                className={`filter-pill ${viewMode === 'pipeline' ? 'filter-pill-active' : ''}`}
                 style={{
                   display: 'flex', alignItems: 'center', gap: '0.5rem',
                   padding: '0.55rem 1.35rem', borderRadius: '9999px',
@@ -275,6 +276,7 @@ export default function ArchitectureFlow() {
               </button>
               <button
                 onClick={() => setViewMode('matrix')}
+                className={`filter-pill ${viewMode === 'matrix' ? 'filter-pill-active' : ''}`}
                 style={{
                   display: 'flex', alignItems: 'center', gap: '0.5rem',
                   padding: '0.55rem 1.35rem', borderRadius: '9999px',

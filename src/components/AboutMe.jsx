@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, MapPin, Sparkles, Copy, Check, Coffee } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { SiGithub as Github } from 'react-icons/si';
 import { FaLinkedin as Linkedin } from 'react-icons/fa';
 import profilePic from '../assets/avatar/github-avatar.jpg';
@@ -29,7 +29,7 @@ export default function AboutMe() {
       setTitleIndex((prev) => (prev + 1) % titles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [titles.length]);
 
   useEffect(() => {
     let index = 0;
@@ -45,17 +45,17 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <section id="about" className="section" style={{ minHeight: '88vh', display: 'flex', alignItems: 'center', paddingTop: '80px', position: 'relative' }}>
-      <div className="container responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }}>
+    <section id="about" className="section hero-section">
+      <div className="container responsive-grid hero-layout">
         
         {/* Left Column: Minimal Typography & Bio */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* Live Status Badge */}
-          <motion.div 
+          <Motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
@@ -75,7 +75,7 @@ export default function AboutMe() {
             <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--primary)', letterSpacing: '0.04em' }}>
               Available for Roles · 104K+ Community Reach
             </span>
-          </motion.div>
+          </Motion.div>
 
           {/* Subtitle Badge */}
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '1.5rem', color: 'var(--primary)' }}>
@@ -111,8 +111,8 @@ export default function AboutMe() {
           </p>
 
           {/* Action Buttons */}
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-            <motion.a 
+          <div className="hero-actions" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+            <Motion.a
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.98 }}
               href="#projects" 
@@ -120,9 +120,9 @@ export default function AboutMe() {
               style={{ padding: '0.75rem 1.5rem', borderRadius: '12px' }}
             >
               Explore Work <ArrowRight size={18} />
-            </motion.a>
+            </Motion.a>
 
-            <motion.a
+            <Motion.a
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.98 }}
               href="https://linkedin.com/in/tunguyendata"
@@ -132,20 +132,22 @@ export default function AboutMe() {
               style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem', background: 'var(--surface-container)', color: 'var(--secondary)', border: '1px solid var(--outline-low)' }}
             >
               <Coffee size={18} color="var(--secondary)" /> Book Coffee Chat
-            </motion.a>
+            </Motion.a>
 
-            <motion.button 
+            <Motion.button
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleCopyEmail}
-              className="btn-secondary" 
+              aria-label={copied ? 'Email copied' : 'Copy email address'}
+              title={copied ? 'Email copied' : 'Copy email address'}
+              className="btn-secondary hero-social"
               style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem', cursor: 'pointer', border: '1px solid var(--outline-low)' }}
             >
               {copied ? <Check size={18} color="var(--primary)" /> : <Copy size={18} />}
               <span>{copied ? 'Copied Email!' : 'Copy Email'}</span>
-            </motion.button>
+            </Motion.button>
 
-            <motion.a 
+            <Motion.a
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.98 }}
               href="https://github.com/tunguyenn99" 
@@ -154,20 +156,22 @@ export default function AboutMe() {
               className="btn-secondary" 
               style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem' }}
             >
-              <Github size={18} /> GitHub
-            </motion.a>
+              <Github size={18} /> <span>GitHub</span>
+            </Motion.a>
 
-            <motion.a 
+            <Motion.a
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.98 }}
               href="https://www.linkedin.com/in/tunguyenn99/" 
               target="_blank" 
               rel="noreferrer" 
-              className="btn-secondary" 
+              aria-label="Open LinkedIn profile"
+              title="LinkedIn"
+              className="btn-secondary hero-social"
               style={{ padding: '0.75rem 1.25rem', borderRadius: '12px', gap: '0.5rem' }}
             >
-              <Linkedin size={18} /> LinkedIn
-            </motion.a>
+              <Linkedin size={18} /> <span>LinkedIn</span>
+            </Motion.a>
           </div>
 
           {/* Location */}
@@ -175,16 +179,16 @@ export default function AboutMe() {
             <MapPin size={16} color="var(--primary)" />
             <span>Hanoi Capital Region, Vietnam</span>
           </div>
-        </motion.div>
+        </Motion.div>
 
         {/* Right Column: Clean Profile Image */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           style={{ display: 'flex', justifyContent: 'center' }}
         >
-          <motion.div
+          <Motion.div
             whileHover={{ scale: 1.03, rotate: 1 }}
             className="glass-panel profile-img-hover"
             style={{
@@ -201,6 +205,9 @@ export default function AboutMe() {
             <img
               src={profilePic}
               alt="Tu Nguyen"
+              width="360"
+              height="460"
+              fetchPriority="high"
               style={{
                 width: '100%',
                 height: '100%',
@@ -210,8 +217,8 @@ export default function AboutMe() {
               }}
             />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 40%)' }}></div>
-          </motion.div>
-        </motion.div>
+          </Motion.div>
+        </Motion.div>
 
       </div>
 
@@ -223,4 +230,3 @@ export default function AboutMe() {
     </section>
   );
 }
-

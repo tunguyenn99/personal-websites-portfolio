@@ -220,6 +220,7 @@ export default function Experience() {
             return (
               <button
                 key={tab.id}
+                className={`filter-pill ${isActive ? 'filter-pill-active' : ''}`}
                 onClick={() => setActiveTab(tab.id)}
                 style={{
                   display: 'flex',
@@ -240,7 +241,7 @@ export default function Experience() {
               >
                 <span style={{ color: tab.color, display: 'flex' }}>{tab.icon}</span>
                 <span style={{ color: isActive ? tab.color : 'inherit' }}>{tab.label}</span>
-                <span style={{
+                <span className="filter-count" style={{
                   fontSize: '0.725rem',
                   padding: '0.15rem 0.5rem',
                   borderRadius: '9999px',
@@ -257,7 +258,7 @@ export default function Experience() {
 
         {/* Custom Mobile Glass Dropdown (< 769px) */}
         <div className="mobile-experience-dropdown-container" style={{ position: 'relative', marginBottom: '2rem' }}>
-          <div 
+          <div className="filter-trigger"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             style={{
               display: 'flex',
@@ -307,7 +308,7 @@ export default function Experience() {
                 left: 0,
                 right: 0,
                 zIndex: 100,
-                background: 'rgba(15, 23, 42, 0.95)',
+                background: 'var(--glass-bg)',
                 backdropFilter: 'blur(20px)',
                 WebkitBackdropFilter: 'blur(20px)',
                 border: '1px solid var(--glass-border)',
@@ -325,6 +326,7 @@ export default function Experience() {
                 return (
                   <div
                     key={tab.id}
+                    className={isActive ? 'filter-option-active' : ''}
                     onClick={() => {
                       setActiveTab(tab.id);
                       setIsDropdownOpen(false);
@@ -353,7 +355,7 @@ export default function Experience() {
                       </span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <span style={{
+                      <span className="filter-count" style={{
                         fontSize: '0.7rem',
                         padding: '0.15rem 0.55rem',
                         borderRadius: '9999px',
@@ -393,7 +395,7 @@ export default function Experience() {
               }}
             >
               {/* Subtle Company Image Logo Background Watermark (Logo Chìm Mờ Image) */}
-              <img
+              <img loading="lazy" decoding="async"
                 src={item.logo}
                 alt={item.company}
                 style={{
@@ -438,7 +440,7 @@ export default function Experience() {
                     flexShrink: 0,
                     overflow: 'hidden'
                   }}>
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={item.logo}
                       alt={item.company}
                       style={{

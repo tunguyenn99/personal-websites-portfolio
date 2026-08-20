@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Award, ExternalLink, Calendar, Briefcase, ChevronLeft, ChevronRight, Filter, ChevronDown, Check } from 'lucide-react';
 import certs from '../data/certifications.json';
 
@@ -70,10 +70,10 @@ export default function Certifications() {
     return filteredCerts.slice(start, start + itemsPerPage);
   }, [filteredCerts, currentPage]);
 
-  // Reset page when filter changes
-  useEffect(() => {
+  const selectOrganization = (organization) => {
+    setSelectedOrg(organization);
     setCurrentPage(1);
-  }, [selectedOrg]);
+  };
 
   // Smooth scroll to section top on page change
   const handlePageChange = (page) => {
@@ -139,7 +139,8 @@ export default function Certifications() {
             {orgs.map(org => (
               <button
                 key={org.name}
-                onClick={() => setSelectedOrg(org.name)}
+                className={`filter-pill ${selectedOrg === org.name ? 'filter-pill-active' : ''}`}
+                onClick={() => selectOrganization(org.name)}
                 style={{
                   padding: '0.6rem 1.25rem',
                   borderRadius: '100px',
@@ -158,7 +159,7 @@ export default function Certifications() {
                 }}
               >
                 {org.name}
-                <span style={{
+                <span className="filter-count" style={{
                   fontSize: '0.75rem',
                   opacity: 0.8,
                   background: selectedOrg === org.name ? 'var(--primary)' : 'var(--surface-low)',
@@ -174,7 +175,7 @@ export default function Certifications() {
 
           {/* Custom Mobile Glass Dropdown (< 769px) - Identical layout to Experience and Projects */}
           <div className="mobile-filter-dropdown-container" style={{ position: 'relative', marginBottom: '1rem' }}>
-            <div 
+            <div className="filter-trigger"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               style={{
                 display: 'flex',
@@ -228,7 +229,7 @@ export default function Certifications() {
                   zIndex: 100,
                   maxHeight: '320px',
                   overflowY: 'auto',
-                  background: 'rgba(15, 23, 42, 0.95)',
+                  background: 'var(--glass-bg)',
                   backdropFilter: 'blur(20px)',
                   WebkitBackdropFilter: 'blur(20px)',
                   border: '1px solid var(--glass-border)',
@@ -246,8 +247,9 @@ export default function Certifications() {
                   return (
                     <div
                       key={org.name}
+                      className={isActive ? 'filter-option-active' : ''}
                       onClick={() => {
-                        setSelectedOrg(org.name);
+                        selectOrganization(org.name);
                         setIsDropdownOpen(false);
                       }}
                       style={{
@@ -276,7 +278,7 @@ export default function Certifications() {
                         </span>
                       </div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <span style={{
+                        <span className="filter-count" style={{
                           fontSize: '0.7rem',
                           padding: '0.15rem 0.55rem',
                           borderRadius: '9999px',
@@ -334,7 +336,7 @@ export default function Certifications() {
                   flexShrink: 0,
                   boxShadow: '0 8px 16px rgba(0,0,0,0.1)'
                 }}>
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ORG_LOGOS[cert.organization] || cert.image}
                     alt={cert.title}
                     style={{ width: '100%', height: '100%', objectFit: 'contain' }}

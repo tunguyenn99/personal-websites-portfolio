@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Star, GitFork, ExternalLink, Database, FileText, Calendar, Code2, Cloud, BarChart3, Workflow, Download, Layers, ChevronLeft, ChevronRight, Filter, ChevronDown, Check } from 'lucide-react';
 import {
   SiPython, SiPostgresql, SiDbt, SiApacheairflow, SiSnowflake,
@@ -31,27 +31,6 @@ const getAllTopics = () => {
     });
   }
   return Array.from(topicsSet).sort();
-};
-
-const topicPriority = [
-  'analytics-engineer',
-  'data-analytics',
-  'business-intelligence',
-  'self-learning',
-  'community-contribution',
-  'profile-portfolio'
-];
-
-const topicColors = {
-  'Top 10 Starring Projects': '#00D27F',
-  'analytics-engineer': '#E11D48',
-  'analytics-engineering': '#10B981',
-  'data-engineering': '#38BDF8',
-  'data-analytics': '#0284C7',
-  'business-intelligence': '#D97706',
-  'self-learning': '#7C3AED',
-  'community-contribution': '#059669',
-  'profile-portfolio': '#DB2777'
 };
 
 // Tech stack priority and colors
@@ -138,7 +117,6 @@ export default function Projects() {
   // Get all unique topics
   const allTopics = getAllTopics();
   const filters = ['Top 10 Starring Projects', ...allTopics];
-  const activeColor = 'var(--primary)';
 
   // Dynamic filtering logic
   const filteredProjects = useMemo(() => {
@@ -159,9 +137,10 @@ export default function Projects() {
     return filteredProjects.slice(start, start + itemsPerPage);
   }, [filteredProjects, currentPage, itemsPerPage]);
 
-  useEffect(() => {
+  const selectFilter = (filter) => {
+    setActiveFilter(filter);
     setCurrentPage(1);
-  }, [activeFilter]);
+  };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -251,7 +230,8 @@ export default function Projects() {
             return (
               <button
                 key={filter}
-                onClick={() => setActiveFilter(filter)}
+                className={`filter-pill ${isActive ? 'filter-pill-active' : ''}`}
+                onClick={() => selectFilter(filter)}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -279,7 +259,7 @@ export default function Projects() {
 
         {/* Custom Mobile Glass Dropdown (< 769px) - Unified Emerald Theme */}
         <div className="mobile-filter-dropdown-container" style={{ position: 'relative', marginBottom: '2rem' }}>
-          <div 
+          <div className="filter-trigger"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             style={{
               display: 'flex',
@@ -331,7 +311,7 @@ export default function Projects() {
                 zIndex: 100,
                 maxHeight: '320px',
                 overflowY: 'auto',
-                background: 'rgba(15, 23, 42, 0.95)',
+                background: 'var(--glass-bg)',
                 backdropFilter: 'blur(20px)',
                 WebkitBackdropFilter: 'blur(20px)',
                 border: '1px solid var(--glass-border)',
@@ -351,8 +331,9 @@ export default function Projects() {
                 return (
                   <div
                     key={filter}
+                    className={isActive ? 'filter-option-active' : ''}
                     onClick={() => {
-                      setActiveFilter(filter);
+                      selectFilter(filter);
                       setIsDropdownOpen(false);
                     }}
                     style={{
@@ -381,7 +362,7 @@ export default function Projects() {
                       </span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <span style={{
+                      <span className="filter-count" style={{
                         fontSize: '0.7rem',
                         padding: '0.15rem 0.55rem',
                         borderRadius: '9999px',
@@ -496,7 +477,7 @@ export default function Projects() {
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
               style={{
-                background: 'rgba(255,255,255,0.05)',
+                background: 'var(--surface-container)',
                 border: '1px solid var(--outline-low)',
                 color: 'var(--text-main)',
                 padding: '0.75rem',
@@ -528,8 +509,8 @@ export default function Projects() {
                       borderRadius: '10px',
                       border: '1px solid',
                       borderColor: isActive ? 'var(--primary)' : 'var(--outline-low)',
-                      background: isActive ? 'var(--primary)' : 'rgba(255,255,255,0.05)',
-                      color: isActive ? 'var(--on-primary)' : 'var(--text-main)',
+                      background: isActive ? 'var(--accent-gradient)' : 'var(--surface-container)',
+                      color: isActive ? 'var(--on-accent-gradient)' : 'var(--text-main)',
                       fontWeight: 700,
                       cursor: 'pointer',
                       transition: 'all 0.2s ease'
@@ -545,7 +526,7 @@ export default function Projects() {
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
               style={{
-                background: 'rgba(255,255,255,0.05)',
+                background: 'var(--surface-container)',
                 border: '1px solid var(--outline-low)',
                 color: 'var(--text-main)',
                 padding: '0.75rem',

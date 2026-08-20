@@ -82,7 +82,7 @@ export default function Navbar() {
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <a href="#" style={{ fontSize: '1.75rem', fontWeight: 700, textDecoration: 'none', color: 'var(--primary)', fontFamily: 'Space Grotesk' }}>TN<span style={{color: 'var(--secondary)'}}>.</span></a>
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+          <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
             {/* Desktop Nav */}
             <div style={{ display: 'none', gap: '2rem', alignItems: 'center' }} className="desktop-nav">
               {navLinks.map(link => (
@@ -122,12 +122,12 @@ export default function Navbar() {
               {theme === 'dark' ? (
                 <>
                   <Sun size={18} color="var(--secondary)" />
-                  <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-main)' }}>Light</span>
+                  <span className="theme-label" style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-main)' }}>Light</span>
                 </>
               ) : (
                 <>
                   <Moon size={18} color="var(--primary)" />
-                  <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-main)' }}>Dark</span>
+                  <span className="theme-label" style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-main)' }}>Dark</span>
                 </>
               )}
             </button>
@@ -176,7 +176,7 @@ export default function Navbar() {
         </div>
 
         <style>{`
-          @media (min-width: 768px) {
+          @media (min-width: 1100px) {
             .desktop-nav { display: flex !important; }
             .mobile-toggle { display: none !important; }
           }
@@ -229,5 +229,4 @@ export default function Navbar() {
     </>
   );
 }
-
 

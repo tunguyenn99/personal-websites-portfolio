@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Users, Heart, ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp, Star } from 'lucide-react';
 import { SiFacebook, SiGithub } from 'react-icons/si';
 import communityData from '../../community_stats.json';
 
@@ -92,7 +92,10 @@ export default function Community() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
           gap: '2rem',
           marginBottom: '3rem',
-          width: '100%'
+          width: '100%',
+          maxWidth: '1000px',
+          marginLeft: 'auto',
+          marginRight: 'auto'
         }}>
           {/* Members Stat Card */}
           <div className="stat-card" style={{
@@ -127,8 +130,9 @@ export default function Community() {
             border: '1px solid var(--outline-low)'
           }}>
             <div style={{ position: 'relative', zIndex: 10 }}>
-              <div className="stat-number stat-number-secondary">
-                <CountUp end={communityData?.github?.total_stars || 839} suffix="+ 🌟" />
+              <div className="stat-number stat-number-secondary stat-number-with-icon">
+                <CountUp end={communityData?.github?.total_stars || 839} suffix="+" />
+                <Star className="stat-icon" aria-hidden="true" />
               </div>
               <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 800, marginTop: '0.75rem', letterSpacing: '0.05em' }}>Total GitHub Stars</div>
             </div>
@@ -175,7 +179,7 @@ export default function Community() {
           <div className="glass-panel" style={{ padding: '0.6rem', overflow: 'hidden', background: 'rgba(0,0,0,0.4)', border: '1px solid var(--outline-low)', borderRadius: '16px' }}>
             <div className="community-gallery" style={{ position: 'relative', aspectRatio: '21/9', maxHeight: '70vh', borderRadius: '12px', overflow: 'hidden', background: '#000', cursor: 'pointer' }}>
               {images.map((img, idx) => (
-                <img
+                <img loading="lazy" decoding="async"
                   key={idx}
                   src={img}
                   alt={`Community Highlight ${idx}`}
@@ -249,7 +253,7 @@ export default function Community() {
               borderRadius: '12px', overflow: 'hidden'
             }}
           >
-            <img
+            <img loading="lazy" decoding="async"
               src={images[activeSlide]}
               alt="Fullscreen view"
               style={{
@@ -344,7 +348,24 @@ export default function Community() {
         .community-cta a { box-sizing: border-box; }
         .community-gallery img { display: block; }
         .stats-grid { align-items: stretch; }
-        .stat-card { width: 100%; max-width: 420px; }
+        .stat-card {
+          width: 100%;
+          min-height: 174px;
+          display: flex;
+          align-items: center;
+        }
+        .stat-number-with-icon {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+        .stat-icon {
+          width: 0.8em;
+          height: 0.8em;
+          fill: var(--secondary);
+          stroke: var(--secondary);
+          flex: 0 0 auto;
+        }
         @media (max-width: 480px) {
           .carousel-btn { width: 40px !important; height: 40px !important; left: 0.5rem !important; right: 0.5rem !important; }
           .carousel-btn:hover { transform: translateY(-50%) scale(1.05) !important; }
@@ -353,7 +374,7 @@ export default function Community() {
           .community-cta a { flex: 1 1 48% !important; min-width: 0 !important; }
           .community-gallery { aspect-ratio: 9/12 !important; max-height: 70vh !important; }
           .stats-grid { grid-template-columns: 1fr !important; justify-items: center !important; }
-          .stat-card { max-width: min(320px, 92%) !important; padding: 1rem !important; border-radius: 12px !important; }
+          .stat-card { max-width: min(360px, 100%) !important; min-height: 132px; padding: 1.25rem !important; border-radius: 12px !important; }
           .community-gallery img { position: absolute; left: 0; top: 0; }
           .community-header-wrapper { text-align: center; }
           .community-subtitle { justify-content: center; }
@@ -362,4 +383,3 @@ export default function Community() {
     </section>
   );
 }
-

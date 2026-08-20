@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import ArchitectureFlow from './components/ArchitectureFlow';
-import Community from './components/Community';
-import Certifications from './components/Certifications';
-import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
+
+const Experience = lazy(() => import('./components/Experience'));
+const Projects = lazy(() => import('./components/Projects'));
+const ArchitectureFlow = lazy(() => import('./components/ArchitectureFlow'));
+const Community = lazy(() => import('./components/Community'));
+const Certifications = lazy(() => import('./components/Certifications'));
+const Contact = lazy(() => import('./components/Contact'));
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -25,17 +26,19 @@ function App() {
       
       <Navbar />
       
-      <main className="container">
+      <main>
         <AboutMe />
-        <Experience />
-        <Projects />
-        <ArchitectureFlow />
-        <Community />
-        <Certifications />
-        <Contact />
+        <Suspense fallback={<div className="section-loader" role="status" aria-label="Loading portfolio sections" />}>
+          <Experience />
+          <Projects />
+          <ArchitectureFlow />
+          <Community />
+          <Certifications />
+          <Contact />
+        </Suspense>
       </main>
       
-      <footer style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--text-muted)' }}>
+      <footer className="site-footer">
         <p>© {new Date().getFullYear()} Tu Nguyen. Developed with React & Modern Web Tech.</p>
       </footer>
     </>
