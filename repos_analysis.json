@@ -298,6 +298,34 @@
     ]
   },
   {
+    "name": "ecommerce-data-modeling",
+    "description": "This repository contains a modern data warehouse (DWH) and analytics platform designed for the Olist Brazilian E-Commerce Dataset (over 1M+ rows of customers, items, reviews, and geo coordinates).  It implements a complete end-to-end ELT pipeline using DuckDB as the local OLAP database, dbt Core for Kimball dimensional transformations",
+    "url": "https://github.com/tunguyenn99/ecommerce-data-modeling",
+    "language": "Python",
+    "stars": 14,
+    "forks": 4,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-05-25",
+    "updated_at": "2026-08-28",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 188,
+    "readme_excerpt": "# \ud83d\uded2 Olist E-Commerce Data Warehouse & Analytics Platform\n\nThis repository contains a modern data warehouse (DWH) and analytics platform designed for the **Olist Brazilian E-Commerce Dataset** (over 1M+ rows of customers, items, reviews, and geo coordinates). \n\nIt implements a complete end-to-end ELT pipeline using **DuckDB** as the local OLAP database, **dbt Core** for Kimball dimensional transformations, **Astronomer Cosmos & Apache Airflow** for orchestrating task groups, **Bruin CLI** for con",
+    "techstack": [
+      "Airflow",
+      "CSV",
+      "Git",
+      "Python",
+      "Rust",
+      "SQL",
+      "dbt",
+      "uv"
+    ]
+  },
+  {
     "name": "data-warehouse-tk-kimball",
     "description": "Docs l\u1ea1i \"The Data Warehouse Toolkit\" c\u1ee7a Ralph Kimball theo \u00fd m\u00ecnh",
     "url": "https://github.com/tunguyenn99/data-warehouse-tk-kimball",
@@ -322,34 +350,6 @@
       "Snowflake",
       "VS Code",
       "XML"
-    ]
-  },
-  {
-    "name": "ecommerce-data-modeling",
-    "description": "This repository contains a modern data warehouse (DWH) and analytics platform designed for the Olist Brazilian E-Commerce Dataset (over 1M+ rows of customers, items, reviews, and geo coordinates).  It implements a complete end-to-end ELT pipeline using DuckDB as the local OLAP database, dbt Core for Kimball dimensional transformations",
-    "url": "https://github.com/tunguyenn99/ecommerce-data-modeling",
-    "language": "Python",
-    "stars": 13,
-    "forks": 4,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2026-05-25",
-    "updated_at": "2026-08-28",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 188,
-    "readme_excerpt": "# \ud83d\uded2 Olist E-Commerce Data Warehouse & Analytics Platform\n\nThis repository contains a modern data warehouse (DWH) and analytics platform designed for the **Olist Brazilian E-Commerce Dataset** (over 1M+ rows of customers, items, reviews, and geo coordinates). \n\nIt implements a complete end-to-end ELT pipeline using **DuckDB** as the local OLAP database, **dbt Core** for Kimball dimensional transformations, **Astronomer Cosmos & Apache Airflow** for orchestrating task groups, **Bruin CLI** for con",
-    "techstack": [
-      "Airflow",
-      "CSV",
-      "Git",
-      "Python",
-      "Rust",
-      "SQL",
-      "dbt",
-      "uv"
     ]
   },
   {
@@ -824,7 +824,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-08-27",
+    "updated_at": "2026-08-28",
     "topics": [
       "profile-portfolio"
     ],
@@ -940,6 +940,33 @@
       "Python",
       "Scikit-learn",
       "TensorFlow"
+    ]
+  },
+  {
+    "name": "oracle-data-platform-foundations-associate",
+    "description": "",
+    "url": "https://github.com/tunguyenn99/oracle-data-platform-foundations-associate",
+    "language": "N/A",
+    "stars": 0,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-07-16",
+    "updated_at": "2026-08-28",
+    "topics": [],
+    "has_readme": true,
+    "readme_lines": 676,
+    "readme_excerpt": "# Oracle Data Platform 2025 Foundations Associate \u2013 Exam Q&A Summary\n\nThis document summarizes selected questions from the 1Z0-1195-25 certification exam, including full question text, all answer options, correct answers, and explanations.\n\n\nMy Certificate:\n\n<img src='./images/certificate.png' width=800>\n\nCertify my badge with [this link](https://catalog-education.oracle.com/ords/certview/sharebadge?id=4E56A8F6F56FE5E0154FDEDEFC0B9D29E7122E9CEFDF0C44359497AF087EEAA0):\n\n<img src='./images/badge.p",
+    "techstack": [
+      "AWS",
+      "Azure",
+      "Excel",
+      "GitHub Actions",
+      "MySQL",
+      "Oracle",
+      "Python",
+      "SQL",
+      "Spark"
     ]
   },
   {
