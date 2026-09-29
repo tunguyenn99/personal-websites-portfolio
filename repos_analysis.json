@@ -147,12 +147,12 @@
     "description": "An end-2-end project about Son Tung M-TP",
     "url": "https://github.com/tunguyenn99/son-tung-mtp-analytics",
     "language": "Jupyter Notebook",
-    "stars": 28,
+    "stars": 29,
     "forks": 4,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-09-22",
-    "updated_at": "2026-09-05",
+    "updated_at": "2026-09-29",
     "topics": [
       "analytics-engineer"
     ],
