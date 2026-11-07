@@ -554,7 +554,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-08-17",
-    "updated_at": "2026-11-06",
+    "updated_at": "2026-11-07",
     "topics": [
       "analytics-engineering"
     ],
@@ -606,46 +606,16 @@
     ]
   },
   {
-    "name": "i-learn-apache-iceberg",
-    "description": "H\u01b0\u1edbng d\u1eabn self-host v\u00e0 t\u00ecm hi\u1ec3u Apache Iceberg",
-    "url": "https://github.com/tunguyenn99/i-learn-apache-iceberg",
-    "language": "Jupyter Notebook",
-    "stars": 4,
-    "forks": 1,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-06-23",
-    "updated_at": "2026-04-12",
-    "topics": [
-      "self-learning"
-    ],
-    "has_readme": true,
-    "readme_lines": 155,
-    "readme_excerpt": "\n# \ud83e\uddca Iceberg Fundamentals \u2013 Th\u1ef1c h\u00e0nh ki\u1ebfn tr\u00fac Lakehouse v\u1edbi Apache Iceberg\n\n## \ud83d\udcda Gi\u1edbi thi\u1ec7u\n\nTrong th\u1ebf gi\u1edbi d\u1eef li\u1ec7u hi\u1ec7n \u0111\u1ea1i, c\u00e1c m\u00f4 h\u00ecnh truy\u1ec1n th\u1ed1ng nh\u01b0 **Data Warehouse** (Kho d\u1eef li\u1ec7u) v\u00e0 **Data Lake** (H\u1ed3 d\u1eef li\u1ec7u) \u0111\u1ec1u c\u00f3 nh\u1eefng \u0111i\u1ec3m m\u1ea1nh \u2013 nh\u01b0ng c\u0169ng t\u1ed3n t\u1ea1i h\u1ea1n ch\u1ebf. \u0110\u00f3 l\u00e0 l\u00fd do ki\u1ebfn tr\u00fac **Data Lakehouse** ra \u0111\u1eddi: k\u1ebft h\u1ee3p hi\u1ec7u qu\u1ea3 l\u01b0u tr\u1eef linh ho\u1ea1t c\u1ee7a Data Lake v\u1edbi kh\u1ea3 n\u0103ng x\u1eed l\u00fd m\u1ea1nh m\u1ebd c\u1ee7a Data Warehouse.\n\n**Apache Iceberg** l\u00e0 m\u1ed9t trong nh\u1eefng n\u1ec1n t\u1ea3ng ti\u00eau bi\u1ec3u h\u1ed7 tr\u1ee3 Lakehouse. Iceber",
-    "techstack": [
-      "AWS",
-      "Docker",
-      "Iceberg",
-      "Jupyter",
-      "Parquet",
-      "PostgreSQL",
-      "SQL",
-      "Spark",
-      "Superset",
-      "Trino"
-    ]
-  },
-  {
     "name": "tunguyenn99",
     "description": "Init my profile",
     "url": "https://github.com/tunguyenn99/tunguyenn99",
     "language": "Python",
-    "stars": 3,
+    "stars": 4,
     "forks": 2,
     "is_fork": false,
     "is_private": false,
     "created_at": "2025-05-28",
-    "updated_at": "2026-11-04",
+    "updated_at": "2026-11-07",
     "topics": [
       "profile-portfolio"
     ],
@@ -688,6 +658,36 @@
       "Superset",
       "Trino",
       "dbt"
+    ]
+  },
+  {
+    "name": "i-learn-apache-iceberg",
+    "description": "H\u01b0\u1edbng d\u1eabn self-host v\u00e0 t\u00ecm hi\u1ec3u Apache Iceberg",
+    "url": "https://github.com/tunguyenn99/i-learn-apache-iceberg",
+    "language": "Jupyter Notebook",
+    "stars": 4,
+    "forks": 1,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-06-23",
+    "updated_at": "2026-04-12",
+    "topics": [
+      "self-learning"
+    ],
+    "has_readme": true,
+    "readme_lines": 155,
+    "readme_excerpt": "\n# \ud83e\uddca Iceberg Fundamentals \u2013 Th\u1ef1c h\u00e0nh ki\u1ebfn tr\u00fac Lakehouse v\u1edbi Apache Iceberg\n\n## \ud83d\udcda Gi\u1edbi thi\u1ec7u\n\nTrong th\u1ebf gi\u1edbi d\u1eef li\u1ec7u hi\u1ec7n \u0111\u1ea1i, c\u00e1c m\u00f4 h\u00ecnh truy\u1ec1n th\u1ed1ng nh\u01b0 **Data Warehouse** (Kho d\u1eef li\u1ec7u) v\u00e0 **Data Lake** (H\u1ed3 d\u1eef li\u1ec7u) \u0111\u1ec1u c\u00f3 nh\u1eefng \u0111i\u1ec3m m\u1ea1nh \u2013 nh\u01b0ng c\u0169ng t\u1ed3n t\u1ea1i h\u1ea1n ch\u1ebf. \u0110\u00f3 l\u00e0 l\u00fd do ki\u1ebfn tr\u00fac **Data Lakehouse** ra \u0111\u1eddi: k\u1ebft h\u1ee3p hi\u1ec7u qu\u1ea3 l\u01b0u tr\u1eef linh ho\u1ea1t c\u1ee7a Data Lake v\u1edbi kh\u1ea3 n\u0103ng x\u1eed l\u00fd m\u1ea1nh m\u1ebd c\u1ee7a Data Warehouse.\n\n**Apache Iceberg** l\u00e0 m\u1ed9t trong nh\u1eefng n\u1ec1n t\u1ea3ng ti\u00eau bi\u1ec3u h\u1ed7 tr\u1ee3 Lakehouse. Iceber",
+    "techstack": [
+      "AWS",
+      "Docker",
+      "Iceberg",
+      "Jupyter",
+      "Parquet",
+      "PostgreSQL",
+      "SQL",
+      "Spark",
+      "Superset",
+      "Trino"
     ]
   },
   {
