@@ -848,7 +848,7 @@
     "is_fork": false,
     "is_private": false,
     "created_at": "2026-04-11",
-    "updated_at": "2026-11-09",
+    "updated_at": "2026-11-10",
     "topics": [
       "profile-portfolio"
     ],
@@ -964,6 +964,36 @@
       "Python",
       "Scikit-learn",
       "TensorFlow"
+    ]
+  },
+  {
+    "name": "a-day-as-an-analytics-engineer",
+    "description": "",
+    "url": "https://github.com/tunguyenn99/a-day-as-an-analytics-engineer",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2026-11-04",
+    "updated_at": "2026-11-10",
+    "topics": [],
+    "has_readme": true,
+    "readme_lines": 146,
+    "readme_excerpt": "# Web Analytics Engineering \u2014 X\u00f3m Ecom Tracker\n\n**Ti\u1ebfng Vi\u1ec7t** | [English](README.en.md)\n\nPipeline SQL Server \u2192 Supabase PostgreSQL/Storage \u2192 dbt medallion \u2192 domain models \u2192 data marts. Ngu\u1ed3n th\u1ef1c t\u1ebf l\u00e0 [X\u00f3m Dataset web_analytics](https://dataset.xomdata.com/datasets/schema/web_analytics): sessions, pageviews, orders, order items, refunds v\u00e0 products. Credentials ngu\u1ed3n ch\u1ec9 n\u1eb1m trong `.env` local \u0111\u01b0\u1ee3c git-ignore.\n\n![Project architecture](docs/images/architecture.png)\n*Ki\u1ebfn tr\u00fac t\u1ed5ng th\u1ec3. Ngu\u1ed3n Ex",
+    "techstack": [
+      "Airflow",
+      "Docker",
+      "Git",
+      "GitHub Actions",
+      "JSON",
+      "PostgreSQL",
+      "Python",
+      "SQL",
+      "SQL Server",
+      "Supabase",
+      "dbt",
+      "uv"
     ]
   },
   {
