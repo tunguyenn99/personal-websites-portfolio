@@ -384,34 +384,6 @@
     ]
   },
   {
-    "name": "dbt-databricks-kestra",
-    "description": "ELT Pipeline on Modern Data platforms",
-    "url": "https://github.com/tunguyenn99/dbt-databricks-kestra",
-    "language": "Jupyter Notebook",
-    "stars": 10,
-    "forks": 2,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-06-19",
-    "updated_at": "2026-06-01",
-    "topics": [
-      "analytics-engineer"
-    ],
-    "has_readme": true,
-    "readme_lines": 174,
-    "readme_excerpt": "# \ud83e\udde0 HR Analytics with dbt, Databricks & Kestra\n\nThis project demonstrates a modern data pipeline for **HR analytics** using [**dbt**](https://www.getdbt.com/), [**Databricks**](https://www.databricks.com/), and [**Kestra**](https://kestra.io/). It explores workforce data to uncover insights about **diversity**, **retention**, and **pay equity**.\n\n---\n\n## \ud83e\uddf0 Tech Stack\n\n- **DBT (Data Build Tool)** \u2013 SQL-based transformation framework used to build modular, testable, and maintainable data pipelines",
-    "techstack": [
-      "Databricks",
-      "Docker",
-      "Git",
-      "GitHub",
-      "GitHub Actions",
-      "Kestra",
-      "SQL",
-      "dbt"
-    ]
-  },
-  {
     "name": "i-learn-git",
     "description": "I try to learn git",
     "url": "https://github.com/tunguyenn99/i-learn-git",
@@ -432,6 +404,34 @@
       "Git",
       "GitHub Actions",
       "GitLab"
+    ]
+  },
+  {
+    "name": "dbt-databricks-kestra",
+    "description": "ELT Pipeline on Modern Data platforms",
+    "url": "https://github.com/tunguyenn99/dbt-databricks-kestra",
+    "language": "Jupyter Notebook",
+    "stars": 9,
+    "forks": 2,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-06-19",
+    "updated_at": "2026-11-25",
+    "topics": [
+      "analytics-engineer"
+    ],
+    "has_readme": true,
+    "readme_lines": 174,
+    "readme_excerpt": "# \ud83e\udde0 HR Analytics with dbt, Databricks & Kestra\n\nThis project demonstrates a modern data pipeline for **HR analytics** using [**dbt**](https://www.getdbt.com/), [**Databricks**](https://www.databricks.com/), and [**Kestra**](https://kestra.io/). It explores workforce data to uncover insights about **diversity**, **retention**, and **pay equity**.\n\n---\n\n## \ud83e\uddf0 Tech Stack\n\n- **DBT (Data Build Tool)** \u2013 SQL-based transformation framework used to build modular, testable, and maintainable data pipelines",
+    "techstack": [
+      "Databricks",
+      "Docker",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "Kestra",
+      "SQL",
+      "dbt"
     ]
   },
   {
@@ -487,34 +487,6 @@
     ]
   },
   {
-    "name": "portfolio-data-analytics",
-    "description": "A collection of my data analytics and BI projects.",
-    "url": "https://github.com/tunguyenn99/portfolio-data-analytics",
-    "language": "Jupyter Notebook",
-    "stars": 7,
-    "forks": 0,
-    "is_fork": false,
-    "is_private": false,
-    "created_at": "2025-05-27",
-    "updated_at": "2026-07-28",
-    "topics": [
-      "profile-portfolio"
-    ],
-    "has_readme": true,
-    "readme_lines": 39,
-    "readme_excerpt": "# \ud83d\udcca Data Portfolio \u2013 Tu Nguyen\n\nWelcome to my personal data portfolio! This repository contains folders of end-to-end data projects I've worked on in areas such as **Data Analytics**, **Business Intelligence**, and **Automation**.\n\n---\n\n## \ud83d\udd75\ufe0f\u200d\u2640\ufe0f About my projects\n\nEach folder in this repository represents a standalone project, featuring data processing workflows, analysis logic, business context, or even reporting/dashboard artifacts.\n\n\ud83d\udce5 Download dataset: Due to the size limitation on Github, I ",
-    "techstack": [
-      "Airflow",
-      "BigQuery",
-      "GitHub Actions",
-      "Power BI",
-      "Python",
-      "SQL",
-      "Spark",
-      "Superset"
-    ]
-  },
-  {
     "name": "dbt-supabase-postgres",
     "description": "",
     "url": "https://github.com/tunguyenn99/dbt-supabase-postgres",
@@ -542,6 +514,34 @@
       "SQL",
       "Supabase",
       "dbt"
+    ]
+  },
+  {
+    "name": "portfolio-data-analytics",
+    "description": "A collection of my data analytics and BI projects.",
+    "url": "https://github.com/tunguyenn99/portfolio-data-analytics",
+    "language": "Jupyter Notebook",
+    "stars": 6,
+    "forks": 0,
+    "is_fork": false,
+    "is_private": false,
+    "created_at": "2025-05-27",
+    "updated_at": "2026-11-25",
+    "topics": [
+      "profile-portfolio"
+    ],
+    "has_readme": true,
+    "readme_lines": 39,
+    "readme_excerpt": "# \ud83d\udcca Data Portfolio \u2013 Tu Nguyen\n\nWelcome to my personal data portfolio! This repository contains folders of end-to-end data projects I've worked on in areas such as **Data Analytics**, **Business Intelligence**, and **Automation**.\n\n---\n\n## \ud83d\udd75\ufe0f\u200d\u2640\ufe0f About my projects\n\nEach folder in this repository represents a standalone project, featuring data processing workflows, analysis logic, business context, or even reporting/dashboard artifacts.\n\n\ud83d\udce5 Download dataset: Due to the size limitation on Github, I ",
+    "techstack": [
+      "Airflow",
+      "BigQuery",
+      "GitHub Actions",
+      "Power BI",
+      "Python",
+      "SQL",
+      "Spark",
+      "Superset"
     ]
   },
   {
